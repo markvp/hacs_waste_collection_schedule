@@ -23,12 +23,6 @@ TEST_CASES = {
 API_URL = "https://www.fareham.gov.uk/internetlookups/search_data.aspx"
 API_LIST = "DomesticBinCollections2025on"
 DEFAULT_ICON = "mdi:trash-can"
-ICON_MAP = {
-    "Refuse": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Garden Waste": "mdi:leaf",
-}
-
 
 class Source:
     def __init__(self, road_name: str, postcode: str):
@@ -160,7 +154,6 @@ class Source:
                 Collection(
                     date=collection_date,
                     t=waste_type,
-                    icon=ICON_MAP.get(waste_type, DEFAULT_ICON),
                 )
             )
         return collections
@@ -176,7 +169,6 @@ class Source:
                 Collection(
                     date=collection_date,
                     t="Garden Waste",
-                    icon=ICON_MAP.get("Garden Waste", DEFAULT_ICON),
                 )
             )
         return collections

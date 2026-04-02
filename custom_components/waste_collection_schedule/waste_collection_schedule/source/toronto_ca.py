@@ -23,10 +23,7 @@ SCHEDULE_LOOKUP_URL = (
 
 ICON_MAP = {
     "GreenBin": "mdi:compost",
-    "Garbage": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
     "YardWaste": "mdi:grass",
-    "ChristmasTree": "mdi:pine-tree",
 }
 
 PICTURE_MAP = {
@@ -37,7 +34,6 @@ PICTURE_MAP = {
 }
 
 VALID_WASTE_TYPES = set(ICON_MAP) | set(PICTURE_MAP)
-
 
 class Source:
     def __init__(self, street_address):

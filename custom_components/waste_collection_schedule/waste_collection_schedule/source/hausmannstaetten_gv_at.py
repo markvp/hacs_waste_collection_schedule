@@ -10,20 +10,11 @@ URL = "https://www.hausmannstaetten.gv.at"
 TEST_CASES: dict[str, dict] = {"Testcase": {}}
 COUNTRY = "at"
 
-
 ICON_MAP = {
-    "restmüll i": "mdi:trash-can",
-    "restmüll ii": "mdi:trash-can",
-    "restmüll ii + 1100": "mdi:trash-can",
-    "bioabfall": "mdi:leaf",
-    "altpapier i": "mdi:package-variant",
-    "altpapier ii": "mdi:package-variant",
     "sperrmüll asz-fernitz": "mdi:factory",
-    "leicht- und metallverpackungen": "mdi:recycle",
 }
 
 API_URL = "https://hausmannstaetten.gv.at/terminkalender"
-
 
 class Source:
     def __init__(self):

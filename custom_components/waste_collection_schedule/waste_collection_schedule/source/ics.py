@@ -105,31 +105,26 @@ TEST_CASES = {
     },
 }
 
-
 HEADERS = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
 _LOGGER = logging.getLogger(__name__)
 
-
 PARAM_TRANSLATIONS = {
+    "de": {
+        "file": "Datei",
+        "headers": "Headers",
+        "offset": "Offset",
+        "params": "Parameter",
+        "regex": "Regulärer Ausdruck",
+        "split_at": "Trennen bei",
+        "title_template": "Titelvorlage",
+        "verify_ssl": "SSL-Verifizierung aktivieren",
+        "version": "(Veraltet) Version, hat keine Auswirkung mehr",
+        "year_field": "Jahresfeld",
+    },
     "en": {
         "version": "(Deprecated) Version, has no effect anymore",
     },
-    "de": {
-        "url": "URL",
-        "file": "Datei",
-        "offset": "Offset",
-        "params": "Parameter",
-        "year_field": "Jahresfeld",
-        "method": "Methode",
-        "regex": "Regulärer Ausdruck",
-        "title_template": "Titelvorlage",
-        "split_at": "Trennen bei",
-        "version": "(Veraltet) Version, hat keine Auswirkung mehr",
-        "verify_ssl": "SSL-Verifizierung aktivieren",
-        "headers": "Headers",
-    },
 }
-
 
 class Source:
     def __init__(

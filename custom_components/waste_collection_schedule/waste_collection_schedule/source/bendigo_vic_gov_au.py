@@ -46,10 +46,12 @@ _LOGGER = logging.getLogger(__name__)
 
 WASTE_NAMES = {"waste": "General Waste", "recycle": "Recycling", "green": "Green Waste"}
 
-ICON_MAP = {"waste": "mdi:trash-can", "recycle": "mdi:recycle", "green": "mdi:leaf"}
+ICON_MAP = {
+    "green": "mdi:leaf",
+    "waste": "mdi:trash-can",
+}
 
 COLLECTION_FREQUENCY = {"Weekly": 1, "Fortnightly": 2}
-
 
 class Source:
     def __init__(self, latitude: float, longitude: float):

@@ -13,17 +13,8 @@ TEST_CASES = {
     "Thirlmere Way THIRLMERE NSW": {"address": "Thirlmere Way THIRLMERE NSW"},
 }
 
-
-ICON_MAP = {
-    "garbage": "mdi:trash-can",
-    "garden organic": "mdi:leaf",
-    "recycling": "mdi:recycle",
-}
-
-
 ADDRESS_URL = "https://yokqi4ofx1.execute-api.ap-southeast-2.amazonaws.com/Live/wcc_address_lookup"
 INFO_URL = "https://yokqi4ofx1.execute-api.ap-southeast-2.amazonaws.com/Live/wcc_details_lookup"
-
 
 class Source:
     def __init__(self, address: str):

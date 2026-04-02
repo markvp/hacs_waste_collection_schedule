@@ -12,8 +12,6 @@ TEST_CASES = {
 }
 
 API_URL = "https://api.hcc.govt.nz/FightTheLandFill/get_Collection_Dates"
-ICON_MAP = {"Rubbish": "mdi:trash-can", "Recycling": "mdi:recycle"}
-
 
 class Source:
     def __init__(self, address):
@@ -33,14 +31,12 @@ class Source:
                     json[0]["RedBin"], "%Y-%m-%dT%H:%M:%S"
                 ).date(),
                 t="Rubbish",
-                icon=ICON_MAP.get("Rubbish"),
             ),
             Collection(
                 date=datetime.datetime.strptime(
                     json[0]["YellowBin"], "%Y-%m-%dT%H:%M:%S"
                 ).date(),
                 t="Recycling",
-                icon=ICON_MAP.get("Recycling"),
             ),
         ]
 

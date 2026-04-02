@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 from waste_collection_schedule import Collection    # type: ignore[attr-defined]
 
-
 TITLE = "Borough Council of King's Lynn & West Norfolk"
 DESCRIPTION = "Source for www.west-norfolk.gov.uk services for Borough Council of King's Lynn & West Norfolk, UK."
 URL = "https://www.west-norfolk.gov.uk"
@@ -19,11 +18,8 @@ TEST_CASES = {
     "Test_004": {"uprn": 100090969937},
 }
 ICON_MAP = {
-    "REFUSE": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
-    "GARDEN": "mdi:leaf"
+    "GARDEN": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(self, uprn):

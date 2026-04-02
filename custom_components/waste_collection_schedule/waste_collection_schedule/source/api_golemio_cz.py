@@ -44,15 +44,15 @@ TEST_CASES = {
 API_URL = "https://api.golemio.cz/"
 
 ICON_MAP = {
-    1: "mdi:bottle-soda",  # Barevné sklo | Tinted glass |
-    2: "mdi:lightning-bolt",  # Elektrozařízení | Electric waste |
-    3: "mdi:cog",  # Kovy | Metals |
-    4: "mdi:package-variant-closed",  # Nápojové kartóny | Beverage cartons |
-    5: "mdi:package-variant",  # Papír | Paper |
-    6: "mdi:recycle",  # Plast | Plastics |
-    7: "mdi:bottle-soda-outline",  # Čiré sklo | Clear glass |
-    8: "mdi:barrel",  # Jedlé tuky a oleje | Edible fats and oils |
-    9: "mdi:delete-variant",  # Multikomoditní sběr | Multicommodity |
+    1: "mdi:bottle-soda",
+    2: "mdi:lightning-bolt",
+    3: "mdi:cog",
+    4: "mdi:package-variant-closed",
+    5: "mdi:package-variant",
+    6: "mdi:recycle",
+    7: "mdi:bottle-soda-outline",
+    8: "mdi:barrel",
+    9: "mdi:delete-variant",
 }
 
 _CZ_DAY_TO_WEEKDAY = {
@@ -66,7 +66,6 @@ _CZ_DAY_TO_WEEKDAY = {
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 def _generate_next_picks(next_pick: date, pick_days: str, frequency: int, count=10):
     """
@@ -116,7 +115,6 @@ def _generate_next_picks(next_pick: date, pick_days: str, frequency: int, count=
         days = weekdays[next_pick_index] - first_pick_weekday
 
         yield next_pick + timedelta(weeks=weeks, days=days)
-
 
 class Source:
     def __init__(

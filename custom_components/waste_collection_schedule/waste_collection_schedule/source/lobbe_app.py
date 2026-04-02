@@ -29,22 +29,15 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "restabfall": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "bioabfall": "mdi:leaf",
-    "altpapier": "mdi:package-variant",
-    "gelber": "mdi:recycle",
     "elektroschrott": "mdi:power-plug",
 }
 
 STATES = Literal["Hessen", "Nordrhein-Westfalen"]
 
-
 API_URL = "https://lobbe.app/wp-admin/admin-ajax.php"
 TYPES = {"gelber", "biobfall", "restabfall", "altpapier", "additional_types"}
-
 
 def make_comparable(s: str) -> str:
     return (
@@ -56,7 +49,6 @@ def make_comparable(s: str) -> str:
         .replace(".", "")
         .replace(",", "")
     )
-
 
 COUNTRY = "de"
 
@@ -124,7 +116,6 @@ PLACES = {
     ],
 }
 
-
 EXTRA_INFO = [
     {
         "title": city,
@@ -133,7 +124,6 @@ EXTRA_INFO = [
     for state, cities in PLACES.items()
     for city in cities
 ]
-
 
 class Source:
     def __init__(self, state: STATES, city: str, street: str):
@@ -232,7 +222,6 @@ class Source:
             )
         return entries
 
-
 def _print_extra_info() -> None:
     params = {
         "action": "state",
@@ -253,7 +242,6 @@ def _print_extra_info() -> None:
             places[state["text"]].append(place["text"])
 
     print(places, len(places))
-
 
 if __name__ == "__main__":
     _print_extra_info()

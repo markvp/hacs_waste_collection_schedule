@@ -26,10 +26,10 @@ PARAM_DESCRIPTIONS = {
 }
 
 ICON_MAP = {
-    "m": "mdi:trash-can",
     "b": "mdi:leaf",
     "e": "mdi:recycle",
     "k": "mdi:dump-truck",
+    "m": "mdi:trash-can",
 }
 
 BIN_TYPES = {
@@ -39,10 +39,8 @@ BIN_TYPES = {
     "k": "Kosovni",
 }
 
-
 LOGIN_URL = "https://e.prodnik.si/Prijava"
 BASE_URL = "https://e.prodnik.si/Domov"
-
 
 class Source:
     def __init__(self, customer_number: str, password: str):

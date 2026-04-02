@@ -26,10 +26,7 @@ HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
 ICON_MAP = {
-    "RED BIN": "mdi:trash-can",
     "BLUE BIN": "mdi:bottle-soda",
-    "YELLOW BIN": "mdi:recycle",
-    "GREEN BIN": "mdi:leaf",
 }
 
 # To keep compatibility with the old version of this source and not break existing sensors
@@ -42,7 +39,6 @@ OLD_BIN_MAP = {
 
 API_URL = "https://environz-api.azurewebsites.net/api/dcc/nextservicedate"
 API_KEY = "F9qPiSASucQZRqKi92rttnnfZ4d8cZNh8RfTVSpQ2it2AzFuMu13mA=="
-
 
 class Source:
     def __init__(self, address):

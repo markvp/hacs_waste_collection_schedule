@@ -18,14 +18,7 @@ TEST_CASES = {
     "100060780440": {"uprn": "100060780440", "postcode": "TN24 9JD"},
     "100062558476": {"uprn": "100062558476", "postcode": "TN233LX"},
 }
-ICON_MAP = {
-    "household refuse": "mdi:trash-can",
-    "food waste": "mdi:food",
-    "garden waste": "mdi:leaf",
-    "recycling": "mdi:recycle",
-}
 API_URL = "https://secure.ashford.gov.uk/waste/collectiondaylookup/"
-
 
 class LegacyTLSAdapter(HTTPAdapter):
     # Modern python libraries reject Ashford's server settings and return SSL errors,
@@ -37,7 +30,6 @@ class LegacyTLSAdapter(HTTPAdapter):
         ctx.maximum_version = ssl.TLSVersion.TLSv1_2  # Explicitly use this TLS version
         kwargs["ssl_context"] = ctx
         return super().init_poolmanager(*args, **kwargs)
-
 
 class Source:
     def __init__(self, postcode: str, uprn: str | int):

@@ -118,19 +118,12 @@ EXTRA_INFO = [  # list from https://www.localcouncils.sa.gov.au/my-local-service
 
 COUNTRY = "au"
 
-
 ICON_MAP = {
-    "Trash": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "Bio": "mdi:leaf",
-    "Paper": "mdi:package-variant",
-    "Recycle": "mdi:recycle",
 }
-
 
 API_URL = "https://services1.arcgis.com/37apdbovSVEwr4YE/ArcGIS/rest/services/MyLocalServices/FeatureServer/{endpoint}/query?f=pjson&geometry=%7B%22x%22:{lon},%22y%22:{lat},%22spatialReference%22:%7B%22wkid%22:4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&outFields=Waste_Type,Col_Day,Col_Freq,Colour,Col_Offset,Alternate,Exclusion,Additional&returnCountOnly=false&returnGeometry=false&returnIdsOnly=false&spatialRel=esriSpatialRelIntersects"
 ENDPOINTS = (0, 1, 2, 4)
-
 
 class Source:
     def __init__(self, lat: float, lon: float):

@@ -23,13 +23,10 @@ TEST_CASES = {
 
 API_URL = "https://digital.wyndham.vic.gov.au/myWyndham/"
 ICON_MAP = {
-    "Green Waste": "mdi:leaf",
     "Garbage": "mdi:trash-can-outline",
-    "Recycling": "mdi:recycle",
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, street_address):

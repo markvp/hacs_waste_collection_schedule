@@ -15,12 +15,6 @@ TEST_CASES = {
 API_URL = "https://myutility.winnipeg.ca/UtilityBillingService/CollectionManagement/getCollectionManagementDetails"
 
 # Mapping icons to different waste types for visual representation
-ICON_MAP = {
-    "Recycling": "mdi:recycle",
-    "Garbage": "mdi:trash-can",
-    "Yard Waste": "mdi:leaf",  # Icon for "Yard Waste"
-}
-
 
 class Source:
     def __init__(self, address):
@@ -59,7 +53,6 @@ class Source:
                     Collection(
                         date=datetime.date.fromisoformat(detail["Date"]),
                         t=waste_type,
-                        icon=ICON_MAP.get(waste_type),
                     )
                 )
         return entries

@@ -20,9 +20,7 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "rubbish": "mdi:trash-can",
     "glass": "mdi:bottle-soda",
     "mixed": "mdi:recycle",
 }
@@ -31,7 +29,6 @@ JS_URL = "https://storage.googleapis.com/pcc-static-v6/pccapp/dist/assets/index.
 
 ZONES_REGEX = re.compile(r"const\s?Xs\s?=\s?\{.*?\};", re.DOTALL)
 COLLECTIONS_MAP_REGEX = re.compile(r"collections:\s?\{(\w+:\s?\[.*?\],?)+\}", re.DOTALL)
-
 
 class Source:
     def __init__(self, address: str):

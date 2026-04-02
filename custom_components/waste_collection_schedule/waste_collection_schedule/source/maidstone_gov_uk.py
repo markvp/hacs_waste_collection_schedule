@@ -19,13 +19,9 @@ HEADERS = {
 
 ICON_MAP = {
     "clinical": "mdi:medical-bag",
-    "bulky": "mdi:sofa",
-    "residual": "mdi:trash-can",
-    "recycling": "mdi:recycle",
-    "garden": "mdi:leaf",
     "food": "mdi:food",
+    "garden": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(self, uprn):

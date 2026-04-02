@@ -16,14 +16,10 @@ TEST_CASES = {
 
 API_URL = "https://kalender.renovasjonsportal.no/api/address/"  # or station"
 
-ICON_MAP = {  # Optional: Dict of waste types and suitable mdi icons
-    "Restavfall": "mdi:trash-can",
+ICON_MAP = {
     "Glass og metallemballasje": "mdi:bottle-soda",
-    "Matavfall": "mdi:leaf",
-    "Papir": "mdi:package-variant",
     "Plastemballasje": "mdi:recycle",
 }
-
 
 class Source:
     def __init__(self, address: str):

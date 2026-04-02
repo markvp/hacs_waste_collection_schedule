@@ -25,16 +25,11 @@ TEST_CASES = {
 
 _LOGGER = logging.getLogger(__name__)
 
-ICON_MAP = {"green waste": "mdi:leaf", "recycling": "mdi:recycle"}
-
-
 class SourceConfigurationError(ValueError):
     pass
 
-
 class SourceParseError(ValueError):
     pass
-
 
 class Source:
     OC_GEOLOCATION_SEARCH_URL = "https://www.banyule.vic.gov.au/api/v1/myarea/search"

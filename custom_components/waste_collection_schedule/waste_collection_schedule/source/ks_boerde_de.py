@@ -28,23 +28,6 @@ TEST_CASES = {
 
 DATA_URL = "https://www.ks-boerde.de/_aturis/eko/proxy.php"
 CALENDAR_URL = "https://boerde.hausmuell.info/ics/ics.php"
-ICON_MAP = {
-    "Restabfall": "mdi:trash-can",
-    "Bioabfall": "mdi:leaf",
-    "Leichtverpackungen": "mdi:recycle",
-    "Papier, Pappe, Karton": "mdi:package-variant",
-    "Schadstoffmobil": "mdi:biohazard",
-}
-
-
-PARAM_TRANSLATIONS = {
-    "de": {
-        "village": "Ort",
-        "street": "Straße",
-        "house_number": "Hausnummer",
-    }
-}
-
 
 class Source:
     def __init__(self, village: str, street: str, house_number: str | int):
@@ -112,5 +95,5 @@ class Source:
 
         entries = []
         for d in dates:
-            entries.append(Collection(date=d[0], t=d[1], icon=ICON_MAP.get(d[1])))
+            entries.append(Collection(date=d[0], t=d[1]))
         return entries

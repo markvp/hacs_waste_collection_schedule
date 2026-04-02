@@ -13,18 +13,11 @@ TEST_CASES = {
     "200001744973": {"uprn": "200001744973"},
 }
 
-
 ICON_MAP = {
-    "Trash": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "Bio": "mdi:leaf",
-    "Paper": "mdi:package-variant",
-    "Recycle": "mdi:recycle",
 }
 
-
 API_URL = "https://digital.flintshire.gov.uk/FCC_BinDay/Home/Details2/{UPRN}"
-
 
 class Source:
     def __init__(self, uprn: str | int):

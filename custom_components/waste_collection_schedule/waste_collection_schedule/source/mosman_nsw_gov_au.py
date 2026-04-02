@@ -15,12 +15,12 @@ TEST_CASES = {
 
 API_URL = "https://apps.mosman.nsw.gov.au/test"
 ICON_MAP = {
-    "generalWaste": "mdi:trash-can",
     "containersGlass": "mdi:recycle",
+    "ewaste": "mdi:battery-sync",
+    "generalCleanUp": "mdi:trash-can",
+    "generalWaste": "mdi:trash-can",
     "paperCardboard": "mdi:recycle",
     "vegetation": "mdi:leaf",
-    "generalCleanUp": "mdi:trash-can",
-    "ewaste": "mdi:battery-sync",
 }
 
 COLLECTIONS_MAP = {
@@ -47,7 +47,6 @@ HEADERS = {
     "mode": "cors",
     "credentials": "omit",
 }
-
 
 class Source:
     def __init__(self, address):

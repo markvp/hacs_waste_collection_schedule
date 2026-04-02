@@ -18,8 +18,6 @@ TEST_CASES = {
 HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
-ICON_MAP = {"Recycling": "mdi:recycle", "Rubbish": "mdi:trash-can"}
-
 
 class Source:
     def __init__(self, postcode, address):
@@ -120,7 +118,6 @@ class Source:
                             Collection(
                                 t="Rubbish",
                                 date=collections[0].date,
-                                icon=ICON_MAP.get("Rubbish"),
                             )
                         )
         except Exception as e:

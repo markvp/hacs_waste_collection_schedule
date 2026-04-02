@@ -10,13 +10,10 @@ URL = "https://edlitz.at"
 TEST_CASES = {"TestSource": {}, "IgnoredArgument": {"_": ""}}
 ICON_MAP = {
     "Biomüllabfuhr": "mdi:food",
-    "Papier Tonne": "mdi:newspaper",
-    "Grüne Tonne": "mdi:recycle",
     "Gelber Sack": "mdi:recycle-variant",
-    "Restmüll": "mdi:trash-can",
-    "Restmüll mit Panoramastraße": "mdi:trash-can",
+    "Grüne Tonne": "mdi:recycle",
+    "Papier Tonne": "mdi:newspaper",
 }
-
 
 class Source:
     def __init__(self, _=None):

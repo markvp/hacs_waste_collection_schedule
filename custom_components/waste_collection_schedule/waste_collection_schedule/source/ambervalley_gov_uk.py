@@ -16,11 +16,7 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "REFUSE": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
     "GREEN": "mdi:leaf",
-    "COMMUNAL REFUSE": "mdi:trash-can",
-    "COMMUNAL RECYCLING": "mdi:recycle",
 }
 
 WASTE_TYPES_DATE_KEY = {
@@ -39,10 +35,8 @@ WASTE_TYPE_FREQUENCY_KEY = {
     "COMMUNAL RECYCLING": "communalRycWeekly",
 }
 
-
 def _get_date(date_string: str) -> date:
     return datetime.strptime(date_string, "%Y-%m-%dT%H:%M:%S").date()
-
 
 class Source:
     def __init__(self, uprn: str | int, predict: bool = False):

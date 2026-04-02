@@ -19,15 +19,11 @@ TEST_CASES = {
 BIN_TYPE_SPLIT_REGEX = re.compile(r"\b and \b|\b with \b|\b \& \b")
 
 ICON_MAP = {
-    "Rubbish": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
     "Food": "mdi:food",
     "Garden": "mdi:leaf",
 }
 
-
 API_URL = "https://www.highpeak.gov.uk/article/6348/Find-your-bin-day"
-
 
 class Source:
     def __init__(self, postcode: str, uprn: str | int):

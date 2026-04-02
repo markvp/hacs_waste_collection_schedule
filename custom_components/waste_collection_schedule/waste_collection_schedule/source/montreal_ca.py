@@ -54,11 +54,9 @@ API_URL = [
 ]
 
 ICON_MAP = {
-    "Waste": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
     "Food": "mdi:food-apple",
     "Green": "mdi:leaf",
-    "Bulky": "mdi:sofa",
+    "Waste": "mdi:trash-can",
 }
 
 WEEKDAYS = {
@@ -157,7 +155,6 @@ PARAM_DESCRIPTIONS = {
         "green": "Se il valore è diverso dal settore dei rifiuti.",
     },
 }
-
 
 class Source:
     def __init__(

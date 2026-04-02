@@ -14,16 +14,12 @@ URL = "https://www.neunkirchen-siegerland.de"
 TEST_CASES = {"Waldstraße": {"strasse": "Waldstr"}}
 
 ICON_MAP = {
-    "Biotonne": "mdi:leaf",
-    "Papiertonne / Papiercontainer": "mdi:newspaper",
-    "Restmülltonne": "mdi:trash-can",
-    "Spartonne Restmüll": "mdi:trash-can-outline",
-    "Container Restmüll": "mdi:dump-truck",
-    "Gelbe Tonne": "mdi:recycle",
     "Astschnittsammlung": "mdi:tree",
+    "Container Restmüll": "mdi:dump-truck",
+    "Papiertonne / Papiercontainer": "mdi:newspaper",
     "Schadstoffsammlung": "mdi:skull-crossbones",
+    "Spartonne Restmüll": "mdi:trash-can-outline",
 }
-
 
 class Source:
     def __init__(self, strasse):

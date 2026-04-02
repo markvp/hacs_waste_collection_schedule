@@ -24,10 +24,8 @@ ICON_MAP = {
     "GREEN": "mdi:recycle",
 }
 
-
 COLLECTION_URL = "https://app.greyhound.ie/collection/collection_calendar"
 LOGIN_URL = "https://app.greyhound.ie/"
-
 
 # ### Arguments affecting the configuration GUI ####
 
@@ -51,14 +49,11 @@ PARAM_TRANSLATIONS = {  # Optional dict to translate the arguments, will be show
 
 # ### End of arguments affecting the configuration GUI ####
 
-
 class GreyhoundAPIError(Exception):
     """Exception raised for errors in the Greyhound API."""
 
-
 class GreyhoundAPICommunicationError(GreyhoundAPIError):
     """Communication error with the API."""
-
 
 class Source:
     def __init__(self, account_number: str, pin: str):

@@ -9,14 +9,11 @@ DESCRIPTION = "Source for Abfallwirtschaftsbetriebe Köln waste collection."
 URL = "https://www.awbkoeln.de"
 TEST_CASES = {"Koeln": {"street_code": 2, "building_number": 50}}
 
-
 PARAM_TRANSLATIONS = {
     "de": {
         "street_code": "Straßencode",
-        "building_number": "Hausnummer",
-    }
+    },
 }
-
 
 class Source:
     def __init__(self, street_code, building_number):

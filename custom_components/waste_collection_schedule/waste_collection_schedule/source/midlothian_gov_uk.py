@@ -22,12 +22,9 @@ DOMAIN_URL = "https://my.midlothian.gov.uk/apibroker/domain/my.midlothian.gov.uk
 RUN_LOOKUP_URL = "https://my.midlothian.gov.uk/apibroker/runLookup"
 
 ICON_MAP = {
-    "Food Collection Service": "mdi:food-apple",
-    "Glass Collection Service": "mdi:glass-fragile",
-    "Residual Collection Service": "mdi:trash-can",
-    "Garden Collection Service": "mdi:leaf",
-    "Recycling Collection Service": "mdi:recycle",
     "Card Collection Service": "mdi:archive",
+    "Food Collection Service": "mdi:food-apple",
+    "Garden Collection Service": "mdi:leaf",
 }
 
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
@@ -38,13 +35,6 @@ PARAM_DESCRIPTIONS = {
     "en": {
         "uprn": "Unique Property Reference Number (required)",
         "postcode": "Postcode of the property (required)",
-    },
-}
-
-PARAM_TRANSLATIONS = {
-    "en": {
-        "uprn": "UPRN",
-        "postcode": "Postcode",
     },
 }
 

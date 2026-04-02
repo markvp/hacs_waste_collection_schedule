@@ -25,7 +25,6 @@ ICON_MAP = {
     "purple": "mdi:newspaper",
 }
 
-
 TITLE = "South Kesteven District Council"
 DESCRIPTION = "Source for southkesteven.gov.uk services for South Kesteven, UK."
 

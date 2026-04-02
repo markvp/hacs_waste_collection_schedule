@@ -30,9 +30,6 @@ TEST_CASES = {
 ICON_MAP = {
     "DOMESTIC FOOD WASTE SERVICE": "mdi:food-apple",
     "DOMESTIC RECYCLING WASTE COLLECTION SERVICE": "mdi:recycle",
-    "DOMESTIC REFUSE WASTE COLLECTION SERVICE": "mdi:trash-can",
-    "DOMESTIC GARDEN WASTE SERVICE": "mdi:leaf",
-    # Add other types as needed
 }
 
 #### Arguments affecting the configuration GUI ####
@@ -53,7 +50,6 @@ PARAM_TRANSLATIONS = {
     "en": {
         "number": "House/Business Name/Number",
         "street": "Street Name",
-        "postcode": "Postcode",
     },
 }
 

@@ -21,12 +21,11 @@ TEST_CASES = {
 ICON_MAP = {
     "BLACK": "mdi:trash-can",
     "BLUE": "mdi:recycle",
-    "PURPLE": "mdi:newspaper",
     "GREEN": "mdi:leaf",
     "ORANGE": "mdi:food",
+    "PURPLE": "mdi:newspaper",
 }
 REGEX = r"(BLACK|BLUE|PURPLE|GREEN|ORANGE).+,\s(\d+\/\d+).+\s(\d+\/\d+)"
-
 
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     "en": "View the instructions found at: https://github.com/mampfes/hacs_waste_collection_schedule/blob/master/doc/source/west_lindsey_gov_uk.md",
@@ -47,7 +46,6 @@ PARAM_DESCRIPTIONS = {
         "id": "The unique property id assigned to your property",
     }
 }
-
 
 class Source:
     def __init__(self, x: int | str, y: int | str, id: int | str):

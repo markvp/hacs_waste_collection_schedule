@@ -9,19 +9,12 @@ DESCRIPTION = "Source for AWG Wuppertal."
 URL = "https://awg-wuppertal.de/"
 TEST_CASES = {"Hauptstraße": {"street": "Hauptstraße"}}
 
-
 ICON_MAP = {
-    "Restmüll": "mdi:trash-can",
     "Gelb": "mdi:recycle",
-    "Bio": "mdi:leaf",
-    "Papier": "mdi:package-variant",
-    "Sperrmüll": "mdi:sofa",
-    "Weihnachtsbaumabholung": "mdi:pine-tree",
 }
 
 BASE_URL = "https://awg-wuppertal.de"
 API_URL = f"{BASE_URL}/privatkunden/abfallkalender.html"
-
 
 class Source:
     def __init__(self, street: str):

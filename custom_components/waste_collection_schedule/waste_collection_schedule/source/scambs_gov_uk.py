@@ -22,11 +22,6 @@ API_URLS = {
     "address_search": "https://servicelayer3c.azure-api.net/wastecalendar/address/search/",
     "collection": "https://servicelayer3c.azure-api.net/wastecalendar/collection/search/{}/",
 }
-ICON_MAP = {
-    "DOMESTIC": "mdi:trash-can",
-    "RECYCLE": "mdi:recycle",
-    "ORGANIC": "mdi:leaf",
-}
 ROUNDS = {
     "DOMESTIC": "Black Bin",
     "RECYCLE": "Blue Bin",
@@ -34,7 +29,6 @@ ROUNDS = {
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, post_code: str, number: str):
@@ -77,8 +71,7 @@ class Source:
                             round_type, round_type.title()
                         ),  # returns concise values: Black Bin, Blue Bin, Green Bin
                         # t = round_type.title(),  # returns standard Scambs values: Black Bin Collection, Blue Bin Collection, Green Bin Collection
-                        icon=ICON_MAP.get(round_type),
-                    )
+                        )
                 )
 
         return entries

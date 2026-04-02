@@ -12,16 +12,14 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Matavfall": "mdi:leaf",
     "Brännbart": "mdi:fire",
+    "Färgat glas/Ofärgat glas": "mdi:bottle-soda",
     "Matavfall/Restavfall": "mdi:trash-can",
     "Plast/Kartong": "mdi:package",
-    "Färgat glas/Ofärgat glas": "mdi:bottle-soda",
 }
 
 SEARCH_URL = "https://gullspang.avfallsapp.se/api/nova/v1/next-pickup/search"
 DATA_URL = "https://gullspang.avfallsapp.se/api/nova/v1/next-pickup/address"
-
 
 class Source:
     def __init__(self, address: str, city: str):

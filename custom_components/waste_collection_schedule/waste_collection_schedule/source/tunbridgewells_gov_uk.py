@@ -12,19 +12,14 @@ TEST_CASES = {
     "100061204678": {"uprn": 100061204678},
 }
 
-
 ICON_MAP = {
-    "REFUSE": "mdi:trash-can",
     "GARDEN": "mdi:leaf",
-    "RECYCLING": "mdi:recycle",
 }
-
 
 API_URL = "https://mytwbc.tunbridgewells.gov.uk/AchieveForms//definition.json&process=1&process_uri=sandbox-proac-c47b63f017ed"
 HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
-
 
 class Source:
     def __init__(self, uprn: str | int):

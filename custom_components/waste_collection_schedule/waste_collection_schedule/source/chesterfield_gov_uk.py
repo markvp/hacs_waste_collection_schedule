@@ -13,7 +13,6 @@ from waste_collection_schedule import Collection
 # This line suppresses the InsecureRequestWarning when using verify=False
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-
 TITLE = "Chesterfield Borough Council"
 DESCRIPTION = "Source for waste collection services for Chesterfield Borough Council"
 URL = "https://www.chesterfield.gov.uk/"
@@ -30,10 +29,8 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "DOMESTIC REFUSE": "mdi:trash-can",
-    "DOMESTIC RECYCLING": "mdi:recycle",
-    "DOMESTIC ORGANIC": "mdi:leaf",
     "DOMESTIC PAID GARDEN": "mdi:leaf",
+    "DOMESTIC RECYCLING": "mdi:recycle",
 }
 
 API_URLS = {
@@ -42,9 +39,7 @@ API_URLS = {
     "search": "https://myaccount.chesterfield.gov.uk/anonymous/aura?r=2&aura.ApexAction.execute=1",
 }
 
-
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, uprn=None):

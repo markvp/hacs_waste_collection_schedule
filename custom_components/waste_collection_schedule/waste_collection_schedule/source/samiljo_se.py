@@ -24,34 +24,34 @@ API_URLS = {
 MAX_PARENT_TRAVERSAL_STEPS = 10
 
 ICON_MAP = {
+    "FKARL1": "mdi:trash-can",
+    "FKARL1-H": "mdi:trash-can",
+    "FKARL1-HK": "mdi:trash-can",
+    "FKARL1-HK-H": "mdi:trash-can",
+    "FKARL2": "mdi:recycle",
+    "FKARL2-H": "mdi:recycle",
+    "FOSORT": "mdi:trash-can",
+    "FOSORT-H": "mdi:trash-can",
+    "FREST": "mdi:trash-can",
+    "FREST-H": "mdi:trash-can",
+    "FREST-HK": "mdi:trash-can",
+    "FREST-HK-H": "mdi:trash-can",
     "HKARL1": "mdi:trash-can",
     "HKARL1-H": "mdi:trash-can",
+    "HKARL1-HK": "mdi:trash-can",
+    "HKARL1-HK-H": "mdi:trash-can",
     "HKARL2": "mdi:recycle",
     "HKARL2-H": "mdi:recycle",
     "HMAT": "mdi:food-apple",
     "HMAT-H": "mdi:food-apple",
-    "HREST": "mdi:trash-can",
-    "HREST-H": "mdi:trash-can",
     "HOSORT": "mdi:trash-can",
     "HOSORT-H": "mdi:trash-can",
-    "FKARL1": "mdi:trash-can",  # Matavfall, Restavfall, Tidningar & Färgat glas
-    "FKARL2": "mdi:recycle",  # Förpackningar av Papper, Plast & Metall samt Ofärgat glas
-    "FKARL1-H": "mdi:trash-can",  # Matavfall, Restavfall, Tidningar & Färgat glas
-    "FKARL2-H": "mdi:recycle",  # Förpackningar av Papper, Plast & Metall samt Ofärgat glas
-    "FOSORT": "mdi:trash-can",
-    "FOSORT-H": "mdi:trash-can",
+    "HREST": "mdi:trash-can",
+    "HREST-H": "mdi:trash-can",
     "HREST-HK": "mdi:trash-can",
     "HREST-HK-H": "mdi:trash-can",
-    "HKARL1-HK": "mdi:trash-can",  # Restavfall, Tidningar & Färgat glas
-    "HKARL1-HK-H": "mdi:trash-can",  # Restavfall, Tidningar & Färgat glas
     "TRG": "mdi:leaf",
     "TRG-H": "mdi:leaf",
-    "FREST-HK": "mdi:trash-can",
-    "FREST-HK-H": "mdi:trash-can",
-    "FKARL1-HK-H": "mdi:trash-can",
-    "FKARL1-HK": "mdi:trash-can",
-    "FREST": "mdi:trash-can",
-    "FREST-H": "mdi:trash-can",
 }
 
 NAME_MAP = {
@@ -99,7 +99,6 @@ MONTH_MAP = {
     "november": 11,
     "december": 12,
 }
-
 
 class Source:
     def __init__(self, street, city):

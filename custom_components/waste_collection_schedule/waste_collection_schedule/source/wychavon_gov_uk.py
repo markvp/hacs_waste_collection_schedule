@@ -13,13 +13,10 @@ TEST_CASES = {
     "100121280854": {"uprn": 100121280854},
 }
 
-
 ICON_MAP = {
-    "Non-recyclable": "mdi:trash-can",
     "Garden": "mdi:leaf",
-    "Recycling": "mdi:recycle",
+    "Non-recyclable": "mdi:trash-can",
 }
-
 
 class Source(Roundlookup):
     def __init__(self, uprn: str | int):

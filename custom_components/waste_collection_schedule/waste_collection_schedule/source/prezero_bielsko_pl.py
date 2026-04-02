@@ -31,13 +31,13 @@ WASTE_TYPE_MAP = {
 }
 
 ICON_MAP = {
-    "kuchenne": "mdi:bio",
-    "resztkowe": "mdi:trash-can",
-    "makulatura": "mdi:newspaper",
-    "szklo": "mdi:glass-fragile",
-    "mix": "mdi:recycle",
-    "zielone": "mdi:flower-tulip",
     "gabaryty": "mdi:table-furniture",
+    "kuchenne": "mdi:bio",
+    "makulatura": "mdi:newspaper",
+    "mix": "mdi:recycle",
+    "resztkowe": "mdi:trash-can",
+    "szklo": "mdi:glass-fragile",
+    "zielone": "mdi:flower-tulip",
 }
 
 # ### Arguments affecting the configuration GUI ####
@@ -63,25 +63,15 @@ PARAM_DESCRIPTIONS = {
 
 PARAM_TRANSLATIONS = {
     "en": {
-        "street": "Street",
         "house_number": "House number",
     },
-    "de": {
-        "street": "Straße",
-        "house_number": "Hausnummer",
-    },
     "it": {
-        "street": "Via",
         "house_number": "Numero civico",
-    },
-    "fr": {
-        "street": "Rue",
-        "house_number": "Numéro de maison",
+        "street": "Via",
     },
 }
 
 # ### End of arguments affecting the configuration GUI ####
-
 
 class Source:
     def __init__(self, street: str, house_number: str):

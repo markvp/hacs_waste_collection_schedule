@@ -20,14 +20,11 @@ API_METHOD = "GetData.ashx"
 
 REGEX_JOB_NAME = r"(?i)Empty Bin\s+(?P<bin_type>\S+(?:\s+\S+)?)"
 ICON_MAP = {
-    "Grey Bin": "mdi:trash-can",
-    "Green Bin": "mdi:leaf",
-    "Brown Bin": "mdi:recycle",
-    "Blue Bin": "mdi:recycle",
     "Blue Bag": "mdi:recycle",
+    "Blue Bin": "mdi:recycle",
+    "Brown Bin": "mdi:recycle",
     "Green Box": "mdi:recycle",
 }
-
 
 class Source:
     def __init__(self, uprn: str | int):

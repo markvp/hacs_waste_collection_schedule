@@ -43,10 +43,9 @@ TEST_CASES = {
 API_URL = "https://mohubudapest.hu/hulladeknaptar"
 ICON_MAP = {
     "COMMUNAL": "mdi:trash-can",
-    "SELECTIVE": "mdi:recycle",
     "GREEN": "mdi:leaf",
+    "SELECTIVE": "mdi:recycle",
 }
-
 
 class Source:
     def __init__(self, district, street, house_number, verify=True):

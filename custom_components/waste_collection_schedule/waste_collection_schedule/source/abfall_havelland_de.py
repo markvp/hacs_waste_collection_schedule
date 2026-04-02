@@ -19,15 +19,7 @@ TEST_CASES = {
     },
 }
 
-ICON_MAP = {
-    "mülltonne": "mdi:trash-can",
-    "bio-tonne": "mdi:leaf",
-    "papier": "mdi:package-variant",
-    "gelbe": "mdi:recycle",
-}
-
 API_URL = "https://www.abfall-havelland.de/ics.php"
-
 
 class Source:
     def __init__(self, ort: str, strasse: str):

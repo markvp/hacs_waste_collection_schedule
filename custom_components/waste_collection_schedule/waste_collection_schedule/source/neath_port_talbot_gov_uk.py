@@ -9,24 +9,19 @@ import requests
 from bs4 import BeautifulSoup
 from waste_collection_schedule import Collection
 
-
 TITLE = "Neath Port Talbot Council"
 DESCRIPTION = "Source for waste collection services for Neath Port Talbot Council"
 URL = "https://www.npt.gov.uk/"
-
 
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     "en": "an easy way to discover your Unique Property Reference Number (UPRN) is by going to https://www.findmyaddress.co.uk/ and entering in your address details.",
 }
 
-
 PARAM_TRANSLATIONS = {
     "en": {
-        "postcode": "Postcode",
         "uprn": "Unique Property Reference Number (UPRN)",
-    }
+    },
 }
-
 
 PARAM_DESCRIPTIONS = {
     "en": {
@@ -34,7 +29,6 @@ PARAM_DESCRIPTIONS = {
         "uprn": "Your Unique Street Reference Number (USRN) can be found by searching for your address at https://uprn.uk/ and viewing the _Data Associations_ section.",
     }
 }
-
 
 TEST_CASES = {
     "Test_001": {
@@ -51,34 +45,24 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "Plastic / Tins / Cans": "mdi:bottle-soda",
-    "Cardboard, Cartons and Paper": "mdi:package-variant",
-    "Glass": "mdi:glass-fragile",
     "Food Waste": "mdi:leaf",
-    "Batteries": "mdi:battery",
-    "General Household Rubbish": "mdi:trash-can",
     "Garden Waste": "mdi:flower",
+    "Plastic / Tins / Cans": "mdi:bottle-soda",
 }
-
 
 class FailedToFindTokensError(Exception): ...
 
-
 class FailedToFindCollections(Exception): ...
-
 
 _DAY_MONTH_RE = re.compile(
     r"(?i)^\s*(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*,?\s*(\d{1,2})\s*([A-Za-z]+)\s*$"
 )
 
-
 @dataclass(frozen=True)
 class Tokens:
     request_verification_token: str | None
     ufprt: str | None
-
 
 class Source:
     """
@@ -138,14 +122,12 @@ class Source:
         # Step 3: Parse the waste collection schedule from the response HTML.
         return _parse_collections_from_page_source(fetch_collections_request.text)
 
-
 def _base_post_payload(raw_html: str) -> dict[str, str]:
     tokens = _extract_tokens(raw_html)
     return {
         "__RequestVerificationToken": tokens.request_verification_token,
         "ufprt": tokens.ufprt,
     }
-
 
 def _extract_tokens(raw_html: str) -> Tokens:
     soup = BeautifulSoup(raw_html, "html.parser")
@@ -164,7 +146,6 @@ def _extract_tokens(raw_html: str) -> Tokens:
         request_verification_token=request_verification_token,
         ufprt=ufprt,
     )
-
 
 def _parse_collections_from_page_source(raw_html: str) -> list[Collection]:
     soup = BeautifulSoup(raw_html, "html.parser")
@@ -209,13 +190,11 @@ def _parse_collections_from_page_source(raw_html: str) -> list[Collection]:
 
     return collections
 
-
 def _collection_date_from_header(raw_html: str) -> datetime.date:
     """
     Parse a datetime from a header like 'Thursday, 23 October'.
     """
     return parser.parse(_clean_text(raw_html), dayfirst=True, fuzzy=True).date()
-
 
 def _clean_text(s: str) -> str:
     return " ".join(s.replace("\xa0", " ").split())

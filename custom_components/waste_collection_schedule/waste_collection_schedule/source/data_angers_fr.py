@@ -29,8 +29,8 @@ TEST_CASES = {
 ICON_MAP = {
     "OM": "mdi:trash-can",
     "TRI": "mdi:recycle",
-    "enc": "mdi:truck-remove",
     "dv": "mdi:leaf",
+    "enc": "mdi:truck-remove",
     "verre": "mdi:bottle-wine",
 }
 
@@ -225,11 +225,9 @@ CONFIG_FLOW_TYPES = {
     },
 }
 
-
 class EntryType(TypedDict):
     type: str
     results: list[str]
-
 
 class Source:
     api_url_waste_calendar = "https://data.angers.fr/api/explore/v2.1/catalog/datasets/calendrier-tri-et-plus/records?select=date_collecte&where=id_secteur%3D%22{idsecteur}%22&limit=100"

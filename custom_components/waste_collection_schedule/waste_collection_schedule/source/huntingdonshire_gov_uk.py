@@ -14,12 +14,9 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Refuse": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Garden": "mdi:leaf",
     "Food": "mdi:food-apple",
+    "Garden": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(self, uprn):

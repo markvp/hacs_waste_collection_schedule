@@ -15,13 +15,12 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
+    "Blue": "mdi:package-variant",
     "Burgundy": "mdi:trash-can",
     "Grey": "mdi:recycle",
-    "Blue": "mdi:package-variant",
 }
 
 API_URL = "https://mybins.blackburn.gov.uk/api/mybins/getbincollectiondays"
-
 
 # With verify=True the POST fails due to a SSLCertVerificationError.
 # Using verify=False works, but is not ideal. The following links may provide a better way of dealing with this:
@@ -29,7 +28,6 @@ API_URL = "https://mybins.blackburn.gov.uk/api/mybins/getbincollectiondays"
 # https://urllib3.readthedocs.io/en/1.26.x/user-guide.html#ssl
 # This line suppresses the InsecureRequestWarning when using verify=False
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
 
 class Source:
     def __init__(self, uprn):

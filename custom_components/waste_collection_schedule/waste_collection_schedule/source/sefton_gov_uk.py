@@ -27,9 +27,7 @@ TEST_CASES = {  # Insert arguments for test cases to be used by test_sources.py 
 }
 
 API_URL = "https://www.sefton.gov.uk/bins-and-recycling/bins-and-recycling/when-is-my-bin-collection-day/"
-ICON_MAP = {  # Optional: Dict of waste types and suitable mdi icons
-    "RESIDUAL": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
+ICON_MAP = {
     "GREEN": "mdi:leaf",
 }
 
@@ -50,9 +48,7 @@ PARAM_DESCRIPTIONS = {  # Optional dict to describe the arguments, will be shown
     }
 }
 
-
 # ### End of arguments affecting the configuration GUI ####
-
 
 class Source:
     def __init__(

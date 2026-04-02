@@ -20,12 +20,8 @@ TEST_CASES = {  # Insert arguments for test cases to be used by test_sources.py 
 
 API_URL = "https://www.frankston.vic.gov.au/My-Property/Waste-and-recycling/My-bins/Bin-collections"
 ICON_MAP = {
-    "Rubbish": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Green Waste": "mdi:leaf",
     "Glass": "mdl:glass-fragile",
 }
-
 
 class Source:
     def __init__(

@@ -47,6 +47,10 @@ class Collection(CollectionBase):
         icon: Optional[str] = None,
         picture: Optional[str] = None,
     ):
+        if icon is None:
+            from waste_collection_schedule.service.icons import guess_icon
+
+            icon = guess_icon(t)
         CollectionBase.__init__(self, date=date, icon=icon, picture=picture)
         self["type"] = t
 

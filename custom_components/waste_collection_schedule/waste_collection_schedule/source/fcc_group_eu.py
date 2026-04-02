@@ -23,14 +23,11 @@ TEST_CASES = {
 
 COUNTRY = "sk"
 
-
 ICON_MAP = {
     "Komunálny": "mdi:trash-can",
     "Plasty": "mdi:recycle",
-    "Papier": "mdi:package-variant",
     "Separovaný": "mdi:recycle",
 }
-
 
 class City(TypedDict):
     locationId: int
@@ -39,18 +36,15 @@ class City(TypedDict):
     defaultFrequencyTitle: None | str
     locations: None | list[str]
 
-
 class Waste(TypedDict):
     wasteId: int
     title: str
     type: int
 
-
 class OptionsResult(TypedDict):
     defaultFrequencyTitle: str | None
     frequencies: list[int]
     wastes: list[Waste]
-
 
 class CollecctionEntry(TypedDict):
     scheduleId: int
@@ -60,13 +54,10 @@ class CollecctionEntry(TypedDict):
     isBiweekly: bool
     isMonthly: bool
 
-
 API_URL = "https://vylozsmeti.kabernet.sk/api/public"
-
 
 def cmp(a: str, b: str) -> bool:  # type: ignore[attr-defined]
     return a.lower().replace(" ", "") == b.lower().replace(" ", "")
-
 
 FREQUENCIES_LITERAL = Literal["weekly", "biweekly", "monthly"]
 FREQUENCIES: list[FREQUENCIES_LITERAL] = ["weekly", "biweekly", "monthly"]
@@ -76,7 +67,6 @@ DEFAULT_FREQUENCY_MAP: dict[str, FREQUENCIES_LITERAL] = {
     "týždenne": "weekly",
     "": "weekly",
 }
-
 
 class Source:
     def __init__(

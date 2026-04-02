@@ -51,9 +51,7 @@ HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
 
-
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, house_number=None, uprn=None, street=None, town=None):

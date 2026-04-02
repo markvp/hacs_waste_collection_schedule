@@ -11,18 +11,12 @@ TEST_CASES = {
     "Red Lion Street": {"uprn": 5121151},
 }
 
-
 ICON_MAP = {
-    "rubbish": "mdi:trash-can",
-    "garden waste": "mdi:leaf",
     "food": "mdi:food",
-    "recycling": "mdi:recycle",
 }
-
 
 API_URL = "https://environmentservices.camden.gov.uk/property/{uprn}"
 ICS_URL = "https://environmentservices.camden.gov.uk{href}"
-
 
 class Source:
     def __init__(self, uprn: str | int):

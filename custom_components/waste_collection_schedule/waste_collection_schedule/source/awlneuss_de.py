@@ -29,22 +29,16 @@ TEST_CASES = {  # Insert arguments for test cases to be used by test_sources.py 
 
 API_URL = "https://buergerportal.awl-neuss.de/api/v1/calendar"
 ICON_MAP = {
-    "grau": "mdi:trash-can",
-    "pink": "mdi:trash-can",
-    "braun": "mdi:leaf",
     "blau": "mdi:package-variant",
     "gelb": "mdi:recycle",
+    "pink": "mdi:trash-can",
 }
-
 
 PARAM_TRANSLATIONS = {
     "de": {
-        "building_number": "Hausnummer",
-        "street_name": "Straßenname",
         "street_code": "Straßencode",
-    }
+    },
 }
-
 
 class Source:
     def __init__(

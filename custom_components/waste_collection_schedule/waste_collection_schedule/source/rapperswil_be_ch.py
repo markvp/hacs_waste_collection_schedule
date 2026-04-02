@@ -10,16 +10,8 @@ TEST_CASES: dict[str, dict[str, str]] = {
     "Rapperswil": {},
 }
 
-
-ICON_MAP = {
-    "Hauskehricht": "mdi:trash-can",
-    "Grüngut": "mdi:leaf",
-    "Papier und Karton": "mdi:package-variant",
-}
-
 BASE_URL = "https://www.rapperswil-be.ch"
 API_URL = f"{BASE_URL}/de/abfallwirtschaft/abfallkalender/"
-
 
 class Source:
     def __init__(self):

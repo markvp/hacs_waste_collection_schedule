@@ -26,18 +26,9 @@ TEST_CASES = {
     },
 }
 ICON_MAP = {
-    "Refuse Collection": "mdi:trash-can",
-    "Refuse": "mdi:trash-can",
-    "Residual Waste": "mdi:trash-can",
-    "Mixed Recycling Collection": "mdi:recycle",
-    "Mixed Recycling": "mdi:recycle",
-    "Dry Recycling": "mdi:recycle",
-    "Garden Collection": "mdi:leaf",
-    "Garden Waste": "mdi:leaf",
     "Food Collection": "mdi:food-apple",
     "Food Waste": "mdi:food-apple",
-    "Paper/Card Collection": "mdi:package-variant",
-    "Paper & Card": "mdi:package-variant",
+    "Garden Collection": "mdi:leaf",
 }
 
 _ICON_KEYWORDS = {
@@ -86,10 +77,8 @@ ADDRESS_FIELDS = (
     "postcode",
 )
 
-
 def build_headers() -> Dict[str, str]:
     return dict(BASE_HEADERS)
-
 
 def normalise_postcode(text: Optional[str]) -> Optional[str]:
     if not text:
@@ -99,7 +88,6 @@ def normalise_postcode(text: Optional[str]) -> Optional[str]:
         return None
     return f"{match.group(1).upper()} {match.group(2).upper()}"
 
-
 def _address_to_string(address: Address) -> str:
     return " ".join(
         str(value)
@@ -107,7 +95,6 @@ def _address_to_string(address: Address) -> str:
         for value in [address.get(key)]
         if value not in (None, "")
     ).strip()
-
 
 def _clean_type_name(name: str) -> str:
     cleaned = name.strip()
@@ -117,7 +104,6 @@ def _clean_type_name(name: str) -> str:
         cleaned = cleaned[: -len("bin")].strip()
     return cleaned or name
 
-
 def _icon_for(label: str) -> Optional[str]:
     if label in ICON_MAP:
         return ICON_MAP[label]
@@ -126,7 +112,6 @@ def _icon_for(label: str) -> Optional[str]:
         if keyword in lowered:
             return icon
     return None
-
 
 def _parse_date_string(value: Any) -> Optional[date]:
     """Handle the varied date formats returned by the Cloud 9 API."""
@@ -159,7 +144,6 @@ def _parse_date_string(value: Any) -> Optional[date]:
             continue
     return None
 
-
 def _extract_dates(details: Dict[str, Any]) -> List[date]:
     """Collect date fields from the different container schemas the API returns."""
     values: List[Any] = [
@@ -189,7 +173,6 @@ def _extract_dates(details: Dict[str, Any]) -> List[date]:
     return sorted(
         {parsed for parsed in map(_parse_date_string, values) if parsed is not None}
     )
-
 
 class Source:
     def __init__(

@@ -14,14 +14,11 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Black bin": "mdi:trash-can",
     "Blue bin": "mdi:recycle",
     "Brown bin": "mdi:glass-fragile",
-    "Green bin": "mdi:leaf",
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, uprn):

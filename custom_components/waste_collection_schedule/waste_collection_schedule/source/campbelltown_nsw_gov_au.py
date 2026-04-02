@@ -52,8 +52,6 @@ HEADERS = {
 
 ICON_MAP = {
     "General Waste": "trash-can",
-    "Recycling": "mdi:recycle",
-    "Green Waste": "mdi:leaf",
 }
 
 class Source:

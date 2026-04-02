@@ -14,15 +14,14 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "NON-RECYCLABLE": "mdi:trash-can",
     "FOOD": "mdi:food",
     "GARDEN": "mdi:leaf",
-    "PAPER": "mdi:newspaper",
     "MIXED": "mdi:glass-fragile",
+    "NON-RECYCLABLE": "mdi:trash-can",
+    "PAPER": "mdi:newspaper",
 }
 
 MAX_COUNT = 15
-
 
 class Source:
     def __init__(self, property):

@@ -14,11 +14,8 @@ ICON_MAP = {
     "Baum- und Strauchschnitt": "mdi:leaf",
     "Biotonne": "mdi:bio",
     "Blaue Tonne": "mdi:newspaper-variant-multiple",
-    "Gelber Sack": "mdi:recycle",
-    "Restmülltonne": "mdi:trash-can",
     "Weihnachtsbäume": "mdi:pine-tree",
 }
-
 
 PARAM_TRANSLATIONS = {
     "de": {
@@ -28,7 +25,6 @@ PARAM_TRANSLATIONS = {
         "pois": "POIS",
     },
 }
-
 
 class Source:
     def __init__(self, pois):

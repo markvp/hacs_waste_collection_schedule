@@ -18,9 +18,6 @@ TEST_CASES = (
 )
 
 ICON_MAP = {
-    "Garden waste": "mdi:leaf",
-    "Refuse": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
     "Food waste": "mdi:food-apple",
 }
 # order of BINS is important, it's the order they appear left-to-right in the table.
@@ -33,7 +30,6 @@ API_URL = (
 HEADERS = {"Content-Type": "application/x-www-form-urlencoded"}
 
 DATE_FORMAT = "%A, %d/%m/%Y"  # format of the date string in the collection table
-
 
 class Source:
     def __init__(self, uprn):

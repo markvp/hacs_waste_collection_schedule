@@ -23,11 +23,10 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "REST-MAD": "mdi:trash-can",
     "PAP-PAPIR": "mdi:newspaper",
     "PLAST-GLAS-METAL": "mdi:bottle-wine",
+    "REST-MAD": "mdi:trash-can",
 }
-
 
 class Source:
     def __init__(self, id: str | int):

@@ -19,11 +19,9 @@ TEST_CASES = {
     "Test_003": {"postcode": "NE31 1LY", "uprn": 100000304486},
 }
 ICON_MAP = {
-    "HOUSEHOLD": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
     "GARDEN": "mdi:leaf",
+    "HOUSEHOLD": "mdi:trash-can",
 }
-
 
 class Source:
     def __init__(self, postcode, uprn):

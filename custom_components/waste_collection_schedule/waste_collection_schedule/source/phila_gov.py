@@ -24,10 +24,6 @@ DAYS = {
     "SAT": SA,
     "SUN": SU,
 }
-ICON_MAP = {
-    "Rubbish": "mdi:trash-can",
-    "Recycle": "mdi:recycle",
-}
 
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     "en": "Search for your collection schedule at [phila.gov](https://www.phila.gov/services/trash-recycling-city-upkeep/find-your-trash-and-recycling-collection-day), use your address as it is displayed on the search results.",
@@ -44,7 +40,6 @@ PARAM_TRANSLATIONS = {
         "address": "Street name and house number of the property",
     },
 }
-
 
 class Source:
     def __init__(self, address: str):
@@ -139,11 +134,11 @@ class Source:
         entries = []
         for item in waste_schedule:
             entries.append(
-                Collection(date=item, t="Rubbish", icon=ICON_MAP.get("Rubbish"))
+                Collection(date=item, t="Rubbish")
             )
         for item in recycle_schedule:
             entries.append(
-                Collection(date=item, t="Recycle", icon=ICON_MAP.get("Recycle"))
+                Collection(date=item, t="Recycle")
             )
 
         return entries

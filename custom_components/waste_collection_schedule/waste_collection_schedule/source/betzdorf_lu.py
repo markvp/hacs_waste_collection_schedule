@@ -18,15 +18,12 @@ TEST_CASES: dict[str, dict] = {
 }
 
 ICON_MAP = {
-    "centre-de-ressources-recyclingpark-superdreckskescht": "mdi:recycle",
     "dechets-menagers-hausmull-exception": "mdi:trash-can",
-    "dechets-biodegradables-biomull-exception": "mdi:leaf",
     "valorlux": "mdi:package-variant",
     "verre-papiers-altglas-altpapier": "mdi:bottle-wine",
 }
 
 API_URL = "https://www.betzdorf.lu/fr/waste"
-
 
 class Source:
     def __init__(self):

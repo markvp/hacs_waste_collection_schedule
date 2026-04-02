@@ -41,15 +41,6 @@ TEST_CASES = {
     },
 }
 
-
-ICON_MAP = {
-    "General Waste": "mdi:trash-can",
-    "Blue-lidded Recycling Bin": "mdi:recycle",
-    "Food and Garden": "mdi:leaf",
-    "Glass, Metals, Plastics and Cartons": "mdi:glass-fragile",
-}
-
-
 class Source:
     def __init__(self, uprn: str | int, usrn: str | int):
         self._uprn = str(uprn).zfill(12)
@@ -75,7 +66,6 @@ class Source:
                     Collection(
                         date=datetime.strptime(day.text, "%d %B %Y").date(),
                         t=waste_type,
-                        icon=ICON_MAP.get(waste_type),
                     )
                 )
 

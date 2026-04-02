@@ -15,13 +15,9 @@ TEST_CASES = {
 COUNTRY = "de"
 
 ICON_MAP = {
-    "Gelber Sack": "mdi:recycle",
-    "Grüngut": "mdi:leaf",
-    "Papier": "mdi:package-variant",
     "Rest- und Biomüll": "mdi:trash-can",
     "Wertstoffhof geschlossen": "mdi:factory",
 }
-
 
 HOST_URI = "https://nu.neu-ulm.de"
 
@@ -30,7 +26,6 @@ PARAM_TRANSLATIONS = {
         "region": "Bezirk",
     }
 }
-
 
 class Source:
     def __init__(self, region: str):

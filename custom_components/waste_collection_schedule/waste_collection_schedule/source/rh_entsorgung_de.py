@@ -18,16 +18,12 @@ TEST_CASES = {
     },
 }
 
-
 PARAM_TRANSLATIONS = {
     "de": {
-        "city": "Ort",
-        "street": "Straße",
-        "house_number": "Hausnummer",
         "address_suffix": "Hausnummerzusatz",
+        "city": "Ort",
     },
 }
-
 
 class Source(JumomindSource):
     def __init__(

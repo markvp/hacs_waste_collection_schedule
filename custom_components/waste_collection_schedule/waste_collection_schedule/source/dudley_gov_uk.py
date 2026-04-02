@@ -14,7 +14,9 @@ TEST_CASES = {
     "Test_003": {"uprn": "90164803"},
     "Test_004": {"uprn": 90092621},
 }
-ICON_MAP = {"RECYCLING": "mdi:recycle", "GARDEN": "mdi:leaf", "REFUSE": "mdi:trash-can"}
+ICON_MAP = {
+    "GARDEN": "mdi:leaf",
+}
 REGEX = {
     "DATES": r"(\d+ \w{3})",
     "DAYS": r"every: (Monday|Tuesday|Wednesday|Thursday|Friday)",
@@ -28,7 +30,6 @@ DAYS = {
     "Saturday": 5,
     "Sunday": 6,
 }
-
 
 class Source:
     def __init__(self, uprn: str | int):

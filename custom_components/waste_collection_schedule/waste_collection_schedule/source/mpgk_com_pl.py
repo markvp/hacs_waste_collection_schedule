@@ -10,18 +10,15 @@ TEST_CASES = {
     "3 Maja 38": {"street": "3 Maja", "number": "38"},
 }
 
-
 ICON_MAP = {
-    "tworzyw": "mdi:recycle",
+    "komunalne": "mdi:trash-can",
     "papier": "mdi:newspaper",
     "szklane": "mdi:glass-wine",
-    "komunalne": "mdi:trash-can",
+    "tworzyw": "mdi:recycle",
     "wielkogabarytowe": "mdi:truck",
 }
 
-
 API_URL = "https://www.mpgk.com.pl/mod/harmonogram/ics"
-
 
 class Source:
     def __init__(self, street: str, number: str | int):

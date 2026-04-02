@@ -20,16 +20,13 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "RESTAFFALD": "mdi:trash-can",
-    "PAPIR": "mdi:newspaper",
-    "PAP": "mdi:archive",
-    "EMBALLAGE": "mdi:recycle",
-    "HAVEAFFALD": "mdi:leaf",  # Uncertain about this name, can't find an example
     "GLAS": "mdi:bottle-wine",
-    "METAL": "mdi:wrench",
     "HÅRD PLAST": "mdi:bottle-soda-classic",
+    "METAL": "mdi:wrench",
+    "PAP": "mdi:archive",
+    "PAPIR": "mdi:newspaper",
+    "RESTAFFALD": "mdi:trash-can",
 }
-
 
 class Source:
     def __init__(self, house_number: str | int):

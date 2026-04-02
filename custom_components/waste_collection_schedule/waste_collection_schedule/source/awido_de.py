@@ -11,7 +11,6 @@ TITLE = "AWIDO Online"
 DESCRIPTION = "Source for AWIDO waste collection."
 URL = "https://www.awido-online.de/"
 
-
 def EXTRA_INFO():
     return [
         {
@@ -24,7 +23,6 @@ def EXTRA_INFO():
         }
         for s in SERVICE_MAP
     ]
-
 
 SERVICE_MAP = [
     {
@@ -454,20 +452,14 @@ TEST_CASES = {
 
 _LOGGER = logging.getLogger(__name__)
 
-
 class JSONNotSupported(Exception):
     pass
 
-
 PARAM_TRANSLATIONS = {
     "de": {
-        "customer": "Kunde",
         "city": "Ort",
-        "street": "Straße",
-        "housenumber": "Hausnummer",
-    }
+    },
 }
-
 
 class Source:
     def __init__(

@@ -26,19 +26,10 @@ TEST_CASES = {
 }
 _LOGGER = logging.getLogger(__name__)
 
-ICON_MAP = {
-    "non recyclable waste": "mdi:trash-can",
-    "garden waste": "mdi:leaf",
-    "recycling": "mdi:recycle",
-    "food waste": "mdi:food",
-}
-
-
 BASE_URL = "http://collectiondates.eastlothian.gov.uk"
 START_URL = f"{BASE_URL}/your-calendar"
 STREETS_URL_REGEX = re.compile(r'url\s*:\s*"(.*?)\?postcode=')
 COLLECTION_URL_REGEX = re.compile(r'url\s*:\s*"(.*?)\?id="\s*\+\s*selectStreet')
-
 
 class Source:
     def __init__(

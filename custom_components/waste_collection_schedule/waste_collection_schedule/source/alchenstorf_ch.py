@@ -11,13 +11,11 @@ URL = "https://www.alchenstorf.ch"
 TEST_CASES: dict[str, dict] = {"TEST": {}}
 
 ICON_MAP = {
-    "Grünabfuhr Alchenstorf": "mdi:leaf",
-    "Kehrichtabfuhr Alchenstorf": "mdi:trash-can-outline",
-    "Kartonsammlung Alchenstorf": "mdi:recycle",
-    "Papiersammlung Alchenstorf": "mdi:newspaper-variant-multiple-outline",
     "Alteisenabfuhr Alchenstorf": "mdi:desktop-classic",
+    "Kartonsammlung Alchenstorf": "mdi:recycle",
+    "Kehrichtabfuhr Alchenstorf": "mdi:trash-can-outline",
+    "Papiersammlung Alchenstorf": "mdi:newspaper-variant-multiple-outline",
 }
-
 
 class Source:
     def __init__(self):

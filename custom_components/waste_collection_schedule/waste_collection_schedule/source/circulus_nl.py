@@ -12,10 +12,9 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
+    "PAP": "mdi:newspaper-variant-multiple",
     "REST": "mdi:trash-can",
     "ZWAKRA": "mdi:recycle",
-    "GFT": "mdi:leaf",
-    "PAP": "mdi:newspaper-variant-multiple",
 }
 
 WASTE_MAP = {
@@ -25,7 +24,6 @@ WASTE_MAP = {
     "PAP": "Papier",
 }
 API_URL = "https://mijn.circulus.nl"
-
 
 class Source:
     def __init__(self, postal_code, house_number):

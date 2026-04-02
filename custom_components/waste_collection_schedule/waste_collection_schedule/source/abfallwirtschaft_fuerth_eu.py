@@ -13,14 +13,6 @@ TEST_CASES = {
 
 API_URL = "https://abfallwirtschaft.fuerth.eu/termine.php"
 
-ICON_MAP = {
-    "Restabfall": "mdi:trash-can",
-    "Biotonne": "mdi:leaf",
-    "Gelber Sack": "mdi:recycle",
-    "Altpapier": "mdi:package-variant",
-}
-
-
 class Source:
     def __init__(self, id):
         self._id = id
@@ -46,6 +38,6 @@ class Source:
         entries = []
 
         for d in dates:
-            entries.append(Collection(date=d[0], t=d[1], icon=ICON_MAP.get(d[1])))
+            entries.append(Collection(date=d[0], t=d[1]))
 			
         return entries

@@ -19,13 +19,12 @@ TEXT_MAP = {
     "O": "Glass Container",
 }
 ICON_MAP = {
-    "G": "mdi:trash-can",
     "B": "mdi:recycle",
-    "P": "mdi:house",
     "C": "mdi:bulb",
+    "G": "mdi:trash-can",
     "O": "mdi:glass",
+    "P": "mdi:house",
 }
-
 
 class Source:
     def __init__(self, id):

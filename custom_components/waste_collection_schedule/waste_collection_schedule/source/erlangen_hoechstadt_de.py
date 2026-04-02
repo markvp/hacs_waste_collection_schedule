@@ -13,14 +13,11 @@ TEST_CASES = {
     "Ortsteile": {"city": "Wachenroth", "street": "Ort inkl. aller Ortsteile"},
 }
 
-
 PARAM_TRANSLATIONS = {
     "de": {
         "city": "Ort",
-        "street": "Straße",
-    }
+    },
 }
-
 
 class Source:
     def __init__(self, city, street):

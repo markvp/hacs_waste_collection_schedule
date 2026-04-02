@@ -13,17 +13,11 @@ TEST_CASES = {
     "Neptune Gate": {"uprn": "200000585910"},
 }
 
-ICON_MAP = {
-    "general waste": "mdi:trash-can",
-    "recycling": "mdi:recycle",
-}
-
 SESSION_URL = "https://stevenage-self.achieveservice.com/authapi/isauthenticated?uri=https%3A%2F%2Fstevenage-self.achieveservice.com%2Fen%2Fservice%2FCheck_your_household_bin_collection_days&hostname=stevenage-self.achieveservice.com&withCredentials=true"
 TOKEN_URL = (
     "https://stevenage-self.achieveservice.com/apibroker/runLookup?id=5e55337a540d4"
 )
 API_URL = "https://stevenage-self.achieveservice.com/apibroker/runLookup"
-
 
 class Source:
     def __init__(self, uprn):
@@ -103,7 +97,6 @@ class Source:
                 Collection(
                     date=date,
                     t=bin_type,
-                    icon=ICON_MAP.get(bin_type.lower()),
                 )
             )
 

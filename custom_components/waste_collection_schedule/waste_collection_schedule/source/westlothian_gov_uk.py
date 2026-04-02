@@ -9,7 +9,6 @@ from datetime import datetime
 from waste_collection_schedule.collection import Collection  # type: ignore[attr-defined]
 from waste_collection_schedule.service.ICS import ICS # type: ignore[attr-defined]
 
-
 TITLE = "West Lothian Council"
 DESCRIPTION = "Source for services for West Lothian"
 URL = "https://www.westlothian.gov.uk"
@@ -21,12 +20,11 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Grey": "mdi:trash-can",
+    "Blue": "mdi:note",
     "Brown": "mdi:leaf",
     "Green": "mdi:glass-fragile",
-    "Blue": "mdi:note",
+    "Grey": "mdi:trash-can",
 }
-
 
 class Source:
     def __init__(self, postcode, uprn):

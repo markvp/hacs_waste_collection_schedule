@@ -13,15 +13,10 @@ TEST_CASES = {  # Insert arguments for test cases to be used by test_sources.py 
 
 API_URL = "https://my.nwleics.gov.uk/location?put=nwl{uprn}&rememberme=0&redirect=%2F"
 
-
 ICON_MAP = {
-    "Refuse": "mdi:trash-can",
-    "Garden Waste": "mdi:leaf",
-    "Yellow Bag": "mdi:recycle",
     "Blue Bag": "mdi:recycle",
     "Red Box": "mdi:recycle",
 }
-
 
 class Source:
     def __init__(self, uprn):

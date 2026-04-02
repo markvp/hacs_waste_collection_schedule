@@ -20,13 +20,6 @@ TEST_CASES = {
     "houseAddress-VerifyFalse": {"postcode": "WA16 0AY", "name_number": "3", "verify": False},
 }
 
-ICON_MAP = {
-    "General Waste": "mdi:trash-can",
-    "Mixed Recycling": "mdi:recycle",
-    "Garden Waste": "mdi:leaf",
-}
-
-
 class Source:
     def __init__(self, uprn=None, postcode=None, name_number=None, verify=True):
         self._uprn = uprn
@@ -95,7 +88,6 @@ class Source:
                     Collection(
                         date=date,
                         t=type,
-                        icon=ICON_MAP.get(type),
                     )
                 )
 

@@ -13,16 +13,13 @@ TEST_CASES = {
     "10070340900": {"uprn": 10070340900},
 }
 
-
 ICON_MAP = {
+    "blue": "mdi:recycle",
     "brown": "mdi:leaf",
     "green": "mdi:trash-can",
-    "blue": "mdi:recycle",
 }
 
-
 API_URL = "https://diogel.gwynedd.llyw.cymru/Daearyddol/en/LleDwinByw/Index/{uprn}"
-
 
 class Source:
     def __init__(self, uprn: str | int):

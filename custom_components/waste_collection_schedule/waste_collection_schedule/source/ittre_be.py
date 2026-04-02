@@ -11,15 +11,9 @@ DESCRIPTION = "Source for Ittre."
 URL = "https://www.ittre.be/"
 TEST_CASES: dict[str, dict] = {"Ittre": {}}
 
-
 ICON_MAP = {
-    "Trash": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "Bio": "mdi:leaf",
-    "Paper": "mdi:package-variant",
-    "Recycle": "mdi:recycle",
 }
-
 
 FRENSH_DAYS = {
     "lundi": MO,
@@ -31,9 +25,7 @@ FRENSH_DAYS = {
     "dimanche": SU,
 }
 
-
 API_URL = "https://www.ittre.be/ma-commune/services-communaux/environnement/gestion-des-dechets/collecte-des-dechets-menagers"
-
 
 def clean_string(text: str) -> str:
     text = text.replace("\n", " ")
@@ -41,7 +33,6 @@ def clean_string(text: str) -> str:
     text = re.sub(r"\s+", " ", text)
     text = text.strip()
     return text
-
 
 class Source:
     def __init__(self):

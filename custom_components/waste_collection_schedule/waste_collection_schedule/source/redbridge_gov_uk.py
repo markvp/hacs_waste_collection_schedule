@@ -15,14 +15,11 @@ TEST_CASES = {
     "a church vicarage, garden, recycling, refuse": {"uprn": 10034912354},
 }
 ICON_MAP = {
-    "REFUSE": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
-    "GARDEN": "mdi:leaf",
     "FOOD": "mdi:food-apple",
+    "GARDEN": "mdi:leaf",
 }
 
 KNOWN_SERVICES = {"REFUSE", "RECYCLING", "GARDEN", "FOOD"}
-
 
 def _extract_text_from_pdf(pdf_bytes: bytes) -> str:
     reader = PdfReader(BytesIO(pdf_bytes))
@@ -30,7 +27,6 @@ def _extract_text_from_pdf(pdf_bytes: bytes) -> str:
     for page in reader.pages:
         text += page.extract_text() or ""
     return text
-
 
 def _extract_collections_from_text(text: str) -> list[Collection]:
     # Normalise and split into non‑empty trimmed lines
@@ -128,7 +124,6 @@ def _extract_collections_from_text(text: str) -> list[Collection]:
         i += 1
 
     return entries
-
 
 class Source:
     def __init__(self, uprn):

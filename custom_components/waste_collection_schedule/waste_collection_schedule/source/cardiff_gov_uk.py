@@ -14,11 +14,9 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "General": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Garden": "mdi:leaf",
     "Food": "mdi:food",
-    "Glass": "mdi:glass-fragile",
+    "Garden": "mdi:leaf",
+    "General": "mdi:trash-can",
 }
 
 PAYLOAD_GET_JWT = (
@@ -37,7 +35,6 @@ URL_GET_JWT = (
     "https://authwebservice.cardiff.gov.uk/AuthenticationWebService.asmx?op=GetJWT"
 )
 
-
 def get_headers() -> dict[str, str]:
     """Return common headers that every request to the Cardiff API requires."""
     return {
@@ -45,7 +42,6 @@ def get_headers() -> dict[str, str]:
         "Referer": "https://www.cardiff.gov.uk/",
         "User-Agent": "Mozilla/5.0",
     }
-
 
 def get_token() -> str:
     """Get an access token."""
@@ -70,7 +66,6 @@ def get_token() -> str:
 
     token = json.loads(jwt_result)["access_token"]
     return token
-
 
 class Source:
     def __init__(self, uprn=None):

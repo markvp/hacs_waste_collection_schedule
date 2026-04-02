@@ -12,13 +12,6 @@ TEST_CASES = {
     "test3": {"uprn": 200001767079},
 }
 
-ICON_MAP = {
-    "240L GREY RUBBISH BIN": "mdi:trash-can",
-    "55L RECYCLING BOX": "mdi:recycle",
-    "140L GARDEN BIN": "mdi:leaf",
-}
-
-
 class Source:
     def __init__(
         self, uprn
@@ -38,7 +31,6 @@ class Source:
                 Collection(
                     date=datetime.strptime(id["start"], "%Y-%m-%dT%H:%M:%S").date(),
                     t=id["title"],
-                    icon=ICON_MAP.get(id["title"]),
                 )
             )
         return entries

@@ -7,13 +7,11 @@ TITLE = "C-Trace"
 DESCRIPTION = "Source for C-Trace.de."
 URL = "https://c-trace.de/"
 
-
 def EXTRA_INFO():
     return [
         {"title": s["title"], "url": s["url"], "default_params": {"service": key}}
         for key, s in SERVICE_MAP.items()
     ]
-
 
 TEST_CASES = {
     "Bremen": {"ort": "Bremen", "strasse": "Abbentorstraße", "hausnummer": 5},
@@ -73,7 +71,6 @@ DEFAULT_ICAL_URL_FILE = "cal"
 # Do not support Ical Download:
 # lekarowarschau-abfallkalender
 # web.torgauoschatz2015
-
 
 SERVICE_MAP = {
     "bremenabfallkalender": {
@@ -158,18 +155,14 @@ SERVICE_MAP = {
 
 BASE_URL = "https://{subdomain}.c-trace.de"
 
-
 PARAM_TRANSLATIONS = {
     "en": {
-        "strasse": "Street",
         "hausnummer": "House number",
-        "gemeinde": "Municipality",
         "ort": "District",
         "ortsteil": "Subdistrict",
         "service": "Operator",
-    }
+    },
 }
-
 
 class Source:
     def __init__(

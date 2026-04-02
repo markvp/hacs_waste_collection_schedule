@@ -15,18 +15,11 @@ TEST_CASES = {
     "Test_003": {"uprn": 100050394291},
     "Test_004": {"uprn": "10003019065"},
 }
-ICON_MAP = {
-    "Refuse": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Food Waste": "mdi:food",
-    "Garden Waste": "mdi:leaf",
-}
 HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, uprn: str):
@@ -55,7 +48,6 @@ class Source:
                 Collection(
                     date=pickup[0],
                     t=pickup[1],
-                    icon=ICON_MAP.get(pickup[1]),
                 )
             )
 

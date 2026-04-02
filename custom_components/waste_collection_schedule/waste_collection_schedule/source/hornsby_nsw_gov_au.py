@@ -35,9 +35,6 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Green Waste": "mdi:leaf",
-    "Recycling": "mdi:recycle",
-    "General Waste": "mdi:trash-can",
     "Bulky Waste": "mdi:delete",
 }
 
@@ -60,7 +57,6 @@ BASE_URL = "https://www.hornsby.nsw.gov.au/"
 
 _LOGGER = logging.getLogger(__name__)
 
-
 def _http_get(url: str, timeout_s: float = 25.0) -> bytes:
     """Perform an HTTP GET request and return the response body."""
     req = urllib.request.Request(
@@ -74,7 +70,6 @@ def _http_get(url: str, timeout_s: float = 25.0) -> bytes:
     )
     with urllib.request.urlopen(req, timeout=timeout_s) as resp:
         return resp.read()
-
 
 def _parse_geolocation_id(response_bytes: bytes) -> str:
     """Parse the Hornsby address search response and return the best matching Id."""
@@ -91,7 +86,6 @@ def _parse_geolocation_id(response_bytes: bytes) -> str:
     items.sort(key=lambda r: r.get("Score", 0), reverse=True)
     return items[0]["Id"]
 
-
 class _HrefExtractor(HTMLParser):
     """Simple HTML parser to extract href attributes from anchor tags."""
 
@@ -106,7 +100,6 @@ class _HrefExtractor(HTMLParser):
         href = d.get("href")
         if href:
             self.hrefs.append(href)
-
 
 def _select_weekly_waste_calendar_pdf_href(hrefs: list[str]) -> str | None:
     """Select the weekly waste calendar PDF URL from the list of hrefs."""
@@ -136,7 +129,6 @@ def _select_weekly_waste_calendar_pdf_href(hrefs: list[str]) -> str | None:
 
     return pdfs[0]
 
-
 def _select_bulky_waste_calendar_pdf_href(hrefs: list[str]) -> str | None:
     """Select the bulky waste calendar PDF URL from the list of hrefs."""
     pdfs = [h for h in hrefs if h.lower().endswith(".pdf")]
@@ -158,7 +150,6 @@ def _select_bulky_waste_calendar_pdf_href(hrefs: list[str]) -> str | None:
         return cand[0]
 
     return None
-
 
 def _resolve_pdf_urls_for_address(
     address: str, language: str = "en-AU"
@@ -198,12 +189,10 @@ def _resolve_pdf_urls_for_address(
 
     return {"weekly": weekly_url, "bulky": bulky_url}
 
-
 def _is_near_white(rgb: tuple[float, float, float]) -> bool:
     """Check if an RGB color is near white."""
     r, g, b = rgb
     return r > 0.95 and g > 0.95 and b > 0.95
-
 
 def _classify_fill(rgb: tuple[float, float, float]) -> str:
     """Classify fill color into 'green' or 'yellow'."""
@@ -213,7 +202,6 @@ def _classify_fill(rgb: tuple[float, float, float]) -> str:
     if r > 0.70 and g > 0.55 and b < 0.45:
         return "yellow"
     return "unknown"
-
 
 def _normalize_color_to_rgb(
     color: Any,
@@ -239,14 +227,12 @@ def _normalize_color_to_rgb(
         return (g, g, g)
     return None
 
-
 def _iter_layout_elements(container: Any) -> Any:
     """Recursively yield all layout elements from a pdfminer container."""
     for element in container:
         yield element
         if isinstance(element, LTLayoutContainer):
             yield from _iter_layout_elements(element)
-
 
 def _flush_word(
     word_chars: list[LTChar], page_height: float
@@ -265,7 +251,6 @@ def _flush_word(
         "top": page_height - by1,
         "bottom": page_height - by0,
     }
-
 
 def _extract_words_from_page(
     page_layout: Any, page_height: float
@@ -286,7 +271,6 @@ def _extract_words_from_page(
         if word_chars:
             words.append(_flush_word(word_chars, page_height))
     return words
-
 
 def _group_words_into_lines(
     words: list[dict[str, Any]], y_tolerance: float = 5.0
@@ -309,7 +293,6 @@ def _group_words_into_lines(
     if current_line:
         lines.append(sorted(current_line, key=lambda w: float(w["x0"])))
     return lines
-
 
 def _extract_events_from_weekly_pdf(pdf_bytes: bytes) -> list[Collection]:
     """Extract green waste and recycling events from the weekly calendar PDF."""
@@ -526,7 +509,6 @@ def _extract_events_from_weekly_pdf(pdf_bytes: bytes) -> list[Collection]:
 
     return entries
 
-
 def _extract_bulky_events_from_pdf(pdf_bytes: bytes) -> list[Collection]:
     """Extract bulky waste dates from the bulky waste flyer PDF."""
     text_parts: list[str] = []
@@ -559,7 +541,6 @@ def _extract_bulky_events_from_pdf(pdf_bytes: bytes) -> list[Collection]:
         )
 
     return entries
-
 
 class Source:
     def __init__(self, address: str):

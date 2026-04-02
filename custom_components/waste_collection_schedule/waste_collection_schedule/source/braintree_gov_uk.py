@@ -14,12 +14,9 @@ TEST_CASES = {
     "Causeway House": {"house_number": "Causeway House", "post_code": "CM7 9HB"},
 }
 ICON_MAP = {
-    "Grey Bin": "mdi:trash-can",
     "Clear Sack": "mdi:recycle",
-    "Garden Bin": "mdi:leaf",
     "Food Bin": "mdi:food-apple",
 }
-
 
 class Source:
     def __init__(self, post_code: str, house_number: str):

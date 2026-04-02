@@ -14,7 +14,6 @@ DESCRIPTION = (
 )
 URL = "https://www.afvalstoffendienst.nl/"
 
-
 TEST_CASES = {
     "s-Hertogenbosch, 5212SB 41A": {
         "postcode": "5212SB",
@@ -47,14 +46,10 @@ TEST_CASES = {
 ICON_MAP = {
     "Groente-Fruit-Tuinafval-etensresten": "mdi:apple",
     "Plastic-Blik-Drankkartons": "mdi:recycle",
-    "Papier": "mdi:package-variant",
     "Restafval": "mdi:trash-can",
-    "Glas": "mdi:glass-fragile",
-    "Kerstboom": "mdi:pine-tree",
 }
 
 API_URL = "https://www.afvalstoffendienst.nl"
-
 
 class Source:
     def __init__(

@@ -11,16 +11,11 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Zmieszane": "mdi:trash-can",  # Mixed
-    "Tworzywa sztuczne": "mdi:recycle",  # Plastic
-    "Bioodpady": "mdi:leaf",  # Organic
-    "Papier": "mdi:file-outline",  # Paper
-    "Szkło": "mdi:glass-fragile",  # Glass
+    "Papier": "mdi:file-outline",
     "Wielkogabaryty": "mdi:sofa-single",
 }
 
 API_URL = "https://api.skycms.com.pl/api/v1/rest/garbage/disposals/"
-
 
 class Source:
     def __init__(self, location_id):

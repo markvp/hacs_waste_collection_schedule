@@ -20,14 +20,10 @@ TEST_CASES = {
     },
 }
 ICON_MAP = {
-    "Domestic Waste": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Garden Waste": "mdi:leaf",
     "Food Waste": "mdi:food-apple",
 }
 
 API_URL = "https://wav-wrp.whitespacews.com/"
-
 
 class Source:
     def __init__(

@@ -13,11 +13,9 @@ TEST_CASES = {"TestName1": {"zoneID": "Monday A"}, "TestName2": {"zoneID": "Frid
 API_URL = "https://www.shellharbourwaste.com.au/waste-collection"
 
 ICON_MAP = {
-    "Waste": "mdi:trash-can",
     "FOGO": "mdi:leaf",
-    "Recycling": "mdi:recycle",
+    "Waste": "mdi:trash-can",
 }
-
 
 def findUrl(zoneID):
     # Take Zone ID and find url to parse
@@ -27,7 +25,6 @@ def findUrl(zoneID):
     r.raise_for_status
     d = r.json()
     return d["url"]
-
 
 class Source:
     def __init__(self, zoneID):

@@ -16,28 +16,21 @@ TEST_CASES = {
     "Test_005": {"uprn": 100062372553},
 }
 
-
 BASE_URL = "https://elmbridge-self.achieveservice.com"
 INTIAL_URL = f"{BASE_URL}/service/Your_bin_collection_days"
 AUTH_URL = f"{BASE_URL}/authapi/isauthenticated"
 AUTH_TEST = f"{BASE_URL}/apibroker/domain/elmbridge-self.achieveservice.com"
 API_URL = f"{BASE_URL}/apibroker/runLookup"
 
-
 ICON_MAP = {
-    "Domestic Waste": "mdi:trash-can",
     "Domestic Recycling": "mdi:recycle",
-    "Food Waste": "mdi:food",
-    "Textiles and Small WEEE": "mdi:tshirt-crew",
 }
-
 
 class CollectionResult(TypedDict):
     Date: str
     Service1: str
     Service2: str
     Service3: str
-
 
 class Source:
     def __init__(self, uprn: str | int):

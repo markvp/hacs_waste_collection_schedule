@@ -24,14 +24,6 @@ TEST_CASES = {
     },
 }
 
-
-ICON_MAP = {
-    "Recycling": "mdi:recycle",
-    "General Waste": "mdi:trash-can",
-    "Garden Organics": "mdi:leaf",
-}
-
-
 API_URL = "https://www.wanneroo.wa.gov.au/info/20008/waste_services"
 MAP_SESSION_URL = [
     "https://wanneroo.spatial.t1cloud.com/spatial/IntraMaps/ApplicationEngine/Configuration/PublicLite/Config/{liteConfigId}",
@@ -41,7 +33,6 @@ MAP_INITIALIZE_URL = (
     "https://wanneroo.spatial.t1cloud.com/spatial/IntraMaps/ApplicationEngine/Modules/"
 )
 COLLECTION_URL = "https://wanneroo.spatial.t1cloud.com/spatial/IntraMaps/ApplicationEngine/Integration/set"
-
 
 # const API_URL = "https://enterprise.mapimage.net/IntraMaps22B/ApplicationEngine/Integration/api/search/";
 API_URL_REGEX = re.compile(r'const\s+API_URL\s*=\s*"(.*?Search/)";')
@@ -54,7 +45,6 @@ PROJECT_NAME_REGEX = re.compile(r'const\s+PROJECT_NAME\s*=\s*"(.*?)";')
 # "Authorization": "apikey f49dd048-a442-4810-a567-544a1e0d32bc",
 AUTHORIZATION_REGEX = re.compile(r'"Authorization": "(.*?)"')
 
-
 WEEKDAYS = [
     "monday",
     "tuesday",
@@ -64,7 +54,6 @@ WEEKDAYS = [
     "saturday",
     "sunday",
 ]
-
 
 def _parse_rythm_description(rythm_description: str) -> list[date]:
     if rythm_description.strip().lower() in WEEKDAYS:
@@ -85,7 +74,6 @@ def _parse_rythm_description(rythm_description: str) -> list[date]:
         ]
 
     raise Exception(f"Could not parse rhythm description: {rythm_description}")
-
 
 class Source:
     def __init__(self, address: str):

@@ -20,15 +20,9 @@ TEST_CASES = {
     }
 }
 
-
 ICON_MAP = {
-    "Gelbe Tonne": "mdi:recycle",
-    "Bioabfall": "mdi:leaf",
-    "Restabfall": "mdi:trash-can",
-    "Papier": "mdi:package-variant",
-    "Sperrmüll": "mdi:sofa",
-    "Weiße Ware": "mdi:fridge",
     "Kühlgeräte": "mdi:fridge-outline",
+    "Weiße Ware": "mdi:fridge",
 }
 
 PARAM_TRANSLATIONS = {
@@ -52,9 +46,7 @@ PARAM_DESCRIPTIONS = {  # Optional dict to describe the arguments, will be shown
     },
 }
 
-
 API_URL = "https://www.mzv-rotenburg-bebra.de/entsorgung.php"
-
 
 def ics_prop_to_str(value: Any) -> str:
     """
@@ -71,7 +63,6 @@ def ics_prop_to_str(value: Any) -> str:
         return value.to_ical().decode("utf-8", errors="ignore")
 
     return str(value)
-
 
 class Source:
     def __init__(

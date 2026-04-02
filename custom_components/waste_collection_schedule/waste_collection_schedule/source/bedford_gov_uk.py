@@ -17,12 +17,9 @@ HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
 ICON_MAP = {
-    "BLACK BIN": "mdi:trash-can",
-    "ORANGE BIN": "mdi:recycle",
-    "GREEN BIN": "mdi:leaf",
     "CADDY BIN": "mdi:food",
+    "ORANGE BIN": "mdi:recycle",
 }
-
 
 class Source:
     def __init__(self, uprn):

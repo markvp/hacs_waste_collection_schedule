@@ -14,59 +14,41 @@ URL = "https://recyclecoach.com"
 COUNTRY = "us"
 
 ICON_MAP = {
-    "Garbage": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Yard Waste": "mdi:leaf",
-    "Holiday": "mdi:calendar",
-    "Blue Zone Garbage": "mdi: trash-can",
-    "Waste Reduction Week": "mdi:calendar",
-    "Treecycle": "mdi:pine-tree",
-    "Leaf and Yard Waste": "mdi:leaf",
-    "Garbage Collection": "mdi:trash-can",
+    "3 Container Exemption Pick-up": "mdi:calendar",
+    "Additional EnviroDepot Hours": "mdi:calendar",
     "Blue Box": "mdi:recycle",
-    "Green Bin": "mdi:food",
-    "Yard Waste Collection": "mdi:leaf",
+    "Blue Box (Container) Recycling": "mdi:recycle",
+    "Blue Box Collection": "mdi:recycle",
+    "Blue Box Recycling": "mdi:recycle",
+    "Blue Zone Garbage": "mdi: trash-can",
+    "Brush and Bulky Collection": "mdi:leaf",
+    "Curbside Battery Collection": "mdi:battery-20",
+    "Curbside Giveaway": "mdi:calendar",
     "Curbside Giveaway Days": "mdi:calendar",
     "Double-Up Days": "mdi:calendar",
-    "Christmas Tree Collection": "mdi:pine-tree",
-    "Blue Box (Container) Recycling": "mdi:recycle",
-    "Green Box (Fibre) Recycling": "mdi:recycle",
-    "Waste Collection": "mdi:trash-can",
-    "Textile Collection": "mdi:tshirt-crew",
-    "Garbage (Residual Waste)": "mdi:trash-can",
-    "Green Bin Organics": "mdi:food",
-    "Blue Box Recycling": "mdi:recycle",
-    "Curbside Giveaway": "mdi:calendar",
-    "Environment Round-Up Day": "mdi:calendar",
-    "Curbside Battery Collection": "mdi:battery-20",
-    "Blue Box Collection": "mdi:recycle",
-    "Green Bin Collection": "mdi:food",
     "E-waste Event": "mdi:calendar",
-    "Additional EnviroDepot Hours": "mdi:calendar",
-    "Garbage Collection": "mdi:trash-can",
-    "Recycling Collection": "mdi:recycle",
-    "Yard Waste Collection Week": "mdi:leaf",
-    "3 Container Exemption Pick-up": "mdi:calendar",
-    "Holiday ": "mdi:calendar",
-    "Trash": "mdi:trash-can",
-    "Organics": "mdi:food",
-    "Saturday Drop-Off Site": "mdi:calendar",
-    "Christmas Trees": "mdi:pine-tree",
-    "Trash Collection": "mdi:trash-can",
-    "HHW Drop-off - Pima West Campus": "mdi:calendar",
-    "HHW Drop-off - Eastside Service Center": "mdi:calendar",
+    "Environment Round-Up Day": "mdi:calendar",
+    "Green Bin": "mdi:food",
+    "Green Bin Collection": "mdi:food",
+    "Green Bin Organics": "mdi:food",
     "HHW Drop-Off - Rodeo Grounds": "mdi:calendar",
+    "HHW Drop-off - Eastside Service Center": "mdi:calendar",
     "HHW Drop-off - Jacobs Park": "mdi:calendar",
+    "HHW Drop-off - Pima West Campus": "mdi:calendar",
     "HHW Drop-off IBEW": "mdi:calendar",
-    "Christmas Tree Drop-off Depots Open": "mdi:pine-tree",
-    "Brush and Bulky Collection": "mdi:leaf",
-    "Pop-Up Drop-Off - Shawnee Park": "mdi:calendar",
-    "Pop-Up Drop-Off - UofL Shelby Campus": "mdi:calendar",
-    "Pop-Up Drop-Off - Sun Valley Park": "mdi:calendar",
-    "Pop-Up Drop-Off - Metro Fleet Services": "mdi:calendar",
+    "Holiday": "mdi:calendar",
+    "Holiday ": "mdi:calendar",
+    "Organics": "mdi:food",
     "Pop-Up Drop-Off - Fern Creek HS": "mdi:calendar",
+    "Pop-Up Drop-Off - Metro Fleet Services": "mdi:calendar",
+    "Pop-Up Drop-Off - Shawnee Park": "mdi:calendar",
+    "Pop-Up Drop-Off - Sun Valley Park": "mdi:calendar",
+    "Pop-Up Drop-Off - UofL Shelby Campus": "mdi:calendar",
     "Pop-Up Drop-Off Doss High": "mdi:calendar",
-    "Backyard Composting Class": "mdi:compost",
+    "Saturday Drop-Off Site": "mdi:calendar",
+    "Treecycle": "mdi:pine-tree",
+    "Waste Collection": "mdi:trash-can",
+    "Waste Reduction Week": "mdi:calendar",
 }
 
 EXTRA_INFO = [
@@ -248,7 +230,6 @@ TEST_CASES = {
     },
 }
 
-
 class Source:
     def __init__(
         self,
@@ -372,7 +353,6 @@ class Source:
 
         if not self.zone_id:
             self._lookup_zones()
-
 
         collection_def_url = f"https://us-api-city.recyclecoach.com/collections?project_id={self.project_id}&district_id={self.district_id}&zone_id={self.zone_id}&lang_cd=en_US"
 

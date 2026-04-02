@@ -16,21 +16,13 @@ TEST_CASES = {  # Insert arguments for test cases to be used by test_sources.py 
 }
 
 API_URL = "https://ead.darmstadt.de/unser-angebot/privathaushalte/abfallkalender/singleStreet/"
-ICON_MAP = {  # Optional: Dict of waste types and suitable mdi icons
+ICON_MAP = {
+    "PPK": "mdi:package-variant",
     "RM1": "mdi:trash-can",
     "RM2": "mdi:trash-can",
     "RM4": "mdi:trash-can",
     "WET": "mdi:recycle",
-    "BIO": "mdi:leaf",
-    "PPK": "mdi:package-variant",
 }
-
-PARAM_TRANSLATIONS = {
-    "de": {
-        "street": "Straße",
-    }
-}
-
 
 class Source:
     def __init__(

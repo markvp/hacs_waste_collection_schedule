@@ -30,14 +30,12 @@ API_URLS = {
 }
 
 ICON_MAP = {
-    "General": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
     "Food": "mdi:food-apple",
     "Garden": "mdi:shovel",
+    "General": "mdi:trash-can",
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, post_code: str, number: str):

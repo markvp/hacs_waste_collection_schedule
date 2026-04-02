@@ -18,11 +18,6 @@ API_URL = (
 )
 
 ICON_MAP = {
-    "Restabfall": "mdi:trash-can",
-    "Restabfall Plus": "mdi:trash-can",
-    "Bioabfall": "mdi:leaf",
-    "Altpapier": "mdi:package-variant",
-    "Verpackungen": "mdi:recycle",
     "Grünabfall / Weihnachtsbäume": "mdi:forest",
 }
 TYPES = {
@@ -55,13 +50,11 @@ TEST_CASES = {
 
 PARAM_TRANSLATIONS = {
     "de": {
+        "address_suffix": "Hausnummerzusatz",
         "city": "Ort",
         "street": "Strasse",
-        "house_number": "Hausnummer",
-        "address_suffix": "Hausnummerzusatz",
-    }
+    },
 }
-
 
 class Source:
     def __init__(self, city, street, house_number, address_suffix=""):

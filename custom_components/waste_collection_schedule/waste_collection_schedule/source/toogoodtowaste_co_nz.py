@@ -21,10 +21,10 @@ WASTE_TYPE_MAP = {
 }
 
 ICON_MAP = {
-    "red": "mdi:trash-can",
-    "yellow": "mdi:recycle",
     "blue": "mdi:glass-fragile",
     "green": "mdi:tree",
+    "red": "mdi:trash-can",
+    "yellow": "mdi:recycle",
 }
 
 PICTURE_MAP = {
@@ -33,7 +33,6 @@ PICTURE_MAP = {
     "blue": f"{URL}__data/assets/image/0016/1780/bin-blue.png",
     "green": f"{URL}__data/assets/image/0018/1782/bin-green.png",
 }
-
 
 class Source:
     def __init__(self, address):

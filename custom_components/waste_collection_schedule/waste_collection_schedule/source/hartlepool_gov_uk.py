@@ -26,9 +26,9 @@ HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
 ICON_MAP = {
+    "Brown": "mdi:leaf",
     "Green": "mdi:trash-can",
     "Grey": "mdi:recycle",
-    "Brown": "mdi:leaf",
 }
 
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {  # Optional dictionary to describe how to get the arguments, will be shown in the GUI configuration form above the input fields, does not need to be translated in all languages
@@ -46,7 +46,6 @@ PARAM_TRANSLATIONS = {  # Optional dict to translate the arguments, will be show
         "uprn": "Unique Property Reference Number",
     },
 }
-
 
 class Source:
     def __init__(

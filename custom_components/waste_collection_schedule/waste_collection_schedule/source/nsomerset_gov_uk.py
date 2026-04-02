@@ -18,14 +18,11 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "RUBBISH": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
-    "GARDEN WASTE": "mdi:flower",
     "FOOD": "mdi:food",
+    "GARDEN WASTE": "mdi:flower",
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, uprn, postcode):

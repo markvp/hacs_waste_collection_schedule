@@ -22,10 +22,9 @@ HEADERS = {
 }
 
 ICON_MAP = {
-    "recycling": "mdi:recycle",
     "food": "mdi:food-apple",
-    "general": "mdi:trash-can",
     "garden": "mdi:leaf",
+    "general": "mdi:trash-can",
 }
 
 TYPE_MAP = {
@@ -34,7 +33,6 @@ TYPE_MAP = {
     "general": "General Waste",
     "garden": "Garden Waste",
 }
-
 
 class Source:
     def __init__(self, uprn):

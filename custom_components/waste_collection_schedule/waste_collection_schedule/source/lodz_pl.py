@@ -35,13 +35,8 @@ TEST_CASES = {
 _LOGGER = logging.getLogger(__name__)
 
 ICON_MAP = {
-    "Szkło": "mdi:glass-fragile",
-    "Papier": "mdi:package-variant",
-    "Metale i tworzywa sztuczne": "mdi:recycle",
     "Resztkowe": "mdi:trash-can",
-    "Mokre Bio": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(self, street: str, house_number: str, building_type: int = 1):

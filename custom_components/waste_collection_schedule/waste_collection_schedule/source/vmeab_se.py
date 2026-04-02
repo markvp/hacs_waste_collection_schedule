@@ -13,15 +13,9 @@ TEST_CASES = {
     "Västervik Örtomtaslingan 1": {"city": "Västervik", "street": "Örtomtaslingan 1"},
 }
 
-
 ICON_MAP = {
-    "Trash": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "Bio": "mdi:leaf",
-    "Paper": "mdi:package-variant",
-    "Recycle": "mdi:recycle",
 }
-
 
 API_URL = "https://www.vmeab.se/api/WasteDisposal/GetAllPickups"
 
@@ -49,7 +43,6 @@ SWEEDISH_WEEKDAYS = {
     "lördag": "saturday",
     "söndag": "sunday",
 }
-
 
 class Source:
     def __init__(self, city: str, street: str):

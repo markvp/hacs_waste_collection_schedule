@@ -21,12 +21,9 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "grey bin": "mdi:trash-can",
-    "grey bin and kerbside caddy": "mdi:trash-can",
-    "kerbside caddy": "mdi:food",
     "blue bin": "mdi:recycle",
     "blue bin and kerbside caddy": "mdi:recycle",
-    "green bin": "mdi:leaf",
+    "kerbside caddy": "mdi:food",
 }
 
 API_URL = "https://webapps.dacorum.gov.uk/bincollections/"
@@ -38,7 +35,6 @@ FORM_ARG_IDS = [
     "lstBxAddrList",
     "MainContent_btnGetSchedules",
 ]
-
 
 class Source:
     def __init__(self, postcode: str, uprn: str | int):

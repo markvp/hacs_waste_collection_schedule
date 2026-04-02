@@ -13,15 +13,12 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "garden": "mdi:leaf",
     "food": "mdi:food",
-    "refuse": "mdi:trash-can",
-    "recycling": "mdi:recycle",
+    "garden": "mdi:leaf",
 }
 
 API_URL = "https://refusecalendarapi.denbighshire.gov.uk/Calendar/{uprn}"
 X_CSRF_TOKEN_URL = "https://refusecalendarapi.denbighshire.gov.uk/Csrf/token"
-
 
 class Source:
     def __init__(self, uprn: str | int):

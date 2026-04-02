@@ -24,11 +24,11 @@ _LOGGER = logging.getLogger(__name__)
 API_URL = "https://zys-harmonogram.smok.net.pl/{}/{}"
 
 ICON_MAP = {
-    1: "mdi:trash-can",      # Zmieszane odpady komunalne
-    2: "mdi:recycle",        # Paper
-    3: "mdi:recycle",        # Metale i tworzywa sztuczne
-    4: "mdi:glass-cup",      # Szkło
-    5: "mdi:leaf",           # Bioodpady
+    1: "mdi:trash-can",
+    2: "mdi:recycle",
+    3: "mdi:recycle",
+    4: "mdi:glass-cup",
+    5: "mdi:leaf",
 }
 
 MONTHS = {
@@ -45,7 +45,6 @@ MONTHS = {
     "listopad": 11,
     "grudzień": 12,
 }
-
 
 class Source:
     def __init__(self, city, street_name, street_number, commune_name):

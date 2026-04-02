@@ -17,8 +17,8 @@ TEST_CASES = {
 
 API_URL = "https://www1.swansea.gov.uk/recyclingsearch/"
 ICON_MAP = {
-    "PINK": "mdi:trash-can",
     "GREEN": "mdi:recycle",
+    "PINK": "mdi:trash-can",
 }
 
 COLOR_MAP = [  # HTML Colour, Bin Type, Icon Mapping
@@ -31,7 +31,6 @@ HEADERS = {
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, street_name=None, post_code=None):

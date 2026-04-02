@@ -31,20 +31,11 @@ WASTE_TYPE_URLS = {
     "4": ("Biomuell_2", "Restmuell", "Papier", "Gelber_Sack_3"),
 }
 
-
 PARAM_TRANSLATIONS = {
     "de": {
-        "street_name": "Straßenname",
-        "street_number": "Hausnummer",
         "teilgebiet": "Teilgebiet",
     },
-    "en": {
-        "street_name": "Street Name",
-        "street_number": "Street Number",
-        "teilgebiet": "Subarea",
-    },
 }
-
 
 class Source:
     def __init__(self, street_name, street_number, teilgebiet=-1):

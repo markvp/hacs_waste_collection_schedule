@@ -18,20 +18,13 @@ TEST_CASES = {
     "Kusel": {"ortsgemeinde": "Kusel"},
 }
 
-
 ICON_MAP = {
-    "restmüll": "mdi:trash-can",
-    "lvp-abfälle": "mdi:recycle",
     "glas": "mdi:bottle-soda",
-    "bioabfall": "mdi:leaf",
-    "papier": "mdi:package-variant",
-    "wertstoffsäcke": "mdi:recycle",
+    "lvp-abfälle": "mdi:recycle",
     "umweltmobil": "mdi:dump-truck",
 }
 
-
 API_URL = "https://abfallwirtschaft.landkreis-kusel.de"
-
 
 def make_comparable(ortsgemeinde: str) -> str:
     return (
@@ -41,7 +34,6 @@ def make_comparable(ortsgemeinde: str) -> str:
         .replace("/", "")
         .replace(" ", "")
     )
-
 
 class Source:
     def __init__(self, ortsgemeinde: str):

@@ -11,19 +11,12 @@ TEST_CASES = {  # Insert arguments for test cases to be used by test_sources.py 
     "Test_001": {"uprn": "643346"},
     "Test_002": {"uprn": "641084"},
 }
-ICON_MAP = {  # Optional: Dict of waste types and suitable mdi icons
-    "BLACK BIN": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
-    "GARDEN WASTE": "mdi:leaf",
-    "FOOD BIN": "mdi:food",
-}
 WASTE_MAP = {  # map new collection names to old collection names for compatibility
     "Refuse": "BLACK BIN",
     "Recycling": "RECYCLING",
     "Garden": "GARDEN WASTE",
     "Food": "FOOD BIN",
 }
-
 
 class Source:
     def __init__(
@@ -50,7 +43,6 @@ class Source:
                             item["hso_nextcollection"].split("T")[0], "%Y-%m-%d"
                         ).date(),
                         t=WASTE_MAP[item["hso_servicename"]],
-                        icon=ICON_MAP.get(WASTE_MAP[item["hso_servicename"]]),
                     )
                 )
 

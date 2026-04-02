@@ -2,7 +2,6 @@
 # This is predominantly a refactoring of the Bristol City Council script from the UKBinCollectionData repo
 # https://github.com/robbrad/UKBinCollectionData
 
-
 from datetime import date, datetime
 
 import requests
@@ -18,23 +17,19 @@ TEST_CASES = {
     "test": {"postcode": "S70 3QU", "uprn": 100050607581},
 }
 
-
 ICON_MAP = {
-    "grey": "mdi:trash-can",
-    "green": "mdi:leaf",
     "blue": "mdi:package-variant",
     "brown": "mdi:recycle",
+    "green": "mdi:leaf",
+    "grey": "mdi:trash-can",
 }
 
-
 API_URL = "https://waste.barnsley.gov.uk/ViewCollection/SelectAddress"
-
 
 def parse_date(d: str) -> date:
     if d.lower() == "today":
         return datetime.now().date()
     return datetime.strptime(d, "%A, %B %d, %Y").date()
-
 
 class Source:
     def __init__(self, postcode: str, uprn: str | int):

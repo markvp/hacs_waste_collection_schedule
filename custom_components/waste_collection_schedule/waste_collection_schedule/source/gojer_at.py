@@ -20,28 +20,20 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "Bioabfall": "mdi:leaf",
-    "Hausmüll": "mdi:trash-can",
-    "Plastikflaschen": "mdi:bottle-soda-classic",
-    "Altpapier": "mdi:package-variant",
-    "Metallverpackungen": "mdi:anvil",
     "Altstoffsammelzentrum": "mdi:factory",
+    "Metallverpackungen": "mdi:anvil",
+    "Plastikflaschen": "mdi:bottle-soda-classic",
 }
-
 
 API_URL = "https://www.gojer.at/service/abfuhrkalender.html"
 CITY_URL = "https://www.gojer.at/ortausgemeinde.html"
 
-
 PARAM_TRANSLATIONS = {
     "de": {
-        "municipality": "Gemeinde",
         "city": "Ort",
-    }
+    },
 }
-
 
 def cmp(a: str, b: str) -> bool:
     for char in (" ", ",", ".", "_", "-"):
@@ -49,7 +41,6 @@ def cmp(a: str, b: str) -> bool:
         b = b.replace(char, "")
 
     return a.lower() == b.lower()
-
 
 class Source:
     def __init__(self, municipality: str, city: str):

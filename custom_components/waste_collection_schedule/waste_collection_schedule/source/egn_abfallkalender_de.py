@@ -39,22 +39,16 @@ _LOGGER = logging.getLogger(__name__)
 
 API_URL = "https://www.egn-abfallkalender.de/kalender"
 ICON_MAP = {
-    "Grau": "mdi:trash-can",
-    "Gelb": "mdi:sack",
     "Blau": "mdi:package-variant",
-    "Braun": "mdi:leaf",
-    "Bio": "mdi:leaf",
+    "Gelb": "mdi:sack",
 }
 
 PARAM_TRANSLATIONS = {
     "de": {
         "city": "Ort",
         "district": "Ortsteil",
-        "street": "Straße",
-        "housenumber": "Hausnummer",
-    }
+    },
 }
-
 
 class Source:
     def __init__(self, city, district, street, housenumber):

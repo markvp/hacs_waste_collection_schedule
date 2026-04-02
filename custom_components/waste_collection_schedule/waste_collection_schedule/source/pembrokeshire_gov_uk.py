@@ -22,13 +22,13 @@ TYPE_MAP = {  # Dict of waste formatted bin types
     "REDBAG": "RED BAG",
     "GREYBAG": "BLACK/GREY BAGS",
 }
-ICON_MAP = {  # Optional: Dict of waste types and suitable mdi icons
-    "FOODCAD": "mdi:food-apple",
-    "BLUEBOX": "mdi:note-multiple",
-    "GREENBOX": "mdi:glass-fragile",
+ICON_MAP = {
     "BLUEBAG": "mdi:recycle",
-    "REDBAG": "mdi:recycle",
+    "BLUEBOX": "mdi:note-multiple",
+    "FOODCAD": "mdi:food-apple",
+    "GREENBOX": "mdi:glass-fragile",
     "GREYBAG": "mdi:trash-can",
+    "REDBAG": "mdi:recycle",
 }
 
 # ### Arguments affecting the configuration GUI ####
@@ -44,7 +44,6 @@ PARAM_DESCRIPTIONS = {  # Optional dict to describe the arguments, will be shown
 }
 
 # ### End of arguments affecting the configuration GUI ####
-
 
 class Source:
     def __init__(

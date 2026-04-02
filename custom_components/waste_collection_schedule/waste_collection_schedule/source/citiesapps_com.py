@@ -39,22 +39,14 @@ TEST_CASES = {
 }
 COUNTRY = "at"
 
-
 ICON_MAP = {
-    "Restmüll": "mdi:trash-can",
-    "Biomüll": "mdi:leaf",
-    "Altpapier": "mdi:package-variant",
-    "Papier": "mdi:package-variant",
-    "Leichtfraktion": "mdi:recycle",
-    "Leichtverpackung": "mdi:recycle",
-    "Leicht-": "mdi:recycle",
-    "Gelber": "mdi:recycle",
-    "Sonder-": "mdi:dump-truck",
     "Abfallwirtschaftszentrum": "mdi:house",
-    "Strauchschnitt": "mdi:tree",
+    "Leicht-": "mdi:recycle",
+    "Leichtfraktion": "mdi:recycle",
     "Metallverpackung": "mdi:can",
+    "Sonder-": "mdi:dump-truck",
+    "Strauchschnitt": "mdi:tree",
 }
-
 
 class Source:
     def __init__(self, city: str, calendar: str, password, email=None, phone=None):

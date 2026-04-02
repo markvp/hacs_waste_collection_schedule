@@ -22,11 +22,8 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Rubbish": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Junk Waste": "mdi:microwave",
     "Green Waste": "mdi:tree",
-    "Green Bin": "mdi:leaf",
+    "Junk Waste": "mdi:microwave",
 }
 
 HEADERS = {
@@ -34,11 +31,9 @@ HEADERS = {
     "Accept": "application/xhtml+xml,text/json,application/xml",
 }
 
-
 class Collections(TypedDict):
     type: str
     dates: list[date]
-
 
 class Source:
     def __init__(

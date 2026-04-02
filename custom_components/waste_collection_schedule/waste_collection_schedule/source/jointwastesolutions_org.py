@@ -53,14 +53,9 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "RUBBISH": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
     "GARDEN": "mdi:leaf",
-    "BATTERIES-SMALL ELECTRICALS-TEXTILES": "mdi:battery",
-    "FOOD WASTE": "mdi:food",
 }
 REGEX = r"(\d+\/\d+\/\d+\/[\d\w]+)"
-
 
 class Source:
     def __init__(self, house, postcode, borough="woking"):

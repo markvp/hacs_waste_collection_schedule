@@ -16,11 +16,9 @@ TEST_CASES = {
 
 PARAM_TRANSLATIONS = {
     "de": {
-        "street": "Straße",
         "city": "Ort",
-    }
+    },
 }
-
 
 class Source:
     def __init__(self, city, street):

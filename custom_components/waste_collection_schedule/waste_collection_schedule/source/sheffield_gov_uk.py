@@ -16,7 +16,6 @@ TEST_CASES = {
     "test004" : {"uprn": "100051085306"},
 }
 
-
 API_URL = "https://wasteservices.sheffield.gov.uk/"
 
 # Headers to mimic the browser
@@ -26,10 +25,10 @@ HEADERS = {
 
 # Icons for the different bin types
 ICON_MAP = {
-    "BLACK": "mdi:delete-empty", # General Waste
-    "BROWN": "mdi:glass-fragile", # Glass, Tins, Cans & Plastics
-    "BLUE": "mdi:newspaper", # Paper & Cardboard
-    "GREEN": "mdi:leaf", # Garden Waste
+    "BLACK": "mdi:delete-empty",
+    "BLUE": "mdi:newspaper",
+    "BROWN": "mdi:glass-fragile",
+    "GREEN": "mdi:leaf",
 }
 
 _LOGGER = logging.getLogger(__name__)

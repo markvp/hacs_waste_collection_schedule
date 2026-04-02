@@ -20,15 +20,7 @@ TEST_CASES = {
     },
 }
 
-
 _LOGGER = logging.getLogger(__name__)
-
-ICON_MAP = {
-    "Green waste bin": "mdi:leaf",
-    "Household rubbish bin": "mdi:trash-can",
-    "Recycling bin": "mdi:recycle",
-}
-
 
 class Source:
     def __init__(self, street_address):

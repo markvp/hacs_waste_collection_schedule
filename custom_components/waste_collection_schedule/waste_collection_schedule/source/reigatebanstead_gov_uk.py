@@ -20,18 +20,11 @@ HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
 ICON_MAP = {
-    "FOOD WASTE": "mdi:food",
-    "MIXED RECYCLING": "mdi:recycle",
-    "GLASS": "mdi:recycle",     # commercial
-    "MIXED CANS": "mdi:recycle",    # commercial
-    "PLASTIC": "mdi:recycle",   # commercial
+    "GLASS": "mdi:recycle",
+    "MIXED CANS": "mdi:recycle",
     "PAPER AND CARDBOARD": "mdi:newspaper",
-    "TRADE - PAPER AND CARDBOARD": "mdi:newspaper",     # commercial
-    "REFUSE": "mdi:trash-can",
-    "TRADE - REFUSE": "mdi:trash-can",  # commercial
-    "GARDEN WASTE": "mdi:leaf",
+    "TRADE - PAPER AND CARDBOARD": "mdi:newspaper",
 }
-
 
 class Source:
     def __init__(self, uprn):

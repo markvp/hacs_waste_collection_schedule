@@ -12,16 +12,10 @@ TEST_CASES = {
     "Test_002": {"uprn": "100070200372"},
     "Test_003": {"uprn": "010010521297"},
 }
-ICON_MAP = {
-    "Blue-lid recycling bins": "mdi:recycle",
-    "Black rubbish bins": "mdi:trash-can",
-    "Green garden waste bins": "mdi:leaf",
-}
 
 # endpoint and api key based on rugby iOS app
 API_URL = "https://apps.cloud9technologies.com/rugby/citizenmobile/mobileapi/wastecollections/{uprn}"
 API_KEY = "Y2xvdWQ5OmlkQmNWNGJvcjU="
-
 
 class Source:
     def __init__(self, uprn: str | int):
@@ -47,7 +41,6 @@ class Source:
                     Collection(
                         date=date,
                         t=desc,
-                        icon=ICON_MAP.get(desc, "mdi:trash-can"),
                     )
                 )
 

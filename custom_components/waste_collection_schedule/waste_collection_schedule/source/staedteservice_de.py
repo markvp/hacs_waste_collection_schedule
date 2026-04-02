@@ -33,16 +33,10 @@ CITY_CODE_MAP = {"Rüsselsheim": 1, "Raunheim": 2}
 CITIES = Literal["Rüsselsheim", "Raunheim"]
 
 ICON_MAP = {
-    "restmüll": "mdi:trash-can",
-    "gelber sack": "mdi:recycle",
-    "gelbe tonne": "mdi:recycle",
     "blaue tonne": "mdi:recycle",
     "papier": "mdi:recycle",
-    "bio": "mdi:leaf",
-    "glas": "mdi:glass-fragile",
     "schadstoffmobil": "mdi:car-battery",
 }
-
 
 class Source:
     def __init__(

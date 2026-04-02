@@ -19,8 +19,8 @@ API_URL = "https://maps.southderbyshire.gov.uk/iShareLIVE.web/getdata.aspx?Reque
 
 ICON_MAP = {
     "Black": "mdi:trash-can",
-    "Green": "mdi:recycle",
     "Brown": "mdi:leaf",
+    "Green": "mdi:recycle",
     "Podback": "mdi:coffee",
 }
 

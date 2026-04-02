@@ -15,19 +15,12 @@ TEST_CASES = {
     "Boltenhagener Straße, 4-8": {"street": "Boltenhagener Straße", "number": "4-8"},
 }
 
-
 ICON_MAP = {
-    "Restabfall": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "Bioabfall": "mdi:leaf",
-    "Papier": "mdi:package-variant",
-    "Gelbe": "mdi:recycle",
 }
-
 
 ICAL_URL = "https://abki.de/abki-services/abki-leerungen-ical"
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, street: str, number: str | int):

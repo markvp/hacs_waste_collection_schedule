@@ -21,13 +21,10 @@ TEST_CASES = {  # Insert arguments for test cases to be used by test_sources.py 
 }
 
 API_URL = "https://info-collectes.ca/wp/wp-admin/admin-ajax.php"
-ICON_MAP = {  # Optional: Dict of waste types and suitable mdi icons
-    "organic": "mdi:compost",
-    "recycling": "mdi:recycle",
-    "greenWaste": "mdi:leaf",
-    "cardboard": "mdi:package-variant",
-    "bulky": "mdi:sofa",
+ICON_MAP = {
     "garbage": "mdi:truck-remove",
+    "greenWaste": "mdi:leaf",
+    "organic": "mdi:compost",
 }
 
 MUNICIPALITY_LITERAL = Literal[
@@ -44,7 +41,6 @@ MUNICIPALITY_LITERAL = Literal[
     "mercier",
 ]
 MUNICIPALITY_NAMES = list(get_args(MUNICIPALITY_LITERAL))
-
 
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {  # Optional dictionary to describe how to get the arguments, will be shown in the GUI configuration form above the input fields, does not need to be translated in all languages
     "en": "HOW TO GET ARGUMENTS DESCRIPTION",
@@ -73,12 +69,10 @@ PARAM_TRANSLATIONS = {  # Optional dict to translate the arguments, will be show
     },
 }
 
-
 def _normalize_municipality_name(municipality_name):
     t = unicodedata.normalize("NFKD", municipality_name)
     normalized__name = "".join(s for s in t if not unicodedata.combining(s))
     return normalized__name.replace(" ", "-").lower()
-
 
 class Source:
     def __init__(self, municipality: MUNICIPALITY_LITERAL, sector: str | None = None):

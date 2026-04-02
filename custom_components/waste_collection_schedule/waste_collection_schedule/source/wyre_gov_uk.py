@@ -9,15 +9,11 @@ URL = "https://www.wyre.gov.uk"  # Insert url to service homepage. URL will show
 TEST_CASES = {"Test_001": {"uprn": "10094000847"}, "Test_002": {"uprn": "100010727065"}}
 HEADERS = {"user-agent": "Mozilla/5.0"}
 ICON_MAP = {
-    "Grey Bin": "mdi:trash-can",
     "Blue Bin": "mdi:recycle",
     "Red Bin": "mdi:recycle",
-    "Green Bin": "mdi:leaf",
 }
 
-
 API_URL = "https://www.wyre.gov.uk/bincollections"
-
 
 class Source:
     def __init__(self, uprn):

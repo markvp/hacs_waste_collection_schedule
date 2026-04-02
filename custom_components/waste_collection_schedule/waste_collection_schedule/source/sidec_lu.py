@@ -21,9 +21,7 @@ API_URL = "https://www.sidec.lu/fr/Collectes/Calendrier"
 ICON_MAP = {
     "BULKY": "mdi:wardrobe",
     "GLASS": "mdi:bottle-wine",
-    "ORGANIC": "mdi:leaf",
     "PAPER": "mdi:newspaper-variant-multiple-outline",
-    "RESIDUAL": "mdi:trash-can",
 }
 
 WASTE_MAPPING = {
@@ -33,7 +31,6 @@ WASTE_MAPPING = {
     "papiers cartons": "PAPER",
     "dechets menagers": "RESIDUAL",
 }
-
 
 class Source:
     def __init__(self, commune: str | None = None):

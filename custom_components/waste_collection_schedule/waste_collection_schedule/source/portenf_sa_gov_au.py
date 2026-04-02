@@ -14,7 +14,6 @@ from waste_collection_schedule import Collection  # type: ignore[attr-defined]
 # This line suppresses the InsecureRequestWarning when using verify=False
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-
 TITLE = "Port Adelaide Enfield, South Australia"
 DESCRIPTION = "Source for City of Port Adelaide Enfield, South Australia."
 URL = "https://ecouncil.portenf.sa.gov.au/"
@@ -43,16 +42,9 @@ TEST_CASES = {
     },
 }
 
-ICON_MAP = {
-    "general-waste bin": "mdi:trash-can",
-    "organics bin": "mdi:leaf",
-    "recycling bin": "mdi:recycle",
-}
-
 LOGGER = logging.getLogger(__name__)
 
 API_URL = "https://ecouncil.portenf.sa.gov.au/public/propertywastedates/public.aspx"
-
 
 class Source:
     def __init__(

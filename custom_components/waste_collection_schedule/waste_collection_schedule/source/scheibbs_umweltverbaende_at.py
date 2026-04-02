@@ -17,12 +17,8 @@ TEST_CASES = {
     "Test_004": {"region": "Wieselburg"},
 }
 ICON_MAP = {
-    "Restmüll": "mdi:trash-can",
     "Gelber Sack": "mdi:sack",
-    "Altpapier": "mdi:package-variant",
-    "Biotonne": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(self, region):

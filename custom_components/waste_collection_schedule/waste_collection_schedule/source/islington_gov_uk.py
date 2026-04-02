@@ -12,19 +12,10 @@ TEST_CASES = {
     "Test_003": {"postcode": "N19 4TA", "uprn": "5300078702"},
 }
 ICON_MAP = {
-    "Green recycling box": "mdi:recycle",
-    "Dry recycling bin": "mdi:recycle",
-    "Communal dry recycling bin": "mdi:recycle",
-    "Small kitchen waste box": "mdi:food",
     "Large brown kitchen waste box": "mdi:food",
-    "Reuseable garden waste sack": "mdi:leaf",
-    "Household refuse sack": "mdi:trash-can",
-    "Refuse skip": "mdi:trash-can",
-    "Food waste recycling": "mdi:food",
-    "Mixed dry recycling": "mdi:recycle",
     "Non-recyclable rubbish": "mdi:recycle",
+    "Small kitchen waste box": "mdi:food",
 }
-
 
 class Source:
     def __init__(self, postcode, uprn):

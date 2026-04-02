@@ -13,10 +13,6 @@ URL = "https://www.rotorualakescouncil.nz"
 API_URL = (
     "https://gis.rdc.govt.nz/server/rest/services/Core/RdcServices/MapServer/125/query"
 )
-ICON_MAP = {
-    "Rubbish": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-}
 HEADERS = {"User-Agent": "waste-collection-schedule"}
 
 TEST_CASES = {
@@ -26,7 +22,6 @@ TEST_CASES = {
     "Test4": {"address": "12a robin st"},
     "Test5": {"address": "25 kaska rd"},
 }
-
 
 class Source:
     def __init__(self, address):
@@ -118,7 +113,6 @@ class Source:
                             Collection(
                                 date=date,
                                 t=bin_type,
-                                icon=ICON_MAP.get(bin_type),
                             )
                         )
 

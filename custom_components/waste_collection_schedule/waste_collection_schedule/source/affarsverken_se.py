@@ -14,9 +14,7 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Restavfall": "mdi:trash-can",
-    "Matavfall": "mdi:leaf",
-    "Trädgårdsavfall": "mdi:tree"
+    "Trädgårdsavfall": "mdi:tree",
 }
 
 API_URL = "https://kundapi.affarsverken.se/api/v1/open-api/"

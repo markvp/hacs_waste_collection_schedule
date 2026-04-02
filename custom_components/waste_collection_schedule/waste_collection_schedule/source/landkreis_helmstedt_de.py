@@ -87,31 +87,28 @@ PARAM_DESCRIPTIONS = {  # Optional dict to describe the arguments, will be shown
     },
 }
 
-PARAM_TRANSLATIONS = {  # Optional dict to translate the arguments, will be shown in the GUI configuration form as placeholder text
+PARAM_TRANSLATIONS = {
+    "de": {
+        "altpapier": "Altpapier",
+        "bioabfall": "Bioabfall",
+        "gelber_sack": "Gelber Sack",
+        "restabfall": "Restabfall",
+    },
     "en": {
+        "altpapier": "Paper",
+        "bioabfall": "Organic",
+        "gelber_sack": "Recycling",
         "municipal": "Municipal",
         "restabfall": "Domestic",
-        "altpapier": "Paper",
-        "gelber_sack": "Recycling",
-        "bioabfall": "Organic",
-    },
-    "de": {
-        "municipal": "Gemeinde",
-        "restabfall": "Restabfall",
-        "altpapier": "Altpapier",
-        "gelber_sack": "Gelber Sack",
-        "bioabfall": "Bioabfall",
     },
 }
 
 # ### End of arguments affecting the configuration GUI ####
 
-
 COLLECTION_TYPE_RESTABFALL = "Restabfall"
 COLLECTION_TYPE_ALTPAPIER = "Altpapier"
 COLLECTION_TYPE_GELBER_SACK = "Gelber Sack"
 COLLECTION_TYPE_BIOABFALL = "Bioabfall"
-
 
 ICON_MAP = {
     COLLECTION_TYPE_RESTABFALL: "mdi:trash-can",
@@ -119,7 +116,6 @@ ICON_MAP = {
     COLLECTION_TYPE_GELBER_SACK: "mdi:recycle",
     COLLECTION_TYPE_BIOABFALL: "mdi:leaf",
 }
-
 
 class Source:
     def __init__(

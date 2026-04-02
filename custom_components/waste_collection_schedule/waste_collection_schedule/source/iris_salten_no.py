@@ -14,18 +14,13 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
+    "food": "mdi:food-apple",
     "generalwaste": "mdi:trash-can",
     "glass_metal": "mdi:bottle-soda",
-    "food": "mdi:food-apple",
-    "paper": "mdi:package-variant",
-    "plastic": "mdi:recycle",
 }
 
-
 API_URL = "https://www.iris-salten.no/tommekalender/"
-
 
 class Source:
     def __init__(self, address: str, kommune: str):

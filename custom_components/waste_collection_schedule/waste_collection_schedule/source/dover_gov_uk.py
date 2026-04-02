@@ -12,18 +12,11 @@ TEST_CASES = {
     "100060905828": {"uprn": "100060905828"},
 }
 
-
 ICON_MAP = {
-    "Garden Waste Collection": "mdi:leaf",
     "Food Collection": "mdi:food-apple",
-    "Refuse Collection": "mdi:trash-can",
-    "Paper/Card Collection": "mdi:package-variant",
-    "Recycling Collection": "mdi:recycle",
 }
 
-
 API_URL = "https://collections.dover.gov.uk/"
-
 
 class Source:
     def __init__(self, uprn: str | int):

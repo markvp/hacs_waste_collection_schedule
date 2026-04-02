@@ -29,7 +29,6 @@ HEADERS = {
     "Origin": "https://www.valorlux.lu",
 }
 
-
 class Source:
     def __init__(self, commune: str | None = None, zone: str | None = None):
         self._commune = commune

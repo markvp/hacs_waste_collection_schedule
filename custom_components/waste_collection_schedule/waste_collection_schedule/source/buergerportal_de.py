@@ -11,7 +11,6 @@ TITLE = "Bürgerportal"
 URL = "https://www.c-trace.de"
 DESCRIPTION = "Source for waste collection in multiple service areas."
 
-
 def EXTRA_INFO():
     return [
         {
@@ -21,7 +20,6 @@ def EXTRA_INFO():
         }
         for s in SERVICE_MAP
     ]
-
 
 TEST_CASES = {
     "Cochem-Zell": {
@@ -101,15 +99,13 @@ SERVICE_MAP = [
 
 PARAM_TRANSLATIONS = {
     "de": {
-        "operator": "Betreiber",
         "district": "Ort",
-        "street": "Straße",
-        "subdistrict": "Ortsteil",
         "number": "Hausnummer",
+        "operator": "Betreiber",
         "show_volume": "Große Container anzeigen",
-    }
+        "subdistrict": "Ortsteil",
+    },
 }
-
 
 # This datalcass is used for adding entries to a set and remove duplicate entries.
 # The default `Collection` extends the standard dict and thus is not hashable.
@@ -122,17 +118,14 @@ class CollectionEntry:
     def export(self) -> Collection:
         return Collection(self.date, self.waste_type, self.icon)
 
-
 def quote_none(value: Optional[str]) -> str:
     if value is None:
         return "null"
 
     return f"'{value}'"
 
-
 def get_api_map():
     return {s["operator"]: s["api_url"] for s in SERVICE_MAP}
-
 
 class Source:
     def __init__(
@@ -301,35 +294,28 @@ class Source:
                 "street", self.street, [entry["Name"] for entry in payload["d"]]
             )
 
-
 # Typed dictionaries for the API
 # Automatically generated using https://pytyper.dev/
-
 
 class DistrictRes(TypedDict):
     OrteId: int
     Ortsname: str
     Ortsteilname: Optional[str]
 
-
 class DistrictsRes(TypedDict):
     d: List[DistrictRes]
-
 
 class StreetRes(TypedDict):
     StrassenId: int
     Name: str
     Plz: str
 
-
 class StreetsRes(TypedDict):
     d: List[StreetRes]
-
 
 class Capacity(TypedDict):
     VolumenId: int
     VolumenWert: str
-
 
 class WasteType(TypedDict):
     AbfallartenId: int
@@ -344,7 +330,6 @@ class WasteType(TypedDict):
     Aktiv: None
     IsSchadstoff: None
 
-
 class ContainerType(TypedDict):
     GefaesstarifArtenId: int
     BescheidText: None
@@ -357,19 +342,16 @@ class ContainerType(TypedDict):
     Abfallart: WasteType
     # Abfuhrrhythmus: Abfuhrrhythmus
 
-
 class CollectionPlan(TypedDict):
     AbfuhrplaeneId: int
     Jahr: int
     GefaesstarifArt: ContainerType
     # AbfallartenObj: Abfuhrrhythmus
 
-
 class CollectionRes(TypedDict):
     AbfuhrtermineId: int
     Termin: str
     Abfuhrplan: CollectionPlan
-
 
 class CollectionsRes(TypedDict):
     d: List[CollectionRes]

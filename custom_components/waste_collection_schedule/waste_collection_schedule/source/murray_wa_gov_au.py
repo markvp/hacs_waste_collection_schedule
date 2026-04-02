@@ -18,9 +18,6 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "General Waste": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Verge Collection - Green waste": "mdi:leaf",
     "Verge Collection - Hard waste": "mdi:dump-truck",
 }
 
@@ -37,7 +34,6 @@ PARAM_DESCRIPTIONS = {
 API_BASE = "https://www.murray.wa.gov.au/api/cms/v1/wastecollection"
 ADDRESS_URL = f"{API_BASE}/GetAddressesByQuery"
 DETAILS_URL = f"{API_BASE}/GetAddressDetailsByGuid"
-
 
 class Source:
     def __init__(self, address: str):

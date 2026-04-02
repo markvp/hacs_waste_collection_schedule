@@ -25,11 +25,8 @@ TEST_CASES = {
 
 ICON_MAP = {
     "mišrių atliekų": "mdi:trash-can",
-    "antrinių žaliavų (popierius/plastikas)": "mdi:recycle",
-    "antrinių žaliavų (stiklas)": "mdi:glass-fragile",
     "žaliųjų atliekų": "mdi:leaf",
 }
-
 
 class Source:
     API_URL = "https://grafikai.svara.lt/api/"

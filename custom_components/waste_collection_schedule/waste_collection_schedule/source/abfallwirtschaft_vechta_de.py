@@ -22,17 +22,9 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "Restabfall": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "Bioabfall": "mdi:leaf",
-    "Altpapier": "mdi:package-variant",
-    "Altpapier Siemer": "mdi:package-variant",
-    "Altpapier Pamo": "mdi:package-variant",
-    "Gelbe Tonne": "mdi:recycle",
 }
-
 
 class Source:
     def __init__(self, stadt: str, strasse: str):

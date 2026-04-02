@@ -52,15 +52,8 @@ HEADERS = {
 
 ICON_MAP = {
     "General Waste (Blue Bin)": "mdi:trash-can",
-    "Organic Waste (Green or Grey Bin)": "mdi:leaf",
-    "Recycling (Yellow Lid Bin)": "mdi:recycle",
     "Residential Street Cleaning": "mdi:broom",
-    # Fallback patterns
-    "General Waste": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Green Waste": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(

@@ -172,14 +172,11 @@ TEST_CASES = {
 HEADERS = {"user-agent": "Mozilla/5.0"}
 
 ICON_MAP = {
-    "waste": "mdi:trash-can",
-    "recycle": "mdi:recycle",
-    "organic": "mdi:leaf",
-    "greenwaste": "mdi:leaf",
     "clean_up": "mdi-calendar-alert",
-    "special": "mdi-calendar-alert",
-    "glass": "mdi:glass-fragile",
+    "greenwaste": "mdi:leaf",
     "paper": "mdi:newspaper",
+    "special": "mdi-calendar-alert",
+    "waste": "mdi:trash-can",
 }
 
 SERVICE_MAP = (
@@ -349,7 +346,6 @@ SERVICE_MAP = (
 
 SERVICE_MAP_LOOKUP = {council["name"]: council for council in SERVICE_MAP}
 
-
 def EXTRA_INFO():
     return [
         {
@@ -360,26 +356,22 @@ def EXTRA_INFO():
         for council in SERVICE_MAP
     ]
 
-
 class LocalityResponse(TypedDict):
     id: int
     name: str
     postcode: Optional[int]
     council: str
 
-
 class StreetResponse(TypedDict):
     id: int
     name: str
     locality: str
-
 
 class PropertyResponse(TypedDict):
     id: int
     name: str
     zone: str
     voucher_preferences: int
-
 
 class OneOffEventResponse(TypedDict):
     start: str
@@ -388,7 +380,6 @@ class OneOffEventResponse(TypedDict):
     color: str
     textColor: str
     borderColor: str
-
 
 class RecurringEventResponse(TypedDict):
     start_date: str
@@ -399,7 +390,6 @@ class RecurringEventResponse(TypedDict):
     borderColor: str
     dow: List[int]
     daysOfWeek: List[int]
-
 
 def generate_recurring_dates(
     event: RecurringEventResponse, start_date: date, end_date: date
@@ -413,7 +403,6 @@ def generate_recurring_dates(
         if current_date.weekday() + 1 in event["daysOfWeek"]:
             recurring_dates.append(current_date)
     return recurring_dates
-
 
 class LocationFinder:
     def __init__(self, api_url: str):
@@ -480,7 +469,6 @@ class LocationFinder:
                 ],
             )
         return property_id
-
 
 class Source:
     def __init__(

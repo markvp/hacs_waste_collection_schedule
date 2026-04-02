@@ -25,21 +25,13 @@ TEST_CASES = {
 SERVLET = "https://portal.gfa-lueneburg.de:8443/WasteManagementLueneburg/WasteManagementServlet"
 
 ICON_MAP = {
-    "Restabfallbehaelter": "mdi:trash-can",
-    "Restmuell": "mdi:trash-can",
-    "Papiertonne": "mdi:package-variant",
-    "Gelber Sack": "mdi:recycle",
     "Gruenabfall": "mdi:leaf",
-    "Biotonne": "mdi:leaf",
-    "Sperrmuell Altmetall": "mdi:recycle",
 }
-
 
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {  # Optional dictionary to describe how to get the arguments, will be shown in the GUI configuration form above the input fields, does not need to be translated in all languages
     "en": "Make sure that the address exactly matches the one auto-completed by the website form: https://www.gfa-lueneburg.de/service/abfuhrkalender.html",
     "de": "Stellen Sie sicher, dass die Adresse genau der entspricht, die vom Website-Formular automatisch vervollständigt wird: https://www.gfa-lueneburg.de/service/abfuhrkalender.html",
 }
-
 
 # Parser for HTML input (hidden) text
 class HiddenInputParser(HTMLParser):
@@ -57,15 +49,11 @@ class HiddenInputParser(HTMLParser):
             if str(d["type"]).lower() == "hidden":
                 self._args[d["name"]] = d["value"] if "value" in d else ""
 
-
 PARAM_TRANSLATIONS = {
     "de": {
         "city": "Ort",
-        "street": "Straße",
-        "house_number": "Hausnummer",
-    }
+    },
 }
-
 
 class Source:
     def __init__(self, city: str, street: str, house_number: int | str):

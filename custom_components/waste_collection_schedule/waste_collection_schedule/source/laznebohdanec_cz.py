@@ -44,9 +44,9 @@ PARAM_TRANSLATIONS = {
 }
 
 ICON_MAP = {
+    "KO": "mdi:trash-can",
     "PAPIR": "mdi:newspaper-variant",
     "PLAST": "mdi:recycle",
-    "KO": "mdi:trash-can",
 }
 
 HEADERS = {"user-agent": "Mozilla/5.0"}
@@ -67,7 +67,6 @@ MONTHS = {
     "Listopad": 11,
     "Prosinec": 12,
 }
-
 
 class Source:
     def __init__(
@@ -173,7 +172,6 @@ class Source:
                     )
         return entries
 
-
 def _read_shared_strings(zf: zipfile.ZipFile) -> list[str]:
     try:
         sst_xml = zf.read("xl/sharedStrings.xml")
@@ -188,7 +186,6 @@ def _read_shared_strings(zf: zipfile.ZipFile) -> list[str]:
             parts.append(t.text or "")
         strings.append("".join(parts))
     return strings
-
 
 def _collect_rows(sheet: ET.Element, strings: list[str]) -> dict[int, dict[str, str]]:
     rows: dict[int, dict[str, str]] = {}
@@ -227,7 +224,6 @@ def _collect_rows(sheet: ET.Element, strings: list[str]) -> dict[int, dict[str, 
         rows.setdefault(row, {})[col] = text
     return rows
 
-
 def _collect_month_rows(rows: dict[int, dict[str, str]]) -> list[tuple[int, int]]:
     month_rows: list[tuple[int, int]] = []
     for row_idx, row in rows.items():
@@ -236,7 +232,6 @@ def _collect_month_rows(rows: dict[int, dict[str, str]]) -> list[tuple[int, int]
             month_rows.append((row_idx, MONTHS[text]))
     return month_rows
 
-
 def _extract_year(strings: list[str]) -> int:
     for s in strings:
         m = re.search(r"\b(20\d{2})\b", s)
@@ -244,13 +239,11 @@ def _extract_year(strings: list[str]) -> int:
             return int(m.group(1))
     raise ValueError("Year not found in XLSX shared strings.")
 
-
 def _split_cell_ref(ref: str) -> tuple[str, int]:
     m = re.match(r"^([A-Z]+)(\d+)$", ref)
     if not m:
         raise ValueError(f"Invalid cell ref: {ref}")
     return m.group(1), int(m.group(2))
-
 
 def _open_zip_from_url(url: str, session: requests.Session) -> zipfile.ZipFile:
     r = session.get(url, timeout=30, headers=HEADERS)
@@ -264,7 +257,6 @@ def _open_zip_from_url(url: str, session: requests.Session) -> zipfile.ZipFile:
         return zipfile.ZipFile(io.BytesIO(r.content))
     except zipfile.BadZipFile as exc:
         raise ValueError(f"URL does not point to a valid XLSX file: {url}") from exc
-
 
 def _discover_xlsx_url(page_url: str, session: requests.Session) -> str:
     r = session.get(page_url, timeout=30, headers=HEADERS)

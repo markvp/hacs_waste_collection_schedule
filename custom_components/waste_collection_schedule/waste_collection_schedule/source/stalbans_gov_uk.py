@@ -11,17 +11,12 @@ TEST_CASES = {
     "9 Tyttenhanger Grn": {"uprn": "100080869141"},
 }
 
-
 ICON_MAP = {
-    "refuse": "mdi:trash-can",
     "food": "mdi:food",
     "garden": "mdi:leaf",
-    "recycling": "mdi:recycle",
 }
 
-
 API_URL = "https://gis.stalbans.gov.uk/NoticeBoard9/VeoliaProxy.NoticeBoard.asmx/GetServicesByUprnAndNoticeBoard"
-
 
 class Source:
     def __init__(self, uprn: str | int):

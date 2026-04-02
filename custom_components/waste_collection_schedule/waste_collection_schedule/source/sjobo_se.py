@@ -17,28 +17,28 @@ ICON_MAP = {
     "FF1-H": "mdi:trash-can",
     "FF2": "mdi:trash-can",
     "FF2-H": "mdi:trash-can",
-    "MoR": "mdi:trash-can",
-    "MoR-H": "mdi:trash-can",
     "FG": "mdi:bottle-soda",
     "FG-H": "mdi:bottle-soda",
-    "OFG": "mdi:bottle-soda",
-    "OFG-H": "mdi:bottle-soda",
-    "RST": "mdi:trash-can",
-    "RST-H": "mdi:trash-can",
     "KOM": "mdi:compost",
     "KOM-H": "mdi:compost",
     "MAT": "mdi:compost",
     "MAT-H": "mdi:compost",
     "MEF": "mdi:recycle",
     "MEF-H": "mdi:recycle",
+    "MoR": "mdi:trash-can",
+    "MoR-H": "mdi:trash-can",
+    "OFG": "mdi:bottle-soda",
+    "OFG-H": "mdi:bottle-soda",
     "PAF": "mdi:package",
     "PAF-H": "mdi:package",
     "PLF": "mdi:recycle",
     "PLF-H": "mdi:recycle",
-    "ToP": "mdi:newspaper",
-    "ToP-H": "mdi:newspaper",
+    "RST": "mdi:trash-can",
+    "RST-H": "mdi:trash-can",
     "TRG": "mdi:leaf",
     "TRG-H": "mdi:leaf",
+    "ToP": "mdi:newspaper",
+    "ToP-H": "mdi:newspaper",
 }
 
 MONTH_MAP = {
@@ -84,7 +84,6 @@ BIN_TYPE_TO_TEXT = {
     "TRG": "Trädgårdsavfall",
     "TRG-H": "Trädgårdsavfall",
 }
-
 
 class Source:
     def __init__(self, address: str, city: str) -> None:

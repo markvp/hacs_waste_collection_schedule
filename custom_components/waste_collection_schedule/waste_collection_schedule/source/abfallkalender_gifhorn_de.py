@@ -18,25 +18,17 @@ TEST_CASES = {
     "Gifhorn, Ackerstraße": {"territory": "Gifhorn", "street": "Ackerstraße"},
 }
 
-
 ICON_MAP = {
-    "Trash": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "Bio": "mdi:leaf",
-    "Paper": "mdi:package-variant",
-    "Recycle": "mdi:recycle",
 }
 # const street_array = [
 STREET_ARRAY_REGEX = re.compile(r"const\s*street_array\s*=\s*\[(.*?)\];")
 
-
 API_URL = "https://www.abfallkalender-gifhorn.de"
-
 
 class Terretory(TypedDict):
     id: str
     streets: list[str]
-
 
 class Source:
     def __init__(self, territory: str, street: str):

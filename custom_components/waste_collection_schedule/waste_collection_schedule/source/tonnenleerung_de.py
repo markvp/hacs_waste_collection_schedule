@@ -20,15 +20,10 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "grau4": "mdi:trash-can",
-    "grau": "mdi:trash-can",
-    "Bio": "mdi:leaf",
     "blau": "mdi:package-variant",
     "gelb": "mdi:recycle",
 }
-
 
 API_URL = "https://tonnenleerung.de/{url}"
 
@@ -45,13 +40,6 @@ NAME_2_TYPE = {
     "braunArray": "Bio",
     "grau4Array": "grau4",
 }
-
-PARAM_TRANSLATIONS = {
-    "de": {
-        "url": "URL",
-    }
-}
-
 
 class Source:
     def __init__(self, url: str):

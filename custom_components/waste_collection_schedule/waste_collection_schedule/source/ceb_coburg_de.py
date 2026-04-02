@@ -16,13 +16,11 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Schwarz": "mdi:trash-can",
-    "Grün": "mdi:package-variant",
     "Gelb": "mdi:recycle",
+    "Grün": "mdi:package-variant",
 }
 
 API_URL = "https://abfuhrkalender.ceb-coburg.de/"
-
 
 class Source:
     def __init__(self, street: str):

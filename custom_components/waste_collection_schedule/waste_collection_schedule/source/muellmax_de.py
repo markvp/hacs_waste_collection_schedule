@@ -9,7 +9,6 @@ TITLE = "Müllmax"
 DESCRIPTION = "Source for Müllmax waste collection."
 URL = "https://www.muellmax.de"
 
-
 def EXTRA_INFO():
     return [
         {
@@ -19,7 +18,6 @@ def EXTRA_INFO():
         }
         for s in SERVICE_MAP
     ]
-
 
 TEST_CASES = {
     # "Rhein-Sieg-Kreis, Alfter": {
@@ -47,13 +45,11 @@ HEADERS = {
 
 PARAM_TRANSLATIONS = {
     "de": {
-        "service": "Service",
+        "mm_frm_hnr_sel": "Hausnummer",
         "mm_frm_ort_sel": "Ort",
         "mm_frm_str_sel": "Straße",
-        "mm_frm_hnr_sel": "Hausnummer",
     },
 }
-
 
 # Parser for HTML checkbox
 class InputCheckboxParser(HTMLParser):
@@ -71,7 +67,6 @@ class InputCheckboxParser(HTMLParser):
             d = dict(attrs)
             if d.get("name", "").startswith(self._startswith):
                 self._value[d["name"]] = d.get("value")
-
 
 # Parser for HTML input (hidden) text
 class InputTextParser(HTMLParser):
@@ -91,7 +86,6 @@ class InputTextParser(HTMLParser):
                 if key not in d or d[key] != value:
                     return
             self._value = d.get("value")
-
 
 class Source:
     def __init__(

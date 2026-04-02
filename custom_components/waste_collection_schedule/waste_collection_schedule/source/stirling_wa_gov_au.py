@@ -15,15 +15,14 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "red": "mdi:trash-can",
     "green": "mdi:leaf",
     "greenverge": "mdi:pine-tree",
+    "red": "mdi:trash-can",
     "yellow": "mdi:recycle",
 }
 
 API_PATH = "/bincollectioncheck/getresult"
 REFERER_PATH = "/waste-and-environment/waste-and-recycling/bin-collections"
-
 
 class Source:
     def __init__(self, lat: float, lon: float):

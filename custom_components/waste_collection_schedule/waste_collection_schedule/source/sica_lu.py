@@ -17,24 +17,18 @@ BASE_URL = "https://dashboard.sicaapp.lu"
 API_URL = f"{BASE_URL}/api/api/app"
 HEADERS = {"User-Agent": "SicaAPP", "Accept": "application/json"}
 ICON_MAP = {
-    "Residual waste": "mdi:trash-can",
-    "Valorlux - blue bag": "mdi:recycle",
-    "Organic waste": "mdi:leaf",
     "Glass": "mdi:bottle-wine-outline",
+    "Hedges, Shrubs and Trees": "mdi:tree",
     "Paper /Carton": "mdi:newspaper",
     "Scrap and electrical appliances": "mdi:washing-machine",
-    "Clothing and Shoes": "mdi:tshirt-crew",
-    "Hedges, Shrubs and Trees": "mdi:tree",
-    "Bulky waste": "mdi:sofa",
+    "Valorlux - blue bag": "mdi:recycle",
 }
-
 
 class LanguageDict(TypedDict):
     en: str
     fr: str
     de: str
     lb: str
-
 
 class MunicipalityData(TypedDict):
     id: int
@@ -44,10 +38,8 @@ class MunicipalityData(TypedDict):
     parentCommunity_id: int | None
     children: list["MunicipalityData"]
 
-
 class MunicipalitiesResult(TypedDict):
     data: list[MunicipalityData]
-
 
 class PickupType(TypedDict):
     id: int
@@ -61,7 +53,6 @@ class PickupType(TypedDict):
     created_at: str
     updated_at: str
     icon: dict[str, str | None | int]
-
 
 class CollectionEntry(TypedDict):
     id: int
@@ -77,7 +68,6 @@ class CollectionEntry(TypedDict):
     created_at: str
     updated_at: str
     pickup_type: PickupType
-
 
 class Source:
     def __init__(self, municipality: str) -> None:

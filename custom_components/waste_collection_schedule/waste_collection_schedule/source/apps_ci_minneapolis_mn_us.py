@@ -17,15 +17,8 @@ TEST_CASES = {
     "Library": {"apn": 2402924310071},
 }
 
-
 # https://apps.ci.minneapolis.mn.us/RecyclingFinderApp/RecyclingRpt.aspx?AppID=RecycleFinderApp&apn=0902824440154
 API_URL = "https://apps.ci.minneapolis.mn.us/RecyclingFinderApp/RecyclingRpt.aspx"
-ICON_MAP = {  # Optional: Dict of waste types and suitable mdi icons
-    "DOMESTIC": "mdi:trash-can",
-    "RECYCLE": "mdi:recycle",
-    "ORGANIC": "mdi:leaf",
-}
-
 
 class Source:
     def __init__(self, apn):

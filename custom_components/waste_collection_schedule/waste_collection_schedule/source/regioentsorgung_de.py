@@ -22,15 +22,11 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64)",
 }
 
-
 PARAM_TRANSLATIONS = {
     "de": {
         "city": "Ort",
-        "street": "Straße",
-        "house_number": "Hausnummer",
     },
 }
-
 
 class FormStateParser(HTMLParser):
     def __init__(self):
@@ -83,14 +79,12 @@ class FormStateParser(HTMLParser):
             if (text or value)
         ]
 
-
 def parse_form_state(content):
     parser = FormStateParser()
     parser.feed(content)
     parser.finalize()
     parser.close()
     return parser
-
 
 def validate_option(field_name, value, options):
     if value in options:
@@ -102,7 +96,6 @@ def validate_option(field_name, value, options):
         value,
         "please check the other address arguments and try again.",
     )
-
 
 class Source:
     def __init__(self, city, street, house_number):

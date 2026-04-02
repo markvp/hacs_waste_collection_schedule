@@ -40,7 +40,6 @@ ICON_MAP = {
     "vetro": "mdi:bottle-soda",
 }
 
-
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     "en": "You need to provide the street name and house number "
     "of your address, as well as the city.",
@@ -64,18 +63,10 @@ PARAM_DESCRIPTIONS = {
 }
 
 PARAM_TRANSLATIONS = {
-    "en": {
-        "address": "Address",
-        "house_number": "House Number",
-        "city": "City",
-    },
     "it": {
-        "address": "Indirizzo",
         "house_number": "Numero Civico",
-        "city": "Città",
     },
 }
-
 
 class Source:
     def __init__(self, address: Any, house_number: Any, city: Optional[Any] = None):

@@ -18,11 +18,7 @@ HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     "it": "Visita <https://isontinambiente.it/it/servizi/servizi-per-il-tuo-comune/ronchi-dei-legionari> e seleziona il tuo indirizzo. L'ID dell'indirizzo è il numero alla fine dell'URL. es. `https://isontinambiente.it/it/servizi/servizi-per-il-tuo-comune/ronchi-dei-legionari/?indirizzo=1172` l'ID dell'indirizzo è `1172`.",
 }
 
-
 ICON_MAP = {
-    "Plastica e lattine": "mdi:recycle",
-    "Organico umido": "mdi:leaf",
-    "Carta e cartone": "mdi:package-variant",
     "Secco residuo": "mdi:trash-can",
 }
 
@@ -41,9 +37,7 @@ ITALIAN_MONTHS = {
     "dicembre": 12,
 }
 
-
 API_URL = "https://isontinambiente.it/it/servizi/servizi-per-il-tuo-comune/ronchi-dei-legionari/"
-
 
 class Source:
     def __init__(self, address_id: str | int):

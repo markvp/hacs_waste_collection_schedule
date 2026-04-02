@@ -30,13 +30,10 @@ TEST_CASES = {
     "test": {"address": "65 MAIN ROAD, LONG HANBOROUGH, WITNEY, OX29 8JX"},
 }
 
-
 ICON_MAP = {
     "bin": "mdi:leaf",
-    "refuse": "mdi:trash-can",
-    "recycling": "mdi:recycle",
-    "caddy": "mdi:food",
     "box": "mdi:recycle",
+    "caddy": "mdi:food",
 }
 
 REGEX_AURA_CONFIG = re.compile(r"var\s+auraConfig\s*=\s*(.*?),\n")
@@ -47,7 +44,6 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:115.0) Gecko/20100101 Firefox/115.0",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 }
-
 
 class Source:
     def __init__(self, address: str):

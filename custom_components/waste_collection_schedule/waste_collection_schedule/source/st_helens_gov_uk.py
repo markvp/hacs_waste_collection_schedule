@@ -28,7 +28,6 @@ WASTE_TYPE_MAP = {
     "Recycling": "Recycling",
 }
 
-
 class Source:
     def __init__(self, postcode: str, uprn: str):
 

@@ -18,7 +18,6 @@ ICON_MAP = {
 }
 REGEX_ORDINALS = r"(?<=\d)(st|nd|rd|th)"
 
-
 class Source:
     def __init__(self, uprn: str | int):
         self._uprn = str(uprn)

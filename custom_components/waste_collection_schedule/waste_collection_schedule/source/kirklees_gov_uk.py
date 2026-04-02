@@ -36,13 +36,6 @@ COLLECTION_REGEX = (
     "(Recycling|Domestic|Garden Waste).*collection date ([0-3][0-9] [a-zA-Z]* [0-9]{4})"
 )
 
-ICON_MAP = {
-    "DOMESTIC": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
-    "GARDEN WASTE": "mdi:leaf",
-}
-
-
 class Source:
     def __init__(
         self, door_num: str | int, postcode: str, uprn: str | int | None = None
@@ -133,7 +126,6 @@ class Source:
                 Collection(
                     date=datetime.strptime(matches[0][1], "%d %B %Y").date(),
                     t=matches[0][0],
-                    icon=ICON_MAP.get(matches[0][0].upper()),
                 )
             )
         return entries

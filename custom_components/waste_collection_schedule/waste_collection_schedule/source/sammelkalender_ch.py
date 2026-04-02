@@ -43,14 +43,10 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "Kehricht": "mdi:trash-can",
-    "Christbaum": "mdi:pine-tree",
-    "Grüngut": "mdi:leaf",
+    "Alteisen/Metall": "mdi:screw-flat-top",
     "Karton": "mdi:package-variant-closed",
     "Papier": "mdi:newspaper",
-    "Alteisen/Metall": "mdi:screw-flat-top",
 }
 
 SERVICES = {
@@ -91,12 +87,9 @@ EXTRA_INFO = [
     for key, s in SERVICES.items()
 ]
 
-
 PROVIDER_LITERALS = Literal["zeba", "zkri", "real_luzern", "zaku"]
 
-
 API_URL = ""
-
 
 class Source:
     def __init__(

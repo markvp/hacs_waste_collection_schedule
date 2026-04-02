@@ -11,14 +11,13 @@ URL = "https://esch.lu"
 TEST_CASES = {"Zone A": {"zone": "A"}, "Zone B": {"zone": "B"}}
 
 API_URL = "https://administration.esch.lu/dechets/?street=0&tour="
-ICON_MAP = {  # Optional: Dict of waste types and suitable mdi icons
-    "Poubelle ménage": "mdi:trash-can",
-    "Papier": "mdi:newspaper",
-    "Organique": "mdi:leaf",
-    "Verre": "mdi:bottle-wine-outline",
-    "Valorlux": "mdi:recycle",
-    "Déchets toxiques": "mdi:skull-crossbones",
+ICON_MAP = {
     "Container ménage": "train-car-container",
+    "Déchets toxiques": "mdi:skull-crossbones",
+    "Organique": "mdi:leaf",
+    "Papier": "mdi:newspaper",
+    "Valorlux": "mdi:recycle",
+    "Verre": "mdi:bottle-wine-outline",
 }
 
 MONTH_NAMES = [
@@ -35,7 +34,6 @@ MONTH_NAMES = [
     "novembre",
     "décembre",
 ]
-
 
 class Source:
     def __init__(

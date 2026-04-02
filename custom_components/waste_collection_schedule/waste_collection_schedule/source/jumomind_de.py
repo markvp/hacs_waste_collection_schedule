@@ -65,16 +65,8 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "Restmüll": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "Biomüll": "mdi:leaf",
-    "Biotonne": "mdi:leaf",
-    "Papier": "mdi:package-variant",
-    "Papiertonne": "mdi:package-variant",
-    "Gelber": "mdi:recycle",
-    "Gelbe": "mdi:recycle",
     "Schadstoffmobil": "mdi:truck-alert",
 }
 
@@ -186,7 +178,6 @@ SERVICE_MAP = {
     "wol": {"list": ["ALW Wolfenbüttel"], "url": "https://www.alw-wf.de"},
 }
 
-
 def EXTRA_INFO():
     extra_info = []
     for provider, entries in SERVICE_MAP.items():
@@ -203,23 +194,18 @@ def EXTRA_INFO():
             )
     return extra_info
 
-
 API_URL = "https://{provider}.jumomind.com/mmapp/api.php"
-
 
 PARAM_TRANSLATIONS = {
     "de": {
-        "service_id": "Service ID",
-        "city": "Ort",
-        "street": "Straße",
-        "city_id": "Ort ID",
         "area_id": "Bereich ID",
-        "house_number": "Hausnummer",
-    }
+        "city": "Ort",
+        "city_id": "Ort ID",
+        "service_id": "Service ID",
+    },
 }
 
 LOGGER = logging.getLogger(__name__)
-
 
 def validate_params(value):
     errors = {}
@@ -247,7 +233,6 @@ def validate_params(value):
         errors["city_id"] = "city_id is required when using area_id"
     return errors
 
-
 def normalize_street(value: str | None) -> str | None:
     return value and (
         value.lower()
@@ -256,7 +241,6 @@ def normalize_street(value: str | None) -> str | None:
         .replace("straße", "strasse")
         .replace("str.", "strasse")
     )
-
 
 class Source:
     def __init__(
@@ -390,7 +374,6 @@ class Source:
 
         return entries
 
-
 def print_md_table():
     table = "|service_id|cities|\n|---|---|\n"
 
@@ -404,7 +387,6 @@ def print_md_table():
         table += "`" + "`, `".join([c["name"] for c in r.json()]) + "`"
         table += "|\n"
     print(table)
-
 
 if __name__ == "__main__":
     print_md_table()

@@ -16,15 +16,6 @@ TEST_CASES = {
 
 SERVICE_URL = "https://kundenportal.berlin-recycling.de/"
 
-
-PARAM_TRANSLATIONS = {
-    "de": {
-        "username": "Benutzername",
-        "password": "Passwort",
-    }
-}
-
-
 class Source:
     def __init__(self, username, password):
         self._username = username

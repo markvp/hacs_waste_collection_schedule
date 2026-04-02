@@ -15,12 +15,10 @@ TEST_CASES = {
     "Test_002": {"municipality": "Cesana", "address": "via foscolo"},
 }
 ICON_MAP = {
-    "INDIFFERENZIATO": "mdi:trash-can",
-    "PLASTICA, LATTINE E TETRAPAK": "mdi:recycle",
-    "VETRO": "mdi:bottle-wine",
     "CARTA E CARTONE": "mdi:newspaper-variant-multiple",
     "SPAZZAMENTO MECCANIZZATO": "mdi:tanker-truck",
     "UMIDO": "mdi:leaf",
+    "VETRO": "mdi:bottle-wine",
 }
 
 class Source:
@@ -107,7 +105,5 @@ class Source:
                             icon=ICON_MAP.get(raw_name)
                         )
                     )
-
-
 
         return entries

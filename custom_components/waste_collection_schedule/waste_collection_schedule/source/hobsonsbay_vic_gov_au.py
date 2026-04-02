@@ -19,13 +19,9 @@ SEARCH_APPLICATION_ID = "JW7FDA7YTI"
 SEARCH_API_KEY = "7a3b39eba83ef97796c682e6a749be71"
 ICON_MAP = {
     "Rubbish": "mdi:trash-can-outline",
-    "Commingled Recycling": "mdi:recycle",
-    "Food and Garden": "mdi:leaf",
-    "Glass": "mdi:glass-fragile",
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, street_address: str):

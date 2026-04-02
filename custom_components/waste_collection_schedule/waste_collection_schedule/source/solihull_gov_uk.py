@@ -16,15 +16,7 @@ TEST_CASES = {
     "New Garden Waste Subscription Service": {"uprn": 100071011936},
 }
 
-ICON_MAP = {
-    "garden waste": "mdi:leaf",
-    "garden waste - subscribed": "mdi:leaf",
-    "household waste": "mdi:trash-can",
-    "mixed recycling": "mdi:recycle",
-}
-
 API_URL = "https://digital.solihull.gov.uk/BinCollectionCalendar/Calendar.aspx"
-
 
 class Source:
     def __init__(self, uprn: str | int, predict: bool = False):

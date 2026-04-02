@@ -16,10 +16,8 @@ DESCRIPTION = "Source for Apps by Insert IT"
 URL = "https://insert-infotech.de/"
 COUNTRY = "de"
 
-
 def EXTRA_INFO():
     return [{"title": s["title"], "url": s["url"]} for s in SERVICE_MAP]
-
 
 TEST_CASES = {
     "Offenbach Address": {
@@ -32,7 +30,6 @@ TEST_CASES = {
     "Mannheim Location ID": {"municipality": "Mannheim", "location_id": 430650},
 }
 
-
 MUNICIPALITIES = {
     "Hattingen": "BmsAbfallkalenderHattingen",
     "Herne": "BmsAbfallkalenderHerne",
@@ -44,19 +41,8 @@ MUNICIPALITIES = {
 }
 
 ICON_MAP = {
-    "Offenbach": {
-        "Restmüll": {"icon": "mdi:trash-can", "name": "Restmüll"},
-        "Biomüll": {"icon": "mdi:leaf", "name": "Biomüll"},
-        "DSD": {"icon": "mdi:recycle", "name": "DSD"},
-        "Altpapier": {"icon": "mdi:package-variant", "name": "Altpapier"},
-    },
-    "Mannheim": {
-        "Rest": {"icon": "mdi:trash-can", "name": "Restmüll"},
-        "Wertstoff": {"icon": "mdi:recycle", "name": "Sack/Tonne gelb"},
-        "Bio": {"icon": "mdi:leaf", "name": "Biomüll"},
-        "Papier": {"icon": "mdi:package-variant", "name": "Altpapier"},
-        "Grünschnitt": {"icon": "mdi:leaf", "name": "Grünschnitt"},
-    },
+    "Mannheim": "{'Rest': {'icon': 'mdi:trash-can', 'name': 'Restmüll'}, 'Wertstoff': {'icon': 'mdi:recycle', 'name': 'Sack/Tonne gelb'}, 'Bio': {'icon': 'mdi:leaf', 'name': 'Biomüll'}, 'Papier': {'icon': 'mdi:package-variant', 'name': 'Altpapier'}, 'Grünschnitt': {'icon': 'mdi:leaf', 'name': 'Grünschnitt'}}",
+    "Offenbach": "{'Restmüll': {'icon': 'mdi:trash-can', 'name': 'Restmüll'}, 'Biomüll': {'icon': 'mdi:leaf', 'name': 'Biomüll'}, 'DSD': {'icon': 'mdi:recycle', 'name': 'DSD'}, 'Altpapier': {'icon': 'mdi:package-variant', 'name': 'Altpapier'}}",
 }
 
 REGEX_MAP = {
@@ -71,13 +57,11 @@ REGEX_MAP = {
 
 PARAM_TRANSLATIONS = {
     "de": {
-        "municipality": "Ort",
-        "street": "Straße",
         "hnr": "Hausnummer",
         "location_id": "Standort ID",
-    }
+        "municipality": "Ort",
+    },
 }
-
 
 class Source:
     def __init__(self, municipality, street=None, hnr=None, location_id=None):

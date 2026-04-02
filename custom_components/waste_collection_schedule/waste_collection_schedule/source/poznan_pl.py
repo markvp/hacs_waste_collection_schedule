@@ -17,19 +17,15 @@ TEST_CASES = {
 
 _LOGGER = logging.getLogger(__name__)
 
-
 API_URL = "https://www.poznan.pl/mim/odpady/harmonogramy.html"
 
 ICON_MAP = {
-    "Odpady zmieszane": "mdi:trash-can",
-    "Papier": "mdi:newspaper-variant-outline",
-    "Metale i tworzywa sztuczne": "mdi:bottle-soda-classic-outline",
-    "Szkło": "mdi:glass-fragile",
     "Bioodpady": "mdi:recycle",
-    "Odpady wystawkowe": "mdi:cupboard",
     "Drzewka świąteczne": "mdi:pine-tree",
+    "Metale i tworzywa sztuczne": "mdi:bottle-soda-classic-outline",
+    "Odpady wystawkowe": "mdi:cupboard",
+    "Papier": "mdi:newspaper-variant-outline",
 }
-
 
 class Source:
     def __init__(self, street_name: str, street_number: str | int):

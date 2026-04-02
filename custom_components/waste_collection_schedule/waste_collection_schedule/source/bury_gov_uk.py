@@ -21,10 +21,10 @@ TEST_CASES = {
     "Test_ID_002": {"id": "593456"},
 }
 ICON_MAP = {
-    "brown": "mdi:leaf",
-    "grey": "mdi:trash-can",
-    "green": "mdi:package-variant",
     "blue": "mdi:bottle-soda-classic",
+    "brown": "mdi:leaf",
+    "green": "mdi:package-variant",
+    "grey": "mdi:trash-can",
 }
 NAME_MAP = {
     "brown": "Garden",
@@ -45,7 +45,6 @@ HEADERS = {
     "Sec-GPC": "1",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
 }
-
 
 class Source:
     def __init__(self, postcode=None, address=None, id=None):

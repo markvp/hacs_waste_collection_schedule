@@ -14,14 +14,11 @@ HEADERS = {
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }
 ICON_MAP = {
-    "Refuse": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "GardenWaste": "mdi:leaf",
     "FoodWaste": "mdi:food-apple",
+    "GardenWaste": "mdi:leaf",
 }
 
 API_URL = "https://www.rushmoor.gov.uk/Umbraco/Api/BinLookUpWorkAround/Get"
-
 
 class Source:
     def __init__(self, uprn):

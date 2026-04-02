@@ -21,11 +21,11 @@ TEST_CASES = {
 API_URL = "https://www.eth-erd.hu/trashcalendarget"
 
 ICON_MAP = {
+    "Fenyőfa": "mdi:pine-tree",
     "Kommunális": "mdi:trash-can",
+    "Papír": "mdi:newspaper",
     "Szelektív": "mdi:recycle",
     "Zöldhulladék": "mdi:leaf",
-    "Papír": "mdi:newspaper",
-    "Fenyőfa": "mdi:pine-tree",
     "Üveg": "mdi:glass-fragile",
 }
 
@@ -45,7 +45,6 @@ CITY_MAP = {
     "sóskút": 3,
     "tárnok": 4,
 }
-
 
 class Source:
     def __init__(self, city: str, street: str = "", house_number: int = 1) -> None:

@@ -14,16 +14,10 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Black bags": "mdi:trash-can",
-    "Glass": "mdi:glass-fragile",
     "Cans": "mdi:trash-can",
-    "Textiles": "mdi:hanger",
     "Paper/card": "mdi:recycle",
-    "Plastics": "mdi:recycle",
-    "Garden waste": "mdi:leaf",
-    "Food waste": "mdi:food",
+    "Textiles": "mdi:hanger",
 }
-
 
 class Source:
     def __init__(self, llpgid):

@@ -9,12 +9,6 @@ DESCRIPTION = "Source for Christchurch City Council."
 URL = "https://ccc.govt.nz"
 TEST_CASES = {"53 Hereford Street": {"address": "53 Hereford Street"}}
 
-ICON_MAP = {
-    "Garbage": "mdi:trash-can",
-    "Recycle": "mdi:recycle",
-    "Organic": "mdi:leaf",
-}
-
 ADDRESS_SUGGEST_URL = "https://opendata.ccc.govt.nz/CCCSearch/rest/address/suggest"
 BIN_SERVICE_URL = (
     "https://ccc-data-citizen-api-v1-prod.au-s1.cloudhub.io/api/v1/properties/"
@@ -27,7 +21,6 @@ BINS_HEADERS = {
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, address: str):
@@ -134,7 +127,6 @@ class Source:
                 Collection(
                     date=collection_date,
                     t=bin["material"],
-                    icon=ICON_MAP.get(bin["material"]),
                 )
             )
         _LOGGER.debug("Bin processing complete. Good to GO! Bin Good?")

@@ -10,11 +10,6 @@ TEST_CASES = {
     "TestService": {"uprn": "16903059805"},
 }
 
-ICON_MAP = {
-    "Restavfall": "mdi:trash-can",
-    "Matavfall": "mdi:leaf"
-}
-
 class Source:
     def __init__(self, uprn):
         self._uprn = uprn

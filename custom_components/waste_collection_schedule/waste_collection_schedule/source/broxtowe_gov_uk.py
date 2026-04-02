@@ -8,7 +8,6 @@ from waste_collection_schedule.exceptions import SourceArgumentException
 
 _LOGGER = logging.getLogger(__name__)
 
-
 TITLE = "Broxtowe Borough Council"
 DESCRIPTION = "Source for Broxtowe Borough Council."
 URL = "https://www.broxtowe.gov.uk/"
@@ -18,16 +17,13 @@ TEST_CASES = {
     "U100031514955 NG9 4DU": {"uprn": "U100031308988 ", "postcode": "NG9 4DU"},
 }
 
-
 ICON_MAP = {
     "BLACK": "mdi:trash-can",
     "GLASS": "mdi:bottle-soda",
     "GREEN": "mdi:leaf",
 }
 
-
 API_URL = "https://selfservice.broxtowe.gov.uk/renderform.aspx?t=217&k=9D2EF214E144EE796430597FB475C3892C43C528"
-
 
 POSTCODE_ARGS = {
     "ctl00$ScriptManager1": "ctl00$ContentPlaceHolder1$APUP_5683|ctl00$ContentPlaceHolder1$FF5683BTN",
@@ -44,7 +40,6 @@ UPRN_ARGS = {
 SUBMIT_ARGS = {
     "__EVENTTARGET": "ctl00$ContentPlaceHolder1$btnSubmit",
 }
-
 
 class Source:
     def __init__(self, uprn: str | int, postcode: str):

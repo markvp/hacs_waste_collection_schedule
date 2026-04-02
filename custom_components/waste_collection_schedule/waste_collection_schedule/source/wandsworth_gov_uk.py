@@ -23,9 +23,7 @@ TEST_CASES = {
 API_URL = "https://www.wandsworth.gov.uk/my-property/"
 
 ICON_MAP = {
-    "Food waste": "mdi:food",
     "Recycling": "mdi:recycling",
-    "Rubbish": "mdi:trash-can",
     "Rubbish/Garden waste": "mdi:trash-can",
     "Small electrical items": "mdi:blender",
 }
@@ -52,7 +50,6 @@ HEADERS = {
     "Accept-Language": "en-GB,en;q=0.5",
     "Referer": "https://www.wandsworth.gov.uk",
 }
-
 
 class Source:
     def __init__(self, uprn: str | int):

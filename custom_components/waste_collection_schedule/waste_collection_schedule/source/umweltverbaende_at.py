@@ -17,13 +17,11 @@ DESCRIPTION = (
 )
 URL = "https://www.umweltverbaende.at/"
 
-
 class E_I_TYPE(TypedDict):
     title: str
     url: str
     country: str
     default_params: dict[str, str]
-
 
 EXTRA_INFO: list[E_I_TYPE] = [
     # { --> Schedules supported via generic ICS source [GDA Amstetten](/doc/ics/gda_gv_at.md)
@@ -216,28 +214,23 @@ EXTRA_INFO: list[E_I_TYPE] = [
 
 PARAM_TRANSLATIONS = {
     "de": {
-        "district": "Gebiet/Service provider id",
-        "municipal": "Gemeinde",
-        "town": "Ort",
-        "plz": "Postleitzahl",
-        "street": "Straße",
-        "hnr": "Hausnummer",
-        "zusatz": "Zusatz",
         "calendar": "Kalender",
-        "calendar_title_separator": "Kalendertitel Seperator",
         "calendar_splitter": "Kalendereintrag-Trenner",
+        "calendar_title_separator": "Kalendertitel Seperator",
+        "district": "Gebiet/Service provider id",
+        "hnr": "Hausnummer",
+        "plz": "Postleitzahl",
+        "town": "Ort",
+        "zusatz": "Zusatz",
     },
     "en": {
-        "district": "District/Service provider id",
-        "municipal": "Municipal",
-        "town": "Town",
-        "plz": "Postal code",
-        "street": "Street",
-        "hnr": "House number",
-        "zusatz": "Addition",
         "calendar": "Calendar",
-        "calendar_title_separator": "Calendar title separator",
         "calendar_splitter": "Calendar entry splitter",
+        "calendar_title_separator": "Calendar title separator",
+        "district": "District/Service provider id",
+        "hnr": "House number",
+        "municipal": "Municipal",
+        "plz": "Postal code",
     },
 }
 
@@ -278,7 +271,6 @@ PARAM_DESCRIPTIONS = {
         "calendar_splitter": "(Alte Website) selten benötigt, nur wenn `calendar` gesetzt ist. Nur erforderlich, wenn mehrere Sammlungen in einer Zeile angezeigt werden. Dies ist das Zeichen, das die Sammelzeiten trennt, die in einer Zeile aufgeführt sind. Wie `Bisamberg Zone B, Restmüll 14-tägig: Gelber Sack` (`:` ist der Trenner) Sie können den Text, den die Integration verwendet, auf der Abholtermine-Seite unter `Kalenderansicht` sehen",
     },
 }
-
 
 TEST_CASES = {
     # "Bruck/Leitha": {"district": "bruck", "municipal": "Berg"}, # Not supported anymore as they only provide a PDFs now
@@ -389,7 +381,6 @@ POSSIBLE_COLLECTION_PATHS = (
     f"fuer-die-bevoelkerung/abholtermine-{datetime.now().year + 1}/", # Zwettl
     f"fuer-die-bevoelkerung/abholtermine-{datetime.now().year}/", # Zwettl
 )
-
 
 class Source:
     def __init__(

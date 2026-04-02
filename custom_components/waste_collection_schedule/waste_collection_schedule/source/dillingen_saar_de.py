@@ -27,18 +27,8 @@ TEST_CASES = {  # Insert arguments for test cases to be used by test_sources.py 
 API_URL = "https://service-dillingen-saar.fbo.de/date/"
 
 ICON_MAP = {
-    "Papier Entsorgung": "mdi:package-variant",
-    "Restmüll Abfuhr": "mdi:trash-can",
     "Tonnen Abfuhr": "mdi:trash-can",
-    "Gelbesäcke Abholung": "mdi:recycle",
 }
-
-PARAM_TRANSLATIONS = {
-    "de": {
-        "street": "Straße",
-    }
-}
-
 
 class Source:
     def __init__(self, street: str):

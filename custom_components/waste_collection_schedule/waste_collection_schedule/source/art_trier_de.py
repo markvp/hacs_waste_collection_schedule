@@ -36,11 +36,6 @@ REMINDER_DAY = (
     "0"  # The calendar event should be on the same day as the waste collection
 )
 REMINDER_TIME = "0600"  # The calendar event should start on any hour of the correct day, so this does not matter much
-ICON_MAP = {
-    "Altpapier": "mdi:package-variant",
-    "Restmüll": "mdi:trash-can",
-    "Gelber Sack": "mdi:recycle",
-}
 SPECIAL_CHARS = str.maketrans(
     {
         " ": "_",
@@ -58,11 +53,9 @@ LOGGER = logging.getLogger(__name__)
 
 PARAM_TRANSLATIONS = {
     "de": {
-        "zip_code": "PLZ",
         "district": "Ort",
-    }
+    },
 }
-
 
 class Source:
     def __init__(self, district: str, zip_code: str):
@@ -85,6 +78,6 @@ class Source:
         schedule = self._ics.convert(res.text)
 
         return [
-            Collection(date=entry[0], t=entry[1], icon=ICON_MAP.get(entry[1]))
+            Collection(date=entry[0], t=entry[1])
             for entry in schedule
         ]

@@ -42,8 +42,6 @@ API_URLS = {
 }
 ICON_MAP = {
     "Waste": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Green Waste": "mdi:leaf",
 }
 HEADERS = {"user-agent": "Mozilla/5.0"}
 EXTRA_INFO = [
@@ -72,7 +70,6 @@ PARAM_TRANSLATIONS = {  # Optional dict to translate the arguments, will be show
         "district": "The district name of the property, as displayed on the FRWA web site.",
     },
 }
-
 
 class Source:
     def __init__(

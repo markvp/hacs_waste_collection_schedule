@@ -19,11 +19,8 @@ TEST_CASES = {
 
 API_URL = "https://onlineforms.bradford.gov.uk/ufs/"
 ICON_MAP = {
-    "REFUSE": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
     "GARDEN": "mdi:leaf",
 }
-
 
 class CustomHttpAdapter(requests.adapters.HTTPAdapter):
     """Transport adapter" that allows us to use custom ssl_context."""
@@ -39,7 +36,6 @@ class CustomHttpAdapter(requests.adapters.HTTPAdapter):
             block=block,
             ssl_context=self.ssl_context,
         )
-
 
 class Source:
     def __init__(self, uprn: str):

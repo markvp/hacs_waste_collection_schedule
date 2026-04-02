@@ -39,17 +39,10 @@ Hinweis: Der Parameter ist verschlüsselt und spezifisch für Ihre Orts- und Str
 }
 
 ICON_MAP = {
-    "Restabfall": "mdi:trash-can",
-    "Gelber Sack": "mdi:recycle",
-    "Bioabfall": "mdi:leaf",
-    "BIO": "mdi:leaf",
-    "Papier": "mdi:package-variant",
     "Problemmüll": "mdi:flask",
-    "Sperrmüll": "mdi:sofa",
 }
 
 API_URL = "https://api-enttermine.heinz-entsorgung.net/termine"
-
 
 class Source:
     def __init__(self, param: str):

@@ -12,19 +12,14 @@ TEST_CASES = {
     "100060300958": {"uprn": "100060300958"},
 }
 
-
 ICON_MAP = {
-    "Paper": "mdi:package-variant",
-    "household": "mdi:trash-can",
-    "recycling": "mdi:recycle",
     "food": "mdi:food",
-    "glass": "mdi:bottle-soda",
     "garden": "mdi:leaf",
+    "glass": "mdi:bottle-soda",
+    "household": "mdi:trash-can",
 }
 
-
 API_URL = "https://eastleigh.gov.uk/waste-bins-and-recycling/collection-dates/your-waste-bin-and-recycling-collections"
-
 
 class Source:
     def __init__(self, uprn: str | int):

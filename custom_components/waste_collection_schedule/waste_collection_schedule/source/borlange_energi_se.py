@@ -30,11 +30,8 @@ MONTHS = {
 
 ICON_MAP = {
     "Matavfall": "mdi:food-apple",
-    "Restavfall": "mdi:trash-can",
-    "Pappersförpackningar": "mdi:package-variant",
     "Plastförpackningar": "mdi:bottle-soda-outline",
 }
-
 
 def parse_swedish_date(text: str) -> datetime:
     """
@@ -57,7 +54,6 @@ def parse_swedish_date(text: str) -> datetime:
         date = datetime(year + 1, month, day)
 
     return date
-
 
 class Source:
     def __init__(self, pickup_address: str):

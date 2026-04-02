@@ -18,10 +18,6 @@ TEST_CASES = {
     },
 }
 API_URL = "https://srrcwastebinserviceday.blob.core.windows.net/wastebinservicedayexport/WasteBinServiceDay_SRRCWebsiteSearch.csv"
-ICON_MAP = {
-    "GENERAL WASTE": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
-}
 DAYS: dict = {
     "MONDAY": MO,
     "TUESDAY": TU,
@@ -55,9 +51,7 @@ PARAM_TRANSLATIONS = {  # Optional dict to translate the arguments, will be show
 
 # ### End of arguments affecting the configuration GUI ####
 
-
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, address: str):
@@ -114,7 +108,6 @@ class Source:
                 Collection(
                     date=item[1].date(),
                     t=item[0],
-                    icon=ICON_MAP.get(item[0]),
                 )
             )
 

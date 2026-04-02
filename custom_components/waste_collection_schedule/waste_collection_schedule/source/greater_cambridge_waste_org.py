@@ -40,10 +40,7 @@ HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
 ICON_MAP = {
-    "BLACK BIN": "mdi:trash-can",
     "BLUE BIN": "mdi:recycle",
-    "GREEN BIN": "mdi:leaf",
-    "FOOD CADDY": "mdi:food",
 }
 REGEX = {
     "details": (
@@ -53,7 +50,6 @@ REGEX = {
     ),
     "schedule": r'aria-label="([^"]+)"',
 }
-
 
 class Source:
     def __init__(

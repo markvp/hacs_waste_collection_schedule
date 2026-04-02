@@ -30,10 +30,6 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Restabfall": "mdi:trash-can",
-    "Bioabfall": "mdi:leaf",
-    "Gelber Sack": "mdi:recycle",
-    "Papier": "mdi:package-variant",
     "Ast- und Strauchwerk": "mdi:tree",
     "Problemstoffe": "mdi:biohazard",
 }
@@ -41,15 +37,12 @@ ICON_MAP = {
 PARAM_TRANSLATIONS = {
     "de": {
         "city": "Ort",
-        "street": "Straße",
-        "street_section": "Straßenabschnitt",
         "four_weekly_rest": "4-wöchentlicher Restabfallrhythmus",
+        "street_section": "Straßenabschnitt",
     },
     "en": {
-        "city": "City",
-        "street": "Street",
-        "street_section": "Street section",
         "four_weekly_rest": "4-weekly residual waste collection",
+        "street_section": "Street section",
     },
 }
 
@@ -84,7 +77,6 @@ _CITY_MAP = {
     "Westerstede": 5,
     "Wiefelstede": 6,
 }
-
 
 class Source:
     def __init__(
@@ -280,7 +272,6 @@ class Source:
                 )
 
         return entries
-
 
 def _emit_collections(
     entries: list[Collection], date: datetime.date, mart: int

@@ -27,18 +27,12 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Restmuell": "mdi:trash-can",
-    "Biobehaelter": "mdi:leaf",
-    "Papierbehaelter": "mdi:package-variant",
-    "Gelbe": "mdi:recycle",
     "Grossmuellbehaelter": "mdi:delete-circle",
 }
-
 
 API_URL = "https://onlineservices.abfallwirtschaft-pforzheim.de/WasteManagementPforzheim/WasteManagementServlet"
 
 # Parser for HTML input (hidden) text
-
 
 class HiddenInputParser(HTMLParser):
     def __init__(self):
@@ -54,7 +48,6 @@ class HiddenInputParser(HTMLParser):
             d = dict(attrs)
             if str(d["type"]).lower() == "hidden":
                 self._args[d["name"]] = d["value"] if "value" in d else ""
-
 
 class Source:
     def __init__(self, street: str, house_number: int, address_suffix: str = ""):

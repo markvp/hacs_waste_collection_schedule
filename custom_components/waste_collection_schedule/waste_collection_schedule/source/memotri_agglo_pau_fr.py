@@ -30,7 +30,6 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Ordures ménagères": "mdi:trash-can",
     "Emballages et papiers": "mdi:recycle",
     "Matières compostables": "mdi:leaf",
 }
@@ -54,20 +53,10 @@ PARAM_DESCRIPTIONS = {
     },
 }
 
-PARAM_TRANSLATIONS = {
-    "en": {
-        "address": "Address",
-    },
-    "fr": {
-        "address": "Adresse",
-    },
-}
-
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     "en": "Enter your full address as you would on the memotri.agglo-pau.fr website, including street number, street name, postal code, and city.",
     "fr": "Saisissez votre adresse complète comme sur le site memotri.agglo-pau.fr, avec numéro de rue, nom de rue, code postal et ville.",
 }
-
 
 class Source:
     def __init__(self, address: str):

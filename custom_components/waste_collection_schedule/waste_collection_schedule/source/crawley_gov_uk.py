@@ -1,7 +1,6 @@
 # Credit where it's due:
 # This is based on the elmbridge_gov_uk source
 
-
 from datetime import datetime
 
 import requests
@@ -16,15 +15,10 @@ TEST_CASES = {
     "Peterborough Road": {"uprn": 100061787552, "usrn": 9700731},
 }
 
-
 ICON_MAP = {
-    "Rubbish and Small Electricals Collection": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "GREENbin Garden Waste Collection": "mdi:leaf",
-    "Paper": "mdi:package-variant",
     "Recycling and Textiles Collection": "mdi:recycle",
 }
-
 
 BASE_URL = "https://my.crawley.gov.uk"
 INTIAL_URL = f"{BASE_URL}/en/service/check_my_bin_collection"
@@ -33,7 +27,6 @@ AUTH_TEST = f"{BASE_URL}/apibroker/domain/my.crawley.gov.uk"
 API_URL = f"{BASE_URL}/apibroker/runLookup"
 
 LOOKUP_ID = "5b4f0ec5f13f4"
-
 
 class Source:
     def __init__(self, uprn: str | int, usrn: str | int | None = None):

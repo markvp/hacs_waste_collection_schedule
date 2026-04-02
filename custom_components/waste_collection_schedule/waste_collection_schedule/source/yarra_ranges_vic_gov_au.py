@@ -22,10 +22,7 @@ _LOGGER = logging.getLogger(__name__)
 
 ICON_MAP = {
     "New weekly FOGO collection": "mdi:leaf",
-    "Rubbish Collection": "mdi:trash-can",
-    "Recycling Collection": "mdi:recycle",
 }
-
 
 class Source:
     def __init__(self, street_address):

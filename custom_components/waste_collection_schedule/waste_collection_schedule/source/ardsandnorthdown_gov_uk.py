@@ -13,14 +13,12 @@ TEST_CASES = {
     "185180798": {"uprn": 185180798},
 }
 
-
 ICON_MAP = {
-    "grey": "mdi:trash-can",
+    "blue": "mdi:recycle",
     "glass": "mdi:bottle-soda",
     "green": "mdi:leaf",
-    "blue": "mdi:recycle",
+    "grey": "mdi:trash-can",
 }
-
 
 API_URL = "https://collections-ardsandnorthdown.azurewebsites.net/WSCollExternal.asmx"
 
@@ -38,7 +36,6 @@ PAYLOAD = """<?xml version="1.0" encoding="utf-8" ?>
     </soap:Body>
 </soap:Envelope>
 """
-
 
 class Source:
     def __init__(self, uprn: str | int):

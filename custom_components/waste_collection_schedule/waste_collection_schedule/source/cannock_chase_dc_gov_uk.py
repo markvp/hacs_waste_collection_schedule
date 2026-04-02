@@ -16,11 +16,6 @@ TEST_CASES = {
 }
 
 API_URL = "https://ccdc.opendata.onl/DynamicCall.dll"
-ICON_MAP = {
-    "REFUSE": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
-    "GARDEN WASTE": "mdi:leaf",
-}
 
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     "en": "You can find your UPRN by visiting https://www.findmyaddress.co.uk/ and entering in your address details.",
@@ -37,7 +32,6 @@ SERVICE_NAME_MAP = {
     "Recycle Collection Service": "Recycling",
     "Garden Collection Service": "Garden waste",
 }
-
 
 class Source:
     def __init__(self, uprn: str | int, postcode: str):
@@ -100,7 +94,6 @@ class Source:
                         date_element.text, "%d/%m/%Y %H:%M:%S"
                     ).date(),
                     t=service_name,
-                    icon=ICON_MAP.get(service_name.upper()),
                 )
             )
 

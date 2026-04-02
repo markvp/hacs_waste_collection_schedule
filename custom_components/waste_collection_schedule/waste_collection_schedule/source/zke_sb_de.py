@@ -24,15 +24,7 @@ TEST_CASES = {
     },
 }
 
-ICON_MAP = {
-    "Restmuell:": "mdi:trash-can",
-    "Biomuell": "mdi:leaf",
-    "Papiertonne": "mdi:package-variant",
-    "Gelbe": "mdi:recycle",
-}
-
 API_URL = "https://info.zke-sb.de/WasteManagementSaarbruecken/WasteManagementServlet"
-
 
 class HiddenInputParser(HTMLParser):
     def __init__(self):
@@ -48,7 +40,6 @@ class HiddenInputParser(HTMLParser):
             d = dict(attrs)
             if str(d.get("type", "")).lower() == "hidden" and "name" in d:
                 self._args[d["name"]] = d["value"] if "value" in d else ""
-
 
 class Source:
     def __init__(self, street: str, house_number: str):

@@ -22,7 +22,6 @@ TEST_CASES = {
 
 _LOGGER = logging.getLogger(__name__)
 
-
 API_URL = "https://sepan.remondis.pl/harmonogram{}"
 
 NAME_MAP = {
@@ -44,7 +43,6 @@ ICON_MAP = {
     6: "mdi:recycle",
     7: "mdi:trash-can",
 }
-
 
 class Source:
     def __init__(self, city, street_name, street_number):

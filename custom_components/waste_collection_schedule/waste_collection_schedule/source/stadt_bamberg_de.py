@@ -10,7 +10,6 @@ TITLE = "Bamberg (City/Stadt)"
 DESCRIPTION = "Source for Bamberg (City/Stadt)."
 URL = "https://www.stadt.bamberg.de"
 
-
 TEST_CASES = {
     "Gartenstraße 2": {
         "street": "Gartenstraße",
@@ -23,20 +22,11 @@ TEST_CASES = {
     },
 }
 
-ICON_MAP = {
-    "Restmuell": "mdi:trash-can",
-    "Biomuell": "mdi:leaf",
-    "Papier": "mdi:package-variant",
-    "Gelber": "mdi:recycle",
-}
-
-
 API_URL = (
     "https://ebbweb.stadt.bamberg.de/WasteManagementBamberg/WasteManagementServlet"
 )
 
 # Parser for HTML input (hidden) text
-
 
 class HiddenInputParser(HTMLParser):
     def __init__(self):
@@ -52,7 +42,6 @@ class HiddenInputParser(HTMLParser):
             d = dict(attrs)
             if str(d["type"]).lower() == "hidden":
                 self._args[d["name"]] = d["value"] if "value" in d else ""
-
 
 class Source:
     def __init__(self, street: str, house_number: int, address_suffix: str = ""):

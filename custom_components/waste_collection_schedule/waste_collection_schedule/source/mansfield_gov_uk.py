@@ -13,7 +13,6 @@ TEST_CASES = {
     "Test_003": {"uprn": 200000666900},
 }
 ICON_MAP = {
-    "RECYCLING": "mdi:recycle",
     "GARDEN": "mdi:leaf",
     "General": "mdi:trash-can",
 }
@@ -23,7 +22,6 @@ HEADERS = {
     "Origin": "https://www.mansfield.gov.uk",
     "Referer": "https://www.mansfield.gov.uk/",
 }
-
 
 class Source:
     def __init__(self, uprn):

@@ -20,9 +20,7 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "RUBBISH": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
-    "FOODWASTE": "mdi:food-apple"
+    "FOODWASTE": "mdi:food-apple",
 }
 
 SEARCH_URLS = {
@@ -32,12 +30,10 @@ SEARCH_URLS = {
 
 COLLECTIONS = {"Rubbish", "Recycling", "FoodWaste"}
 
-
 def fix_date(d: date):
     if datetime.now().month == 12 and d.month in (1, 2):
         d = d.replace(year=d.year + 1)
     return d
-
 
 class Source:
     def __init__(

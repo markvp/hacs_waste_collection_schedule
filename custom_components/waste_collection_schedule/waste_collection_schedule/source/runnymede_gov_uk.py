@@ -20,14 +20,6 @@ TEST_CASES = {
 API_URL = "https://www.runnymede.gov.uk/bin-collection-day"
 HEADERS = {"user-agent": "Mozilla/5.0"}
 
-ICON_MAP = {
-    "Food caddy": "mdi:food",
-    "Garden waste": "mdi:leaf",
-    "Recycling": "mdi:recycle",
-    "Refuse": "mdi:trash-can",
-}
-
-
 class Source:
     def __init__(self, uprn: str):
         self._uprn = uprn
@@ -53,7 +45,6 @@ class Source:
                     Collection(
                         date=date,
                         t=collection_text,
-                        icon=ICON_MAP.get(collection_text),
                     )
                 )
 

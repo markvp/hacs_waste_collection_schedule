@@ -31,16 +31,16 @@ COUNTRY = "se"
 _LOGGER = logging.getLogger(__name__)
 
 ICON_MAP = {
-    "Tunna 1": "mdi:recycle",
-    "Tunna 2": "mdi:recycle",
-    "Hushållsavfall": "mdi:trash-can",
+    "Deponi": "mdi:delete",
     "Färgat glas": "mdi:bottle-wine",
-    "Ofärgat glas": "mdi:bottle-wine-outline",
+    "Hushållsavfall": "mdi:trash-can",
     "Metall": "mdi:nail",
+    "Ofärgat glas": "mdi:bottle-wine-outline",
     "Papper": "mdi:package",
     "Plast": "mdi:bottle-soda-classic-outline",
     "Tidning": "mdi:newspaper",
-    "Deponi": "mdi:delete",
+    "Tunna 1": "mdi:recycle",
+    "Tunna 2": "mdi:recycle",
 }
 
 # See documentatation about possible other cities and service providers
@@ -66,7 +66,6 @@ EXTRA_INFO = [
     }
     for provider, data in SERVICE_PROVIDERS.items()
 ]
-
 
 class Source:
     def __init__(

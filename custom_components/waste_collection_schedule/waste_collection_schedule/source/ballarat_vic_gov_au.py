@@ -26,11 +26,9 @@ WASTE_NAMES = {
 }
 
 ICON_MAP = {
-    "waste": "mdi:trash-can",
-    "recycle": "mdi:recycle",
     "green": "mdi:leaf",
+    "waste": "mdi:trash-can",
 }
-
 
 class Source:
     def __init__(self, street_address):

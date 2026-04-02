@@ -14,20 +14,15 @@ TEST_CASES = {
     "130143631": {"uprn": 130072429, "predict": True},
 }
 
-
 ICON_MAP = {
-    "refuse": "mdi:trash-can",
-    "recycle": "mdi:recycle",
-    "garden": "mdi:leaf",
-    "food": "mdi:food",
     "containers": "mdi:package",
+    "food": "mdi:food",
+    "garden": "mdi:leaf",
 }
-
 
 SESSION_URL = "https://highland-self.achieveservice.com/authapi/isauthenticated?uri=https%3A%2F%2Fhighland-self.achieveservice.com%2Fen%2Fservice%2FCheck_your_household_bin_collection_days&hostname=highland-self.achieveservice.com&withCredentials=true"
 
 API_URL = "https://highland-self.achieveservice.com/apibroker/runLookup"
-
 
 class Source:
     def __init__(self, uprn: str | int, predict: bool = False):

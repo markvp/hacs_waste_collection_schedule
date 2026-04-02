@@ -9,14 +9,11 @@ DESCRIPTION = "Source for waste collections for the city of Stuttgart, Germany."
 URL = "https://service.stuttgart.de"
 TEST_CASES = {"Im Steinengarten 7": {"street": "Im Steinengarten", "streetnr": 7}}
 
-
 PARAM_TRANSLATIONS = {
     "de": {
-        "street": "Straße",
         "streetnr": "Hausnummer",
-    }
+    },
 }
-
 
 # Parser for HTML checkbox
 class InputCheckboxParser(HTMLParser):
@@ -34,7 +31,6 @@ class InputCheckboxParser(HTMLParser):
             d = dict(attrs)
             if d.get("name", "") == self._name:
                 self._value.append(d.get("value"))
-
 
 # Parser for HTML table
 class TableParser(HTMLParser):
@@ -97,7 +93,6 @@ class TableParser(HTMLParser):
             self._type += data
         elif self._within_td and self._col_index == 2:
             self._date += data
-
 
 class Source:
     def __init__(self, street, streetnr):

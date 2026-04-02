@@ -21,13 +21,10 @@ TEST_CASES = {
 BASE_URL = "https://lewisham.gov.uk"
 ADDRESS_SEARCH_URL = "https://lewisham.gov.uk/api/AddressFinder"
 
-
 DATE_REGEX = r"(\d{2}/\d{2}/\d{4})"
 DAYS = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
 
 ICON_MAP = {
-    "refuse": "mdi:trash-can",
-    "recycling": "mdi:recycle",
     "food": "mdi:food-apple",
     "garden": "mdi:leaf",
 }
@@ -40,10 +37,8 @@ PAYLOAD_SECTION_TEMPLATE = (
 
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 
-
 class InsufficientDataError(Exception):
     pass
-
 
 class Source:
     def __init__(self, post_code=None, number=None, name=None, uprn=None):

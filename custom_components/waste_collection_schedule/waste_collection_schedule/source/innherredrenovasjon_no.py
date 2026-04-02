@@ -21,17 +21,12 @@ API_URL = (
 )
 
 ICON_MAP = {
-    "Restavfall": "mdi:trash-can",
-    "Bioavfall": "mdi:leaf",
-    "Papp/papir": "mdi:package-variant",
-    "Plastemballasje": "mdi:recycle",
     "Glass- og metallemballasje": "mdi:bottle-soda",
     "Matavfall": "mdi:trash-can",
-    "Restavfall mini": "mdi:trash-can",
+    "Plastemballasje": "mdi:recycle",
 }
 
 HEADERS = {"user-agent": "Mozilla/5.0"}
-
 
 class Source:
     def __init__(self, address: str):

@@ -17,7 +17,6 @@ TITLE = "Moorabool Shire Council"
 DESCRIPTION = "Source for Moorabool Shire Council rubbish collection."
 URL = "https://www.moorabool.vic.gov.au"
 
-
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     "en": "Go to <https://www.moorabool.vic.gov.au/Waste-and-environment/Household-bins/Find-your-bin-collection-day> and make sure your address matches the auto-complete suggestions."
 }
@@ -39,12 +38,9 @@ HEADERS = {
     "Referer": "https://www.moorabool.vic.gov.au/Waste-and-environment/Household-bins/Find-your-bin-collection-day",
 }
 
-
 ICON_MAP = {
     "Garbage": "trash-can",
-    "Recycling": "mdi:recycle",
 }
-
 
 class ApiItem(TypedDict):
     Id: str
@@ -54,13 +50,11 @@ class ApiItem(TypedDict):
     Score: float
     LatLon: tuple[int, int]
 
-
 class ApiResult(TypedDict):
     Items: list[ApiItem]
     Offset: int
     Limit: int
     Total: int
-
 
 class Source:
     def __init__(self, address: str):

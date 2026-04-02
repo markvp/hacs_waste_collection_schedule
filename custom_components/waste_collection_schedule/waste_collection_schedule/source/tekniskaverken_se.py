@@ -17,7 +17,9 @@ TEST_CASES = {
     "Home": {"street": "Roshagsvägen 66", "city": "Linköping"},
     "Police": {"street": "Brigadgatan 4", "city": "Linköping"},
 }
-ICON_MAP = {"Hushållsavfall": "mdi:trash-can", "Trädgårdsavfall": "mdi:leaf"}
+ICON_MAP = {
+    "Hushållsavfall": "mdi:trash-can",
+}
 
 MONTH_MAP = {
     "januari": 1,
@@ -33,7 +35,6 @@ MONTH_MAP = {
     "november": 11,
     "december": 12,
 }
-
 
 class Source:
     def __init__(self, street, city):

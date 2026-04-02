@@ -12,15 +12,9 @@ TEST_CASES = {"Leppen": {"region": "Leppen"}}
 COUNTRY = "at"
 
 ICON_MAP = {
-    "Restmüll": "mdi:trash-can",
     "Glasbehälter": "mdi:bottle-soda",
-    "Biomüll": "mdi:leaf",
-    "Altpapiertonne": "mdi:package-variant",
-    "Recycle": "mdi:recycle",
     "Recyclinghof": "mdi:factory",
-    "Gelbe": "mdi:recycle",
 }
-
 
 API_URL = "https://www.bad-eisenkappel.info/gemeinde/onlineservice/abfuhrtermine.html"
 
@@ -29,7 +23,6 @@ PARAM_TRANSLATIONS = {
         "region": "Ortsteil",
     }
 }
-
 
 class Source:
     def __init__(self, region: str):

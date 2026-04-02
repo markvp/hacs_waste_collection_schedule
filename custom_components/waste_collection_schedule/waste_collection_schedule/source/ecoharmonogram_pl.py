@@ -30,10 +30,6 @@ GROUP_DESCRIPTION_PL = "Wybierz grupę zbiórki, aby ograniczyć wyniki do konkr
 
 PARAM_TRANSLATIONS = {
     "en": {
-        "town": "Town",
-        "street": "Street",
-        "house_number": "House number",
-        "district": "District",
         "language": "Language",
         "additional_sides_matcher": "Additional Sides Matcher",
         "community": "Community",
@@ -42,20 +38,9 @@ PARAM_TRANSLATIONS = {
         "g3": "Group 3",
         "g4": "Group 4",
         "g5": "Group 5",
+        "house_number": "House number",
+        "language": "Language",
     },
-    # "pl": {
-    #     "town": "Miasto",
-    #     "street": "Ulica",
-    #     "house_number": "Numer domu",
-    #     "district": "Dzielnica",
-    #     "additional_sides_matcher": "Matcher dodatkowych stron zbiórki",
-    #     "community": "Społeczność",
-    #     "g1": "Grupa 1",
-    #     "g2": "Grupa 2",
-    #     "g3": "Grupa 3",
-    #     "g4": "Grupa 4",
-    #     "g5": "Grupa 5",
-    # },
 }
 PARAM_DESCRIPTIONS = {
     "en": {
@@ -86,7 +71,6 @@ PARAM_DESCRIPTIONS = {
     #     "g5": GROUP_DESCRIPTION_PL,
     # },
 }
-
 
 # {"schedulePeriods":[{"id":"7059","startDate":"2025-01-01","endDate":"2025-03-31","changeDate":"2024-12-19 23:05:18"},{"id":"7946","startDate":"2025-04-01","endDate":"2025-10-31","changeDate":"2025-05-07 09:42:53"}]}
 
@@ -181,10 +165,8 @@ TEST_CASES = {
     },
 }
 
-
 class ScheduleWithName(Schedule):
     name: str
-
 
 class Source:
     def __init__(

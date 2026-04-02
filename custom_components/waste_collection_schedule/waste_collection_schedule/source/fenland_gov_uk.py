@@ -17,13 +17,10 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Empty Bin GREEN 240": "mdi:trash-can",
-    "Empty Bin REFUSE SACK": "mdi:trash-can",
     "Empty Bin BLUE 240": "mdi:recycle",
-    "Empty Bin RECYCLING SACK": "mdi:recycle",
     "Empty Bin BROWN 240": "mdi:leaf",
+    "Empty Bin GREEN 240": "mdi:trash-can",
 }
-
 
 class Source:
     def __init__(self, post_code: str, house_number: str):

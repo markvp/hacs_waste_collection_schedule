@@ -36,10 +36,7 @@ APIS = [
 
 ICON_MAP = {
     "waste": "mdi:trash-can",
-    "recycle": "mdi:recycle",
-    "organic": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(self, suburb, street_name, street_number):

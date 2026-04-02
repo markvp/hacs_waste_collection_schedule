@@ -12,17 +12,13 @@ TEST_CASES = {
     "100021552942": {"uprn": 100021552942},
 }
 
-
 ICON_MAP = {
     "Black": "mdi:trash-can",
-    "Garden": "mdi:leaf",
-    "Recycling": "mdi:recycle",
     "Food": "mdi:food",
+    "Garden": "mdi:leaf",
 }
 
-
 API_URL = "https://www.hounslow.gov.uk/homepage/86/recycling_and_waste_collection_day_finder#collectionday"
-
 
 class Source:
     def __init__(self, uprn: str | int):

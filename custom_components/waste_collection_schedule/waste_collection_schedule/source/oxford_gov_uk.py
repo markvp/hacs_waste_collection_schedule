@@ -16,12 +16,9 @@ HEADERS = {"user-agent": "Mozilla/5.0"}
 API_URL = "https://www.oxford.gov.uk/xfp/form/142"
 
 ICON_MAP = {
-    "Refuse": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Garden": "mdi:leaf",
     "Food": "mdi:food-apple",
+    "Garden": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(self, uprn: str, postcode: str):

@@ -11,9 +11,7 @@ TEST_CASES = {
     "15049111": {"uprn": "15049111"},
 }
 
-
 ICON_MAP = {
-    "refuse": "mdi:trash-can",
     "food": "mdi:food",
     "garden": "mdi:recycle",
     "recycling": "mdi:package-variant",
@@ -21,11 +19,9 @@ ICON_MAP = {
     "sacks": "mdi:sack",
 }
 
-
 API_URL = (
     "https://api.westnorthants.digital/openapi/v1/unified-waste-collections/{uprn}"
 )
-
 
 class Source:
     def __init__(self, uprn: str | int):

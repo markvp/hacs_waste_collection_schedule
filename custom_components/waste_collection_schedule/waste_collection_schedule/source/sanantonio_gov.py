@@ -28,11 +28,7 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Garbage": "mdi:trash-can",
-    "Recycle": "mdi:recycle",
-    "Organics": "mdi:leaf",
     "Brush": "mdi:tree",
-    "Bulky": "mdi:sofa",
 }
 
 DAY_OF_WEEK = {
@@ -45,20 +41,17 @@ DAY_OF_WEEK = {
     "SUNDAY": 6,
 }
 
-
 def _get_thanksgiving(year: int) -> date:
     nov_first = date(year, 11, 1)
     days_until_thursday = (3 - nov_first.weekday()) % 7
     first_thursday = nov_first + timedelta(days=days_until_thursday)
     return first_thursday + timedelta(weeks=3)
 
-
 def _get_mlk_day(year: int) -> date:
     jan_first = date(year, 1, 1)
     days_until_monday = (0 - jan_first.weekday()) % 7
     first_monday = jan_first + timedelta(days=days_until_monday)
     return first_monday + timedelta(weeks=2)
-
 
 def _get_shifting_holidays(year: int) -> list[date]:
     return [
@@ -68,13 +61,11 @@ def _get_shifting_holidays(year: int) -> list[date]:
         _get_mlk_day(year),
     ]
 
-
 def _get_week_bounds(d: date) -> tuple[date, date]:
     days_since_sunday = (d.weekday() + 1) % 7
     week_start = d - timedelta(days=days_since_sunday)
     week_end = week_start + timedelta(days=6)
     return week_start, week_end
-
 
 def _adjust_for_holidays(collection_date: date) -> date:
     collection_dow = collection_date.weekday()
@@ -92,7 +83,6 @@ def _adjust_for_holidays(collection_date: date) -> date:
 
     return collection_date
 
-
 def _get_next_day_of_week(day_name: str, *, weeks: int = 4) -> list[date]:
     day_name = day_name.upper().strip()
     if day_name not in DAY_OF_WEEK:
@@ -109,13 +99,11 @@ def _get_next_day_of_week(day_name: str, *, weeks: int = 4) -> list[date]:
 
     return [_adjust_for_holidays(d) for d in dates]
 
-
 def _parse_week_of_date(date_str: str) -> date | None:
     if not date_str or not date_str.startswith("Week of "):
         return None
     date_part = date_str.replace("Week of ", "").strip()
     return datetime.strptime(date_part, "%m/%d/%Y").date()
-
 
 class Source:
     def __init__(self, address: str):

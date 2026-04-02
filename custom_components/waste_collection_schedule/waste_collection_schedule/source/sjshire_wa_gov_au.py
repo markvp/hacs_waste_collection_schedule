@@ -19,12 +19,6 @@ TEST_CASES = {
     "Friday": {"address": "1548 Kargotich Road MARDELLA WA 6125"},
 }
 
-ICON_MAP = {
-    "Rubbish": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-}
-
-
 class Source:
     def __init__(self, address, predict=False):
         self._address = address
@@ -154,7 +148,6 @@ class Source:
                     Collection(
                         date=date,
                         t=collection["type"],
-                        icon=ICON_MAP.get(collection["type"]),
                     )
                 )
 

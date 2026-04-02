@@ -14,11 +14,8 @@ TEST_CASES = {
 API_URL = "https://eastcambs-self.achieveservice.com/appshost/firmstep/self/apps/custompage/bincollections?uprn={uprn}"
 
 ICON_MAP = {
-    "Black Bag": "mdi:trash-can",
     "Blue Bin": "mdi:recycle",
-    "Green or Brown Bin": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(self, uprn=None):

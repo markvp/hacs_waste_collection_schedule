@@ -17,18 +17,12 @@ TEST_CASES = {
 }
 
 API_URL = "https://www.geelongaustralia.com.au/recycling/calendar/default.aspx"
-ICON_MAP = {
-    "Garbage": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Green waste": "mdi:leaf",
-}
 
 SUBMIT_ARGS = {
     "ctl00$ContentBody$BTN_SEARCH": "Search",
 }
 
 ADDRESS_FIELD = "ctl00$ContentBody$TB_SEARCH"
-
 
 class Source:
     def __init__(
@@ -88,7 +82,7 @@ class Source:
                             date.text, "%A, %d %B %Y"
                         ).date(),
                         t=t,  # Collection type
-                        icon=ICON_MAP.get(t),  # Collection icon
+                        # Collection icon
                     )
                 )
 

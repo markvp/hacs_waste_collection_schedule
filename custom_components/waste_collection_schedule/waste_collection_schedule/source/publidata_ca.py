@@ -34,13 +34,13 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "omr": "mdi:trash-can",
+    "bio": "mdi:compost",
+    "dv": "mdi:leaf",
     "emb": "mdi:recycle",
     "enc": "mdi:truck-remove",
-    "dv": "mdi:leaf",
-    "bio": "mdi:compost",
-    "verre": "mdi:bottle-wine",
+    "omr": "mdi:trash-can",
     "sapin": "mdi:pine-tree-variant",
+    "verre": "mdi:bottle-wine",
 }
 
 LABEL_MAP = {
@@ -83,7 +83,6 @@ _CALENDAR_DAY_VERY_ABBR = {
 }
 
 _CALENDAR_MONTHS_ABBR = [m for m in calendar.month_abbr if m]
-
 
 class Source:
     geocoder_url = "https://api.publidata.ca/v2/geocoder"

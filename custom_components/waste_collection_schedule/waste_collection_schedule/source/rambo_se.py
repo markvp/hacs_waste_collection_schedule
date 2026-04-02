@@ -21,13 +21,10 @@ TEST_CASES = {
     "Storgatan 39, Smögen": {"address": "Storgatan 39, Smögen"},
 }
 
-
 ICON_MAP = {
     "Hushållsavfall": "mdi:trash-can",
-    "Matavfall": "mdi:leaf",
     "Kärl": "mdi:trash-can",
 }
-
 
 API_URL = "https://rambo.se/wp-json/app/v1/{}"
 
@@ -35,7 +32,6 @@ HEADERS = {
     "accept": "application/json, text/plain, */*",
     "X-App-Identifier": "www.rambo.se/hamtdag",
 }
-
 
 class Source:
     def __init__(self, address: str):

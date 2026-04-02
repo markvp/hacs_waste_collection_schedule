@@ -16,23 +16,17 @@ TEST_CASES = {
 API_URL = "https://mags.de/ics/icscal.php"
 
 ICON_MAP = {
-    "Restmüll (Grau)": "mdi:trash-can",
-    "Bioabfall (Braun)": "mdi:leaf",
-    "Verpackungen (Gelb)": "mdi:recycle",
-    "Altpapier (Blau)": "mdi:package-variant",
-    "Papiermobil": "mdi:paper-roll",
-    "Grünschnitt": "mdi:tree-outline",
     "Elektrokleingeräte-Sammlung": "mdi:radio",
+    "Grünschnitt": "mdi:tree-outline",
+    "Papiermobil": "mdi:paper-roll",
 }
 
 PARAM_TRANSLATIONS = {
     "de": {
-        "street": "Straße",
         "number": "Hausnummer",
         "turnus": "Turnus",
     },
 }
-
 
 class Source:
     def __init__(self, street, number, turnus=2):

@@ -20,9 +20,7 @@ TEST_CASES = {
 ICON_MAP = {
     "Glass": "mdi:glass-mug-variant",
     "Rubbish": "mdi:delete-empty",
-    "Recycle": "mdi:recycle",
 }
-
 
 class WasteSearchResultsParser(HTMLParser):
     def __init__(self):
@@ -54,12 +52,10 @@ class WasteSearchResultsParser(HTMLParser):
                 self._entries.append(Collection(date, self._wasteType))
             self._withinCollectionDay = False
 
-
 HEADER = {"User-Agent": "Mozilla/5.0"}
 
 SITE_URL = "https://www.wastenet.org.nz/bin-day/"
 ADDRESS_URL = "https://www.wastenet.org.nz/wp-admin/admin-ajax.php"
-
 
 class Source:
     def __init__(self, address: str | None = None, entry_id=None):

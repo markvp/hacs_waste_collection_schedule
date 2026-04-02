@@ -16,8 +16,6 @@ TEST_CASES = {
 
 ICON_MAP = {
     "FOGO": "mdi:leaf",
-    "Recycling": "mdi:recycle",
-    "General Waste": "mdi:trash-can",
 }
 
 class Source:

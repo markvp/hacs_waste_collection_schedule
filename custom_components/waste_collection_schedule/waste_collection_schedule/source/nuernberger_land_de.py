@@ -14,15 +14,6 @@ TEST_CASES = {
 API_URL = "https://abfuhrkalender.nuernberger-land.de/waste_calendar"
 FILTER = "rm:bio:p:dsd:poison"
 
-ICON_MAP = {
-    "Restmüll": "mdi:trash-can",
-    "Biotonne": "mdi:leaf",
-    "Gelber Sack": "mdi:recycle",
-    "Papier": "mdi:package-variant",
-    "Giftmobil": "mdi:biohazard",
-}
-
-
 class Source:
     def __init__(self, id):
         self._id = id
@@ -48,6 +39,6 @@ class Source:
         entries = []
 
         for d in dates:
-            entries.append(Collection(date=d[0], t=d[1], icon=ICON_MAP.get(d[1])))
+            entries.append(Collection(date=d[0], t=d[1]))
 
         return entries

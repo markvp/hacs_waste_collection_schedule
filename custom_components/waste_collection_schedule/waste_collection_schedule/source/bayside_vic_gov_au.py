@@ -20,13 +20,6 @@ CONFIG_ID = "7a287c70-ea2d-4abd-943c-8bf55cf09fe5"
 PROJECT_ID = "1c8f869f-fa4a-4c39-b7bb-94641ee61597"
 FORM_ID = "a2f4b83c-a8ec-4ad8-83e4-f04f5d936077"
 
-ICON_MAP = {
-    "Recycling": "mdi:recycle",
-    "Food & Green Waste": "mdi:leaf",
-    "Domestic Waste": "mdi:trash-can",
-}
-
-
 class Source:
     def __init__(self, street_address):
         self._street_address = street_address

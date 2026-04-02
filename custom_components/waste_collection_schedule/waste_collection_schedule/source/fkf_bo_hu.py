@@ -18,10 +18,9 @@ TEST_CASES = {
 API_URL = "https://www.mohubudapest.hu/hulladeknaptar-budaors"
 ICON_MAP = {
     "COMMUNAL": "mdi:trash-can",
-    "SELECTIVE": "mdi:recycle",
     "GREEN": "mdi:leaf",
+    "SELECTIVE": "mdi:recycle",
 }
-
 
 class Source:
     def __init__(self, street, ssl_verify: bool = True):

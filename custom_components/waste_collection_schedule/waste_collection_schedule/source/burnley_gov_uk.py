@@ -18,8 +18,6 @@ HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
 ICON_MAP = {
-    "REFUSE": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
     "GARDEN": "mdi:leaf",
 }
 MONTHS = {
@@ -36,7 +34,6 @@ MONTHS = {
     "November": 11,
     "December": 12,
 }
-
 
 class Source:
     def __init__(self, uprn):

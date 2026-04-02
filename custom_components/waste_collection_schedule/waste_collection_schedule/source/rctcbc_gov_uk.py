@@ -12,13 +12,6 @@ TEST_CASES = {
     "Test_002": {"uprn": "100100718352"},
     "Test_003": {"uprn": 100100733093},
 }
-ICON_MAP = {
-    "BLACK BAGS": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
-    "FOOD WASTE": "mdi:food",
-    "GARDEN WASTE": "mdi:leaf",
-}
-
 
 class Source:
     def __init__(self, uprn):
@@ -49,7 +42,6 @@ class Source:
                                 "%d %B %Y",
                             ).date(),
                             t=pickup.text,
-                            icon=ICON_MAP.get(pickup.text.upper()),
                         )
                     )
         return entries

@@ -45,12 +45,8 @@ LOOKUPS = [
 ]
 
 ICON_MAP = {
-    "Garden Waste (Green)": "mdi:leaf",
-    "Household Waste (Grey)": "mdi:trash-can",
     "Food Waste (Brown)": "mdi:food-apple",
-    "Recycling (Blue)": "mdi:recycle",
 }
-
 
 def _parse_date(d: str) -> date:
     # Sandwell returns dd/mm/YYYY
@@ -58,7 +54,6 @@ def _parse_date(d: str) -> date:
         return datetime.strptime(d, "%d/%m/%Y").date()
     except Exception as e:
         raise ValueError(f"Invalid date from Sandwell: {d}") from e
-
 
 class Source:
     def __init__(self, uprn: str):

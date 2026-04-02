@@ -29,14 +29,9 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "Schwarze": "mdi:trash-can",
-    "Grüne": "mdi:leaf",
     "Blaue": "mdi:package-variant",
-    "Gelbe": "mdi:recycle",
 }
-
 
 API_URL = "https://www.abfall-lro.de/de/abfuhrtermine/"
 ICAL_URL = "https://www.abfall-lro.de/default-wGlobal/wGlobal/abfuhrtermine/ical.php"
@@ -45,12 +40,11 @@ RHYTHMS = Literal["2w", "4w", ""]
 
 PARAM_TRANSLATIONS = {
     "de": {
-        "municipality": "Gemeinde",
         "black_rhythm": "Schwarze Tonne Rythmus",
-        "green_rhythm": "Gelbe Tonne Rythmus",
         "black_seasonal": "Schwarze Tonne Saisonal",
+        "green_rhythm": "Gelbe Tonne Rythmus",
         "green_seasonal": "Gelbe Tonne Saisonal",
-    }
+    },
 }
 
 PARAM_DESCRIPTIONS = {
@@ -69,7 +63,6 @@ PARAM_DESCRIPTIONS = {
         "green_seasonal": "Ankreuzen, wenn die Grünen Tonnen nur saisonal geleert werden",
     },
 }
-
 
 class Source:
     def __init__(

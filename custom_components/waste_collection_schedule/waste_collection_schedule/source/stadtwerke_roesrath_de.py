@@ -11,15 +11,6 @@ TEST_CASES = {"Ahornweg": {"street": "Ahornweg"}}
 
 _LOGGER = logging.getLogger(__name__)
 
-ICON_MAP = {
-    "Biotonne": "mdi:leaf",
-    "Restmülltonne": "mdi:trash-can",
-    "Restmülltonne 60l": "mdi:trash-can",
-    "Gelbe Tonne": "mdi:recycle",
-    "Papiertonne": "mdi:package-variant",
-}
-
-
 class Source:
     def __init__(self, street):
         self.street = street

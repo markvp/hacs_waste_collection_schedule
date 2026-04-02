@@ -15,23 +15,19 @@ TEST_CASES = {
 
 API_URL = "https://www.muenchenstein.ch/abfuhrdaten"
 
-
 ICON_MAP = {
-    "kehricht-und-kleinsperrgut-brennbar": "mdi:trash-can-outline",
-    "hackseldienst": "mdi:leaf",
-    "papierabfuhr": "mdi:newspaper-variant-multiple-outline",
-    "kartonabfuhr": "mdi:package-variant",
-    "metallabfuhr": "mdi:nail",
     "grobsperrgut (brennbar)": "mdi:sofa-single-outline",
+    "hackseldienst": "mdi:leaf",
+    "kehricht-und-kleinsperrgut-brennbar": "mdi:trash-can-outline",
+    "metallabfuhr": "mdi:nail",
+    "papierabfuhr": "mdi:newspaper-variant-multiple-outline",
 }
-
 
 PARAM_TRANSLATIONS = {
     "de": {
         "waste_district": "Abfuhrkreis",
     },
 }
-
 
 class Source:
     def __init__(self, waste_district):

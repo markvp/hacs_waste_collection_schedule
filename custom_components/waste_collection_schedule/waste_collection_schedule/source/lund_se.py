@@ -16,15 +16,12 @@ HEADERS = {
 }
 
 ICON_MAP = {
-    "Restavfall": "mdi:trash-can",
-    "Plastförpacknin": "mdi:recycle",
-    "Tidningar": "mdi:newspaper",
-    "Metallförpackni": "mdi:recycle",
+    "Färgat Glas": "mdi:glass-wine",
     "Matavfall": "mdi:food-apple",
     "Ofärgat Glas": "mdi:glass-wine",
-    "Färgat Glas": "mdi:glass-wine",
+    "Plastförpacknin": "mdi:recycle",
+    "Tidningar": "mdi:newspaper",
 }
-
 
 class Source:
     def __init__(self, street_address):

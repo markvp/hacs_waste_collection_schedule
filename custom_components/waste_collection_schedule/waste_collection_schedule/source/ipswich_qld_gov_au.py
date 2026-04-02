@@ -13,18 +13,13 @@ TEST_CASES = {
     "Random": {"street": "50 Brisbane Road", "suburb": "Redbank"},
 }
 
-
 ICON_MAP = {
-    "Waste Bin": "mdi:trash-can",
-    "Recycle Bin": "mdi:recycle",
     "FOGO Bin": "mdi:leaf",
 }
-
 
 def toDate(dateStr: str):
     items = dateStr.split("-")
     return datetime.date(int(items[1]), int(items[2]), int(items[3]))
-
 
 class IpswichGovAuParser(HTMLParser):
     def __init__(self):
@@ -94,7 +89,6 @@ class IpswichGovAuParser(HTMLParser):
                     self._loaded_date, data, icon=ICON_MAP.get(data)
                 )
             )
-
 
 class Source:
     def __init__(self, street, suburb):

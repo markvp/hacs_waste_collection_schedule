@@ -26,13 +26,8 @@ EVENT_BLACKLIST = [
 ]
 
 ICON_MAP = {
-    "Restmüll": "mdi:trash-can",
-    "Bio": "mdi:leaf",
     "Gelbe Tonne": "mdi:recycle-variant",
-    "Papier": "mdi:package-variant",
-    "Problemmüll": "mdi:biohazard",
 }
-
 
 PARAM_TRANSLATIONS = {
     "de": {
@@ -40,7 +35,6 @@ PARAM_TRANSLATIONS = {
         "district": "Ort, Ortsteil",
     }
 }
-
 
 class Source:
     def __init__(self, city: str | None = None, district: str | None = None):

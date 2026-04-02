@@ -21,24 +21,14 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "Trash": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "Bio": "mdi:leaf",
-    "Paper": "mdi:package-variant",
-    "Recycle": "mdi:recycle",
-    "240L Yellow Lid Recycle Bin": "mdi:recycle",
-    "140L Red Lid General Waste Bin": "mdi:trash-can",
-    "240L Green Lid Garden Vegetation Bin": "mdi:leaf",
 }
-
 
 SEARCH_URL = "https://1coast.com.au/ajax.php"
 COLLECTION_URL = (
     "https://1coast.com.au/bin-collection/bin-collection-day-address-details"
 )
-
 
 class Source:
     def __init__(self, address: str):
@@ -162,7 +152,6 @@ class Source:
                 entries.append(Collection(date=date_, t=bin, icon=icon))
 
         return entries
-
 
 # https://1coast.com.au/bin-collection/bin-collection-day-address-details/?a=unauth-address-search&address=711491&12,GERMAINE%20AVE,BATEAU%20BAY,CENTRAL%20COAST,2261=&collection%5Bfrequency%5D=W21&collection%5Bday%5D=FRI
 # https://1coast.com.au/bin-collection/bin-collection-day-address-details/?a=unauth-address-search&address=711491&12,GERMAINE%20AVE,BATEAU%20BAY,CENTRAL%20COAST,2261&collection[frequency]=W21&collection[day]=FRI

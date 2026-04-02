@@ -23,11 +23,6 @@ TEST_CASES = {
 }
 
 API_BASE_URL = "https://www.shoalhaven.nsw.gov.au/ocapi/Public/myarea/wasteservices"
-ICON_MAP = {
-    # Maps waste types (in uppercase) to Material Design Icons (mdi)
-    "GENERAL WASTE": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
-}
 
 # ### Arguments affecting the configuration GUI ####
 
@@ -55,7 +50,6 @@ PARAM_TRANSLATIONS = {
 }
 
 # ### End of arguments affecting the configuration GUI ####
-
 
 class Source:
     def __init__(self, geolocation_id: str):
@@ -122,7 +116,6 @@ class Source:
                         Collection(
                             date=collection_date,
                             t=waste_type,
-                            icon=ICON_MAP.get(waste_type),
                         )
                     )
                 else:

@@ -14,11 +14,6 @@ TEST_CASES = {
 }
 
 SEARCH_PAGE_URL = f"{URL}Waste-Sustainability/Bin-Collection/When-we-collect-your-bins"
-ICON_MAP = {
-    "Landfill Waste": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Food and Garden Waste": "mdi:leaf",
-}
 
 # ### Arguments affecting the configuration GUI ####
 
@@ -39,7 +34,6 @@ PARAM_TRANSLATIONS = {
 }
 
 # ### End of arguments affecting the configuration GUI ####
-
 
 class Source:
     def __init__(self, address: str):
@@ -81,7 +75,7 @@ class Source:
                 Collection(
                     date=next_date,  # Collection date
                     t=waste_type,  # Collection type
-                    icon=ICON_MAP.get(waste_type),  # Collection icon
+                    # Collection icon
                 )
             )
 

@@ -29,15 +29,10 @@ API_URL = "https://kiedywywoz.pl/API/harmo_img/"
 TOKEN = "OkkxhC6b9etJBAq7WTHJ0LhIglO18sip"
 
 ICON_MAP = {
-    "Zmieszane": "mdi:trash-can",
-    "Szkło": "mdi:bottle-wine",
-    "Papier": "mdi:package-variant",
-    "Tworzywa sztuczne": "mdi:recycle",
     "Bio": "mdi:bio",
+    "Szkło": "mdi:bottle-wine",
     "Zielone": "mdi:leaf",
-    "Choinki": "mdi:pine-tree",
 }
-
 
 def fetch_streets() -> dict[str, str]:
     """Fetch available streets as a dictionary, selecting the smallest ID for duplicate names."""
@@ -61,7 +56,6 @@ def fetch_streets() -> dict[str, str]:
         "API returned 'error' while fetching the street list. Possibly invalid token or server issue."
     )
     raise Exception("Could not fetch streets from the API.")
-
 
 def fetch_numbers(street_name: str) -> dict[str, str]:
     """Fetch building numbers for a given street as a dictionary."""
@@ -99,7 +93,6 @@ def fetch_numbers(street_name: str) -> dict[str, str]:
         f"Could not fetch building numbers for street '{street_name}' from the API."
     )
 
-
 def fetch_pdf(street_name: str, building_number: str) -> BytesIO:
     """Download the schedule PDF for a specific building number."""
     if not street_name:
@@ -133,7 +126,6 @@ def fetch_pdf(street_name: str, building_number: str) -> BytesIO:
     response.raise_for_status()
     return BytesIO(response.content)
 
-
 def extract_text_from_pdf(pdf_file: BytesIO) -> str:
     """Extract text from the downloaded PDF."""
     _LOGGER.debug("Extracting text from the PDF.")
@@ -143,7 +135,6 @@ def extract_text_from_pdf(pdf_file: BytesIO) -> str:
         text += page.extract_text() or ""
     return text.strip()
 
-
 def extract_year(text: str) -> int:
     """Extract year from the PDF's datestamp."""
     year_pattern = r"Data generowania:\s\d{4}-\d{2}-\d{2}"
@@ -152,7 +143,6 @@ def extract_year(text: str) -> int:
         return int(match.group(0).split()[2].split("-")[0])
     _LOGGER.error("Could not extract datestamp (year) from the PDF text.")
     raise Exception("Could not extract datestamp from the PDF")
-
 
 def extract_schedule(text: str) -> list[dict]:
     """Extract schedule from the PDF text."""
@@ -223,7 +213,6 @@ def extract_schedule(text: str) -> list[dict]:
                 }
             )
     return schedule
-
 
 class Source:
     def __init__(self, street_name: str, building_number: str):

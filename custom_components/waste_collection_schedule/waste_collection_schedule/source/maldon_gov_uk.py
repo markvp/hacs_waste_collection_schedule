@@ -19,12 +19,9 @@ TEST_CASES = {
 API_URL = "https://maldon.suez.co.uk/maldon/ServiceSummary?uprn="
 
 ICON_MAP = {
-    "Refuse Collection": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Green": "mdi:leaf",
     "Food": "mdi:food-apple",
+    "Green": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(self, uprn: str):

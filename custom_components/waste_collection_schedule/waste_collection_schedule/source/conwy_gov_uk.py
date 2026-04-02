@@ -13,17 +13,12 @@ TEST_CASES = {
     "50000007574": {"uprn": 50000007574},
 }
 
-
 ICON_MAP = {
-    "garden": "mdi:leaf",
     "electrical": "mdi:battery",
-    "refuse": "mdi:trash-can",
-    "recycle": "mdi:recycle",
+    "garden": "mdi:leaf",
 }
 
-
 API_URL = "https://www.conwy.gov.uk/Contensis-Forms/erf/collection-result-soap-xmas2025.asp"
-
 
 class Source:
     def __init__(self, uprn: str | int):

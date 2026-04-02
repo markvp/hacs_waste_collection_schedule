@@ -30,14 +30,6 @@ TEST_CASES = {
 }
 SERVLET = "https://portal.awb-emsland.de/WasteManagementEmsland/WasteManagementServlet"
 
-ICON_MAP = {
-    "Restabfallbehaelter": "mdi:trash-can",
-    "Papierbehaelter": "mdi:package-variant",
-    "Wertstoffbehaelter": "mdi:recycle",
-    "Bioabfallbehaelter": "mdi:leaf",
-}
-
-
 # Parser for HTML input (hidden) text
 class HiddenInputParser(HTMLParser):
     def __init__(self):
@@ -54,16 +46,12 @@ class HiddenInputParser(HTMLParser):
             if str(d["type"]).lower() == "hidden":
                 self._args[d["name"]] = d["value"] if "value" in d else ""
 
-
 PARAM_TRANSLATIONS = {
     "de": {
-        "city": "Ort",
-        "street": "Straße",
-        "house_number": "Hausnummer",
         "address_suffix": "Hausnummerzusatz",
-    }
+        "city": "Ort",
+    },
 }
-
 
 class Source:
     def __init__(
@@ -176,6 +164,6 @@ class Source:
         entries = []
         for d in dates:
             bin_type = d[1].strip()
-            entries.append(Collection(d[0], bin_type, icon=ICON_MAP.get(bin_type)))
+            entries.append(Collection(d[0], bin_type))
 
         return entries

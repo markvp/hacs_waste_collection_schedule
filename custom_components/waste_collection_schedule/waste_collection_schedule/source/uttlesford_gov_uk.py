@@ -15,7 +15,11 @@ TEST_CASES = {
 
 API_URL = "http://bins.uttlesford.gov.uk/collections.php?house={house}"
 
-ICON_MAP = {"black": "mdi:trash-can", "green": "mdi:recycle", "brown": "mdi:food-apple"}
+ICON_MAP = {
+    "black": "mdi:trash-can",
+    "brown": "mdi:food-apple",
+    "green": "mdi:recycle",
+}
 
 PICTURE_MAP = {
     "black": "https://bins.uttlesford.gov.uk/img/result-black.png",
@@ -28,7 +32,6 @@ TEXT_MAP = {
     "green": "Green (Dry Recycling)",
     "brown": "Brown (Food Waste)",
 }
-
 
 class Source:
     def __init__(self, house=None):

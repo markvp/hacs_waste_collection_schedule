@@ -14,12 +14,11 @@ TEST_CASES = {
     }
 }
 ICON_MAP = {
-    "SE": "mdi:trash-can",
-    "MUO": "mdi:delete-variant",
     "KAR": "mdi:package-variant",
     "LAS": "mdi:glass-wine",
     "MET": "mdi:tools",
-    "BIO": "mdi:leaf",
+    "MUO": "mdi:delete-variant",
+    "SE": "mdi:trash-can",
 }
 NAME_DEF = {
     "SE": "Sekajäte",
@@ -32,7 +31,6 @@ NAME_DEF = {
 API_URL = "https://web.rosknroll.fi/rosknroll"
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(

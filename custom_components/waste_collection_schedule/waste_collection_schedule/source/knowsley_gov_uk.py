@@ -16,11 +16,10 @@ TEST_CASES = {
 }
 _LOGGER = logging.getLogger(__name__)
 
-
 ICON_MAP = {
-    "Maroon": "mdi:trash-can",
-    "Grey": "mdi:recycle",
     "Blue": "mdi:leaf",
+    "Grey": "mdi:recycle",
+    "Maroon": "mdi:trash-can",
 }
 
 BASE_URL = "https://knowsleytransaction.mendixcloud.com/"
@@ -40,7 +39,6 @@ INIT_PAYLOAD = {
         "version": 2,
     },
 }
-
 
 class Source:
     def __init__(self, postcode: str, uprn: str | int):

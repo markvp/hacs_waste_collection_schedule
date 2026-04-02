@@ -13,7 +13,6 @@ API_URL = f"{URL}api/v1/integration/"
 NEXT_COLLECTION_URL = f"{API_URL}getNextGarbageCollection"
 FIND_ADDRESS_URL = f"{API_URL}findAddress"
 
-
 TEST_CASES = {
     "Gustav Adolfs väg 24, Norrtälje": {
         "street_address": "Gustav Adolfs väg 24, Norrtälje"
@@ -21,13 +20,10 @@ TEST_CASES = {
     "Rödhakestigen 1, Väddö": {"street_address": "Rödhakestigen 1, Väddö"},
 }
 
-
 ICON_MAP = {
-    "Restavfall": "mdi:trash-can",
     "Matavfall": "mdi:food-apple",
     "Slam": "mdi:valve",
 }
-
 
 def parse_date(next_pickup_date):
     """Parse the date string into a datetime object.
@@ -73,7 +69,6 @@ def parse_date(next_pickup_date):
         date_obj = datetime.strptime(f"{year}-{month}-{day_number}", "%Y-%m-%d").date()
 
     return date_obj
-
 
 class Source:
     def __init__(self, street_address):

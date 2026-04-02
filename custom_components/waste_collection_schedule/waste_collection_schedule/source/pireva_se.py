@@ -19,7 +19,6 @@ COUNTRY = "se"
 SEARCH_URL = "https://www.pireva.se/api/search/collection-address"
 DATA_URL_FORMAT = "https://www.pireva.se/tomningsschema/{SLUG}/"
 ICON_MAP = {
-    "Restavfall": "mdi:trash-can",
     "Matavfall": "mdi:food-apple",
 }
 MONTH_MAP = {
@@ -36,7 +35,6 @@ MONTH_MAP = {
     "November": 11,
     "December": 12,
 }
-
 
 class Source:
     def __init__(self, street_address: str):

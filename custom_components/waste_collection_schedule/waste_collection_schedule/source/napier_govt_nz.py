@@ -12,10 +12,6 @@ DESCRIPTION = "Source for Napier City Council"
 URL = "https://www.napier.govt.nz/"
 COUNTRY = "nz"
 API_URL = "https://data.napier.govt.nz/regional/ncc/widgets/collectiondays/do_collectiondays.php"
-ICON_MAP = {
-    "Rubbish": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-}
 HEADERS = {"User-Agent": "waste-collection-schedule"}
 
 TEST_CASES = {
@@ -24,7 +20,6 @@ TEST_CASES = {
     "Test3": {"address": "603 Marine Parade"},
     "Test4": {"address": "14 Cobden Road"},
 }
-
 
 class Source:
     def __init__(self, address):
@@ -152,9 +147,6 @@ class Source:
                             Collection(
                                 date=collection_date,
                                 t=collection_type.capitalize(),
-                                icon=ICON_MAP.get(
-                                    collection_type.capitalize(), "mdi:calendar"
-                                ),
                             )
                         )
 

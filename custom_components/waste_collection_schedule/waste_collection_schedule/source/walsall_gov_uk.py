@@ -17,17 +17,15 @@ TEST_CASES = {
 
 API_URL = "https://cag.walsall.gov.uk"
 ICON_MAP = {
-    "GREY": "mdi:trash-can",
-    "GREEN": "mdi:recycle",
     "BROWN": "mdi:leaf",
+    "GREEN": "mdi:recycle",
+    "GREY": "mdi:trash-can",
 }
 HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
 
-
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, uprn=None):

@@ -59,10 +59,10 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "omr": "mdi:trash-can",
+    "dv": "mdi:leaf",
     "emb": "mdi:recycle",
     "enc": "mdi:truck-remove",
-    "dv": "mdi:leaf",
+    "omr": "mdi:trash-can",
     "verre": "mdi:bottle-wine",
 }
 
@@ -76,13 +76,6 @@ PARAM_DESCRIPTIONS = {
     "en": {"address": "Your full address", "city": "Your city"},
     "de": {"address": "Ihre vollständige Adresse", "city": "Ihre Stadt"},
     "it": {"address": "Il tuo indirizzo completo", "city": "La tua città"},
-}
-
-PARAM_TRANSLATIONS = {
-    "fr": {"address": "Adresse", "city": "Ville"},
-    "en": {"address": "Address", "city": "City"},
-    "de": {"address": "Adresse", "city": "Stadt"},
-    "it": {"address": "Indirizzo", "city": "Città"},
 }
 
 EXTRA_INFO = [
@@ -172,7 +165,6 @@ EXTRA_INFO = [
     },
 ]
 
-
 class DayNames(Enum):
     MONDAY = "LUNDI"
     TUESDAY = "MARDI"
@@ -181,7 +173,6 @@ class DayNames(Enum):
     FRIDAY = "VENDREDI"
     SATURDAY = "SAMEDI"
     SUNDAY = "DIMANCHE"
-
 
 DAY_NAME_MAP = {
     DayNames.MONDAY: 0,
@@ -192,7 +183,6 @@ DAY_NAME_MAP = {
     DayNames.SATURDAY: 5,
     DayNames.SUNDAY: 6,
 }
-
 
 class Source:
     geocoder_url = "https://api.publidata.io/v2/geocoder"

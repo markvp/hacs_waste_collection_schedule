@@ -19,11 +19,9 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Household": "mdi:trash-can",
     "GOBS": "mdi:leaf",
-    "Recycle": "mdi:recycle",
+    "Household": "mdi:trash-can",
 }
-
 
 SEARCH_URL = "https://map.whitehorse.vic.gov.au/weave/services/v1/index/search"
 BIN_REQUEST_URL = (
@@ -32,7 +30,6 @@ BIN_REQUEST_URL = (
 
 # opening or closing tag
 HTML_TAG_REGEX = re.compile(r"</?.*?>")
-
 
 class Source:
     def __init__(self, address: str):

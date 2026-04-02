@@ -23,8 +23,6 @@ BIN_NAME = {
     "GardenBin": "Garden",
 }
 ICON_MAP = {
-    "REFUSE": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
     "GARDEN": "mdi:leaf",
 }
 MONTHS = {
@@ -53,7 +51,6 @@ MONTHS = {
     "Dec": 12,
 }
 RELATIVE_DATES = {"Today": 0, "Tomorrow": 1}
-
 
 class Source:
     def __init__(self, uprn: str | int):

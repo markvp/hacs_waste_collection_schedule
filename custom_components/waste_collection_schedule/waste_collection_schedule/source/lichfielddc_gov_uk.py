@@ -14,14 +14,10 @@ TEST_CASES = {
     "Test_004": {"uprn": "100031699855"},
 }
 ICON_MAP = {
-    "Black Bin": "mdi:trash-can",
     "Blue Bin": "mdi:recycle",
     "Blue Sack": "mdi:recycle",
     "Purple Bin": "mdi:recycle",
-    "Garden Bin": "mdi:leaf",
-    "Brown Bin": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(self, uprn):

@@ -30,9 +30,7 @@ TEST_CASES = {  # Insert arguments for test cases to be used by test_sources.py 
 }
 
 API_URL = "https://maps.planogis.org/arcgiswad/rest/services/Sustainability/ServicedAddresses/MapServer/0/query?"
-ICON_MAP = {  # Optional: Dict of waste types and suitable mdi icons
-    "TRASH": "mdi:trash-can",
-    "RECYCLE": "mdi:recycle",
+ICON_MAP = {
     "BULKY": "mdi:size-xl",
 }
 WEEKDAYMAP = {
@@ -77,7 +75,6 @@ PARAM_TRANSLATIONS = {  # Optional dict to translate the arguments, will be show
 }
 
 # ### End of arguments affecting the configuration GUI ####
-
 
 class Source:
     def __init__(

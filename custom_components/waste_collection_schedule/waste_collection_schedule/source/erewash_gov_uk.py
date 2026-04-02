@@ -12,9 +12,7 @@ TEST_CASES = {
     "Test_003": {"uprn": "100030118783"},
 }
 ICON_MAP = {
-    "recycling-collection-service": "mdi:recycle",
     "garden-waste-collection-service": "mdi:leaf",
-    "domestic-waste-collection-service": "mdi:trash-can",
 }
 HOW_TO_GET_ARGUMENTS_DESCRIPTION: dict = {
     "en": "an easy way to discover your Unique Property Reference Number (UPRN) is by going to https://www.findmyaddress.co.uk/ and entering in your address details.",
@@ -29,7 +27,6 @@ PARAM_DESCRIPTIONS: dict = {
         "uprn": "Unique Property Reference Number (UPRN)",
     }
 }
-
 
 class Source:
     def __init__(self, uprn: str | int):

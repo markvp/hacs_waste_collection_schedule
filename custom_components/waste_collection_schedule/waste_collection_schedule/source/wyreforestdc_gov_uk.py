@@ -24,9 +24,7 @@ API_URLS = {
 }
 
 ICON_MAP = {
-    "rubbish (black bin)": "mdi:trash-can",
     "recycling (green bin)": "mdi:recycle",
-    "garden waste (brown bin)": "mdi:leaf",
 }
 
 DAYS = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
@@ -42,7 +40,6 @@ REGEX_GET_GARDEN_SAME_WEEK_AS = re.compile(
 )
 
 _LOGGER = logging.getLogger(__name__)
-
 
 def get_date_by_weekday(weekday: str) -> date:
     this_week = re.match("This (.*?)$", weekday, re.IGNORECASE)
@@ -71,10 +68,8 @@ def get_date_by_weekday(weekday: str) -> date:
         d += timedelta(days=1)
     return d
 
-
 def predict_next_collections(first_date: date, day_interval: int = 14):
     return [first_date + timedelta(days=i * day_interval) for i in range(5)]
-
 
 class Source:
     def __init__(self, street: str, town: str, garden_cutomer: str | int | None = None):

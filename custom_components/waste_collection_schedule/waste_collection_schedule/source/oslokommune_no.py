@@ -33,9 +33,8 @@ TEST_CASES = {
 
 API_URL = "https://www.oslo.kommune.no/actions/snap-lib-waste-complaint/search-by-address"
 ICON_MAP = {
-    "":           "mdi:trash-can",
-    "restavfall": "mdi:trash-can",
-    "papir":      "mdi:newspaper-variant-multiple"
+    "": "mdi:trash-can",
+    "papir": "mdi:newspaper-variant-multiple",
 }
 
 # Map Hyppighet.Faktor to interval in days

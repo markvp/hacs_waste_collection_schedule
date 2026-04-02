@@ -31,13 +31,11 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "INDIFFERENZIATO": "mdi:trash-can",
-    "ORGANICO": "mdi:food-apple",
-    "VETRO E LATTINE": "mdi:bottle-wine",
     "CARTA": "mdi:newspaper-variant-multiple",
-    "PLASTICA": "mdi:recycle",
+    "ORGANICO": "mdi:food-apple",
     "SFALCI ABBONAMENTO NORMALE": "mdi:leaf-cricle",
     "SFALCI ABBONAMENTO RIDOTTO": "mdi:leaf-circle-outline",
+    "VETRO E LATTINE": "mdi:bottle-wine",
 }
 
 API_URL = "https://cidiu.it/wp-content/themes/icelander/integrazione-lista/cidiu-processer.php"
@@ -48,7 +46,6 @@ HEADERS = {
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, street, street_number, city):

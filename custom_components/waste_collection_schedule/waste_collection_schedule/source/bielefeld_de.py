@@ -17,10 +17,8 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Restabfallbehaelter": "mdi:delete",
-    "Bioabfallbehaelter": "mdi:leaf",
     "Papierbehaelter": "mdi:newspaper",
-    "Wertstofftonne": "mdi:recycle",
+    "Restabfallbehaelter": "mdi:delete",
 }
 
 SERVLET = "https://anwendungen.bielefeld.de/WasteManagementBielefeldTest/WasteManagementServlet"  # Actual Production URL changed from ORIGINAL_SERVLET
@@ -29,7 +27,6 @@ ORIGINAL_SERVLET = (
 )
 
 TEXT_REGEX = re.compile(r"var\s*text\s*=\s*'(.*?)'\s*;", re.DOTALL)
-
 
 # Parser for HTML input (hidden) text
 class HiddenInputParser(HTMLParser):
@@ -67,15 +64,11 @@ class HiddenInputParser(HTMLParser):
                                 new_radio.append(args_copy)
                         self._radio_args = new_radio
 
-
 PARAM_TRANSLATIONS = {
     "de": {
-        "street": "Straße",
-        "house_number": "Hausnummer",
         "address_suffix": "Hausnummerzusatz",
-    }
+    },
 }
-
 
 class Source:
     def __init__(self, street: str, house_number: int, address_suffix: str = ""):

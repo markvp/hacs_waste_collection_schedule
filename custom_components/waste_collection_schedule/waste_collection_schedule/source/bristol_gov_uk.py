@@ -17,18 +17,11 @@ TEST_CASES = {
     "Test_003": {"uprn": 17929},
 }
 ICON_MAP = {
-    "90L BLUE SACK": "mdi:recycle",
-    "240L GARDEN WASTE BIN": "mdi:leaf",
-    "180L GENERAL WASTE": "mdi:trash-can",
-    "45L BLACK RECYCLING BOX": "mdi:recycle",
-    "23L FOOD WASTE BIN": "mdi:food",
-    "55L GREEN RECYCLING BOX": "mdi:recycle",
-    "140L FOOD WASTE BIN": "mdi:food",
+    "1100L RECYCLING CARD": "mdi:package-variant",
     "240L RECYCLING MIXED GLASS": "mdi:bottle-wine",
     "240L RECYCLING PAPER": "mdi:newspaper",
-    "1100L GENERAL WASTE": "mdi:trash-can",
-    "1100L RECYCLING CARD": "mdi:package-variant",
     "360L RECYCLING PLASTIC/CANS": "mdi:bottle-soda-classic",
+    "90L BLUE SACK": "mdi:recycle",
 }
 HEADERS = {
     "Accept": "*/*",
@@ -44,7 +37,6 @@ HEADERS = {
     "Sec-GPC": "1",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",
 }
-
 
 class Source:
     def __init__(self, uprn):

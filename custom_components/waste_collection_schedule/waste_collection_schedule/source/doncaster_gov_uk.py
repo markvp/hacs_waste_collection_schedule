@@ -18,15 +18,13 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "GREEN": "mdi:leaf",
-    "RECYCLING": "mdi:recycle",
     "BLACK": "mdi:trash-can",
     "BULKY": "mdi:fridge",
+    "GREEN": "mdi:leaf",
     "RE-USE": "mdi:sofa",
 }
 
 REGEX_DATE = r"\(([0-9]{10})"
-
 
 class Source:
     def __init__(self, uprn):

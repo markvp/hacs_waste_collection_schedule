@@ -22,12 +22,8 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Black domestic waste": "mdi:trash-can",
-    "Green recycling": "mdi:recycle",
-    "Brown garden waste": "mdi:leaf",
     "Food waste": "mdi:food-apple",
 }
-
 
 class Source:
     def __init__(self, post_code: str, address: str):

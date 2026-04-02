@@ -23,11 +23,9 @@ API_URLS = {
     "collection": "https://www.birmingham.gov.uk/xfp/form/619",
 }
 ICON_MAP = {
-    "Household Collection": "mdi:trash-can",
-    "Recycling Collection": "mdi:recycle",
     "Green Recycling Chargeable Collections": "mdi:leaf",
+    "Household Collection": "mdi:trash-can",
 }
-
 
 class Source:
     def __init__(self, uprn: str, postcode: str):

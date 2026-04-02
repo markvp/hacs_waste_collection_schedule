@@ -15,12 +15,6 @@ TEST_CASES = {
 
 API_URL = "https://gis1.fuquay-varina.org/server/rest/services/Public/Solid_Waste_Information/MapServer/0/query"
 
-ICON_MAP = {
-    "GARBAGE": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
-}
-
-
 class Source:
     def __init__(self, street_address: str):
         self._street_address = street_address.strip()
@@ -55,7 +49,7 @@ class Source:
             garbage_date = self._parse_date_from_text(garbage_date_text)
             if garbage_date:
                 entries.append(
-                    Collection(date=garbage_date, t="Garbage", icon=ICON_MAP["GARBAGE"])
+                    Collection(date=garbage_date, t="Garbage")
                 )
 
         # Parse recycling collection
@@ -65,7 +59,7 @@ class Source:
             if recycling_date:
                 entries.append(
                     Collection(
-                        date=recycling_date, t="Recycling", icon=ICON_MAP["RECYCLING"]
+                        date=recycling_date, t="Recycling"
                     )
                 )
 

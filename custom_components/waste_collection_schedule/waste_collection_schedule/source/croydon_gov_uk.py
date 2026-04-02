@@ -16,10 +16,8 @@ TEST_CASES = {
     "Test_004": {"postcode": "CR5 2BG", "houseID": "18 South Drive"},
 }
 ICON_MAP = {
-    "Food waste": "mdi:food",
-    "General rubbish": "mdi:trash-can",
-    "Paper and card recycling": "mdi:newspaper",
     "Glass, plastics, cans and cartons recycling": "mdi:bottle-wine",
+    "Paper and card recycling": "mdi:newspaper",
 }
 API_URLS = {
     "BASE": "https://service.croydon.gov.uk",
@@ -71,7 +69,6 @@ SESSION_STORAGE = {
     ],
     "last_context_record_id": "86086077",
 }
-
 
 class Source:
     def __init__(self, postcode, houseID):

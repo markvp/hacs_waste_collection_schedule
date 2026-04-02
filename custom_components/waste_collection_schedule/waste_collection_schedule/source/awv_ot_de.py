@@ -26,18 +26,12 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
     "Hausmuelltonne": "mdi:trash-can",
-    "Biotonne": "mdi:leaf",
-    "Papiertonne": "mdi:package-variant",
-    "Gelbe Tonne": "mdi:recycle",
 }
-
 
 API_URL = "https://www.awv-ot.de/tourenauskunft/auskunftbatix.php"
 ICS_URL = "https://www.awv-ot.de/tourenauskunft/ics/ics.php"
-
 
 class Source:
     def __init__(self, city: str, street: str, hnr: str):

@@ -40,13 +40,7 @@ HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
 
-ICON_MAP = {
-    "Rubbish": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-}
-
 # _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(
@@ -101,8 +95,7 @@ class Source:
                 Collection(
                     date = date,
                     t=waste_type,  # api returns Recycling, Rubbish
-                    icon=ICON_MAP.get(waste_type),
-                )
+                    )
             )
 
         return entries

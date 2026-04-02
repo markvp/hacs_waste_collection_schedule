@@ -13,11 +13,8 @@ TEST_CASES = {
     "187262293": {"uprn": 187262293},
 }
 
-
 ICON_MAP = {
-    "Refuse": "mdi:trash-can",
     "Garden": "mdi:leaf",
-    "Recycling": "mdi:recycle",
 }
 
 # Common waste type mappings for fallback (calendar uses different titles than key)
@@ -26,7 +23,6 @@ WASTE_TYPE_MAPPINGS = {
     "Grn date based on Round Name": "Garden",
     "Rec date based on Round Name": "Recycling",
 }
-
 
 API_URL = "https://collections-midandeastantrim.azurewebsites.net/WSCollExternal.asmx"
 
@@ -44,11 +40,9 @@ PAYLOAD = """<?xml version="1.0" encoding="utf-8" ?>
 </soap:Envelope>
 """
 
-
 class Source:
     def __init__(self, uprn: str | int):
         self._payload = PAYLOAD.format(uprn=str(uprn).strip())
-
 
     def fetch(self) -> list[Collection]:
         r = requests.post(

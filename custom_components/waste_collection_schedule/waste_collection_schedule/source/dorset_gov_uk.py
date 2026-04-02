@@ -12,12 +12,6 @@ TEST_CASES = {
     "Test_002": {"uprn": 100040606087},
     "Test_003": {"uprn": "100040606071"},
 }
-ICON_MAP = {
-    "Recycling": "mdi:recycle",
-    "Rubbish": "mdi:trash-can",
-    "Garden Waste": "mdi:leaf",
-    "Food Waste": "mdi:food",
-}
 
 API_URLS = {
     "Recycling": "https://geoapi.dorsetcouncil.gov.uk/v1/Services/recyclingday/{uprn}",
@@ -25,7 +19,6 @@ API_URLS = {
     "Garden Waste": "https://geoapi.dorsetcouncil.gov.uk/v1/Services/gardenwasteday/{uprn}",
     "Food Waste": "https://geoapi.dorsetcouncil.gov.uk/v1/Services/foodwasteday/{uprn}",
 }
-
 
 class Source:
     def __init__(self, uprn: str | int):
@@ -45,7 +38,6 @@ class Source:
                     Collection(
                         date=date,
                         t=bin,
-                        icon=ICON_MAP.get(bin),
                     )
                 )
             except (

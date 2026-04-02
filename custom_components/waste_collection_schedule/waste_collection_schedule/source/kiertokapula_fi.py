@@ -14,12 +14,11 @@ TEST_CASES = {
     }
 }
 ICON_MAP = {
-    "SEK": "mdi:trash-can",
-    "MUO": "mdi:delete-variant",
     "KAR": "mdi:package-variant",
     "LAS": "mdi:glass-wine",
     "MET": "mdi:tools",
-    "BIO": "mdi:leaf",
+    "MUO": "mdi:delete-variant",
+    "SEK": "mdi:trash-can",
 }
 NAME_DEF = {
     "SEK": "Sekajäte",
@@ -32,7 +31,6 @@ NAME_DEF = {
 API_URL = "https://asiakasnetti.kiertokapula.fi/kiertokapula"
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(

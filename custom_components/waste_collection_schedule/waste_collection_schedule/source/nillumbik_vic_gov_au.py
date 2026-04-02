@@ -14,11 +14,8 @@ TEST_CASES = {"Test": {"street_address": "11 Sunnyside Crescent, WATTLE GLEN, 30
 _LOGGER = logging.getLogger(__name__)
 
 ICON_MAP = {
-    "Food and Green Waste": "mdi:leaf",
     "Hard Waste": "mdi:sofa",
-    "Recycling": "mdi:recycle",
 }
-
 
 class Source:
     def __init__(self, street_address):

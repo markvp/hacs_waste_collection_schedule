@@ -17,14 +17,10 @@ TEST_CASES = {
 API_URL = "https://selfserve.harlow.gov.uk/appshost/firmstep/self/apps/custompage/bincollectionsecho?uprn={uprn}"
 
 ICON_MAP = {
-    "Non-Recycling": "mdi:trash-can",
-    "Food Caddy": "mdi:food-apple",
-    "Recycling": "mdi:recycle",
-    "Green Waste Subscription": "mdi:leaf",
     "Communal Non-Recycling": "mdi:trash-can",
-    "Communal Recycling": "mdi:recycle",
+    "Food Caddy": "mdi:food-apple",
+    "Non-Recycling": "mdi:trash-can",
 }
-
 
 class Source:
     def __init__(self, uprn=None):

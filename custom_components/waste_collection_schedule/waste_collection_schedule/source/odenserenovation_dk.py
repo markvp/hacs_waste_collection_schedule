@@ -14,15 +14,14 @@ TEST_CASES = {
 
 API_URL = "https://mit.odenserenovation.dk/api/Calendar/GetCalendarByAddress"
 ICON_MAP = {
-    "00": "mdi:trash-can",  # Mad- og restaffald
-    "10": "mdi:archive",  # Glas & metal og papir & småt pap
-    "20": "mdi:trash-can",  # Restaffald
-    "30": "mdi:food-apple",  # Madaffald
-    "40": "mdi:archive",  # Papir & småt pap
-    "50": "mdi:bottle-wine",  # Glas & Metal
-    "60": "mdi:bottle-soda",  # Plast og mad- & drikkekartoner
+    "00": "mdi:trash-can",
+    "10": "mdi:archive",
+    "20": "mdi:trash-can",
+    "30": "mdi:food-apple",
+    "40": "mdi:archive",
+    "50": "mdi:bottle-wine",
+    "60": "mdi:bottle-soda",
 }
-
 
 class Source:
     def __init__(self, addressNo: int):

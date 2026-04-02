@@ -21,11 +21,9 @@ ICON_MAP = {
 
 PARAM_TRANSLATIONS = {
     "de": {
-        "street": "Straße",
         "number": "Hausnummer",
-    }
+    },
 }
-
 
 class Source:
     def __init__(self, street: str | None, number: int | None):

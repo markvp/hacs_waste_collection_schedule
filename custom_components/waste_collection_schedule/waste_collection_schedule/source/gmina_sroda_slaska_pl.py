@@ -11,12 +11,8 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Zmieszane komunalne": "mdi:trash-can",  # Mixed
-    "Tworzywa sztuczne": "mdi:recycle",  # Plastic
-    "Odpady kuchenne ulegające biodegradacji": "mdi:leaf",  # Organic
-    "Papier": "mdi:file-outline",  # Paper
-    "Szkło": "mdi:glass-fragile",  # Glass
     "Odpady wielkogabarytowe": "mdi:sofa-single",
+    "Papier": "mdi:file-outline",
 }
 
 API_URL = "https://waste-collection.sciana.pro/api/v1/"
@@ -31,7 +27,6 @@ PARAM_DESCRIPTIONS = {  # Optional dict to describe the arguments, will be shown
         "location_id": "Unique location id (LOCATION_ID)",
     },
 }
-
 
 class Source:
     def __init__(self, location_id):

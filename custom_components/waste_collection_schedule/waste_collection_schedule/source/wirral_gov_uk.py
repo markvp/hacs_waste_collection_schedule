@@ -17,7 +17,6 @@ TEST_CASES = {
 ICON_MAP = {
     "NON RECYCLEABLE (GREEN BIN)": "mdi:trash-can",
     "PAPER AND PACKAGING (GREY BIN)": "mdi:newspaper",
-    "GARDEN WASTE (BROWN BIN)": "mdi:leaf",
 }
 WASTES = {
     "Non recycleable (green bin)",
@@ -25,7 +24,6 @@ WASTES = {
     "Paper and packaging (grey bin)",
 }
 DATE_REGEX = "^([0-9]{1,2} [A-Za-z]+ [0-9]{4})"
-
 
 class Source:
     def __init__(self, street, suburb):

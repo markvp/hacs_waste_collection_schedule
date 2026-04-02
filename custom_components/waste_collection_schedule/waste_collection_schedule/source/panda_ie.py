@@ -13,13 +13,10 @@ TEST_CASES = {
     }
 }
 
-
 ICON_MAP = {
-    "Waste": "mdi:trash-can",
     "Compost": "mdi:leaf",
-    "Recycling": "mdi:recycle",
+    "Waste": "mdi:trash-can",
 }
-
 
 COLLECTION_URL = (
     "https://domesticmobileserviceapi.azurewebsites.net/api/Account/GetData"
@@ -48,7 +45,6 @@ PARAM_TRANSLATIONS = {  # Optional dict to translate the arguments, will be show
 }
 
 # ### End of arguments affecting the configuration GUI ####
-
 
 class Source:
     def __init__(self, account_number: str, pin: str):

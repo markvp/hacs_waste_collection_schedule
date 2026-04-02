@@ -10,8 +10,6 @@ DESCRIPTION = "The greater Eastern Shore of Hobart"
 
 URL = "https://www.ccc.tas.gov.au/wp-json/waste-collection"
 ICON_MAP = {
-    "RUBBISH": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
     "GREENWASTE": "mdi:leaf",
 }
 
@@ -26,7 +24,6 @@ TEST_CASES = {
 
 DATE_REGEX = r"\d{1,2}/\d{1,2}/\d{4}"
 WEEKS_TO_CHECK = 52
-
 
 def _get_dates(value: str) -> list[date]:
     date_strings = re.findall(DATE_REGEX, value)
@@ -48,7 +45,6 @@ def _get_dates(value: str) -> list[date]:
         raise Exception("Data has changed, api processor needs to be updated")
 
     return dates
-
 
 def _process_results(results) -> list[Collection]:
     entries = []
@@ -77,7 +73,6 @@ def _process_results(results) -> list[Collection]:
             ]
         )
     return entries
-
 
 def _query_api(address: str) -> dict:
     session = requests.Session()
@@ -112,7 +107,6 @@ def _query_api(address: str) -> dict:
         raise Exception("Could not find collections")
 
     return collections_result
-
 
 class Source:
     def __init__(self, address: str):

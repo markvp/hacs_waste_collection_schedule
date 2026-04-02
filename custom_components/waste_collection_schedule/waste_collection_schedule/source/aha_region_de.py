@@ -43,16 +43,11 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Restabfall": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "Bioabfall": "mdi:leaf",
-    "Papier": "mdi:package-variant",
-    "Leichtverpackungen": "mdi:recycle",
 }
 
 API_URL = "https://www.aha-region.de/abholtermine/abfuhrkalender"
 LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(

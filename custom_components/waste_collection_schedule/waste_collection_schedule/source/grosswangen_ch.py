@@ -11,17 +11,15 @@ URL = "https://www.grosswangen.ch"
 TEST_CASES = {"TEST": {}}
 
 ICON_MAP = {
-    "Grüngutabfuhr": "mdi:leaf",
-    "Kehricht-Aussentour": "mdi:trash-can-outline",
-    "Kartonsammlung": "mdi:recycle",
+    "Alteisensammlung und Sammlung elektronischer Geräte": "mdi:desktop-classic",
     "Altpapiersammlung": "mdi:newspaper-variant-multiple-outline",
     "Häckselservice": "mdi:leaf-off",
-    "Alteisensammlung und Sammlung elektronischer Geräte": "mdi:desktop-classic",
+    "Kartonsammlung": "mdi:recycle",
+    "Kehricht-Aussentour": "mdi:trash-can-outline",
     "Zusätzliche Gratis-Laubabfuhr": "mdi:leaf",
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self):

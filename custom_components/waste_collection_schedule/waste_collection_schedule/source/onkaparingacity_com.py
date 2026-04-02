@@ -12,15 +12,8 @@ TEST_CASES = {
     "TestcaseI": {"address": "18 Flagstaff Road, FLAGSTAFF HILL 5159"},
 }
 
-ICON_MAP = {
-    "General Waste": "mdi:trash-can",
-    "Recycling Waste": "mdi:recycle",
-    "Green Waste": "mdi:leaf",
-}
-
 API_URL = "https://www.onkaparingacity.com"
 HEADERS = {"referer": f"{API_URL}/Services/Waste-and-recycling/Bin-collections"}
-
 
 class Source:
     def __init__(self, address):
@@ -71,5 +64,5 @@ class Source:
 
         entries = []
         for item in waste:
-            entries.append(Collection(item[1], item[0], icon=ICON_MAP.get(item[0])))
+            entries.append(Collection(item[1], item[0]))
         return entries

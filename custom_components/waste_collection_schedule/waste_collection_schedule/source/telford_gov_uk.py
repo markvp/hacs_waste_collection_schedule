@@ -27,15 +27,14 @@ API_URLS = {
 
 # Map the names to icons
 ICON_MAP = {
-    "Red Top Container": "mdi:trash-can",
-    "Purple / Blue Containers": "mdi:recycle",
     "Green Container": "mdi:leaf",
+    "Purple / Blue Containers": "mdi:recycle",
+    "Red Top Container": "mdi:trash-can",
     "Silver Containers": "mdi:food",
 }
 
 # Path to the images provided by the council for the containers
 IMAGEPATH = "https://dac.telford.gov.uk/BinDayFinder/Content/BinIcons/"
-
 
 class Source:
     def __init__(self, post_code=None, name_number=None, uprn=None):

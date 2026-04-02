@@ -22,11 +22,10 @@ API_URLS = {
     "collection": "https://bincollections.bromsgrove.gov.uk/BinCollections/Details/",
 }
 ICON_MAP = {
-    "Grey": "mdi:trash-can",
-    "Green": "mdi:recycle",
     "Brown": "mdi:leaf",
+    "Green": "mdi:recycle",
+    "Grey": "mdi:trash-can",
 }
-
 
 class Source:
     def __init__(self, uprn: str, postcode: str):

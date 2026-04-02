@@ -18,13 +18,10 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Commercial -  general waste:": "mdi:trash-can",
     "Commercial -  cardboard and paper:": "mdi:note-text",
     "Commercial - plastic cans and glass:": "mdi:recycle",
-    "Black/grey bin (general waste):": "mdi:trash-can",
-    "Yellow lidded recycling container (glass/cans/plastics):": "mdi:recycle",
     "Red lidded recycling container (paper/card):": "mdi:note-text",
-    "Brown bin (garden waste):": "mdi:leaf",
+    "Yellow lidded recycling container (glass/cans/plastics):": "mdi:recycle",
 }
 
 HEADER_MAP = {
@@ -53,7 +50,6 @@ PARAMS = {
     "ctl00$MainContent$txtAddress": "",
     "ctl00$MainContent$hdnUPRN": "",
 }
-
 
 class Source:
     def __init__(self, street="", uprn=""):

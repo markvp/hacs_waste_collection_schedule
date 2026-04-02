@@ -20,13 +20,11 @@ HEADERS = {
 }
 API_URL = "https://public.tameside.gov.uk/forms/bin-dates.asp"
 ICON_MAP = {
-    "GREEN BIN": "mdi:trash-can",
-    "BROWN BIN": "mdi:leaf",
-    "BLUE BIN": "mdi:newspaper",
     "BLACK BIN": "mdi:glass-fragile",
+    "BLUE BIN": "mdi:newspaper",
+    "GREEN BIN": "mdi:trash-can",
 }
 REGEX = r"(st|nd|rd|th)"
-
 
 class Source:
     def __init__(self, postcode=None, uprn=None):

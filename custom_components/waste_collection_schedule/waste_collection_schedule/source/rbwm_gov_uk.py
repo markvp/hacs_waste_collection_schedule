@@ -15,36 +15,24 @@ TEST_CASES = {
     "Maidenhead 2": {"uprn": 100080355442},
 }
 
-
-ICON_MAP = {
-    "refuse": "mdi:trash-can",
-    "garden waste": "mdi:leaf",
-    "recycling": "mdi:recycle",
-}
-
 PARAM_TRANSLATIONS = {
     "de": {
         "postcode": "(Leer lassen)",
-        "uprn": "UPRN",
     },
     "en": {
         "postcode": "(Leave Empty)",
-        "uprn": "UPRN",
     },
     "it": {
         "postcode": "(Lascia vuoto)",
-        "uprn": "UPRN",
     },
 }
 
 API_URL = "https://forms.rbwm.gov.uk/bincollections"
 
-
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
 }
-
 
 class Source:
     # postcode was previously required by this source. This is no longer the case but argument kept for backwards compatibility

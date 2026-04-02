@@ -13,8 +13,9 @@ TEST_CASES = {
     "Test_003": {"property": 46012509},
 }
 
-ICON_MAP = {"DOMESTIC": "mdi:trash-can", "RECYCLING": "mdi:glass-fragile"}
-
+ICON_MAP = {
+    "RECYCLING": "mdi:glass-fragile",
+}
 
 class Source:
     def __init__(self, property):

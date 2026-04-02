@@ -23,14 +23,11 @@ TEST_CASES = {
     },
 }
 ICON_MAP = {
-    "Domestic Waste": "mdi:trash-can",
     "Glass Cans and Plastic Recycling": "mdi:recycle",
-    "Garden Waste": "mdi:leaf",
 }
 API_URL = "https://abc-wrp.whitespacews.com/"
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(

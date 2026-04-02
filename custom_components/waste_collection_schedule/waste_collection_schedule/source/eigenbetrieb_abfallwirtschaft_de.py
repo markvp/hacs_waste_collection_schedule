@@ -17,19 +17,11 @@ TEST_CASES = {
     "Spremberg, Gartenstrasse": {"city": 10, "street": 701},
 }
 
-ICON_MAP = {
-    "Restmüll": "mdi:trash-can",
-    "Biotonne": "mdi:leaf",
-    "Papiercontainer": "mdi:package-variant",
-    "Gelbe(r) Sack/Tonne": "mdi:recycle",
-}
 PARAM_TRANSLATIONS = {
     "de": {
         "city": "Ort",
-        "street": "Straße",
-    }
+    },
 }
-
 
 class Source:
     def __init__(self, city: str, street: str):

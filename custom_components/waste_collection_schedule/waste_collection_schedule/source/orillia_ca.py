@@ -13,19 +13,12 @@ TEST_CASES = {
     }
 }
 
-
 ICON_MAP = {
-    "Trash": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "Bio": "mdi:leaf",
-    "Paper": "mdi:package-variant",
-    "Recycle": "mdi:recycle",
 }
-
 
 COLLECTION_URL = "https://citizenportal-product-api.esolg.ca/api/v1/orillianow-orillia/mywastedashboard/get-mywaste-widget-content-async/198"
 LOGIN_URL = "https://citizenportal-product-api.esolg.ca/api/v1/orillianow-orillia/account/sign-in"
-
 
 class Source:
     def __init__(self, email: str, password: str):

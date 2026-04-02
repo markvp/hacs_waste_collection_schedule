@@ -19,12 +19,11 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "REST-MAD": "mdi:trash-can",
+    "MADAFFALD": "mdi:food",
     "PAP-PAPIR": "mdi:newspaper",
     "PLAST-GLAS-METAL": "mdi:recycle",
-    "MADAFFALD": "mdi:food",
+    "REST-MAD": "mdi:trash-can",
     "RESTAFFALD": "mdi:trash-can",
-    "FARLIGT-AFFALD": "mdi:biohazard",
 }
 
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
@@ -37,7 +36,6 @@ HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     5. The ID should be a UUID format like: `00006ac8-0002-0001-4164-647265737320`
     """,
 }
-
 
 class Source:
     def __init__(self, id: str):

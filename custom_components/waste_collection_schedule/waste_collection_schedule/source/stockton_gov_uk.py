@@ -20,16 +20,11 @@ TEST_CASES = {
     "100110206644": {"uprn": 100110206644},
 }
 
-
 ICON_MAP = {
     "Waste": "mdi:trash-can",
-    "Garden Waste": "mdi:leaf",
-    "Recycling": "mdi:recycle",
 }
 
-
 API_URL = "https://www.stockton.gov.uk/bin-collection-days"
-
 
 class Source:
     def __init__(self, uprn: str | int):

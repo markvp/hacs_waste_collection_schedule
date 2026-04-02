@@ -13,7 +13,6 @@ from waste_collection_schedule.exceptions import (
 
 _LOGGER = logging.getLogger(__name__)
 
-
 TITLE = "Iren Ambiente"
 DESCRIPTION = "Source for Iren Ambiente."
 URL = "https://servizi.irenambiente.it/"
@@ -55,17 +54,11 @@ HOW_TO_GET_ARGUMENTS_DESCRIPTION = {  # Optional dictionary to describe how to g
 DTSTART_REGEX = re.compile(r"DTSTART=\d*T\d*Z?;?")
 
 ICON_MAP = {
-    "Carta": "mdi:package-variant",
-    "Cartone": "mdi:package-variant",
-    "Rifiuto residuo indifferenziato": "mdi:trash-can",
-    "Rifiuti Organici": "mdi:leaf",
-    "Imballaggi in plastica": "mdi:recycle",
-    "Vetro e lattine": "mdi:bottle-soda",
-    "Vetro": "mdi:bottle-soda",
-    "Imballaggi in plastica e barattolame": "mdi:recycle",
     "Alluminio": "mdi:recycle",
+    "Cartone": "mdi:package-variant",
+    "Vetro": "mdi:bottle-soda",
+    "Vetro e lattine": "mdi:bottle-soda",
 }
-
 
 PARAM_TRANSLATIONS = {  # Optional dict to translate the arguments, will be shown in the GUI configuration form as placeholder text
     "it": {
@@ -80,46 +73,37 @@ COLLECTION_ULR = (
     "https://net.irenambiente.it/restv1/api/cms/calendarioraccoltacivico/{address_id}"
 )
 
-
 class CityResultEntry(TypedDict):
     Comune: str
     Istat: str
-
 
 class StreetResultEntry(TypedDict):
     Street: str
     StreetCode: str
     Istat: str
 
-
 class HnrRestultEntry(TypedDict):
     Civico: str
     AdrNr: str
 
-
 class CityResult(TypedDict):
     data: list[CityResultEntry]
-
 
 class StreetResult(TypedDict):
     data: list[StreetResultEntry]
 
-
 class HnrResult(TypedDict):
     data: list[HnrRestultEntry]
-
 
 class Holiday(TypedDict):
     DataFestivita: str
     DataConferimento: str
-
 
 class CollectionItem(TypedDict):
     Materiale: str
     ICalRRule: str
     FestivitaCalendario: list[Holiday]
     NonVisibile: bool
-
 
 class Source:
     def __init__(self, city: str, street: str, house_number: str | int):

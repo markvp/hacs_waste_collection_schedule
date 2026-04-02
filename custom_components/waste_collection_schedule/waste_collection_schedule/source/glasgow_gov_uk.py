@@ -15,13 +15,12 @@ TEST_CASES = {
 
 API_URL = "https://onlineservices.glasgow.gov.uk/forms/refuseandrecyclingcalendar/CollectionsCalendar.aspx?UPRN="
 ICON_MAP = {
-    "purple bins": "mdi:glass-fragile",
+    "blue bins": "mdi:recycle",
     "brown bins": "mdi:apple",
     "green bins": "mdi:trash-can",
-    "blue bins": "mdi:recycle",
     "grey bins": "mdi:apple",
+    "purple bins": "mdi:glass-fragile",
 }
-
 
 class Source:
     def __init__(self, uprn: str):

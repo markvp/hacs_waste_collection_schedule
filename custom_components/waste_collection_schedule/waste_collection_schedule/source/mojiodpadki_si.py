@@ -5,7 +5,6 @@ import requests
 from bs4 import BeautifulSoup
 from waste_collection_schedule import Collection
 
-
 TITLE = "Moji odpadki, Ljubljana"
 DESCRIPTION = "Source script for mojiodpadki.si"
 URL = "https://www.mojiodpadki.si"
@@ -15,10 +14,9 @@ TEST_CASES = {
 
 API_URL = "https://www.mojiodpadki.si/urniki/urniki-odvoza-odpadkov"
 ICON_MAP = {
-    "MKO": "mdi:trash-can",  # unsorted waste
-    "EMB": "mdi:recycle",  # packaging waste
-    "BIO": "mdi:leaf",  # biodegradable waste
-    "PAP": "mdi:newspaper",  # paper waste
+    "EMB": "mdi:recycle",
+    "MKO": "mdi:trash-can",
+    "PAP": "mdi:newspaper",
 }
 
 # month names from mojiodpadki.si (sl_SI)
@@ -39,14 +37,11 @@ MONTHS = {
 
 _LOGGER = logging.getLogger(__name__)
 
-
 class Source:
-
 
     def __init__(self, uprn):
         _LOGGER.info(f"Initializing mojiodpadki.si waste collection service for uprn={uprn}")
         self._uprn = uprn
-
 
     def fetch(self):
         # GET request returns schedule for matching uprn

@@ -18,10 +18,7 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "rubbish": "mdi:trash-can",
-    "recycling": "mdi:recycle",
     "fogo": "mdi:leaf",
 }
 
@@ -39,7 +36,6 @@ PARAM_DESCRIPTIONS = {
     }
 }
 
-
 class Address(TypedDict):
     Id: str
     AddressSingleLine: str
@@ -47,7 +43,6 @@ class Address(TypedDict):
     Distance: int
     Score: float
     LatLon: None
-
 
 class Source:
     def __init__(self, address: str) -> None:

@@ -11,17 +11,14 @@ TEST_CASES = {
     "53 CREIGHTON ROAD, EALING, LONDON, W5 4SH": {"uprn": "12082293"},
 }
 
-
 ICON_MAP = {
     "BLACK": "mdi:trash-can",
-    "GARDEN": "mdi:leaf",
     "BLUE": "mdi:recycle",
     "FOOD": "mdi:food-apple",
+    "GARDEN": "mdi:leaf",
 }
 
-
 API_URL = "https://www.ealing.gov.uk/site/custom_scripts/WasteCollectionWS/home/FindCollection"
-
 
 class Source:
     def __init__(self, uprn: str | int):

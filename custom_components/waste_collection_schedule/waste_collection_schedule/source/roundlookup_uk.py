@@ -17,7 +17,6 @@ from waste_collection_schedule.exceptions import (
 # This line suppresses the InsecureRequestWarning when using verify=False
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-
 _LOGGER = logging.getLogger(__name__)
 
 TITLE = "Malvern Hills District Council"
@@ -36,13 +35,10 @@ TEST_CASES = {
     "Wychavon: 10095592085": {"uprn": 10095592085, "council": "Wychavon"},
 }
 
-
 ICON_MAP = {
-    "Non-recyclable": "mdi:trash-can",
     "Garden": "mdi:leaf",
-    "Recycling": "mdi:recycle",
+    "Non-recyclable": "mdi:trash-can",
 }
-
 
 SERVICE_MAP = {
     "Malvern Hills": {
@@ -69,7 +65,6 @@ EXTRA_INFO = [
 ]
 
 COUNIL_LITERAL = Literal["Malvern Hills", "Wychavon", "Worcester City"]
-
 
 class Source:
     def __init__(self, uprn: str | int, council: COUNIL_LITERAL) -> None:

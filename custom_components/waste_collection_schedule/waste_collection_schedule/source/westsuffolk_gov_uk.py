@@ -13,16 +13,11 @@ TEST_CASES = {
     "Haere Mai, The Street, Troston, IP31 1EW": {"uprn": "100091387226"},
 }
 
-
 ICON_MAP = {
-    "Black bin": "mdi:trash-can",
-    "Brown bin": "mdi:leaf",
     "Blue bin": "mdi:recycle",
 }
 
-
 API_URL = "https://maps.westsuffolk.gov.uk/MyWestSuffolk.aspx"
-
 
 class Source:
     def __init__(self, uprn: str | int):

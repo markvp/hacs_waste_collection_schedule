@@ -15,11 +15,7 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "zmieszane": "mdi:trash-can",  # Mixed
-    "tworzywa": "mdi:recycle",  # Plastic
-    "BIO": "mdi:leaf",  # Organic
-    "papier": "mdi:file-outline",  # Paper
-    "szkło": "mdi:glass-fragile"  # Glass
+    "papier": "mdi:file-outline",
 }
 
 API_URL = "https://ekosystem.wroc.pl/wp-admin/admin-ajax.php"
@@ -28,7 +24,6 @@ MESSAGE_FIELD_NAME = 'wiadomosc'
 PARAMS_NUMBER_PARAM_NAME = 'params'
 WASTE_TYPE_PARAM_FORMAT = "co_{}"
 DATE_PARAM_FORMAT = "kiedy_{}"
-
 
 class Source:
     def __init__(self, location_id):

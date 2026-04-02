@@ -17,13 +17,6 @@ TEST_CASES = {
 
 _LOGGER = logging.getLogger(__name__)
 
-ICON_MAP = {  # Dict of waste types and suitable mdi icons
-    "General waste": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Green organics": "mdi:leaf",
-}
-
-
 class Source:
     def __init__(self, street_address):
         self._street_address = street_address

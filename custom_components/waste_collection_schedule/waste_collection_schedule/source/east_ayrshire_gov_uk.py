@@ -14,13 +14,6 @@ TEST_CASES = {
     "Test_003": {"uprn": 127072016},
 }
 
-ICON_MAP = {
-    "General waste bin": "mdi:trash-can",
-    "Garden waste bin": "mdi:leaf",
-    "Recycling trolley": "mdi:recycle",
-}
-
-
 class Source:
     def __init__(self, uprn):
         self._uprn = str(uprn)
@@ -40,9 +33,6 @@ class Source:
                 Collection(
                     date=parser.parse(bins["datetime"]).date(),
                     t=bins.select_one("span.ScheduleItem").get_text().strip(),
-                    icon=ICON_MAP.get(
-                        bins.select_one("span.ScheduleItem").get_text().strip()
-                    ),
                 )
             )
         return entries

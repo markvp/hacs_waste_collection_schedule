@@ -21,12 +21,6 @@ TEST_CASES = {
 }
 ICON_MAP = {
     "SEKA": "mdi:trash-can",
-    "BIO": "mdi:leaf",
-    # Unsure about these
-    # "MUO": "mdi:delete-variant",
-    # "KAR": "mdi:package-variant",
-    # "LAS": "mdi:glass-wine",
-    # "MET": "mdi:tools",
 }
 
 API_URL = "https://oma.mustankorkea.fi/api"
@@ -52,7 +46,6 @@ PARAM_TRANSLATIONS = {
         "contract_id": "e.g. 30-00012345-00",
     }
 }
-
 
 class Source:
     REQUEST_TIMEOUT = 10

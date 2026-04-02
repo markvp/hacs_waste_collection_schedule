@@ -25,8 +25,6 @@ HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
 ICON_MAP = {
-    "Recycling": "mdi:recycle",
-    "Refuse": "mdi:trash-can",
     "Garden": "mdi:leaf",
 }
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
@@ -43,7 +41,6 @@ PARAM_DESCRIPTIONS = {
     }
 }
 REGEX = r"\d+\/\d+\/\d+"
-
 
 class Source:
     def __init__(self, uprn: str | int):

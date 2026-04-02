@@ -80,26 +80,21 @@ PARAM_DESCRIPTIONS = {
 }
 
 PARAM_TRANSLATIONS = {
-    "en": {
-        "street": "Street",
-        "registrationNumber": "Registration Number",
-    },
     "de": {
-        "street": "Straße",
         "registrationNumber": "Registrierungsnummer",
     },
-    "it": {
-        "street": "Strada",
-        "registrationNumber": "Numero di registrazione",
+    "en": {
+        "registrationNumber": "Registration Number",
     },
     "fr": {
-        "street": "Rue",
         "registrationNumber": "Numéro d'enregistrement",
+    },
+    "it": {
+        "registrationNumber": "Numero di registrazione",
     },
 }
 
 # ### End of arguments affecting the configuration GUI ####
-
 
 class Source:
     def __init__(self, street: str = "", registrationNumber: str = ""):

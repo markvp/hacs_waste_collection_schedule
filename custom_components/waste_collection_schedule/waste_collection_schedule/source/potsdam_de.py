@@ -31,7 +31,6 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
     1: "mdi:trash-can",
     2: "mdi:leaf",
@@ -58,28 +57,23 @@ RHYTHM_MAP = {
     5: "Kombileerung",
 }
 
-
 API_URL = "https://www.geben-und-nehmen-markt.de/abfallkalender/potsdam/{year}/page-data/index/page-data.json"
 
 PARAM_TRANSLATIONS = {
     "de": {
-        "ortsteil": "Ortsteil",
-        "strasse": "Straße",
-        "rest_rhythm": "Restabfall Rhythmus",
-        "papier_rhythm": "Papier Rhythmus",
         "bio_rhythm": "Bio Rhythmus",
         "gelb_rhythm": "Gelb Rhythmus",
+        "ortsteil": "Ortsteil",
+        "papier_rhythm": "Papier Rhythmus",
+        "rest_rhythm": "Restabfall Rhythmus",
     },
     "en": {
-        "ortsteil": "District",
-        "strasse": "Street",
-        "rest_rhythm": "General waste rhythm",
-        "papier_rhythm": "Paper rhythm",
         "bio_rhythm": "Organics rhythm",
         "gelb_rhythm": "Recycling rhythm",
+        "papier_rhythm": "Paper rhythm",
+        "rest_rhythm": "General waste rhythm",
     },
 }
-
 
 class Source:
     def __init__(

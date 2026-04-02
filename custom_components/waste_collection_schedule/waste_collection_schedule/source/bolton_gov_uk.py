@@ -25,10 +25,8 @@ API_URLS = {
 }
 
 ICON_MAP = {
-    "Grey Bin": "mdi:trash-can",
     "Beige Bin": "mdi:newspaper-variant",
     "Burgundy Bin": "mdi:bottle-soda",
-    "Green Bin": "mdi:leaf",
     "Food container": "mdi:food",
 }
 
@@ -48,7 +46,6 @@ TEST_CASES = {
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, postcode: str, house_number: str):

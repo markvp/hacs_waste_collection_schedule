@@ -8,18 +8,11 @@ DESCRIPTION = "Source for Winterthur."
 URL = "https://winterthur.ch/"
 TEST_CASES = {"Am Iberghang": {"street": "Am Iberghang"}}
 
-
 ICON_MAP = {
-    "Trash": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "Bio": "mdi:leaf",
-    "Paper": "mdi:package-variant",
-    "Recycle": "mdi:recycle",
 }
 
-
 API_URL = "https://m.winterthur.ch/index.php?apid=1066394"
-
 
 class Source:
     def __init__(self, street: str):

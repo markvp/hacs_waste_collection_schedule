@@ -41,11 +41,8 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Grey bin": "mdi:trash-can",
     "Green bin": "mdi:recycle",
-    "Brown bin": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(self, uprn: str | int):

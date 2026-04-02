@@ -19,12 +19,6 @@ TEST_CASES = {
 
 HEADERS = {"user-agent": "Mozilla/5.0"}
 
-ICON_MAP = {
-    "recycle": "mdi:recycle",
-    "organic": "mdi:leaf",
-}
-
-
 class Source:
     def __init__(self, suburb, street_name, street_number):
         self.suburb = suburb
@@ -127,7 +121,6 @@ class Source:
                             Collection(
                                 date=collection_date,
                                 t=waste_type,
-                                icon=ICON_MAP.get(waste_type),
                             )
                         )
 

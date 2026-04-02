@@ -16,13 +16,11 @@ BIN_TYPES = {
     "emb": "Embalaza",
 }
 ICON_MAP = {
-    "mko": "mdi:trash-can",
-    "bio": "mdi:leaf",
     "emb": "mdi:recycle",
+    "mko": "mdi:trash-can",
 }
 
 BASE_URL = "https://www.simbio.si/sl/moj-dan-odvoza-odpadkov"
-
 
 class Source:
     def __init__(self, street: str, house_number: str | int):

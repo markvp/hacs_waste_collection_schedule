@@ -23,11 +23,9 @@ API_URLS = {
 HEADER = {"user-agent": "Mozilla/5.0"}
 ICON_MAP = {
     "General": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, post_code: str, number: str):

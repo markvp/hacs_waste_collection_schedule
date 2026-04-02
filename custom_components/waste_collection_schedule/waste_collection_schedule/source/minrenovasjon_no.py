@@ -36,24 +36,20 @@ APP_KEY = "AE13DEEC-804F-4615-A74E-B4FAC11F0A30"
 ICON_MAP = {
     "": "mdi:trash-can",
     "brush": "mdi:trash-can",
+    "drikkekartong": "mdi:newspaper-variant-multiple",
     "elektriskogelektronisk": "mdi:chip",
     "farligavfall": "mdi:trash-can",
     "glassogmetallemballasje": "mdi:trash-can",
     "hageavfall": "mdi:leaf",
     "klaerogsko": "mdi:hanger",
     "matavfall": "mdi:trash-can",
-    "matrestavfall": "mdi:trash-can",
-    "matrestavfallplast": "mdi:trash-can",
     "metall": "mdi:trash-can",
     "papir": "mdi:newspaper-variant-multiple",
     "pappogkartong": "mdi:archive",
-    "plastemballasje": "mdi:trash-can",
-    "restavfall": "mdi:trash-can",
-    "drikkekartong": "mdi:newspaper-variant-multiple",
     "papppapirdrikkekartong": "mdi:newspaper-variant-multiple",
+    "plastemballasje": "mdi:trash-can",
     "trevirke": "mdi:trash-can",
 }
-
 
 class Source:
     def __init__(self, street_name, house_number, street_code, county_id):

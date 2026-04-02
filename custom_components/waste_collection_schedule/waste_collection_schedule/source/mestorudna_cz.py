@@ -22,25 +22,25 @@ WASTE_DATES_URL = "https://mesto-rudna.cz/odpadovy-kalendar/permanent/data_calen
 
 ICON_MAP = {
     "B": "mdi:compost",
-    "TKOS": "mdi:trash-can",
-    "TKOJ": "mdi:trash-can",
+    "BIOJ": "mdi:compost",
+    "BIOL": "mdi:compost",
+    "BIOS": "mdi:compost",
+    "BIOSU": "mdi:compost",
     "BS": "mdi:pine-tree",
+    "D2DPAPIR": "mdi:note-text-outline",
+    "D2DPLAST": "mdi:recycle-variant",
+    "D2DPLASTL": "mdi:recycle-variant",
+    "D2DPLASTS": "mdi:recycle-variant",
+    "NO": "mdi:skull-scan",
+    "PET": "mdi:bottle-soda-outline",
     "SHK": "mdi:pot",
     "SHPA": "mdi:note-text-outline",
     "SHPL": "mdi:recycle-variant",
     "SHS": "mdi:glass-fragile",
-    "NO": "mdi:skull-scan",
     "SKOL": "mdi:trash-can",
     "SKOS": "mdi:trash-can",
-    "BIOJ": "mdi:compost",
-    "BIOS": "mdi:compost",
-    "BIOL": "mdi:compost",
-    "BIOSU": "mdi:compost",
-    "D2DPLAST": "mdi:recycle-variant",
-    "D2DPLASTL": "mdi:recycle-variant",
-    "D2DPLASTS": "mdi:recycle-variant",
-    "D2DPAPIR": "mdi:note-text-outline",
-    "PET": "mdi:bottle-soda-outline",
+    "TKOJ": "mdi:trash-can",
+    "TKOS": "mdi:trash-can",
 }
 
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
@@ -66,7 +66,6 @@ CONFIG_FLOW_TYPES = {
         "multiple": False,
     }
 }
-
 
 class Source:
     def __init__(self, city_part=""):

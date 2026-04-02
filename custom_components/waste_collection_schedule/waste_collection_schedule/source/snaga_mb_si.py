@@ -10,7 +10,6 @@ TEST_CASES = {
     "Ruska ulica 24": {"street": "Ruska ulica", "house_number": 24},
 }
 
-
 BIN_TYPES = {
     "O": "Ost.",
     "B": "Bio.",
@@ -19,17 +18,16 @@ BIN_TYPES = {
     "S": "Stek.",
 }
 ICON_MAP = {
-    "O": "mdi:trash-can",
     "B": "mdi:leaf",
-    "U": "mdi:recycle",
+    "O": "mdi:trash-can",
     "P": "mdi:newspaper",
     "S": "mdi:glass-cocktail",
+    "U": "mdi:recycle",
 }
 
 BASE_URL = "https://arhiv.snaga-mb.si/mso"
 ADDRESS_ID_URL = f"{BASE_URL}/tmRSkjpgG.php"
 COLLECTION_URL = f"{BASE_URL}/tmRSk.php"
-
 
 class Source:
     def __init__(self, street: str, house_number: str | int):

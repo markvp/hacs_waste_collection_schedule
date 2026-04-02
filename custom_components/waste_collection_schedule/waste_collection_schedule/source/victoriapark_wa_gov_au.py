@@ -25,13 +25,10 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Rubbish": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
     "Bulk Waste": "mdi:microwave",
-    "Green Waste": "mdi:tree",
     "Go Bin": "mdi:leaf",
+    "Green Waste": "mdi:tree",
 }
-
 
 def clean_months(start_date, date_str):
     date_cleaned = start_date + re.sub(r"^\d+", "", date_str)
@@ -50,7 +47,6 @@ def clean_months(start_date, date_str):
     date_elements: list = date_cleaned.split(" ")
     date_cleaned = f"{date_elements[0]} {date_elements[1]} {date_elements[-1]}"
     return date_cleaned
-
 
 class Source:
     def __init__(self, address, predict=False):

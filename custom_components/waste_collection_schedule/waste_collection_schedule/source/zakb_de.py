@@ -37,36 +37,23 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "Restabfallbehaelter": "mdi:trash-can",
-    "Restabfallcontainer": "mdi:trash-can",
-    "Bioabfallbehaelter": "mdi:leaf",
-    "Papierbehaelter": "mdi:package-variant",
-    "Papiercontainer": "mdi:package-variant",
-    "Gelber Sack": "mdi:recycle",
     "Gruensperrmuell": "mdi:forest",
 }
 
-
 API_URL = "https://www.zakb.de/online-service/abfallkalender/"
-
 
 PARAM_TRANSLATIONS = {
     "de": {
-        "ort": "Ort",
-        "strasse": "Straße",
         "hnr": "Hausnummer",
         "hnr_zusatz": "Hausnummerzusatz",
+        "ort": "Ort",
     },
     "en": {
-        "ort": "City",
-        "strasse": "Street",
         "hnr": "House number",
         "hnr_zusatz": "House number addition",
     },
 }
-
 
 class Source:
     def __init__(self, ort: str, strasse: str, hnr: str | int, hnr_zusatz: str = ""):

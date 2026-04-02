@@ -28,18 +28,15 @@ HEADERS = {
 }
 
 ICON_MAP = {
-    "Lattine": "mdi:bottle-soda-classic",
-    "Plastica": "mdi:bottle-soda-classic",
-    "Indifferenziato": "mdi:trash-can",
-    "Vetro": "mdi:glass-fragile",
-    "Organico": "mdi:apple",
-    "Sfalci e potature": "mdi:leaf",
-    "Pannolini/Pannoloni": "mdi:baby-carriage",
     "Carta e cartone": "mdi:newspaper",
+    "Lattine": "mdi:bottle-soda-classic",
+    "Organico": "mdi:apple",
+    "Pannolini/Pannoloni": "mdi:baby-carriage",
+    "Plastica": "mdi:bottle-soda-classic",
+    "Sfalci e potature": "mdi:leaf",
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(
@@ -162,7 +159,6 @@ class Source:
                 )
 
         return entries
-
 
 def api_get_request(relative_path, params=None):
     _LOGGER.info("%s [GET] params: %s", relative_path, params)

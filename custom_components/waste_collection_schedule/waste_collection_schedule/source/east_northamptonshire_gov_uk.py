@@ -3,7 +3,6 @@ from datetime import datetime, timedelta
 import requests
 from waste_collection_schedule import Collection  # type: ignore[attr-defined]
 
-
 TITLE = "East Northamptonshire and Wellingborough"
 DESCRIPTION = "Source for East Northamptonshire and Wellingborough"
 URL = "east-northamptonshire.gov.uk"
@@ -17,9 +16,7 @@ TEST_CASES = {
 
 ICON_MAP = {
     "general": "mdi:trash-can",
-    "recycling": "mdi:recycle",
 }
-
 
 API_URL = "https://api.northnorthants.gov.uk/test/wc-info/{uprn}"
 
@@ -30,7 +27,6 @@ DAYS = {
     'THU': 3,
     'FRI': 4
 }
-
 
 class Source:
     def __init__(self, uprn: str):

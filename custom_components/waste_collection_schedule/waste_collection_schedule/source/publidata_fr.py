@@ -109,13 +109,13 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "omr": "mdi:trash-can",
+    "bio": "mdi:food-apple",
+    "dv": "mdi:leaf",
     "emb": "mdi:recycle",
     "enc": "mdi:truck-remove",
-    "dv": "mdi:leaf",
-    "verre": "mdi:bottle-wine",
-    "bio": "mdi:food-apple",
+    "omr": "mdi:trash-can",
     "sapin": "mdi:pine-tree",
+    "verre": "mdi:bottle-wine",
 }
 
 LABEL_MAP = {
@@ -153,18 +153,15 @@ PARAM_DESCRIPTIONS = {
 }
 
 PARAM_TRANSLATIONS = {
-    "en": {
-        "address": "Address",
-        "insee_code": "INSEE Code",
-        "instance_id": "Instance ID",
-    },
     "de": {
-        "address": "Adresse",
         "insee_code": "INSEE-Code",
         "instance_id": "Instanz-ID",
     },
+    "en": {
+        "insee_code": "INSEE Code",
+        "instance_id": "Instance ID",
+    },
     "it": {
-        "address": "Indirizzo",
         "insee_code": "Codice INSEE",
         "instance_id": "ID Istanza",
     },
@@ -264,7 +261,6 @@ _CALENDAR_DAY_VERY_ABBR = {
 }
 
 _CALENDAR_MONTHS_ABBR = [m for m in calendar.month_abbr if m]
-
 
 class Source:
     geocoder_url = "https://api.publidata.io/v2/geocoder"
@@ -548,7 +544,6 @@ class Source:
 
         Return:
             rrule object
-
 
         Handled opening_hours formats:
             "week 2-52/2 Mo 12:00-17:00"

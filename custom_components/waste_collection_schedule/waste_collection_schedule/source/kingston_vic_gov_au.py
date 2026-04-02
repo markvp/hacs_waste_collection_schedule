@@ -31,11 +31,9 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "WasteBin": "mdi:trash-can",
-    "RecycleBin": "mdi:recycle",
     "GreenBin": "mdi:leaf",
+    "WasteBin": "mdi:trash-can",
 }
 
 BIN_NAMES = {
@@ -43,7 +41,6 @@ BIN_NAMES = {
     "RecycleBin": "Recycling",
     "GreenBin": "Food and garden waste",
 }
-
 
 class Source:
     def __init__(

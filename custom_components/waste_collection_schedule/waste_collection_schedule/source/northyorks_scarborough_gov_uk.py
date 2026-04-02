@@ -12,16 +12,11 @@ TEST_CASES = {
     "10013454353": {"uprn": "100052161572"},
 }
 
-
 ICON_MAP = {
-    "Household waste": "mdi:trash-can",
     "Garden": "mdi:leaf",
-    "Recycling": "mdi:recycle",
 }
 
-
 API_URL = "https://www.northyorks.gov.uk/bin-calendar/Scarborough/results/{uprn}/ajax?_wrapper_format=drupal_ajax"
-
 
 class Source:
     def __init__(self, uprn: str | int):

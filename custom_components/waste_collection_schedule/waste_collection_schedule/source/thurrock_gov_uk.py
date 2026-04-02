@@ -31,21 +31,18 @@ TEST_CASES = {
     }
 }
 
-
 ICON_MAP = {
-    "Brown": "mdi:leaf",
     "Blue": "mdi:package-variant",
+    "Brown": "mdi:leaf",
     "Green": "mdi:recycle",
-    "Grey": "mdi:recycle",
     "Green/Grey": "mdi:recycle",
+    "Grey": "mdi:recycle",
 }
-
 
 API_URL = "https://www.thurrock.gov.uk/household-bin-collection-days/household-bin-collection-weeks"
 STREETS_URL = (
     "https://www.thurrock.gov.uk/household-bin-collection-days/street-names-{start}"
 )
-
 
 class Source:
     def __init__(self, street: str, town: str):

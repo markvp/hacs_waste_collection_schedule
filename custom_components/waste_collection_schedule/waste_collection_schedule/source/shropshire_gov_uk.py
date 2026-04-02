@@ -16,16 +16,12 @@ TEST_CASES = {
     "200000119191": {"uprn": "200000119191"},
 }
 
-
 ICON_MAP = {
-    "General": "mdi:trash-can",
     "Garden": "mdi:leaf",
-    "Recycling": "mdi:recycle",
+    "General": "mdi:trash-can",
 }
 
-
 API_URL = "https://bins.shropshire.gov.uk/property/{uprn}"
-
 
 class Source:
     def __init__(self, uprn: str | int):

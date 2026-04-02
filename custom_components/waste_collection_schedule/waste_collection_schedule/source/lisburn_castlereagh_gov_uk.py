@@ -25,9 +25,7 @@ TEST_CASES = {
 }
 
 API_URL = "https://lisburn.isl-fusion.com"
-ICON_MAP = {  # Optional: Dict of waste types and suitable mdi icons
-    "ResidualBin": "mdi:trash-can",
-    "RecycleBin": "mdi:recycle",
+ICON_MAP = {
     "BrownBin": "mdi:leaf",
 }
 NICE_NAMES = {
@@ -35,7 +33,6 @@ NICE_NAMES = {
     "RecycleBin": "Recycling",
     "BrownBin": "Garden",
 }
-
 
 class Source:
     # argX correspond to the args dict in the source configuration

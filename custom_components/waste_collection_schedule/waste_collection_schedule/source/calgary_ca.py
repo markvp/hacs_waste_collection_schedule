@@ -15,9 +15,9 @@ TEST_CASES = {"42 AUBURN SHORES WY SE": {"street_address": "42 AUBURN SHORES WY 
 SCHEDULE_LOOKUP_URL = "https://data.calgary.ca/resource/jq4t-b745.json"
 
 ICON_MAP = {
-    "Green": "mdi:leaf",
     "Black": "mdi:trash-can",
     "Blue": "mdi:recycle",
+    "Green": "mdi:leaf",
 }
 
 WEEKDAYS = [
@@ -31,7 +31,6 @@ WEEKDAYS = [
 ]
 
 LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, street_address):

@@ -27,11 +27,6 @@ TEST_CASES = {
     },
 }
 _LOGGER = logging.getLogger(__name__)
-ICON_MAP = {
-    "green-lidded (rubbish) bin": "mdi:trash-can",
-    "blue-lidded (recycling) bin": "mdi:recycle",
-    "brown-lidded (garden waste) bin": "mdi:leaf",
-}
 
 PARAM_TRANSLATIONS = {
     "en": {
@@ -44,10 +39,8 @@ PARAM_DESCRIPTIONS = {
     }
 }
 
-
 def _normalize_space(text: str) -> str:
     return re.sub(r"\s+", " ", text.replace("\xa0", " ")).strip()
-
 
 class Source:
     def __init__(self, street: str):
@@ -131,7 +124,6 @@ class Source:
                             Collection(
                                 date=waste_date,
                                 t=waste_type,
-                                icon=ICON_MAP.get(waste_type, "mdi:trash-can"),
                             )
                         )
                 except Exception as e:

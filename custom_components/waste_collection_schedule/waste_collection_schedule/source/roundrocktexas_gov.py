@@ -14,10 +14,6 @@ TEST_CASES = {
     "Mayfield Ranch": {"neighborhood": "Mayfield Ranch"},
     "Windy Park": {"neighborhood": "Windy Park"},
 }
-ICON_MAP = {
-    "Recycling": "mdi:recycle",
-    "Trash": "mdi:trash-can",
-}
 DAYS = {
     "Monday": MO,
     "Tuesday": TU,
@@ -46,7 +42,6 @@ HOLIDAYS = (
         ].date(),  # 1st January
     }
 )
-
 
 class Source:
     def __init__(self, neighborhood: str):
@@ -89,7 +84,6 @@ class Source:
                     Collection(
                         date=datetime.strptime(zone["Date"], "%Y-%m-%d").date(),
                         t="Recycling",
-                        icon=ICON_MAP.get("Recycling"),
                     )
                 )
 
@@ -104,7 +98,6 @@ class Source:
                 Collection(
                     date=item,
                     t="Trash",
-                    icon=ICON_MAP.get("Trash"),
                 )
             )
 

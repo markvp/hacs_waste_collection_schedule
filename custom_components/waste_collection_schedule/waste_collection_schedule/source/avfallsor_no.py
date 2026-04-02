@@ -13,16 +13,11 @@ TEST_CASES = {"Auglandslia 1, Kristiansand": {"address": "Auglandslia 1, Kristia
 _LOGGER = logging.getLogger(__name__)
 
 ICON_MAP = {
-    "Restavfall": "mdi:trash-can",
-    "Bioavfall": "mdi:leaf",
-    "Papp og papir": "mdi:package-variant",
-    "Plastemballasje": "mdi:recycle",
     "Glass- og metallemballasje": "mdi:bottle-soda",
+    "Plastemballasje": "mdi:recycle",
 }
 
-
 API_URL = "https://avfallsor.no/wp-json/addresses/v1/address"
-
 
 NO_WEEKDAYS = ["mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag", "søndag"]
 NO_MONTHS = [
@@ -39,7 +34,6 @@ NO_MONTHS = [
     "november",
     "desember",
 ]
-
 
 def parse_date(date_str: str) -> datetime.date:
     date_str = date_str.lower()
@@ -66,7 +60,6 @@ def parse_date(date_str: str) -> datetime.date:
         return date_.replace(year=datetime.datetime.now().year + 1)
 
     return date_
-
 
 class Source:
     def __init__(self, address: str):

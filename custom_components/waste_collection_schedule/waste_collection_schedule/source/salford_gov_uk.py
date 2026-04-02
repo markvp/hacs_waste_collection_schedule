@@ -13,14 +13,11 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Domestic waste": "mdi:trash-can",
     "Blue recycling (paper and card)": "mdi:recycle",
     "Brown recycling (bottles and cans)": "mdi:glass-fragile",
-    "Food and garden waste": "mdi:leaf",
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, uprn: int):

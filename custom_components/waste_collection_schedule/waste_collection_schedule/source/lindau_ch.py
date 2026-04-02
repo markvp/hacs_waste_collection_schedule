@@ -13,13 +13,10 @@ TEST_CASES = {
     "Grafstal": {"city": "190"},
 }
 
-
 ICON_MAP = {
-    "kehricht": "mdi:trash-can",
+    "altmetalle": "mdi:nail",
     "grungut": "mdi:leaf",
     "hackseldienst": "mdi:leaf",
-    "papier und karton": "mdi:package-variant",
-    "altmetalle": "mdi:nail",
 }
 
 PARAM_TRANSLATIONS = {
@@ -27,7 +24,6 @@ PARAM_TRANSLATIONS = {
         "city": "Ort",
     }
 }
-
 
 class Source:
     def __init__(self, city):

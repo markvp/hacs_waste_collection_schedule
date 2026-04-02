@@ -13,12 +13,15 @@ TEST_CASES = {
     "Test2": {"uprn": 3455011391},
 }
 
-ICON_MAP = {"ORG": "mdi:leaf", "RES": "mdi:trash-can", "REC": "mdi:recycle"}
+ICON_MAP = {
+    "ORG": "mdi:leaf",
+    "REC": "mdi:recycle",
+    "RES": "mdi:trash-can",
+}
 
 API_URL = "https://www.stoke.gov.uk/jadu/custom/webserviceLookUps/BarTecWebServices_missed_bin_calendar.php?UPRN="
 
 DATE_FORMAT = "%d/%m/%Y"  # format of the date string in the collection table
-
 
 class Source:
     def __init__(self, uprn):

@@ -32,13 +32,6 @@ HEADERS = {
     "X-Requested-With": "XMLHttpRequest",
 }
 
-ICON_MAP = {
-    "Garbage": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Food and garden": "mdi:leaf",
-}
-
-
 class Source:
     def __init__(self, address="", predict=False):
         address = address.strip()
@@ -132,7 +125,6 @@ class Source:
                     Collection(
                         date=d,
                         t=waste_type,
-                        icon=ICON_MAP.get(waste_type, "mdi:trash-can"),
                     )
                 )
 

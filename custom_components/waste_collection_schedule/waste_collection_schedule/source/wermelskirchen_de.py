@@ -14,45 +14,15 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Restabfall 2-woechentlich": {
-        "icon": "mdi:trash-can",
-        "image": "https://abfallkalender.citkomm.de/fileadmin/_processed_/1/b/csm_Restmuell_6b2b32c774.png",
-    },
-    "Restabfall 4-woechentlich": {
-        "icon": "mdi:trash-can",
-        "image": "https://abfallkalender.citkomm.de/fileadmin/_processed_/1/b/csm_Restmuell_6b2b32c774.png",
-    },
-    "Restabfall 6-woechentlich": {
-        "icon": "mdi:trash-can",
-        "image": "https://abfallkalender.citkomm.de/fileadmin/_processed_/1/b/csm_Restmuell_6b2b32c774.png",
-    },
-    "Gelber Sack": {
-        "icon": "mdi:recycle-variant",
-        "image": "https://abfallkalender.citkomm.de/fileadmin/_processed_/f/4/csm_GelbeTonne_24ffc276b2.png",
-    },
-    "Papier": {
-        "icon": "mdi:package-variant",
-        "image": "https://abfallkalender.citkomm.de/fileadmin/_processed_/2/3/csm_Papiertonne_919ed3b5da.png",
-    },
-    "Biotonne": {
-        "icon": "mdi:leaf",
-        "image": "https://abfallkalender.citkomm.de/fileadmin/_processed_/6/f/csm_Biotonne_wk_ae1b0e61aa.png",
-    },
-    "Schadstoffsammlung": {
-        "icon": "mdi:bottle-tonic-skull",
-        "image": "https://abfallkalender.citkomm.de/fileadmin/_processed_/4/2/csm_sondermuell_62f5701a7b.png",
-    },
-    "Weihnachtsbaum": {"icon": "mdi:pine-tree", "image": ""},
+    "Biotonne": "{'icon': 'mdi:leaf', 'image': 'https://abfallkalender.citkomm.de/fileadmin/_processed_/6/f/csm_Biotonne_wk_ae1b0e61aa.png'}",
+    "Gelber Sack": "{'icon': 'mdi:recycle-variant', 'image': 'https://abfallkalender.citkomm.de/fileadmin/_processed_/f/4/csm_GelbeTonne_24ffc276b2.png'}",
+    "Papier": "{'icon': 'mdi:package-variant', 'image': 'https://abfallkalender.citkomm.de/fileadmin/_processed_/2/3/csm_Papiertonne_919ed3b5da.png'}",
+    "Restabfall 2-woechentlich": "{'icon': 'mdi:trash-can', 'image': 'https://abfallkalender.citkomm.de/fileadmin/_processed_/1/b/csm_Restmuell_6b2b32c774.png'}",
+    "Restabfall 4-woechentlich": "{'icon': 'mdi:trash-can', 'image': 'https://abfallkalender.citkomm.de/fileadmin/_processed_/1/b/csm_Restmuell_6b2b32c774.png'}",
+    "Restabfall 6-woechentlich": "{'icon': 'mdi:trash-can', 'image': 'https://abfallkalender.citkomm.de/fileadmin/_processed_/1/b/csm_Restmuell_6b2b32c774.png'}",
+    "Schadstoffsammlung": "{'icon': 'mdi:bottle-tonic-skull', 'image': 'https://abfallkalender.citkomm.de/fileadmin/_processed_/4/2/csm_sondermuell_62f5701a7b.png'}",
+    "Weihnachtsbaum": "{'icon': 'mdi:pine-tree', 'image': ''}",
 }
-
-
-PARAM_TRANSLATIONS = {
-    "de": {
-        "street": "Straße",
-        "house_number": "Hausnummer",
-    }
-}
-
 
 class Source:
     def __init__(self, street, house_number):

@@ -23,14 +23,9 @@ TEST_CASES = {
 API_URL = "https://web.c-trace.de/ekotom-abfallkalender/(S(y0ommq52pdbwa0jek4oqqzgr))/kalendarzodpadow/abc?Ort={city}&Strasse={street}&Hausnr={nr}"
 
 ICON_MAP = {
-    "Zmieszane": "mdi:trash-can",  # Mixed
-    "Tworzywa": "mdi:recycle",  # Plastic
-    "BIO": "mdi:leaf",  # Organic
-    "Papier": "mdi:file-outline",  # Paper
-    "Szkło": "mdi:glass-fragile",  # Glass
-    "Gabaryty": "mdi:dump-truck",  # Bulky Waste
+    "Gabaryty": "mdi:dump-truck",
+    "Papier": "mdi:file-outline",
 }
-
 
 class Source:
     def __init__(self, street, city, nr):

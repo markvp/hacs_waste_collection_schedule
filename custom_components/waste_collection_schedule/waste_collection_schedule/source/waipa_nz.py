@@ -14,12 +14,6 @@ TEST_CASES = {
     "1 Acacia Avenue": {"address": "1 Acacia Avenue"},  # Wednesday
 }
 
-ICON_MAP = {
-    "Recycling": "mdi:recycle",
-    "Glass": "mdi:glass-fragile",
-}
-
-
 class Source:
     def __init__(self, address):
         self._address = address

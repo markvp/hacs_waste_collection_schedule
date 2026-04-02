@@ -15,13 +15,6 @@ TEST_CASES = {
 
 API_URL = "https://www.kiama.nsw.gov.au/ocapi/Public/myarea/wasteservices"
 
-ICON_MAP = {
-    "Urban garbage": "mdi:trash-can",
-    "Urban food & garden organics": "mdi:leaf",
-    "Urban recycling": "mdi:recycle",
-}
-
-
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     "en": """Go to <https://www.kiama.nsw.gov.au/Services/Waste-and-recycling/Find-my-bin-collection-dates>
 Open the developer tools (F12), Go to the Network tab
@@ -31,7 +24,6 @@ Look for a network call to the wasteservices endpoint, it will have geolocationi
 This GUID is what you need, it is unique to your service address.""",
 }
 
-
 def parse_date(date_str):
     """Convert date string like 'Fri 20/6/2025' to date object."""
     try:
@@ -39,7 +31,6 @@ def parse_date(date_str):
         return datetime.strptime(date_str, "%a %d/%m/%Y").date()
     except ValueError:
         return f"Invalid date format: {date_str}"
-
 
 class Source:
     def __init__(self, geolocationid):
@@ -86,7 +77,6 @@ class Source:
                         Collection(
                             date=parse_date(day),
                             t=bin_type,
-                            icon=ICON_MAP.get(bin_type),
                         )
                     )
         return entries

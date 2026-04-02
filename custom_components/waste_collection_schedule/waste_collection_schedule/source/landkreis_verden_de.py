@@ -25,22 +25,16 @@ HEADERS = {
 }
 
 ICON_MAP = {
-    "Gelber": "mdi:recycle",
-    "Restabfallbehaelter": "mdi:trash-can",
-    "Papierbehaelter": "mdi:newspaper",
     "Kompostbehaelter": "mdi:leaf",
-    "Weihnachtsbaum": "mdi:pine-tree",
+    "Papierbehaelter": "mdi:newspaper",
 }
 
 PARAM_TRANSLATIONS = {
     "de": {
         "city": "Ort",
-        "street": "Straße",
-        "house_number": "Hausnummer",
         "house_number_addition": "Hausnummerzusatz",
     },
 }
-
 
 class Source:
     def __init__(

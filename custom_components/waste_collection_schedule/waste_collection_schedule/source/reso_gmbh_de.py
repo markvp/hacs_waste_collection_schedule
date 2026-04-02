@@ -11,15 +11,9 @@ TEST_CASES = {
     "Reichelsheim Kerngemeinde": {"ort": "Reichelsheim", "ortsteil": "Kerngemeinde"}
 }
 
-
 ICON_MAP = {
-    "restmüll": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "biotonne": "mdi:leaf",
-    "papiertonne": "mdi:package-variant",
-    "gelber-sack": "mdi:recycle",
 }
-
 
 EXTRA_INFO = [
     {"title": "Bad-König", "default_params": {"ort": "Bad-König"}},
@@ -36,9 +30,7 @@ EXTRA_INFO = [
     {"title": "Reichelsheim", "default_params": {"ort": "Reichelsheim"}},
 ]
 
-
 API_URL = "https://reso-gmbh.abfallkalender.services/php/Kalender-2-ICS.php"
-
 
 class Source:
     def __init__(self, ort: str, ortsteil: str):

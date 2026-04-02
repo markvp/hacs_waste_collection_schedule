@@ -9,18 +9,14 @@ DESCRIPTION = "Source for Sutton Council, London."
 URL = "https://sutton.gov.uk"
 TEST_CASES = {"4721996": {"id": 4721996}, "4499298": {"id": "4499298"}}
 
-
 ICON_MAP = {
-    "non-recyclable": "mdi:trash-can",
-    "paper": "mdi:package-variant",
-    "mixed": "mdi:recycle",
     "food": "mdi:food",
+    "mixed": "mdi:recycle",
+    "non-recyclable": "mdi:trash-can",
 }
-
 
 API_URL = "https://waste-services.sutton.gov.uk/waste/{id}"
 ICAL_URL = API_URL + "/calendar.ics"
-
 
 class Source:
     def __init__(self, id: str | int):

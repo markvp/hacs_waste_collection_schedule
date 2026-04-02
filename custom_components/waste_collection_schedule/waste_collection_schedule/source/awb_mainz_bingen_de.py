@@ -30,19 +30,12 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "Restmüll": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "Biomüll": "mdi:leaf",
-    "Papier": "mdi:package-variant",
-    "Gelbe/r Tonne / Sack": "mdi:recycle",
     "Problemmüll": "mdi:toxic",
 }
 
-
 API_URL = "https://abfallkalender.awb-mainz-bingen.de/"
-
 
 class Source:
     def __init__(self, bezirk: str, ort: str, strasse: str | None = None):

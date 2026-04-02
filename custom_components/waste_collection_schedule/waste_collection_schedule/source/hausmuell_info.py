@@ -77,30 +77,9 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "hausmüll": "mdi:trash-can",
-    "restabfall": "mdi:trash-can",
-    "restmüll": "mdi:trash-can",
     "glass": "mdi:bottle-soda",
-    "biomüll": "mdi:leaf",
-    "biomüll mit reinigung": "mdi:leaf",
-    "bioabfall mit reinigung": "mdi:leaf",
-    "bioabfall": "mdi:leaf",
-    "papier": "mdi:package-variant",
-    "papier, pappe, karton": "mdi:package-variant",
-    "papier, pappe & kart.": "mdi:package-variant",
-    "pappe, papier & kart.": "mdi:package-variant",
-    "altpapier": "mdi:package-variant",
-    "gelbe tonne": "mdi:recycle",
-    "gelber sack": "mdi:recycle",
-    "gelber sack / gelbe tonne": "mdi:recycle",
-    "leichtverpackungen": "mdi:recycle",
-    "leichtstoffverpackungen": "mdi:recycle",
     "grünschnitt": "mdi:tree",
-    "schadstoffe": "mdi:biohazard",
-    "schadstoffmobil": "mdi:biohazard",
-    "problemmüll": "mdi:biohazard",
 }
 
 SUPPORTED_PROVIDERS = [
@@ -152,9 +131,7 @@ EXTRA_INFO = [
     for p in SUPPORTED_PROVIDERS
 ]
 
-
 API_URL = "https://{}.hausmuell.info/"
-
 
 def replace_special_chars(s: str) -> str:
     return (
@@ -167,7 +144,6 @@ def replace_special_chars(s: str) -> str:
         .replace("Ü", "U")
     )
 
-
 def replace_special_chars_with_underscore(s: str) -> str:
     return (
         s.replace("ß", "_")
@@ -179,7 +155,6 @@ def replace_special_chars_with_underscore(s: str) -> str:
         .replace("Ü", "_")
     )
 
-
 def replace_special_chars_args(d: dict, replace_func=replace_special_chars) -> dict:
     to_return = {}
     for k, v in d.items():
@@ -190,24 +165,17 @@ def replace_special_chars_args(d: dict, replace_func=replace_special_chars) -> d
 
     return to_return
 
-
 PARAM_TRANSLATIONS = {
     "de": {
-        "subdomain": "Subdomain",
+        "hausnummer": "Hausnummer",
         "ort": "Ort",
         "ortsteil": "Ortsteil",
-        "strasse": "Straße",
-        "hausnummer": "Hausnummer",
     },
     "en": {
-        "subdomain": "Subdomain",
-        "ort": "City",
-        "ortsteil": "District",
-        "strasse": "Street",
         "hausnummer": "House number",
+        "subdomain": "Subdomain",
     },
 }
-
 
 class Source:
     def __init__(

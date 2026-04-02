@@ -18,13 +18,8 @@ TEST_CASES = {
 
 API_URL = "https://www.tauranga.govt.nz/services/rubbish-and-recycling/kerbside-collections/when-to-put-your-bins-out"
 ICON_MAP = {
-    "Rubbish": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Glass": "mdi:glass-fragile",
-    "Garden waste": "mdi:leaf",
     "Food scraps": "mdi:food-apple",
 }
-
 
 class Source:
     def __init__(self, address: str) -> None:

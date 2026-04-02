@@ -23,14 +23,7 @@ API_URLS = {
     "collection": "https://servicelayer3c.azure-api.net/wastecalendar/collection/search/{}/",
 }
 
-ICON_MAP = {
-    "DOMESTIC": "mdi:trash-can",
-    "RECYCLE": "mdi:recycle",
-    "ORGANIC": "mdi:leaf",
-}
-
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, post_code: str, number: str):
@@ -73,7 +66,6 @@ class Source:
                             collection["date"], "%Y-%m-%dT%H:%M:%SZ"
                         ).date(),
                         t=round_type.title(),
-                        icon=ICON_MAP.get(round_type),
                     )
                 )
 

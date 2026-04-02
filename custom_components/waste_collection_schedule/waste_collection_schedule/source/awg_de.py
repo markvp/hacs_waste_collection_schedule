@@ -18,9 +18,7 @@ from waste_collection_schedule.service.ICS import ICS
 # This line suppresses the InsecureRequestWarning when using verify=False
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-
 _LOGGER = logging.getLogger(__name__)
-
 
 TITLE = "ZAW Donau-Wald"
 DESCRIPTION = "Source for ZAW Donau-Wald."
@@ -41,20 +39,9 @@ TEST_CASES = {
     },
 }
 
-
-ICON_MAP = {
-    "Biotonne": "mdi:leaf",
-    "Papiertonne": "mdi:package-variant",
-    "Restmuelltonne": "mdi:trash-can",
-    "Restmüllcontainer": "mdi:trash-can",
-    "Papiercontainer": "mdi:package-variant",
-}
-
-
 API_URL = (
     "https://wastemanagement.awg.de/WasteManagementDonauwald/WasteManagementServlet"
 )
-
 
 class Source:
     def __init__(self, city, street, hnr, addition=""):

@@ -15,10 +15,10 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Grey": "mdi:trash-can",
-    "Brown": "mdi:leaf",
-    "Purple": "mdi:glass-fragile",
     "Blue": "mdi:recycle",
+    "Brown": "mdi:leaf",
+    "Grey": "mdi:trash-can",
+    "Purple": "mdi:glass-fragile",
 }
 
 BIN_TEXTS = [
@@ -27,7 +27,6 @@ BIN_TEXTS = [
     "PURPLE_DATE_TEXT",
     "BROWN_DATE_TEXT",
 ]
-
 
 class Source:
     def __init__(self, uprn):

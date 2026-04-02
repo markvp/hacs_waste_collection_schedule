@@ -14,20 +14,13 @@ TEST_CASES = {
     "Äußere Rittersbacher Straße": {"street": "Äußere Rittersbacher Straße"},
 }
 
-
 ICON_MAP = {
-    "Restmüll": "mdi:trash-can",
-    "Restmüllcontainer": "mdi:trash-can",
-    "Papiertonne": "mdi:package-variant",
-    "Gelber Sack": "mdi:recycle",
-    "Biotonne": "mdi:food-apple",
     "Biocontainer": "mdi:food-apple",
+    "Biotonne": "mdi:food-apple",
 }
-
 
 BASE_API_URL = "https://www.abfuhrplan-schwabach.de/"
 DATA_ULR = BASE_API_URL + "{street}"
-
 
 def _prepare_arg(arg: str) -> str:
     return (
@@ -42,7 +35,6 @@ def _prepare_arg(arg: str) -> str:
         .replace("ß", "ss")
         .replace(",", "")
     )
-
 
 class Source:
     def __init__(self, street: str):

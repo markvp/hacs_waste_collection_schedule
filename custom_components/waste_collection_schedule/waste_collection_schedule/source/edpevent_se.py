@@ -118,12 +118,10 @@ _LOGGER = logging.getLogger(__name__)
 # This maps the icon based on the waste type
 ICON_MAP = {
     "Brännbart": "mdi:trash-can",
-    "Matavfall tätt": "mdi:food",
     "Deponi": "mdi:recycle",
-    "Restavfall": "mdi:trash-can",
     "Matavfall": "mdi:food-apple",
+    "Matavfall tätt": "mdi:food",
     "Slam": "mdi:emoticon-poop",
-    "Trädgårdsavfall": "mdi:leaf",
 }
 
 # This can be used to rename the waste types to something more user friendly
@@ -243,7 +241,6 @@ EXTRA_INFO = [
     }
     for provider, data in SERVICE_PROVIDERS.items()
 ]
-
 
 class Source:
     def __init__(

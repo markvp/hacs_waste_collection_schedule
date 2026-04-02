@@ -19,10 +19,9 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "BLUE": "mdi:recycle",
     "BLACK": "mdi:trash-can",
+    "BLUE": "mdi:recycle",
     "GARDEN": "mdi:leaf",
-    "NAPPY": "mdi:biohazard",
 }
 REMAP_WASTE = {  # Map websire containers to underlying waste types
     "BLUE": "BLUE BAG & GREEN FOOD BIN",
@@ -30,7 +29,6 @@ REMAP_WASTE = {  # Map websire containers to underlying waste types
     "GARDEN": "GARDEN WATE",
     "NAPPY": "NAPPY & HYGIENE WASTE",
 }
-
 
 # ### Arguments affecting the configuration GUI ####
 
@@ -51,7 +49,6 @@ PARAM_TRANSLATIONS = {  # Optional dict to translate the arguments, will be show
 }
 
 # ### End of arguments affecting the configuration GUI ####
-
 
 class Source:
     def __init__(

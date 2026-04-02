@@ -16,15 +16,12 @@ TEST_CASES = {
     "Rotterdam": {"postcode": "3067AL", "number": "53"},
 }
 
-ICON_MAP = {  # Optional: Dict of waste types and suitable mdi icons
-    "Restafval": "mdi:trash-can",
-    "Papier en karton": "mdi:paper-roll",
-    "Groente, Fruit en Tuinafval": "mdi:leaf",
+ICON_MAP = {
     "PMD": "mdi:bottle-soda-classic-outline",
+    "Papier en karton": "mdi:paper-roll",
     "Plastic, Metalen en Drankkartons": "mdi:bottle-soda-classic-outline",
+    "Restafval": "mdi:trash-can",
     "papier": "mdi:paper-roll",
-    "GFT": "mdi:leaf",
-    "GFT ": "mdi:leaf",
     "restafval": "mdi:trash-can",
 }
 
@@ -35,7 +32,6 @@ HOW_TO_GET_ARGUMENTS_DESCRIPTION = {  # Optional dictionary to describe how to g
 }
 
 # ### End of arguments affecting the configuration GUI ####
-
 
 class Source:
     def __init__(self, postcode, number, add=""):

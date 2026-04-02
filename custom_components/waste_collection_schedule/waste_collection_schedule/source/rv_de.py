@@ -29,17 +29,7 @@ TEST_CASES = {
     },
 }
 
-
-ICON_MAP = {
-    "Restmuelltonne": "mdi:trash-can",
-    "Biotonne": "mdi:leaf",
-    "Papiertonne": "mdi:package-variant",
-    "Gelbe": "mdi:recycle",
-}
-
-
 API_URL = "https://athos-onlinedienste.rv.de/WasteManagementRavensburgPrivat/WasteManagementServlet"
-
 
 class HiddenInputParser(HTMLParser):
     def __init__(self):
@@ -55,7 +45,6 @@ class HiddenInputParser(HTMLParser):
             d = dict(attrs)
             if str(d["type"]).lower() == "hidden":
                 self._args[d["name"]] = d["value"] if "value" in d else ""
-
 
 class Source:
     def __init__(self, ort: str, strasse: str, hnr: str | int, hnr_zusatz: str | int):

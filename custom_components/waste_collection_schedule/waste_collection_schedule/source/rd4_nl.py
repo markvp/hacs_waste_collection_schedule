@@ -8,20 +8,14 @@ DESCRIPTION = "Source for Rd4."
 URL = "https://rd4.nl/"
 TEST_CASES = {"6417 AT 32": {"postal_code": "6417 AT", "house_number": 32}}
 
-
 ICON_MAP = {
-    "pmd": "mdi:recycle",
-    "gft": "mdi:leaf",
-    "residual_waste": "mdi:trash-can",
-    "paper": "mdi:newspaper",
-    "pruning_waste": "mdi:leaf",
     "best_bag": "mdi:bag-personal",
     "christmas_trees": "mdi:christmas-tree",
+    "paper": "mdi:newspaper",
+    "pruning_waste": "mdi:leaf",
 }
 
-
 API_URL = "https://data.rd4.nl/api/v1/waste-calendar"
-
 
 class Source:
     def __init__(self, postal_code: str, house_number: str | int):

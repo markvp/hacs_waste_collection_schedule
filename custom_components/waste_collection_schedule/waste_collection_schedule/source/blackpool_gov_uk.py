@@ -20,11 +20,8 @@ NAME_MAP = {
     "Dry Recycling": "Blue bin",
 }
 ICON_MAP = {
-    "Domestic Refuse": "mdi:trash-can",
-    "Dry Recycling": "mdi:recycle",
     "Brown Sack": "mdi:newspaper",
 }
-
 
 class Source:
     def __init__(self, postcode, uprn):

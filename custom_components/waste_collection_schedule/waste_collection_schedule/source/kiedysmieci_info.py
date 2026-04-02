@@ -28,13 +28,8 @@ TEST_CASES = {
 API_URL = "https://cloud.fxsystems.com.pl:8078/odbiory_smieci/%s"
 
 ICON_MAP = {
-    "zmieszane": "mdi:trash-can",
-    "metale i tworzywa sztuczne": "mdi:recycle",
     "papier i tektura": "mdi:file-outline",
-    "szkło": "mdi:glass-fragile",
-    "biodegradowalne": "mdi:leaf",
 }
-
 
 def get_json(url):
     # workaround to establish ssl connection to this host
@@ -43,7 +38,6 @@ def get_json(url):
 
     response = urllib.request.urlopen(API_URL % url, context=ssl_ctx)
     return json.loads(response.read().decode("utf-8"))
-
 
 class Source:
     def __init__(self, voivodeship: str, district: str, municipality: str, street: str):

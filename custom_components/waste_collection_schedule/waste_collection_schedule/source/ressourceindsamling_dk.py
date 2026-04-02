@@ -17,19 +17,15 @@ TEST_CASES = {  # Insert arguments for test cases to be used by test_sources.py 
 }
 
 API_URL = "https://selfserviceapi.waste2x.dk/api/Services/Services/GetServicesForCustomer"
-ICON_MAP = {  # Optional: Dict of waste types and suitable mdi icons
-    "Haveaffald": "mdi:leaf",
-    "Storskrald": "mdi:recycle",
+ICON_MAP = {
     "Mad/Rest affald": "mdi:food",
-    "Pap": "mdi:archive",
-    "Papir/Plast \u0026 MDK": "mdi:bottle-soda",
     "Metal/Glas affald": "mdi:wrench",
-    "Juletræer": "mdi:pine-tree",
-    "Farligt affald": "mdi:biohazard",
+    "Pap": "mdi:archive",
+    "Papir/Plast & MDK": "mdi:bottle-soda",
+    "Storskrald": "mdi:recycle",
 }
 
 ADDRESS_LOOKUP_URL = "https://selfserviceapi.waste2x.dk/api/Customer/Customer/SearchCustomer/"
-
 
 class Source:
     def __init__(self, streetName, number):

@@ -25,20 +25,12 @@ TEST_CASES = {
     },
 }
 
-ICON_MAP = {
-    "Restabfall": "mdi:trash-can",
-    "gelbe Tonne/Leichtverpackungen": "mdi:recycle",
-    "Papier": "mdi:package-variant",
-    "Biomüll": "mdi:leaf",
-}
-
 PARAM_TRANSLATIONS = {
     "de": {
-        "client": "Client",
         "city": "Ort",
+        "client": "Client",
         "district": "Ortsteil",
-        "street": "Straße",
-    }
+    },
 }
 
 SERVICE_MAP = [
@@ -58,7 +50,6 @@ EXTRA_INFO = [
     }
     for district in SERVICE_MAP
 ]
-
 
 class Source:
     def __init__(self, client, city, district=None, street=None):
@@ -150,7 +141,6 @@ class Source:
                 Collection(
                     d,
                     pickup["fraction"]["name"],
-                    icon=ICON_MAP.get(pickup["fraction"]["name"]),
                 )
             )
 

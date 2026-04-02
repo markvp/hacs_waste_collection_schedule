@@ -23,11 +23,9 @@ SEARCH_URLS = {
     "collection_search": "https://www.cornwall.gov.uk/umbraco/Surface/Waste/MyCollectionDays?subscribe=False",
 }
 ICON_MAP = {
-    "Rubbish": "mdi:delete",
-    "Recycling": "mdi:recycle",
     "Garden": "mdi:flower",
+    "Rubbish": "mdi:delete",
 }
-
 
 class Source:
     def __init__(

@@ -13,10 +13,6 @@ TEST_CASES = {  # Insert arguments for test cases to be used by test_sources.py 
     }
 }
 
-ICON_MAP = {  # Optional: Dict of waste types and suitable mdi icons
-    "Papier": "mdi:package-variant",
-}
-
 API_URL = "https://blauetonne.stkn.org/lk_rosenheim"
 
 class Source:
@@ -34,7 +30,7 @@ class Source:
                 Collection(
                     date=datetime.fromisoformat(date).date(),  # Collection date
                     t="Papier Tonne",  # Collection type
-                    icon=ICON_MAP.get("Papier"),  # Collection icon
+                    # Collection icon
                 )
             )
 

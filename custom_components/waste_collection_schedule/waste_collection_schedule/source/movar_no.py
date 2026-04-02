@@ -15,18 +15,15 @@ TEST_CASES = {
 
 API_URL = "https://movar.no/kalender.html"
 ICON_MAP = {
-    "Restavfall": "mdi:trash-can",  # residual waste
-	"Papp og papir": "mdi:newspaper-variant-multiple",  # cardboard and paper
-    "Våtorganisk": "mdi:leaf",  # wet organic
-	"Glass og metallemballasje": "mdi:recycle",  # glass and metal packaging
-	"Drikkekartonger": "mdi:recycle",  # drink cartons
-	"Spesialavfall": "mdi:recycle",  # special waste
-	"Plastemballasje": "mdi:recycle",  # plastic packaging
-	"Hageavfall": "mdi:tree",  # yard waste
-	"Metaller": "mdi:recycle",  # metals
-	"Papp": "mdi:newspaper-variant-multiple",  # cardboard
+    "Drikkekartonger": "mdi:recycle",
+    "Glass og metallemballasje": "mdi:recycle",
+    "Hageavfall": "mdi:tree",
+    "Papp": "mdi:newspaper-variant-multiple",
+    "Papp og papir": "mdi:newspaper-variant-multiple",
+    "Plastemballasje": "mdi:recycle",
+    "Spesialavfall": "mdi:recycle",
+    "Våtorganisk": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(self, address):

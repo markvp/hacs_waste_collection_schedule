@@ -13,15 +13,12 @@ TEST_CASES = {
     "BT63 5GY": {"address_id": "187318004"},
 }
 ICON_MAP = {
-    "Domestic": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
     "Garden & Food": "mdi:leaf",
 }
 API_URL = "https://www.armaghbanbridgecraigavon.gov.uk/resident/binday-result/"
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     "en": "Find the parameter of your address using https://www.armaghbanbridgecraigavon.gov.uk/resident/when-is-my-bin-day/, after selecting your address. The address ID is the number at the end of the URL after `address=`.",
 }
-
 
 class Source:
     def __init__(self, address_id: int):

@@ -14,10 +14,10 @@ TEST_CASES = {
 }
 ICON_MAP = {
     "Blue": "mdi:trash-can",
-    "Glass": "mdi:bottle-soda",
     "Brown": "mdi:leaf",
-    "Grey": "mdi:package-variant",
+    "Glass": "mdi:bottle-soda",
     "Green": "mdi:recycle",
+    "Grey": "mdi:package-variant",
 }
 
 API_BASE_URL = "https://fife.form.uk.empro.verintcloudservices.com/api"
@@ -26,7 +26,6 @@ AUTH_URL = f"{API_BASE_URL}/citizen"
 
 DATE_FORMAT = "%A, %B %d, %Y"
 REQUEST_TIMEOUT = 10  # seconds
-
 
 class Source:
     def __init__(self, uprn: str | int):

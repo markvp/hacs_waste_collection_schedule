@@ -14,13 +14,10 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "refuse": "mdi:trash-can",
-    "recycling": "mdi:recycle",
     "garden": "mdi:leaf",
 }
 
 API_URL = "https://your.westlancs.gov.uk/yourwestlancs.aspx"
-
 
 class Source:
     def __init__(self, postcode, uprn):

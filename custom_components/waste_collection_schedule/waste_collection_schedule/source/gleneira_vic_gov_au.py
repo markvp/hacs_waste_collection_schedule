@@ -28,11 +28,6 @@ SEARCH_PAGE_URL = "https://www.gleneira.vic.gov.au/our-city/in-your-area"
 API_URL = SEARCH_PAGE_URL
 
 # Define waste type icons
-ICON_MAP = {
-    "Next organic collection": "mdi:leaf",
-    "Next rubbish collection": "mdi:trash-can",
-    "Next recycling collection": "mdi:recycle",
-}
 
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     "en": f'Visit the [Glen Eira City Council]({SEARCH_PAGE_URL}) "Find your bin collection day" page and search for your address. There are typically no commas and the suburb / state name are in capitals. For example: 4 Staniland Grove ELSTERNWICK VIC 3185. The arguments should exactly match the full street address after selecting the autocomplete result.',
@@ -67,7 +62,6 @@ PARAM_TRANSLATIONS = {
         _STREET_ADDRESS_ARG_NAME: "Adresse complète",
     },
 }
-
 
 class Source:
     def __init__(self, street_address: str):
@@ -121,7 +115,7 @@ class Source:
             if rubbish_type in ICON_MAP:
                 date = datetime.strptime(when, "%A %d %B %Y").date()
                 entries.append(
-                    Collection(date=date, t=rubbish_type, icon=ICON_MAP[rubbish_type])
+                    Collection(date=date, t=rubbish_type)
                 )
 
         return entries

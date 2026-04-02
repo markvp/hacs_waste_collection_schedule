@@ -19,25 +19,17 @@ TEST_CASES = {
     "Berge": {"ort": "Berge", "strasse": "Poststr.", "hnr": 3},
 }
 
-
 ICON_MAP = {
-    "Restmülltonne": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "Bio-Tonne": "mdi:leaf",
-    "Papiermülltonne": "mdi:package-variant",
-    "Gelbe Tonne/Gelben Sack": "mdi:recycle",
 }
 
-
 API_URL = "https://www.awigo.de/index.php"
-
 
 def compare_cities(a: str, b: str) -> bool:
     return (
         re.sub(r"\([0-9]+\)", "", a.lower()).strip()
         == re.sub(r"\([0-9]+\)", "", b.lower()).strip()
     )
-
 
 class Source:
     def __init__(self, ort: str, strasse: str, hnr: str | int):

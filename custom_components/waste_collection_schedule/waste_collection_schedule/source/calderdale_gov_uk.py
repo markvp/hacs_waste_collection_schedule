@@ -20,13 +20,10 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Recycling": "mdi:recycle",
     "Waste": "mdi:trash-can",
-    "Garden waste": "mdi:leaf",
 }
 
 API_URL = "https://www.calderdale.gov.uk/environment/waste/household-collections/collectiondayfinder.jsp"
-
 
 class Source:
     def __init__(self, postcode: str, uprn: str | int):

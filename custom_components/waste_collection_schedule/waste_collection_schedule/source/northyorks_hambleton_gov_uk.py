@@ -15,19 +15,11 @@ TEST_CASES = {
     "010070732324, leading 0 missing": {"uprn": 10070732324},
 }
 
-
-ICON_MAP = {
-    "REFUSE": "mdi:trash-can",
-    "GARDEN WASTE": "mdi:leaf",
-    "RECYCLING": "mdi:recycle",
-}
-
 HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
 
 API_URL = "https://hambletondc-self.achieveservice.com/service/Bin_collection_finder"
-
 
 class Source:
     def __init__(self, uprn: str | int):

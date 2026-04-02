@@ -30,23 +30,17 @@ TEST_CASES = {
 TYPES = ("restmuell", "bio", "wert", "papier")
 
 ICON_MAP = {
-    "Restabfall": "mdi:trash-can",
-    "Bioabfall": "mdi:leaf",
-    "Gelber Sack/Gelbe Tonne": "mdi:sack",
-    "Papiertonne": "mdi:package-variant",
     "Bildschirm-/Kühlgeräte": "mdi:television-classic",
-    "Schadstoffsammlung": "mdi:biohazard",
+    "Gelber Sack/Gelbe Tonne": "mdi:sack",
     "altmetalle": "mdi:nail",
 }
 
 LOGGER = logging.getLogger(__name__)
 
-
 def compare_str(a: str, b: str):
     return a.lower().replace(" ", "").replace("-", "") == b.lower().replace(
         "-", ""
     ).replace(" ", "")
-
 
 class Source:
     def __init__(self, ort, strasse=None, nummer=None, stadtteil=None):

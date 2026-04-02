@@ -32,11 +32,8 @@ HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
 ICON_MAP = {
-    "Refuse": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Garden Waste": "mdi:leaf",
-    "Paper": "mdi:newspaper",
     "Food": "mdi:food",
+    "Paper": "mdi:newspaper",
 }
 REGEX = {
     "SID": r"sid=(.+)",
@@ -59,7 +56,6 @@ PARAM_TRANSLATIONS = {  # Optional dict to translate the arguments, will be show
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(

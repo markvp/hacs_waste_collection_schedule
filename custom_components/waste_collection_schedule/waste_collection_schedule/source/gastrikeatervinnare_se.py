@@ -19,11 +19,8 @@ TEST_CASES = {
     "Library Ockelbo": {"street": "Södra Åsgatan 30D", "city": "Ockelbo"},
 }
 ICON_MAP = {
-    "Restavfall": "mdi:trash-can",
-    "Matavfall": "mdi:leaf",
     "Blandat": "mdi:trash-can",
 }
-
 
 class Source:
     def __init__(self, street, city):

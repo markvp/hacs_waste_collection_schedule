@@ -16,12 +16,6 @@ TEST_CASES = {
     "Xmas_Adjustment_Test": {"postcode": "RG40 1GE", "property": "92906"},
     "No-Collection Test": {"postcode": "RG10 0EU", "address": "39 Broadwater Road"},
 }
-ICON_MAP = {
-    "HOUSEHOLD WASTE": "mdi:trash-can",
-    "GARDEN WASTE": "mdi:leaf",
-    "RECYCLING": "mdi:recycle",
-    "FOOD WASTE": "mdi:food",
-}
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0",
     "Content-Type": "application/x-www-form-urlencoded",
@@ -29,7 +23,6 @@ HEADERS = {
     "Origin": "https://www.wokingham.gov.uk",
     "Referer": "https://www.wokingham.gov.uk/rubbish-and-recycling/waste-collection/see-your-new-bin-collection-dates",
 }
-
 
 class Source:
     def __init__(self, postcode=None, property=None, address=None):
@@ -148,7 +141,6 @@ class Source:
                 Collection(
                     date=datetime.strptime(waste_date, "%d/%m/%Y").date(),
                     t=waste_type,
-                    icon=ICON_MAP.get(waste_type.upper()),
                 )
             )
 

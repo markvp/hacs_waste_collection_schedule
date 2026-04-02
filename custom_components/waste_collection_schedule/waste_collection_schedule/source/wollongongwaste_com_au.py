@@ -13,10 +13,7 @@ API_URL = "https://wollongong.waste-info.com.au/api/v1/properties/"
 
 ICON_MAP = {
     "waste": "mdi:trash-can",
-    "organic": "mdi:leaf",
-    "recycle": "mdi:recycle",
 }
-
 
 def day_of_week(start_date, end_date, day_of_week_index):
     day_of_week_dates = []
@@ -25,7 +22,6 @@ def day_of_week(start_date, end_date, day_of_week_index):
             day_of_week_dates.append(start_date)
         start_date += timedelta(days=1)
     return day_of_week_dates
-
 
 class Source:
     def __init__(self, propertyID):

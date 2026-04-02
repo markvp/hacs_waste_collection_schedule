@@ -60,24 +60,19 @@ EXTRA_INFO = [
     },
 ]
 
-
 ICON_MAP = {
-    "waste": "mdi:trash-can",
     "black": "mdi:trash-can",
-    "pink bin": "mdi:trash-can",
-    "residual": "mdi:trash-can",
-    "glass": "mdi:bottle-wine",
-    "garden": "mdi:leaf",
-    "brown": "mdi:leaf",
-    "recycling": "mdi:recycle",
-    "green": "mdi:recycle",
     "black bin": "mdi:recycle",
+    "brown": "mdi:leaf",
+    "garden": "mdi:leaf",
+    "glass": "mdi:bottle-wine",
+    "green": "mdi:recycle",
     "green bin": "mdi:package-variant-closed",
+    "pink bin": "mdi:trash-can",
+    "waste": "mdi:trash-can",
 }
 
-
 API_URL = "https://bins.azurewebsites.net/api/"
-
 
 class Source:
     def __init__(self, postcode: str, town: str, street: str, number: str | int):

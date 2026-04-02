@@ -14,13 +14,9 @@ TEST_CASES = {
     "CF32 0PW": {"uprn": 64017161},
 }
 
-
 ICON_MAP = {
-    "Trash": "mdi:trash-can",
     "Food": "mdi:food",
     "Garden": "mdi:leaf",
-    "Paper": "mdi:package-variant",
-    "Recycle": "mdi:recycle",
 }
 
 WEEKDAYS = [
@@ -34,7 +30,6 @@ WEEKDAYS = [
 ]
 
 API_URL = "https://myvale.valeofglamorgan.gov.uk/getdata.aspx"
-
 
 class Source:
     def __init__(self, uprn: str | int):

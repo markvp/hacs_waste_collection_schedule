@@ -16,11 +16,8 @@ TEST_CASES = {
 API_URL = "https://liverpool.gov.uk/Bins/BinDatesTable?UPRN={uprn}&HideGreenBin=False&ShowTable=True"
 
 ICON_MAP = {
-    "Refuse": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
     "Green": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(self, uprn=None, postcode=None, name_number=None):
@@ -58,7 +55,6 @@ class Source:
                     if date.month == 1 and today.month == 12:
                         date = date.replace(year=date.year+1)
                 
-        
                 entries.append(
                     Collection(
                         date=date,

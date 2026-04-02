@@ -18,10 +18,7 @@ _LOGGER = logging.getLogger(__name__)
 
 ICON_MAP = {
     "FOGO bin": "mdi:leaf",
-    "Recycling bin": "mdi:recycle",
-    "Glass-only bin": "mdi:glass-fragile",
 }
-
 
 class Source:
     def __init__(self, street_address):

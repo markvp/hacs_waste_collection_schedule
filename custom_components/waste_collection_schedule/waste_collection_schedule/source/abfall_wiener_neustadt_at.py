@@ -40,15 +40,6 @@ TEST_CASES = {
     },
 }
 
-ICON_MAP = {
-    "Restmüll": "mdi:trash-can",
-    "Biotonne": "mdi:leaf",
-    "Wertstoffe": "mdi:recycle",
-    "Altpapier": "mdi:package-variant",
-    "Altkleider": "mdi:tshirt-crew",
-    "Christbaum": "mdi:pine-tree",
-}
-
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     "en": "Visit the website https://abfall.wiener-neustadt.at/ and select your street from the dropdown menu. Note your street name and select the waste collection frequency that applies to your address.",
     "de": "Besuchen Sie die Website https://abfall.wiener-neustadt.at/ und wählen Sie Ihre Straße aus dem Dropdown-Menü. Notieren Sie sich Ihren Straßennamen und wählen Sie die Abfuhrhäufigkeit, die für Ihre Adresse gilt.",
@@ -68,15 +59,14 @@ PARAM_DESCRIPTIONS = {
 }
 
 PARAM_TRANSLATIONS = {
-    "en": {
-        "street": "Street Name",
-        "str_id": "Street ID",
-        "rm_art": "Collection Frequency",
-    },
     "de": {
-        "street": "Straße",
-        "str_id": "Straßen-ID",
         "rm_art": "Abfuhrhäufigkeit (Restmüll)",
+        "str_id": "Straßen-ID",
+    },
+    "en": {
+        "rm_art": "Collection Frequency",
+        "str_id": "Street ID",
+        "street": "Street Name",
     },
 }
 
@@ -94,7 +84,6 @@ RM_ART_MAP = {
     "monthly": "36",
     "36": "36",
 }
-
 
 class Source:
     def __init__(
@@ -349,7 +338,6 @@ class Source:
                     Collection(
                         date=date_obj,
                         t=waste_type,
-                        icon=ICON_MAP.get(waste_type),
                     )
                 )
 

@@ -12,19 +12,12 @@ TEST_CASES = {
     "Ymergatan 5": {"address": "Ymergatan 5"},
 }
 
-
 ICON_MAP = {
-    "Restavfall": "mdi:trash-can",
-    "Matavfall": "mdi:leaf",
-    "Porslin": "mdi:coffee",
-    "Returpapper": "mdi:package-variant",
-    "Pappersförpackningar": "mdi:package-variant",
-    "Plastförpackningar": "mdi:recycle",
-    "Metallförpackningar": "mdi:recycle",
     "Färgade": "mdi:bottle-soda",
-    "Ofärgade": "mdi:bottle-soda",
     "Ljuskällor": "mdi:lightbulb",
-    "Småbatterier": "mdi:battery",
+    "Ofärgade": "mdi:bottle-soda",
+    "Plastförpackningar": "mdi:recycle",
+    "Porslin": "mdi:coffee",
 }
 
 API_URL = "https://lumire.se/api/waste-pickup"

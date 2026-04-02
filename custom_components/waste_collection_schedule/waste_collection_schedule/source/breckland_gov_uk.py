@@ -17,16 +17,10 @@ TEST_CASES = {
 }
 
 API_URL = "https://www.breckland.gov.uk/apiserver/ajaxlibrary"
-ICON_MAP = {
-    "Refuse Collection Service": "mdi:trash-can",
-    "Recycling Collection Service": "mdi:recycle",
-    "Garden Waste Service": "mdi:leaf",
-}
 
 _LOGGER = logging.getLogger(__name__)
 
 headers = {"referer": URL}
-
 
 class Source:
     def __init__(self, postcode=None, address=None, uprn=None):

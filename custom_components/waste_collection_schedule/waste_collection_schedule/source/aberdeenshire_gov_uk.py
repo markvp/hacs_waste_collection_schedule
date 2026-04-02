@@ -28,7 +28,6 @@ PARAM_DESCRIPTIONS = {
     },
 }
 
-
 class Source:
     def __init__(self, uprn):
         self._uprn = str(uprn).zfill(12)

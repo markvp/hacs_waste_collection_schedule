@@ -33,7 +33,6 @@ COLLECTION_TYPE = {
     "RE": "Recycling Green Bin",
 }
 
-
 class Source:
     def __init__(self, uprn: str | int):
         self._uprn = str(uprn).strip()

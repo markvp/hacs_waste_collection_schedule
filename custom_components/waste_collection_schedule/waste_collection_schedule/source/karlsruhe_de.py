@@ -12,7 +12,6 @@ from waste_collection_schedule.service.ICS import ICS
 # This line suppresses the InsecureRequestWarning when using verify=False
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-
 TITLE = "City of Karlsruhe"
 DESCRIPTION = "Source for City of Karlsruhe."
 URL = "https://www.karlsruhe.de/"
@@ -35,32 +34,22 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "Restmüll": "mdi:trash-can",
-    "Bioabfall": "mdi:leaf",
-    "Papier": "mdi:package-variant",
-    "Wertstoff": "mdi:recycle",
     "Sperrmüllabholung": "mdi:wardrobe",
 }
 
-
 API_URL = "https://web{i}.karlsruhe.de/service/abfall/akal/akal_{year}.php"
-
 
 PARAM_TRANSLATIONS = {
     "de": {
-        "street": "Straße",
         "hnr": "Hausnummer",
         "ladeort": "Ladeort",
     },
     "en": {
-        "street": "Street",
         "hnr": "House number",
         "ladeort": "Loading point",
     },
 }
-
 
 class Source:
     def __init__(self, street: str, hnr: str | int, ladeort: int | None = None):

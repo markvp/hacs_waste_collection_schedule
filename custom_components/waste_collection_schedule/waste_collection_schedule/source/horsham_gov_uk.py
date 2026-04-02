@@ -18,15 +18,11 @@ API_URL = "https://satellite.horsham.gov.uk/environment/refuse/cal_details.asp"
 # Updated 1st April 2026 as Food Waste was added, and the names for the refuse bins had been updated
 ICON_MAP = {
     "Green Bin for Refuse and Non-Recycling": "mdi:trash-can",
-    "Blue-Top Bin for Recycling": "mdi:recycle",
-    "Brown-Top Bin for Garden Waste": "mdi:leaf",
-    "Orange-Top Bin for Food Waste": "mdi:food",
 }
 HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
 _LOGGER = logging.getLogger(__name__)
-
 
 class LegacyTLSAdapter(HTTPAdapter):
     # Modern python libraries reject Horsham server settings and return connection reset errors,
@@ -38,7 +34,6 @@ class LegacyTLSAdapter(HTTPAdapter):
         ctx.maximum_version = ssl.TLSVersion.TLSv1_2  # Explicitly use this TLS version
         kwargs["ssl_context"] = ctx
         return super().init_poolmanager(*args, **kwargs)
-
 
 class Source:
     def __init__(self, uprn: str):

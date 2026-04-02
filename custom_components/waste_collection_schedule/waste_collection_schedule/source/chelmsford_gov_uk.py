@@ -14,13 +14,10 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
+    "card sack": "mdi:package-variant",
     "food waste": "mdi:food-apple",
-    "black bin": "mdi:trash-can",
-    "brown bin": "mdi:leaf",
     "green box": "mdi:bottle-soda",
     "paper sack": "mdi:newspaper",
-    "card sack": "mdi:package-variant",
-    "plastic and cartons bag": "mdi:recycle",
 }
 
 # ### Arguments affecting the configuration GUI ####
@@ -34,7 +31,6 @@ PARAM_DESCRIPTIONS = {  # Optional dict to describe the arguments, will be shown
         "collection_round": "Collection round identifier (e.g. Tuesday A). You can find yours by going to https://www.chelmsford.gov.uk/bins-and-recycling/check-your-collection-day and entering in your address details.",
     },
 }
-
 
 class Source:
     def __init__(self, collection_round):

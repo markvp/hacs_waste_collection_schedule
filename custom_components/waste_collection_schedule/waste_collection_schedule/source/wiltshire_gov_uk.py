@@ -23,12 +23,9 @@ COLLECTIONS = {
     "Chargeable garden waste",  # some addresses also have a chargeable garden waste collection
 }
 ICON_MAP = {
-    "Household waste": "mdi:trash-can",
     "Mixed dry recycling (blue lidded bin)": "mdi:recycle",
     "Mixed dry recycling (blue lidded bin) and glass (black box or basket)": "mdi:recycle",
-    "Chargeable garden waste": "mdi:leaf",
 }
-
 
 def add_month(date_):
     if date_.month < 12:
@@ -36,7 +33,6 @@ def add_month(date_):
     else:
         date_ = date_.replace(year=date_.year + 1, month=1)
     return date_
-
 
 class Source:
     def __init__(

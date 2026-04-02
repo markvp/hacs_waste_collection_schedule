@@ -33,8 +33,6 @@ API_URL = "https://www.casey.vic.gov.au/coc-properties/api/search-address"
 # Define waste type icons
 ICON_MAP = {
     "Garden": "mdi:leaf",
-    "Garbage": "mdi:trash-can",
-    "Recycle": "mdi:recycle",
 }
 
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
@@ -75,7 +73,6 @@ PARAM_TRANSLATIONS = {
 _PREV_STRING = "Prev"
 _NEXT_STRING = "Next"
 _DATE_STRING = "Date"
-
 
 class Source:
     def __init__(self, street_address: str):

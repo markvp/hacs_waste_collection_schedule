@@ -14,13 +14,9 @@ TEST_CASES = {
     "LN2 4EB 000235036597": {"postcode": " Ln 24 eB ", "uprn": 235036597},
 }
 
-
 ICON_MAP = {
-    "Refuse": "mdi:trash-can",
     "Garden": "mdi:leaf",
-    "Recycling": "mdi:recycle",
 }
-
 
 API_URL = "https://www.lincoln.gov.uk/b/view-bin-collection-days"
 
@@ -28,13 +24,11 @@ HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
 
-
 BIN_TYPES = [
     ("refusenextdate", "Refuse", "refuse_freq"),
     ("recyclenextdate", "Recycling", "recycle_freq"),
     ("gardennextdate", "Garden", "garden_freq"),
 ]
-
 
 class Source:
     def __init__(self, postcode: str, uprn: str | int):

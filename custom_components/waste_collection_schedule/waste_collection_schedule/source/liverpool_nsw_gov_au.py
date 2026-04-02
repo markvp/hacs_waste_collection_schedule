@@ -18,14 +18,7 @@ TEST_CASES = {
     },
 }
 
-ICON_MAP = {
-    "Garbage": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Organic": "mdi:leaf",
-}
-
 API_URL = "https://data.liverpool.nsw.gov.au/api/explore/v2.1/catalog/datasets/bin-collection-days/records"
-
 
 class Source:
     def __init__(self, address: str):
@@ -90,7 +83,6 @@ class Source:
                     Collection(
                         date=current,
                         t=bin_name,
-                        icon=ICON_MAP.get(bin_name, "mdi:trash-can"),
                     )
                 )
                 current += timedelta(days=interval)

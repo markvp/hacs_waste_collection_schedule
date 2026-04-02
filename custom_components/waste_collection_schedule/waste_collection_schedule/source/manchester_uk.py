@@ -23,8 +23,6 @@ AUTH_KEY = "Authorization"
 ICON_MAP = {
     "ahtm_dates_black_bin": "mdi:trash-can",
     "ahtm_dates_blue_pulpable_bin": "package-variant",
-    "ahtm_dates_brown_commingled_bin": "mdi:recycle",
-    "ahtm_dates_green_organic_bin": "mdi:leaf",
 }
 
 COLLECTION_MAP = {
@@ -34,9 +32,7 @@ COLLECTION_MAP = {
     "ahtm_dates_green_organic_bin": "Green Bin",
 }
 
-
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, uprn: int):

@@ -17,9 +17,8 @@ TEST_CASES = {
 API_URL = "https://gyhg.bluespot.hu/api/"
 
 ICON_MAP = {
-    "leftover": "mdi:trash-can",
-    "recycle": "mdi:recycle",
     "bio": "mdi:compost",
+    "leftover": "mdi:trash-can",
 }
 
 NAME_MAP = {
@@ -49,7 +48,6 @@ PARAM_TRANSLATIONS = {
 }
 
 #### End of arguments affecting the configuration GUI ####
-
 
 class Source:
     def __init__(self, city: str, street: str, house_number: str | int):

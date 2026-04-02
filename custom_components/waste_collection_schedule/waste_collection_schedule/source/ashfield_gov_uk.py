@@ -26,10 +26,7 @@ API_URLS = {
 }
 
 ICON_MAP = {
-    "Residual Waste Collection Service": "mdi:trash-can",
     "Domestic Recycling Collection Service": "mdi:recycle",
-    "Domestic Glass Collection Service": "mdi:glass-fragile",
-    "Garden Waste Collection Service": "mdi:leaf",
 }
 
 NAMES = {
@@ -38,7 +35,6 @@ NAMES = {
     "Domestic Glass Collection Service": "Blue (glass)",
     "Garden Waste Collection Service": "Brown (garden)",
 }
-
 
 class Source:
     def __init__(self, post_code=None, number=None, name=None, uprn=None):

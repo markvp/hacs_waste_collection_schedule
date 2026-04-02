@@ -2,6 +2,16 @@
 
 # Add support via a dedicated source
 
+## Quick Start
+
+Use the scaffolding tool to generate a new source:
+
+```bash
+python scripts/new_source.py
+```
+
+This creates the source `.py` and documentation `.md` files with the correct structure.
+
 ## Files required for a new Service Provider
 
 The following files need to be provided to support a new service provider:
@@ -33,11 +43,10 @@ TEST_CASES = {  # Insert arguments for test cases to be used by test_sources.py 
 }
 
 API_URL = "https://abc.com/search/"
-ICON_MAP = {   # Optional: Dict of waste types and suitable mdi icons
-    "DOMESTIC": "mdi:trash-can",
-    "RECYCLE": "mdi:recycle",
-    "ORGANIC": "mdi:leaf",
-}
+
+# ICON_MAP is NOT needed — the framework auto-detects icons from waste type names.
+# Only pass icon="mdi:icon-name" explicitly in Collection() calls if the
+# auto-detection returns the wrong icon for a specific waste type.
 
 #### Arguments affecting the configuration GUI ####
 
@@ -67,22 +76,15 @@ PARAM_DESCRIPTIONS = { # Optional dict to describe the arguments, will be shown 
     },
 }
 
-PARAM_TRANSLATIONS = { # Optional dict to translate the arguments, will be shown in the GUI configuration form as placeholder text
+PARAM_TRANSLATIONS = { # Optional dict — only needed for source-specific parameter names.
+    # Common params like street, address, uprn, postcode, city, house_number, etc.
+    # are already translated in default_translations.py and do NOT need to be
+    # redefined here. Only add translations for params unique to your source.
     "en": {
         "arg1": "User Readable Name for ARG1",
-        "arg2": "User Readable Name for ARG2",
     },
     "de": {
         "arg1": "Benutzerfreundlicher Name für ARG1",
-        "arg2": "Benutzerfreundlicher Name für ARG2",
-    },
-    "it": {
-        "arg1": "Nome leggibile dall'utente per ARG1",
-        "arg2": "Nome leggibile dall'utente per ARG2",
-    },
-    "fr": {
-        "arg1": "Nom lisible par l'utilisateur pour ARG1",
-        "arg2": "Nom lisible par l'utilisateur pour ARG2",
     },
 }
 

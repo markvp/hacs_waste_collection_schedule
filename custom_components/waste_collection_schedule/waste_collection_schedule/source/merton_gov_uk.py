@@ -22,15 +22,9 @@ WASTE_CLASSES: list = [
     "garden",
 ]
 ICON_MAP = {
-    "Food waste": "mdi:food",
     "Paper and card": "mdi:newspaper",
-    "Plastics, glass, cans and cartons": "mdi:glass-fragile",
-    "Rubbish": "mdi:trash-can",
     "Textiles": "mdi:hanger",
-    "Household batteries": "mdi:battery",
-    "Garden waste": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(self, property: str):

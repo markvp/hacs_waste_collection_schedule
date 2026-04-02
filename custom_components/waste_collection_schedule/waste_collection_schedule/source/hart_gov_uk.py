@@ -13,12 +13,9 @@ TEST_CASES = {
     "Test_004": {"uprn": "100062464806"},
 }
 ICON_MAP = {
-    "recycling-collection-service": "mdi:recycle",
-    "garden-waste-collection-service": "mdi:leaf",
-    "refuse-collection-service": "mdi:trash-can",
     "christmas-collection-dates": "mdi:string-lights",
+    "garden-waste-collection-service": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(self, uprn):

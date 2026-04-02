@@ -14,15 +14,6 @@ TEST_CASES = {
     "100023583909": {"uprn": 100022551607},
 }
 
-
-ICON_MAP = {
-    "DOMESTIC WASTE COLLECTION SERVICE": "mdi:trash-can",
-    "FOOD WASTE COLLECTION SERVICE": "mdi:food",
-    "ORGANIC COLLECTION SERVICE": "mdi:leaf",
-    "RECYCLING COLLECTION SERVICE": "mdi:recycle",
-}
-
-
 HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
@@ -91,7 +82,6 @@ class Source:
                 Collection(
                     t=bin_type,
                     date=attempt_date.date(),
-                    icon=ICON_MAP.get(bin_type.upper()),
                 )
             )
 

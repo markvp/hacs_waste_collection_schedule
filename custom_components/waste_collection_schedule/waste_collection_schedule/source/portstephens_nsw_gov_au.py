@@ -24,7 +24,6 @@ TEST_CASES = {
     },
 }
 
-
 API_BASE_URL = "https://port-stephens.waste-info.com.au/api/v1/"
 
 API_URLS = {
@@ -41,8 +40,6 @@ HEADERS = {
 ICON_MAP = {
     "general": "mdi:trash-can",
     "special": "mdi:trash-can",
-    "recycle": "mdi:recycle",
-    "organic": "mdi:leaf",
 }
 
 ROUNDS = {
@@ -52,7 +49,6 @@ ROUNDS = {
 }
 
 TRACKED_EVENTS = ["general", "recycle", "organic", "special"]
-
 
 def get_id(
     s: requests.Session,
@@ -72,7 +68,6 @@ def get_id(
     raise SourceArgumentNotFoundWithSuggestions(
         init_param_name, name, [x["name"] for x in data[val_key]]
     )
-
 
 class Source:
     def __init__(self, suburb: str, street_name: str, street_number: str):

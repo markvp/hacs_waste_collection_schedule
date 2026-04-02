@@ -8,13 +8,11 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 from waste_collection_schedule import Collection
 
-
 class Municipality(TypedDict):
     PAYLOAD: dict[str, str | int]
     API_URL: str
     title: str
     url: str
-
 
 TITLE = "iTouchVision Source using the encrypted API"
 DESCRIPTION = "Source for iTouchVision Source using the encrypted API."
@@ -40,33 +38,15 @@ TEST_CASES = {
 }
 COUNTRY = "uk"
 ICON_MAP = {
-    "Food waste": "mdi:food",
-    "Food Waste": "mdi:food",
-    "FOOD WASTE": "mdi:food",
-    "General waste": "mdi:trash-can",
-    "Mixed recycling": "mdi:recycle",
-    "Paper and cardboard": "mdi:newspaper",
-    "Textiles/Batteries/Electricals": "mdi:battery",
     "GARDEN WASTE": "mdi:flower",
-    "Garden waste": "mdi:flower",
-    "HOUSEHOLD WASTE": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
-    "Recycling collection": "mdi:recycle",
-    "Refuse Bin": "mdi:trash-can",
-    "Garden Waste Collection": "mdi:flower",
-    "General Waste Collection": "mdi:trash-can",
-    "Glass Collection": "mdi:bottle-wine",
-    "Recycling Collection": "mdi:recycle",
     "Garden": "mdi:flower",
-    "Recycling": "mdi:recycle",
-    "Rubbish": "mdi:trash-can",
     "Garden Waste": "mdi:flower",
-    "Household Waste": "mdi:trash-can",
-    "RECYCLING - BLUE": "mdi:recycle",
+    "Garden Waste Collection": "mdi:flower",
+    "Garden waste": "mdi:flower",
+    "Glass Collection": "mdi:bottle-wine",
+    "Paper and cardboard": "mdi:newspaper",
     "RECYCLING - BROWN": "mdi:newspaper",
     "RECYCLING - GREEN": "mdi:leaf",
-    "REFUSE": "mdi:trash-can",
-    "Green Garden Waste": "mdi:leaf",
 }
 
 # Global variables for encryption key and IV
@@ -74,7 +54,6 @@ KEY = binascii.unhexlify(
     "F57E76482EE3DC3336495DEDEEF3962671B054FE353E815145E29C5689F72FEC"
 )
 IV = binascii.unhexlify("2CBF4FC35C69B82362D393A4F0B9971A")
-
 
 # Encryption function
 def encrypt_aes(plaintext: str) -> str:
@@ -84,7 +63,6 @@ def encrypt_aes(plaintext: str) -> str:
     ciphertext = cipher.encrypt(padded_data)
     return binascii.hexlify(ciphertext).decode("utf-8")
 
-
 # Decryption function
 def decrypt_aes(ciphertext_hex: str) -> str:
     ciphertext = binascii.unhexlify(ciphertext_hex)
@@ -92,7 +70,6 @@ def decrypt_aes(ciphertext_hex: str) -> str:
     decrypted_data = cipher.decrypt(ciphertext)
     plaintext = unpad(decrypted_data, AES.block_size).decode("utf-8")
     return plaintext
-
 
 MUNICIPALITIES: dict[str, Municipality] = {
     "BUCKINGHAMSHIRE": {
@@ -240,7 +217,6 @@ EXTRA_INFO = [
     }
     for key, m in MUNICIPALITIES.items()
 ]
-
 
 class Source:
     def __init__(self, uprn: str | int, municipality: MUNICIPALITY_LITERALS):

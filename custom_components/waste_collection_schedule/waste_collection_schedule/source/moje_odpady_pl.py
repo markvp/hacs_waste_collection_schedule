@@ -28,22 +28,14 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "Trash": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "Bio": "mdi:leaf",
-    "Paper": "mdi:package-variant",
-    "Recycle": "mdi:recycle",
 }
-
 
 API_URL = "https://waste24.net/client/api/mywaste/v2/location_cities.php"
 
-
 def make_comparable(text: str) -> str:
     return text.lower().replace(" ", "").replace(".", "")
-
 
 class Source:
     def __init__(

@@ -18,14 +18,11 @@ DEPRECATED_API_URL = "https://api-2.tewkesbury.gov.uk/general/rounds/%s/nextColl
 API_URL = "https://api-2.tewkesbury.gov.uk/incab/rounds/%s/next-collection"
 
 ICON_MAP = {
-    "Refuse": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Garden": "mdi:leaf",
     "Food": "mdi:silverware-fork-knife",
+    "Garden": "mdi:leaf",
 }
 
 LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, postcode: str | None = None, uprn: str | None = None):

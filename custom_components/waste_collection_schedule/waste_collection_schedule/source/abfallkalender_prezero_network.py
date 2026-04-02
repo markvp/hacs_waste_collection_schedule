@@ -46,25 +46,7 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Biotonne": "mdi:leaf",
-    "Gelbe Tonne": "mdi:recycle",
-    "Restmülltonne": "mdi:trash-can",
-    "Restmülltonne 4-wl.": "mdi:trash-can",
-    "Papiertonne": "mdi:package-variant",
     "Schadstoffsammlung": "mdi:bottle-tonic-skull",
-}
-
-PARAM_TRANSLATIONS = {
-    "de": {
-        "city": "Stadt",
-        "street": "Straße",
-        "house_number": "Hausnummer",
-    },
-    "en": {
-        "city": "City",
-        "street": "Street",
-        "house_number": "House Number",
-    },
 }
 
 PARAM_DESCRIPTIONS = {
@@ -84,7 +66,6 @@ HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     "de": "Geben Sie Ihre Straße und Hausnummer ein. Die Stadt ist standardmäßig auf Bad Oeynhausen eingestellt (unterstützt: Bad Oeynhausen, Willich).",
     "en": "Enter your street and house number. The city defaults to Bad Oeynhausen (supported: Bad Oeynhausen, Willich).",
 }
-
 
 class Source:
     def __init__(self, street: str, house_number: str, city: str = "bad-oeynhausen"):

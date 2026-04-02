@@ -18,13 +18,10 @@ TEST_CASES = {
     },
 }
 ICON_MAP = {
-    "GREY BIN": "mdi:trash-can",
-    "BROWN BIN": "mdi:leaf",
-    "GREEN BIN": "mdi:bottle-wine",
-    "BURGUNDY BIN": "mdi:recycle",
     "BLUE BIN": "mdi:newspaper",
+    "BURGUNDY BIN": "mdi:recycle",
+    "GREEN BIN": "mdi:bottle-wine",
 }
-
 
 # ### Arguments affecting the configuration GUI ####
 
@@ -45,7 +42,6 @@ PARAM_TRANSLATIONS = {  # Optional dict to translate the arguments, will be show
 }
 
 # ### End of arguments affecting the configuration GUI ####
-
 
 class Source:
     def __init__(

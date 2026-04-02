@@ -31,11 +31,6 @@ TEST_CASES = {
 }
 API_URL = "https://data.hawkesbury.nsw.gov.au/api"
 _LOGGER = logging.getLogger(__name__)
-ICON_MAP = {  # Optional: Dict of waste types and suitable mdi icons
-    "DOMESTIC": "mdi:trash-can",
-    "RECYCLE": "mdi:recycle",
-    "ORGANIC": "mdi:leaf",
-}
 STREETNAMES = {
     "Av": "Avenue",
     "Cct": "Circuit",
@@ -52,7 +47,6 @@ STREETNAMES = {
     "St": "Street",
     "Tce": "Terrace",
 }
-
 
 class Source:
     def __init__(self, suburb, street, houseNo, postCode):
@@ -118,7 +112,6 @@ class Source:
         entries = garbagebin_entries + recyclebin_entries + organicbin_entries
 
         return entries
-
 
 def parse_date_field(date_string):
     formats = ["%Y-%m-%d %H:%M:%S", "%Y-%m-%d"]

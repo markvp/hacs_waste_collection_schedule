@@ -18,13 +18,6 @@ TEST_CASES = {
     # "Campbell St (ID Only)": {"streetId": "6515"},  # Wednesday
 }
 
-
-ICON_MAP = {
-    "Rubbish Collection": "mdi:trash-can",
-    "Glass crate": "mdi:glass-fragile",
-    "Wheelie bin or recycling bags": "mdi:recycle",
-}
-
 PICTURE_MAP = {
     "Rubbish Collection": "https://wellington.govt.nz/assets/images/rubbish-recycling/rubbish-bag.png",
     "Glass crate": "https://wellington.govt.nz/assets/images/rubbish-recycling/glass-crate.png",
@@ -34,7 +27,6 @@ PICTURE_MAP = {
 HEADERS = {
     "User-Agent": "Mozilla/5.0 Gecko/20100101 Firefox/136.0",
 }
-
 
 class Source:
     def __init__(self, streetId=None, streetName=None):
@@ -87,7 +79,6 @@ class Source:
                         d[0],
                         wasteType,
                         picture=PICTURE_MAP.get(wasteType),
-                        icon=ICON_MAP.get(wasteType),
                     )
                 )
         return entries

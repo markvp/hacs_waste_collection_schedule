@@ -16,12 +16,6 @@ TEST_CASES = {
 }
 
 API_URL = "https://www.data.act.gov.au/resource/jzzy-44un.json"
-ICON_MAP = {
-    "Garbage": "mdi:trash-can",
-    "Recycle": "mdi:recycle",
-    "Organic": "mdi:leaf",
-}
-
 
 class Source:
     def __init__(self, suburb, split_suburb = ""):  # argX correspond to the args dict in the source configuration
@@ -49,7 +43,7 @@ class Source:
             Collection(
                 date = datetime.strptime(data["garbage_pickup_date"], "%d/%m/%Y").date(),  # Collection date
                 t = "Garbage",  # Collection type
-                icon = ICON_MAP["Garbage"],  # Collection icon
+                # Collection icon
             )
         )
 
@@ -57,7 +51,7 @@ class Source:
             Collection(
                 date = datetime.strptime(data["recycling_pickup_date"], "%d/%m/%Y").date(),  # Collection date
                 t = "Recycle",  # Collection type
-                icon = ICON_MAP["Recycle"],  # Collection icon
+                # Collection icon
             )
         )
 
@@ -65,7 +59,7 @@ class Source:
             Collection(
                 date = datetime.strptime(data["next_greenwaste_date"], "%d/%m/%Y").date(),  # Collection date
                 t = "Organic",  # Collection type
-                icon = ICON_MAP["Organic"],  # Collection icon
+                # Collection icon
             )
         )
 

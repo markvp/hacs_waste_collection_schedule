@@ -10,18 +10,7 @@ DESCRIPTION = "Source for Kumberg."
 URL = "https://www.kumberg.gv.at"
 TEST_CASES: dict[str, dict] = {"Whole Kumberg": {}}
 
-
-ICON_MAP = {
-    "Restmüll": "mdi:trash-can",
-    "Bio": "mdi:leaf",
-    "Papier": "mdi:package-variant",
-    "Gelber Sack": "mdi:recycle",
-    "Sperrmüll": "mdi:sofa",
-}
-
-
 API_URL = "https://www.kumberg.gv.at/kalender/"
-
 
 class Source:
     def __init__(self):

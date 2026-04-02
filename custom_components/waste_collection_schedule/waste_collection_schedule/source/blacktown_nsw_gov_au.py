@@ -53,12 +53,9 @@ HEADERS = {
     "X-Requested-With": "XMLHttpRequest",
 }
 
-
 ICON_MAP = {
     "General Waste": "trash-can",
-    "Recycling": "mdi:recycle",
 }
-
 
 class Source:
     def __init__(

@@ -1,0 +1,1887 @@
+{
+  "mdi:trash-can": {
+    "keys": [
+      "",
+      "00",
+      "1100l general waste",
+      "140l red lid general waste bin",
+      "180l general waste",
+      "20",
+      "240l grey rubbish bin",
+      "ahtm_dates_black_bin",
+      "b2",
+      "b2-f",
+      "b2-h",
+      "bac d'ordures ménagères",
+      "black",
+      "black bag",
+      "black bags",
+      "black bin",
+      "black bins",
+      "black domestic waste",
+      "black rubbish bins",
+      "black/grey bin (general waste):",
+      "blandat",
+      "blue",
+      "brush",
+      "brännbart",
+      "bulk waste",
+      "burgundy",
+      "cans",
+      "commercial -  general waste:",
+      "communal",
+      "communal non-recycling",
+      "communal refuse",
+      "dechets-menagers-hausmull-exception",
+      "do",
+      "domestic",
+      "domestic refuse",
+      "domestic refuse waste collection service",
+      "domestic waste",
+      "domestic waste collection service",
+      "domestic-waste-collection-service",
+      "empty bin 240l black",
+      "empty bin green 240",
+      "empty bin refuse sack",
+      "farligavfall",
+      "ff1",
+      "ff1-h",
+      "ff2",
+      "ff2-h",
+      "fkarl1",
+      "fkarl1-h",
+      "fkarl1-hk",
+      "fkarl1-hk-h",
+      "fosort",
+      "fosort-h",
+      "frest",
+      "frest-h",
+      "frest-hk",
+      "frest-hk-h",
+      "g",
+      "garbage",
+      "garbage (residual waste)",
+      "garbage collection",
+      "gelbe tonne",
+      "general",
+      "general household rubbish",
+      "general rubbish",
+      "general waste",
+      "general waste (blue bin)",
+      "general waste bin",
+      "general waste collection",
+      "general waste wheeled bin",
+      "general-waste bin",
+      "general_waste",
+      "generalcleanup",
+      "generalwaste",
+      "glassogmetallemballasje",
+      "grau",
+      "grau4",
+      "graue tonne",
+      "green",
+      "green bin",
+      "green bin for refuse and non-recycling",
+      "green bins",
+      "green wheelie",
+      "green-lidded (rubbish) bin",
+      "greendate",
+      "grey",
+      "grey bin",
+      "grey bin and kerbside caddy",
+      "greybag",
+      "hauskehricht",
+      "hausmuelltonne",
+      "hausmüll",
+      "hkarl1",
+      "hkarl1-h",
+      "hkarl1-hk",
+      "hkarl1-hk-h",
+      "hosort",
+      "hosort-h",
+      "house",
+      "household",
+      "household collection",
+      "household refuse",
+      "household refuse sack",
+      "household rubbish",
+      "household rubbish bag",
+      "household rubbish bin",
+      "household waste",
+      "household waste (grey)",
+      "hrest",
+      "hrest-h",
+      "hrest-hk",
+      "hrest-hk-h",
+      "hushållsavfall",
+      "indifferenziato",
+      "kehricht",
+      "ko",
+      "kommunális",
+      "komunalne",
+      "komunálny",
+      "kärl",
+      "landfill",
+      "landfill waste",
+      "leftover",
+      "m",
+      "maroon",
+      "matavfall",
+      "matavfall/restavfall",
+      "matrestavfall",
+      "matrestavfallplast",
+      "metall",
+      "mixed",
+      "mišrios komunalinės atliekos",
+      "mišrių atliekų",
+      "mko",
+      "mor",
+      "mor-h",
+      "ménagères",
+      "mülltonne",
+      "next rubbish collection",
+      "non recyclable waste",
+      "non recycleable (green bin)",
+      "non-recyclable",
+      "non-recyclable waste",
+      "non-recyclables (green lid) and food waste",
+      "non-recycling",
+      "o",
+      "odpady zmieszane",
+      "om",
+      "omr",
+      "ordures ménagères",
+      "pink",
+      "pink bin",
+      "plastemballasje",
+      "poubelle grise",
+      "poubelle ménage",
+      "red",
+      "red bin",
+      "red top container",
+      "refuse",
+      "refuse (black bin)",
+      "refuse and food waste",
+      "refuse bin",
+      "refuse collection",
+      "refuse collection service",
+      "refuse skip",
+      "refuse-collection-service",
+      "refusecollectiondate",
+      "res",
+      "residual",
+      "residual collection service",
+      "residual waste",
+      "residual waste collection service",
+      "residual_waste",
+      "residualbin",
+      "rest",
+      "rest- und biomüll",
+      "rest-mad",
+      "restabfall",
+      "restabfall plus",
+      "restabfallbehaelter",
+      "restabfallcontainer",
+      "restaffald",
+      "restafval",
+      "restavfall",
+      "restavfall mini",
+      "restavfall til forbrenning",
+      "restmuell",
+      "restmuell:",
+      "restmuelltonne",
+      "restmüll",
+      "restmüll (grau)",
+      "restmüll abfuhr",
+      "restmüll i",
+      "restmüll ii",
+      "restmüll ii + 1100",
+      "restmüll mit panoramastraße",
+      "restmüll-gefäß",
+      "restmüllcontainer",
+      "restmülltonne",
+      "restmülltonne 4-wl.",
+      "restmülltonne 60l",
+      "resztkowe",
+      "rifiuto residuo indifferenziato",
+      "rm1",
+      "rm2",
+      "rm4",
+      "rst",
+      "rst-h",
+      "rubbish",
+      "rubbish (black bin)",
+      "rubbish and small electricals collection",
+      "rubbish bin",
+      "rubbish collection",
+      "rubbish/garden waste",
+      "schwarz",
+      "schwarze",
+      "se",
+      "secco residuo",
+      "segregowane i zmieszane",
+      "sek",
+      "seka",
+      "skol",
+      "skos",
+      "special",
+      "tkoj",
+      "tkos",
+      "tonnen abfuhr",
+      "trade - refuse",
+      "trash",
+      "trash collection",
+      "trevirke",
+      "urban garbage",
+      "waste",
+      "waste bin",
+      "waste collection",
+      "wastebin",
+      "zmieszane",
+      "zmieszane komunalne"
+    ],
+    "count": 238
+  },
+  "mdi:recycle": {
+    "keys": [
+      "240l yellow lid recycle bin",
+      "45l black recycling box",
+      "55l green recycling box",
+      "55l recycling box",
+      "90l blue sack",
+      "ahtm_dates_brown_commingled_bin",
+      "alluminio",
+      "antrinių žaliavų (popierius/plastikas)",
+      "b",
+      "bac jaune",
+      "bio",
+      "bioodpady",
+      "black bin",
+      "blaue tonne",
+      "blue",
+      "blue bag",
+      "blue bin",
+      "blue bin and kerbside caddy",
+      "blue bins",
+      "blue box",
+      "blue box (container) recycling",
+      "blue box collection",
+      "blue box recycling",
+      "blue recycling (paper and card)",
+      "blue sack",
+      "blue-lid recycling bins",
+      "blue-lidded (recycling) bin",
+      "blue-lidded recycling bin",
+      "blue-top bin for recycling",
+      "bluebag",
+      "bluedate",
+      "box",
+      "brown",
+      "brown bin",
+      "burgundy bin",
+      "cans, plastic & glass",
+      "centre-de-ressources-recyclingpark-superdreckskescht",
+      "clear sack",
+      "commercial - plastic cans and glass:",
+      "commingled recycling",
+      "communal dry recycling bin",
+      "communal recycling",
+      "containersglass",
+      "deponi",
+      "domestic recycling",
+      "domestic recycling collection service",
+      "domestic recycling waste collection service",
+      "drikkekartonger",
+      "dry recycling",
+      "dry recycling bin",
+      "dsd",
+      "e",
+      "emb",
+      "emballage",
+      "emballages et papiers",
+      "empty bin 240l green",
+      "empty bin blue 240",
+      "empty bin recycling sack",
+      "fkarl2",
+      "fkarl2-h",
+      "garden",
+      "gelb",
+      "gelbe",
+      "gelbe tonne",
+      "gelbe tonne/gelben sack",
+      "gelbe tonne/leichtverpackungen",
+      "gelbe(r) sack/tonne",
+      "gelbe/r tonne / sack",
+      "gelber",
+      "gelber sack",
+      "gelber sack / gelbe tonne",
+      "gelber-sack",
+      "gelbesäcke abholung",
+      "glass",
+      "glass cans and plastic recycling",
+      "glass og metallemballasje",
+      "gray",
+      "green",
+      "green bin",
+      "green box",
+      "green box (fibre) recycling",
+      "green recycling",
+      "green recycling box",
+      "green/grey",
+      "grey",
+      "grüne tonne",
+      "hkarl2",
+      "hkarl2-h",
+      "imballaggi in plastica",
+      "imballaggi in plastica e barattolame",
+      "kartonsammlung",
+      "kartonsammlung alchenstorf",
+      "kerbside recycling",
+      "kitos pakuočių atliekos",
+      "leicht-",
+      "leicht- und metallverpackungen",
+      "leichtfraktion",
+      "leichtstoffverpackungen",
+      "leichtverpackung",
+      "leichtverpackungen",
+      "light-packaging",
+      "lvp",
+      "lvp-abfälle",
+      "mef",
+      "mef-h",
+      "metale i tworzywa sztuczne",
+      "metaller",
+      "metallförpackni",
+      "metallförpackningar",
+      "mix",
+      "mixed",
+      "mixed cans",
+      "mixed dry recycling",
+      "mixed dry recycling (blue lidded bin)",
+      "mixed dry recycling (blue lidded bin) and glass (black box or basket)",
+      "mixed recycling",
+      "mixed recycling and food waste",
+      "mixed recycling collection",
+      "next recycling collection",
+      "non-recyclable rubbish",
+      "orange bin",
+      "paper and cardboard",
+      "paper/card",
+      "papercardboard",
+      "papier",
+      "papir",
+      "papir og plastemballasje",
+      "papp/papir",
+      "plast",
+      "plast-glas-metal",
+      "plastemballasje",
+      "plastförpacknin",
+      "plastförpackningar",
+      "plastic",
+      "plastic and cardboard wheeled bin",
+      "plastic and cartons bag",
+      "plastic-blik-drankkartons",
+      "plastica",
+      "plastica e lattine",
+      "plastica e metallo",
+      "plastica, lattine e tetrapak",
+      "plastics",
+      "plastik",
+      "plasty",
+      "plf",
+      "plf-h",
+      "pmc",
+      "pmd",
+      "poubelle jaune",
+      "purple / blue containers",
+      "purple bin",
+      "re",
+      "rec",
+      "recycl",
+      "recyclables",
+      "recycle",
+      "recycle bin",
+      "recyclebin",
+      "recycled",
+      "recycling",
+      "recycling (blue)",
+      "recycling (green bin)",
+      "recycling (purple lid / black box and food waste)",
+      "recycling (yellow lid bin)",
+      "recycling - blue",
+      "recycling and food waste",
+      "recycling and textiles collection",
+      "recycling bin",
+      "recycling box",
+      "recycling boxes",
+      "recycling collection",
+      "recycling collection service",
+      "recycling trolley",
+      "recycling waste",
+      "recycling-collection-service",
+      "recyclingcollectiondate",
+      "red bin",
+      "red box",
+      "redbag",
+      "selective",
+      "separovaný",
+      "sperrmuell altmetall",
+      "spesialavfall",
+      "storskrald",
+      "szelektív",
+      "szkło",
+      "tri",
+      "tunna 1",
+      "tunna 2",
+      "tworzyw",
+      "tworzywa",
+      "tworzywa sztuczne",
+      "u",
+      "urban recycling",
+      "valorlux",
+      "valorlux - blue bag",
+      "verpackung",
+      "verpackungen",
+      "verpackungen (gelb)",
+      "wertstoff",
+      "wertstoffbehaelter",
+      "wertstoffe",
+      "wertstoffsäcke",
+      "wertstofftonne",
+      "wet",
+      "wheelie bin or recycling bags",
+      "yellow",
+      "yellow bag",
+      "yellow bin",
+      "yellow lidded recycling container (glass/cans/plastics):",
+      "zwakra"
+    ],
+    "count": 211
+  },
+  "mdi:leaf": {
+    "keys": [
+      "140l garden bin",
+      "240l garden waste bin",
+      "240l green lid garden vegetation bin",
+      "ahtm_dates_green_organic_bin",
+      "b",
+      "baum- und strauchschnitt",
+      "bin",
+      "bio",
+      "bio-tonne",
+      "bioabfall",
+      "bioabfall (braun)",
+      "bioabfall mit reinigung",
+      "bioabfallbehaelter",
+      "bioavfall",
+      "biobehaelter",
+      "biodegradowalne",
+      "biomuell",
+      "biomüll",
+      "biomüll mit reinigung",
+      "bioodpady",
+      "biotonne",
+      "blue",
+      "braun",
+      "brown",
+      "brown bin",
+      "brown bin (garden waste):",
+      "brown bins",
+      "brown garden waste",
+      "brown garden waste wheeled bin",
+      "brown wheelie",
+      "brown-lidded (garden waste) bin",
+      "brown-top bin for garden waste",
+      "brownbin",
+      "browndate",
+      "brush and bulky collection",
+      "chargeable garden waste",
+      "compost",
+      "dechets-biodegradables-biomull-exception",
+      "domestic garden waste service",
+      "domestic organic",
+      "domestic paid garden",
+      "dv",
+      "déchets verts",
+      "empty bin 240l brown",
+      "empty bin brown 240",
+      "fogo",
+      "fogo bin",
+      "food",
+      "food & green waste",
+      "food and garden",
+      "food and garden organics",
+      "food and garden waste",
+      "food and green waste",
+      "food waste",
+      "garden",
+      "garden & food",
+      "garden (if applicable)",
+      "garden bin",
+      "garden collection",
+      "garden collection service",
+      "garden organic",
+      "garden organics",
+      "garden recycling",
+      "garden waste",
+      "garden waste (brown bin)",
+      "garden waste (green)",
+      "garden waste - subscribed",
+      "garden waste bin",
+      "garden waste bins",
+      "garden waste collection",
+      "garden waste collection service",
+      "garden waste service",
+      "garden-waste-collection-service",
+      "gardencollectiondate",
+      "gardenwaste",
+      "gft",
+      "go bin",
+      "gobs",
+      "green",
+      "green bin",
+      "green container",
+      "green garden waste",
+      "green garden waste bins",
+      "green or brown bin",
+      "green organics",
+      "green recycling chargeable collections",
+      "green waste",
+      "green waste bin",
+      "green waste subscription",
+      "green_waste",
+      "greenbin",
+      "greenbin garden waste collection",
+      "greenwaste",
+      "groente, fruit en tuinafval",
+      "gruenabfall",
+      "grungut",
+      "grünabfuhr",
+      "grünabfuhr alchenstorf",
+      "grüne",
+      "grüngut",
+      "grüngutabfuhr",
+      "hackseldienst",
+      "hageavfall",
+      "haveaffald",
+      "kompostbehaelter",
+      "leaf and yard waste",
+      "matavfall",
+      "matières compostables",
+      "mokre bio",
+      "new weekly fogo collection",
+      "next organic collection",
+      "odpady bio",
+      "odpady kuchenne ulegające biodegradacji",
+      "org",
+      "org-f",
+      "org-h",
+      "organic",
+      "organic collection service",
+      "organic waste",
+      "organic waste (green or grey bin)",
+      "organico",
+      "organico umido",
+      "organics",
+      "organics bin",
+      "organique",
+      "pruning_waste",
+      "recycling - green",
+      "reuseable garden waste sack",
+      "rifiuti organici",
+      "sfalci e potature",
+      "trg",
+      "trg-h",
+      "trädgårdsavfall",
+      "umido",
+      "urban food & garden organics",
+      "vegetation",
+      "verge collection - green waste",
+      "våtorganisk",
+      "våtorganisk avfall",
+      "yard waste",
+      "yard waste collection",
+      "yard waste collection week",
+      "zielone",
+      "zusätzliche gratis-laubabfuhr",
+      "zöldhulladék",
+      "žaliųjų atliekų"
+    ],
+    "count": 146
+  },
+  "mdi:package-variant": {
+    "keys": [
+      "1100l recycling card",
+      "altpapier",
+      "altpapier (blau)",
+      "altpapier i",
+      "altpapier ii",
+      "altpapier pamo",
+      "altpapier siemer",
+      "altpapiertonne",
+      "blau",
+      "blaue",
+      "blaue tonne",
+      "blue",
+      "blue kerbside box - paper",
+      "card sack",
+      "cardboard",
+      "cardboard, cartons and paper",
+      "carta",
+      "carta e cartone",
+      "cartone",
+      "green",
+      "grey",
+      "grün",
+      "kar",
+      "karton",
+      "kartonabfuhr",
+      "lvp",
+      "paper",
+      "paper & card",
+      "paper and card",
+      "paper-bundle",
+      "paper/card collection",
+      "papercard_waste",
+      "papier",
+      "papier entsorgung",
+      "papier und karton",
+      "papier, pappe & kart.",
+      "papier, pappe, karton",
+      "papier-tonne",
+      "papierbehaelter",
+      "papiercontainer",
+      "papiermülltonne",
+      "papiertonne",
+      "papir",
+      "papp og papir",
+      "papp/papir",
+      "pappe, papier & kart.",
+      "pappersförpackningar",
+      "pappier",
+      "ppk",
+      "recycling",
+      "recycling_boxes",
+      "returpapper",
+      "valorlux",
+      "verpackung"
+    ],
+    "count": 54
+  },
+  "mdi:newspaper": {
+    "keys": [
+      "240l recycling paper",
+      "blue",
+      "blue bin",
+      "blue lidded wheelie",
+      "brown sack",
+      "carta e cartone",
+      "makulatura",
+      "p",
+      "pap",
+      "pap-papir",
+      "paper",
+      "paper /carton",
+      "paper and card",
+      "paper and card recycling",
+      "paper and cardboard",
+      "paper and packaging (grey bin)",
+      "paper sack",
+      "papier",
+      "papier tonne",
+      "papier/karton",
+      "papierbehaelter",
+      "papiertonne",
+      "papiertonne / papiercontainer",
+      "papir",
+      "papír",
+      "purple",
+      "recycling - brown",
+      "tidning",
+      "tidningar",
+      "top",
+      "top-h",
+      "trade - paper and cardboard"
+    ],
+    "count": 32
+  },
+  "mdi:glass-fragile": {
+    "keys": [
+      "antrinių žaliavų (stiklas)",
+      "black bin",
+      "blue",
+      "brown",
+      "brown bin",
+      "brown recycling (bottles and cans)",
+      "domestic glass collection service",
+      "glas",
+      "glass",
+      "glass and bottles",
+      "glass collection service",
+      "glass crate",
+      "glass, metals, plastics and cartons",
+      "glass-only bin",
+      "green",
+      "green glass box",
+      "green kerbside box - cans, glass and aluminium foil",
+      "greenbox",
+      "mixed",
+      "plastics, glass, cans and cartons",
+      "purple",
+      "purple bins",
+      "recycling",
+      "shs",
+      "stiklo pakuočių atliekos",
+      "szklo",
+      "szkło",
+      "vetro",
+      "white lidded wheelie",
+      "üveg"
+    ],
+    "count": 30
+  },
+  "mdi:food": {
+    "keys": [
+      "140l food waste bin",
+      "23l food waste bin",
+      "biomüllabfuhr",
+      "blue food bin",
+      "brown caddy",
+      "caddy",
+      "caddy bin",
+      "composting",
+      "food",
+      "food bin",
+      "food caddy",
+      "food container",
+      "food waste",
+      "food waste collection service",
+      "food waste recycling",
+      "food_waste",
+      "green bin",
+      "green bin collection",
+      "green bin organics",
+      "kerbside caddy",
+      "large brown kitchen waste box",
+      "mad/rest affald",
+      "madaffald",
+      "matavfall tätt",
+      "orange",
+      "orange-top bin for food waste",
+      "organics",
+      "silver containers",
+      "small kitchen waste box"
+    ],
+    "count": 29
+  },
+  "mdi:food-apple": {
+    "keys": [
+      "30",
+      "bio",
+      "biocontainer",
+      "biotonne",
+      "brown",
+      "caddy",
+      "domestic food waste service",
+      "food",
+      "food bin",
+      "food caddy",
+      "food collection",
+      "food collection service",
+      "food scraps",
+      "food waste",
+      "food waste (brown)",
+      "foodcad",
+      "foodcollectiondate",
+      "foodwaste",
+      "hmat",
+      "hmat-h",
+      "matavfall",
+      "organico"
+    ],
+    "count": 22
+  },
+  "mdi:bottle-soda": {
+    "keys": [
+      "60",
+      "blue bin",
+      "burgundy bin",
+      "fg",
+      "fg-h",
+      "färgade",
+      "färgat glas/ofärgat glas",
+      "glas",
+      "glasbehälter",
+      "glass",
+      "glass og metallemballasje",
+      "glass- og metallemballasje",
+      "glass_metal",
+      "green box",
+      "ofg",
+      "ofg-h",
+      "ofärgade",
+      "papir/plast & mdk",
+      "plastic / tins / cans",
+      "vetro",
+      "vetro e lattine"
+    ],
+    "count": 21
+  },
+  "mdi:calendar": {
+    "keys": [
+      "3 container exemption pick-up",
+      "additional envirodepot hours",
+      "curbside giveaway",
+      "curbside giveaway days",
+      "double-up days",
+      "e-waste event",
+      "environment round-up day",
+      "hhw drop-off - eastside service center",
+      "hhw drop-off - jacobs park",
+      "hhw drop-off - pima west campus",
+      "hhw drop-off - rodeo grounds",
+      "hhw drop-off ibew",
+      "holiday",
+      "pop-up drop-off - fern creek hs",
+      "pop-up drop-off - metro fleet services",
+      "pop-up drop-off - shawnee park",
+      "pop-up drop-off - sun valley park",
+      "pop-up drop-off - uofl shelby campus",
+      "pop-up drop-off doss high",
+      "saturday drop-off site",
+      "waste reduction week"
+    ],
+    "count": 21
+  },
+  "mdi:pine-tree": {
+    "keys": [
+      "bs",
+      "choinki",
+      "christbaum",
+      "christmas",
+      "christmas tree collection",
+      "christmas tree drop-off depots open",
+      "christmas trees",
+      "christmastree",
+      "drzewka świąteczne",
+      "fenyőfa",
+      "gelbe tonnetannenbaum",
+      "greenverge",
+      "juletre",
+      "juletræer",
+      "kerstboom",
+      "sapin",
+      "treecycle",
+      "weihnachtsbaum",
+      "weihnachtsbaumabholung",
+      "weihnachtsbäume"
+    ],
+    "count": 20
+  },
+  "mdi:bottle-wine": {
+    "keys": [
+      "240l recycling mixed glass",
+      "50",
+      "brown bin",
+      "fg",
+      "fg-f",
+      "fg-h",
+      "färgat glas",
+      "glas",
+      "glass",
+      "glass collection",
+      "glass, cans, plastic and cartons",
+      "glass, plastics, cans and cartons recycling",
+      "glass_waste",
+      "green bin",
+      "plast-glas-metal",
+      "szkło",
+      "verre",
+      "verre-papiers-altglas-altpapier",
+      "vetro",
+      "vetro e lattine"
+    ],
+    "count": 20
+  },
+  "mdi:compost": {
+    "keys": [
+      "b",
+      "backyard composting class",
+      "bio",
+      "bioj",
+      "biol",
+      "bios",
+      "biosu",
+      "greenbin",
+      "kom",
+      "kom-h",
+      "mat",
+      "mat-h",
+      "matavfall",
+      "organic"
+    ],
+    "count": 14
+  },
+  "mdi:tree": {
+    "keys": [
+      "ast- und strauchwerk",
+      "astschnittsammlung",
+      "astwerk",
+      "brush",
+      "garden",
+      "green",
+      "green waste",
+      "grünschnitt",
+      "hageavfall",
+      "hedges, shrubs and trees",
+      "strauchschnitt",
+      "trädgårdsavfall"
+    ],
+    "count": 12
+  },
+  "mdi:trash-can-outline": {
+    "keys": [
+      "garbage",
+      "kehricht-aussentour",
+      "kehricht-und-kleinsperrgut-brennbar",
+      "kehrichtabfuhr alchenstorf",
+      "lb",
+      "lb-f",
+      "lb-h",
+      "restabfall",
+      "rubbish",
+      "spartonne restmüll"
+    ],
+    "count": 10
+  },
+  "mdi:delete": {
+    "keys": [
+      "brown bin",
+      "bulky waste",
+      "deponi",
+      "has",
+      "has-f",
+      "has-h",
+      "restabfallbehaelter",
+      "restmülltonne",
+      "rubbish",
+      "secco residuo"
+    ],
+    "count": 10
+  },
+  "mdi:biohazard": {
+    "keys": [
+      "farligt affald",
+      "farligt-affald",
+      "giftmobil",
+      "nappy",
+      "problemmüll",
+      "problemstoffe",
+      "schad",
+      "schadstoffe",
+      "schadstoffmobil",
+      "schadstoffsammlung"
+    ],
+    "count": 10
+  },
+  "mdi:newspaper-variant-multiple": {
+    "keys": [
+      "blaue tonne",
+      "carta",
+      "carta e cartone",
+      "drikkekartong",
+      "pap",
+      "papier",
+      "papir",
+      "papp",
+      "papp og papir",
+      "papppapirdrikkekartong"
+    ],
+    "count": 10
+  },
+  "mdi:recycle-variant": {
+    "keys": [
+      "b1",
+      "b1-f",
+      "b1-h",
+      "d2dplast",
+      "d2dplastl",
+      "d2dplasts",
+      "gelbe tonne",
+      "gelber sack",
+      "shpl"
+    ],
+    "count": 9
+  },
+  "mdi:bottle-soda-classic": {
+    "keys": [
+      "360l recycling plastic/cans",
+      "blue",
+      "hård plast",
+      "lattine",
+      "plastica",
+      "plastica e metalli",
+      "plasticcans_waste",
+      "plastikflaschen"
+    ],
+    "count": 8
+  },
+  "mdi:dump-truck": {
+    "keys": [
+      "container restmüll",
+      "encombrants",
+      "gabaryty",
+      "k",
+      "sonder-",
+      "umweltmobil",
+      "verge collection - hard waste"
+    ],
+    "count": 7
+  },
+  "mdi:newspaper-variant-multiple-outline": {
+    "keys": [
+      "altpapiersammlung",
+      "paper",
+      "papierabfuhr",
+      "papiersammlung alchenstorf",
+      "tidn",
+      "tidn-f",
+      "tidn-h"
+    ],
+    "count": 7
+  },
+  "mdi:bottle-soda-classic-outline": {
+    "keys": [
+      "hpl",
+      "hpl-f",
+      "hpl-h",
+      "metale i tworzywa sztuczne",
+      "plast",
+      "plastic, metalen en drankkartons",
+      "pmd"
+    ],
+    "count": 7
+  },
+  "mdi:sofa": {
+    "keys": [
+      "bulk verge collection",
+      "bulky",
+      "bulky waste",
+      "hard waste",
+      "large items",
+      "re-use",
+      "sperrmüll"
+    ],
+    "count": 7
+  },
+  "mdi:sack": {
+    "keys": [
+      "gelb",
+      "gelber sack",
+      "gelber sack/gelbe tonne",
+      "plastics",
+      "sacks",
+      "textiles bag"
+    ],
+    "count": 6
+  },
+  "mdi:forest": {
+    "keys": [
+      "baum",
+      "gruen",
+      "gruensperrmuell",
+      "grün",
+      "grünabfall / weihnachtsbäume",
+      "schnitt"
+    ],
+    "count": 6
+  },
+  "mdi:battery": {
+    "keys": [
+      "batteries",
+      "batteries-small electricals-textiles",
+      "electrical",
+      "household batteries",
+      "småbatterier",
+      "textiles/batteries/electricals"
+    ],
+    "count": 6
+  },
+  "mdi:apple": {
+    "keys": [
+      "brown bins",
+      "food",
+      "grey bins",
+      "groente-fruit-tuinafval-etensresten",
+      "organico"
+    ],
+    "count": 5
+  },
+  "mdi:package-variant-closed": {
+    "keys": [
+      "green bin",
+      "karton",
+      "plf",
+      "plf-f",
+      "plf-h"
+    ],
+    "count": 5
+  },
+  "mdi:package": {
+    "keys": [
+      "containers",
+      "paf",
+      "paf-h",
+      "papper",
+      "plast/kartong"
+    ],
+    "count": 5
+  },
+  "mdi:archive": {
+    "keys": [
+      "10",
+      "40",
+      "card collection service",
+      "pap",
+      "pappogkartong"
+    ],
+    "count": 5
+  },
+  "mdi:delete-empty": {
+    "keys": [
+      "black",
+      "kk",
+      "kk-f",
+      "kk-h",
+      "rubbish"
+    ],
+    "count": 5
+  },
+  "mdi:tshirt-crew": {
+    "keys": [
+      "altkleider",
+      "clothing and shoes",
+      "textile collection",
+      "textiles and small weee"
+    ],
+    "count": 4
+  },
+  "mdi:factory": {
+    "keys": [
+      "altstoffsammelzentrum",
+      "recyclinghof",
+      "sperrmüll asz-fernitz",
+      "wertstoffhof geschlossen"
+    ],
+    "count": 4
+  },
+  "mdi:flower": {
+    "keys": [
+      "compost bin",
+      "garden",
+      "garden waste",
+      "garden waste collection"
+    ],
+    "count": 4
+  },
+  "mdi:glass-wine": {
+    "keys": [
+      "färgat glas",
+      "las",
+      "ofärgat glas",
+      "szklane"
+    ],
+    "count": 4
+  },
+  "mdi:food-apple-outline": {
+    "keys": [
+      "biotonne",
+      "mat",
+      "mat-f",
+      "mat-h"
+    ],
+    "count": 4
+  },
+  "mdi:file-document-outline": {
+    "keys": [
+      "altpapier",
+      "papp",
+      "papp-f",
+      "papp-h"
+    ],
+    "count": 4
+  },
+  "mdi:bottle-wine-outline": {
+    "keys": [
+      "glass",
+      "ofärgat glas",
+      "verre"
+    ],
+    "count": 3
+  },
+  "mdi:nail": {
+    "keys": [
+      "altmetalle",
+      "metall",
+      "metallabfuhr"
+    ],
+    "count": 3
+  },
+  "trash-can": {
+    "keys": [
+      "garbage",
+      "general waste",
+      "rubbish"
+    ],
+    "count": 3
+  },
+  "mdi:bio": {
+    "keys": [
+      "bio",
+      "biotonne",
+      "kuchenne"
+    ],
+    "count": 3
+  },
+  "mdi:wardrobe": {
+    "keys": [
+      "bulky",
+      "odpady wielkogabarytowe",
+      "sperrmüllabholung"
+    ],
+    "count": 3
+  },
+  "mdi:paper-roll": {
+    "keys": [
+      "papier",
+      "papier en karton",
+      "papiermobil"
+    ],
+    "count": 3
+  },
+  "mdi:food-takeout-box-outline": {
+    "keys": [
+      "hasd",
+      "hasd-f",
+      "hasd-h"
+    ],
+    "count": 3
+  },
+  "mdi:delete-forever": {
+    "keys": [
+      "hao",
+      "hao-f",
+      "hao-h"
+    ],
+    "count": 3
+  },
+  "mdi:delete-sweep": {
+    "keys": [
+      "hax",
+      "hax-f",
+      "hax-h"
+    ],
+    "count": 3
+  },
+  "mdi:glass-pint-outline": {
+    "keys": [
+      "ofg",
+      "ofg-f",
+      "ofg-h"
+    ],
+    "count": 3
+  },
+  "mdi:can-outline": {
+    "keys": [
+      "met",
+      "met-f",
+      "met-h"
+    ],
+    "count": 3
+  },
+  "mdi:shopping-outline": {
+    "keys": [
+      "mpl",
+      "mpl-f",
+      "mpl-h"
+    ],
+    "count": 3
+  },
+  "mdi:archive-outline": {
+    "keys": [
+      "well",
+      "well-f",
+      "well-h"
+    ],
+    "count": 3
+  },
+  "mdi:leaf-maple": {
+    "keys": [
+      "trg",
+      "trg-f",
+      "trg-h"
+    ],
+    "count": 3
+  },
+  "mdi:skull-crossbones": {
+    "keys": [
+      "déchets toxiques",
+      "schadstoffsammlung"
+    ],
+    "count": 2
+  },
+  "mdi:desktop-classic": {
+    "keys": [
+      "alteisenabfuhr alchenstorf",
+      "alteisensammlung und sammlung elektronischer geräte"
+    ],
+    "count": 2
+  },
+  "mdi:television-classic": {
+    "keys": [
+      "bildschirm-/kühlgeräte",
+      "junk"
+    ],
+    "count": 2
+  },
+  "mdi:hanger": {
+    "keys": [
+      "klaerogsko",
+      "textiles"
+    ],
+    "count": 2
+  },
+  "mdi:newspaper-variant": {
+    "keys": [
+      "beige bin",
+      "papir"
+    ],
+    "count": 2
+  },
+  "mdi:bottle-soda-outline": {
+    "keys": [
+      "pet",
+      "plastförpackningar"
+    ],
+    "count": 2
+  },
+  "mdi:truck": {
+    "keys": [
+      "mobil",
+      "wielkogabarytowe"
+    ],
+    "count": 2
+  },
+  "mdi:house": {
+    "keys": [
+      "abfallwirtschaftszentrum",
+      "p"
+    ],
+    "count": 2
+  },
+  "mdi:microwave": {
+    "keys": [
+      "bulk waste",
+      "junk waste"
+    ],
+    "count": 2
+  },
+  "mdi:truck-remove": {
+    "keys": [
+      "enc",
+      "garbage"
+    ],
+    "count": 2
+  },
+  "mdi:fridge": {
+    "keys": [
+      "bulky",
+      "weiße ware"
+    ],
+    "count": 2
+  },
+  "mdi:file-outline": {
+    "keys": [
+      "papier",
+      "papier i tektura"
+    ],
+    "count": 2
+  },
+  "mdi:sofa-single": {
+    "keys": [
+      "odpady wielkogabarytowe",
+      "wielkogabaryty"
+    ],
+    "count": 2
+  },
+  "mdi:cupboard": {
+    "keys": [
+      "gabaryty",
+      "odpady wystawkowe"
+    ],
+    "count": 2
+  },
+  "mdi:coffee": {
+    "keys": [
+      "podback",
+      "porslin"
+    ],
+    "count": 2
+  },
+  "mdi-calendar-alert": {
+    "keys": [
+      "clean_up",
+      "special"
+    ],
+    "count": 2
+  },
+  "mdi:screw-flat-top": {
+    "keys": [
+      "alteisen/metall",
+      "metall"
+    ],
+    "count": 2
+  },
+  "mdi:note-text-outline": {
+    "keys": [
+      "d2dpapir",
+      "shpa"
+    ],
+    "count": 2
+  },
+  "mdi:recycling": {
+    "keys": [
+      "recycling",
+      "red & purple recycling bags"
+    ],
+    "count": 2
+  },
+  "mdi:toilet": {
+    "keys": [
+      "lat",
+      "lat-h"
+    ],
+    "count": 2
+  },
+  "mdi:battery-outline": {
+    "keys": [
+      "batt",
+      "batt-h"
+    ],
+    "count": 2
+  },
+  "mdi:oil-lamp": {
+    "keys": [
+      "fett",
+      "fett-h"
+    ],
+    "count": 2
+  },
+  "mdi:oil": {
+    "keys": [
+      "olja",
+      "olja-h"
+    ],
+    "count": 2
+  },
+  "mdi:water-opacity": {
+    "keys": [
+      "slam",
+      "slam-h"
+    ],
+    "count": 2
+  },
+  "mdi:help-circle-outline": {
+    "keys": [
+      "fa",
+      "fa-h"
+    ],
+    "count": 2
+  },
+  "mdi:note-text": {
+    "keys": [
+      "commercial -  cardboard and paper:",
+      "red lidded recycling container (paper/card):"
+    ],
+    "count": 2
+  },
+  "mdi:wrench": {
+    "keys": [
+      "metal",
+      "metal/glas affald"
+    ],
+    "count": 2
+  },
+  "mdi:bottle-tonic-skull": {
+    "keys": [
+      "schadstoffsammlung"
+    ],
+    "count": 1
+  },
+  "mdi:delete-circle": {
+    "keys": [
+      "grossmuellbehaelter"
+    ],
+    "count": 1
+  },
+  "mdi:toxic": {
+    "keys": [
+      "problemmüll"
+    ],
+    "count": 1
+  },
+  "mdi:hair-dryer": {
+    "keys": [
+      "small electrical items"
+    ],
+    "count": 1
+  },
+  "mdi:shovel": {
+    "keys": [
+      "garden"
+    ],
+    "count": 1
+  },
+  "mdi:leaf-cricle": {
+    "keys": [
+      "sfalci abbonamento normale"
+    ],
+    "count": 1
+  },
+  "mdi:leaf-circle-outline": {
+    "keys": [
+      "sfalci abbonamento ridotto"
+    ],
+    "count": 1
+  },
+  "mdi:can": {
+    "keys": [
+      "metallverpackung"
+    ],
+    "count": 1
+  },
+  "mdi:note": {
+    "keys": [
+      "blue"
+    ],
+    "count": 1
+  },
+  "mdi:emoticon-poop": {
+    "keys": [
+      "slam"
+    ],
+    "count": 1
+  },
+  "train-car-container": {
+    "keys": [
+      "container ménage"
+    ],
+    "count": 1
+  },
+  "mdl:glass-fragile": {
+    "keys": [
+      "glass"
+    ],
+    "count": 1
+  },
+  "mdi:anvil": {
+    "keys": [
+      "metallverpackungen"
+    ],
+    "count": 1
+  },
+  "mdi:sprout": {
+    "keys": [
+      "green"
+    ],
+    "count": 1
+  },
+  "mdi:leaf-off": {
+    "keys": [
+      "häckselservice"
+    ],
+    "count": 1
+  },
+  "mdi:string-lights": {
+    "keys": [
+      "christmas-collection-dates"
+    ],
+    "count": 1
+  },
+  "mdi:flask": {
+    "keys": [
+      "problemmüll"
+    ],
+    "count": 1
+  },
+  "mdi:lightbulb": {
+    "keys": [
+      "ljuskällor"
+    ],
+    "count": 1
+  },
+  "mdi:baby-carriage": {
+    "keys": [
+      "pannolini/pannoloni"
+    ],
+    "count": 1
+  },
+  "mdi:truck-alert": {
+    "keys": [
+      "schadstoffmobil"
+    ],
+    "count": 1
+  },
+  "mdi:delete-variant": {
+    "keys": [
+      "muo"
+    ],
+    "count": 1
+  },
+  "mdi:tools": {
+    "keys": [
+      "met"
+    ],
+    "count": 1
+  },
+  "mdi:shredder": {
+    "keys": [
+      "schredderdienst"
+    ],
+    "count": 1
+  },
+  "mdi:power-plug": {
+    "keys": [
+      "elektroschrott"
+    ],
+    "count": 1
+  },
+  "mdi:tree-outline": {
+    "keys": [
+      "grünschnitt"
+    ],
+    "count": 1
+  },
+  "mdi:radio": {
+    "keys": [
+      "elektrokleingeräte-sammlung"
+    ],
+    "count": 1
+  },
+  "mdi:medical-bag": {
+    "keys": [
+      "clinical"
+    ],
+    "count": 1
+  },
+  "package-variant": {
+    "keys": [
+      "ahtm_dates_blue_pulpable_bin"
+    ],
+    "count": 1
+  },
+  "mdi:pot": {
+    "keys": [
+      "shk"
+    ],
+    "count": 1
+  },
+  "mdi:skull-scan": {
+    "keys": [
+      "no"
+    ],
+    "count": 1
+  },
+  "mdi:chip": {
+    "keys": [
+      "elektriskogelektronisk"
+    ],
+    "count": 1
+  },
+  "mdi:diaper-outline": {
+    "keys": [
+      "yellow nappy & hygiene waste bag"
+    ],
+    "count": 1
+  },
+  "mdi:bulb": {
+    "keys": [
+      "c"
+    ],
+    "count": 1
+  },
+  "mdi:glass": {
+    "keys": [
+      "o"
+    ],
+    "count": 1
+  },
+  "mdi:battery-sync": {
+    "keys": [
+      "ewaste"
+    ],
+    "count": 1
+  },
+  "mdi:BottleWine": {
+    "keys": [
+      "glass only"
+    ],
+    "count": 1
+  },
+  "mdi:sofa-single-outline": {
+    "keys": [
+      "grobsperrgut (brennbar)"
+    ],
+    "count": 1
+  },
+  "mdi:fridge-outline": {
+    "keys": [
+      "kühlgeräte"
+    ],
+    "count": 1
+  },
+  "mdi:valve": {
+    "keys": [
+      "slam"
+    ],
+    "count": 1
+  },
+  "mdi:note-multiple": {
+    "keys": [
+      "bluebox"
+    ],
+    "count": 1
+  },
+  "mdi:size-xl": {
+    "keys": [
+      "bulky"
+    ],
+    "count": 1
+  },
+  "mdi:newspaper-variant-outline": {
+    "keys": [
+      "papier"
+    ],
+    "count": 1
+  },
+  "mdi:flower-tulip": {
+    "keys": [
+      "zielone"
+    ],
+    "count": 1
+  },
+  "mdi:table-furniture": {
+    "keys": [
+      "gabaryty"
+    ],
+    "count": 1
+  },
+  "mdi:pine-tree-variant": {
+    "keys": [
+      "sapin"
+    ],
+    "count": 1
+  },
+  "mdi:bag-personal": {
+    "keys": [
+      "best_bag"
+    ],
+    "count": 1
+  },
+  "mdi:christmas-tree": {
+    "keys": [
+      "christmas_trees"
+    ],
+    "count": 1
+  },
+  "mdi:clippy": {
+    "keys": [
+      "altmetall"
+    ],
+    "count": 1
+  },
+  "mdi: trash-can": {
+    "keys": [
+      "blue zone garbage"
+    ],
+    "count": 1
+  },
+  "mdi:battery-20": {
+    "keys": [
+      "curbside battery collection"
+    ],
+    "count": 1
+  },
+  "mdi:washing-machine": {
+    "keys": [
+      "scrap and electrical appliances"
+    ],
+    "count": 1
+  },
+  "mdi:tanker-truck": {
+    "keys": [
+      "spazzamento meccanizzato"
+    ],
+    "count": 1
+  },
+  "mdi:fire": {
+    "keys": [
+      "brännbart"
+    ],
+    "count": 1
+  },
+  "mdi:glass-cocktail": {
+    "keys": [
+      "s"
+    ],
+    "count": 1
+  },
+  "mdi:car-battery": {
+    "keys": [
+      "schadstoffmobil"
+    ],
+    "count": 1
+  },
+  "mdi:silverware-fork-knife": {
+    "keys": [
+      "food"
+    ],
+    "count": 1
+  },
+  "mdi:grass": {
+    "keys": [
+      "yardwaste"
+    ],
+    "count": 1
+  },
+  "mdi:baby": {
+    "keys": [
+      "windeltonne"
+    ],
+    "count": 1
+  },
+  "mdi:chemical-weapon": {
+    "keys": [
+      "problemstoff"
+    ],
+    "count": 1
+  },
+  "mdi:broom": {
+    "keys": [
+      "residential street cleaning"
+    ],
+    "count": 1
+  },
+  "mdi:blender": {
+    "keys": [
+      "small electrical items"
+    ],
+    "count": 1
+  },
+  "mdi:glass-mug-variant": {
+    "keys": [
+      "glass"
+    ],
+    "count": 1
+  }
+}

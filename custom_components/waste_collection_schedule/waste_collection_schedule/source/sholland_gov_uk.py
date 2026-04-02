@@ -14,9 +14,7 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "refuse": "mdi:trash-can",
     "garden": "mdi:leaf",
-    "recycling": "mdi:recycle",
 }
 
 TYPE_LABELS = {
@@ -33,7 +31,6 @@ HEADERS = {
     "Content-Type": "application/json",
     "Referer": "https://www.sholland.gov.uk/mycollections",
 }
-
 
 class Source:
     def __init__(self, uprn: str | int, postcode: str):

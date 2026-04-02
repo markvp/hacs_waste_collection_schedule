@@ -57,13 +57,10 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Rubbish": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
     "Garden (if applicable)": "mdi:leaf",
 }
 
 matcher = re.compile(r"^([A-Z][a-z]+) (\d{1,2}) ([A-Z][a-z]+) (\d{4})$")
-
 
 def parse_date(date_str: str) -> date:
     match = matcher.match(date_str)
@@ -76,10 +73,8 @@ def parse_date(date_str: str) -> date:
         int(match.group(2)),
     )
 
-
 def comparable(data: str) -> str:
     return data.replace(",", "").replace(" ", "").lower()
-
 
 class Source:
     _address_payload: dict | None

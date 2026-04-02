@@ -15,11 +15,9 @@ TEST_CASES = {
 
 API_URL = "https://tkeliai.lt/ajax.php"
 ICON_MAP = {
-    "Mišrios komunalinės atliekos": "mdi:trash-can",
     "Kitos pakuočių atliekos": "mdi:recycle",
-    "Stiklo pakuočių atliekos": "mdi:glass-fragile",
+    "Mišrios komunalinės atliekos": "mdi:trash-can",
 }
-
 
 class Source:
     def __init__(self, location):

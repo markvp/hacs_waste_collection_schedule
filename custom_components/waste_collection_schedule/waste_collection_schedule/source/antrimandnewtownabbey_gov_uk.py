@@ -18,14 +18,6 @@ TEST_CASES = {
     "id_str": {"id": "1145"},
 }
 
-
-ICON_MAP = {
-    "Black bins": "mdi:trash-can",
-    "Brown bins": "mdi:leaf",
-    "Kerbside Recycling": "mdi:recycle",
-}
-
-
 REGULAR_API_URL = (
     "https://antrimandnewtownabbey.gov.uk/residents/bins-recycling/bins-schedule/"
 )
@@ -34,13 +26,11 @@ RECYCLING_HOLYDAY_API_URL = "https://www.brysonrecycling.org/northern-ireland/ke
 
 REGEX_REMOVE_TH_ND_RD_ST = r"(?<=\d)(st|nd|rd|th)"
 
-
 FREQUENCY_MAP = {
     "every week": 7,
     "every fortnight": 14,
     "fortnightly": 14,
 }
-
 
 class Source:
     def __init__(self, id: int | None = None, uprn: str | int | None = None):

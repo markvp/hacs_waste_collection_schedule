@@ -14,10 +14,8 @@ API_URL = "https://www.staffordbc.gov.uk/address/"
 
 ICON_MAP = {
     "Blue bin": "mdi:recycle",
-    "Brown bin": "mdi:leaf",
     "Green bin": "mdi:trash-can",
 }
-
 
 class Source:
     def __init__(self, uprn):

@@ -16,21 +16,8 @@ TEST_CASES = {
 API_BASE = "https://www.tbv-velbert.de"
 API_URL = f"{API_BASE}/abfall"
 HEADERS = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
-ICON_MAP = {
-    "Restmüll-Gefäß": "mdi:trash-can",
-    "Gelbe Tonne": "mdi:recycle",
-    "Bio-Tonne": "mdi:leaf",
-    "Papier-Tonne": "mdi:package-variant",
-}
 
 _LOGGER = logging.getLogger(__name__)
-
-PARAM_TRANSLATIONS = {
-    "de": {
-        "street": "Straße",
-    }
-}
-
 
 class Source:
     def __init__(self, street):

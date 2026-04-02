@@ -19,17 +19,8 @@ TEST_CASES = {
     },
 }
 
-
-ICON_MAP = {
-    "Refuse": "mdi:trash-can",
-    "Garden Waste": "mdi:leaf",
-    "Recycling": "mdi:recycle",
-}
-
-
 API_URL = "https://my.oadby-wigston.gov.uk/my-property-finder"
 SEARCH_URL = "https://my.oadby-wigston.gov.uk/data/ac/addresses.json"
-
 
 class Source:
     def __init__(self, address: str):
@@ -114,6 +105,6 @@ class Source:
                 continue
             waste_type = waste_type_tag.text.strip()
             date_ = self._parse_date(date_str)
-            entries.append(Collection(date_, waste_type, icon=ICON_MAP.get(waste_type)))
+            entries.append(Collection(date_, waste_type))
 
         return entries

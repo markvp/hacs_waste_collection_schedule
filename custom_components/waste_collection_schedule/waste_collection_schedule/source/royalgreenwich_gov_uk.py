@@ -22,12 +22,10 @@ TEST_CASES = {
 
 ADDRESS_SEARCH_URL = "https://www.royalgreenwich.gov.uk/site/custom_scripts/apps/waste-collection/source.php"
 
-
 DAYS = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
 ICON_MAP = {
-    "recycling": "mdi:recycle",
-    "garden": "mdi:leaf",
     "food": "mdi:food-apple",
+    "garden": "mdi:leaf",
 }
 
 # ### Arguments affecting the configuration GUI ####
@@ -50,7 +48,6 @@ PARAM_DESCRIPTIONS = {  # Optional dict to describe the arguments, will be shown
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0",
 }
-
 
 class Source:
     def __init__(

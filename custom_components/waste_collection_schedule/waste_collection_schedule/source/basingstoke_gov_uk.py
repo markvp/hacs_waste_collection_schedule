@@ -13,7 +13,6 @@ from waste_collection_schedule import Collection  # type: ignore[attr-defined]
 # This line suppresses the InsecureRequestWarning when using verify=False
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-
 TITLE = "Basingstoke and Deane Borough Council"
 DESCRIPTION = "Source for basingstoke.gov.uk services for Basingstoke and Deane Borough Council, UK."
 URL = "https://basingstoke.gov.uk"
@@ -27,13 +26,10 @@ HEADERS = {
     "user-agent": "Mozilla/5.0",
 }
 ICON_MAP = {
-    "WASTE": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
     "GARDEN": "mdi:leaf",
-    "GLASS": "mdi:glass-fragile",
+    "WASTE": "mdi:trash-can",
 }
 LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, uprn):

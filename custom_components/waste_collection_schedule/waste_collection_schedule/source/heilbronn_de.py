@@ -44,28 +44,16 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "residual": "mdi:trash-can",
-    "bio": "mdi:leaf",
     "green": "mdi:leaf",
     "light-packaging": "mdi:recycle",
-    "paper": "mdi:package-variant",
-    "paper-bundle": "mdi:package-variant",
-    "christmastree": "mdi:pine-tree",
 }
 
 PARAM_TRANSLATIONS = {
-    "de": {
-        "plz": "PLZ",
-        "strasse": "Straße",
-        "hausnr": "Hausnummer",
-    },
     "en": {
-        "plz": "Zip Code",
-        "strasse": "Street",
         "hausnr": "House number",
+        "plz": "Zip Code",
     },
 }
-
 
 class Source:
     def __init__(self, plz: int, strasse: str, hausnr: str | int | None = None):

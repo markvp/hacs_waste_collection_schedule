@@ -11,12 +11,9 @@ TEST_CASES = {
     "Test_002": {"address": "1 W 72nd St, New York, NY 10023"},
 }
 ICON_MAP = {
-    "Trash": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
     "Composting": "mdi:food",
     "Large items": "mdi:sofa",
 }
-
 
 class Source:
     def __init__(self, address):

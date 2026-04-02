@@ -23,16 +23,13 @@ REGEX = {
     "ORDINALS": r"(st|nd|rd|th) ",
 }
 ICON_MAP = {
-    "GREEN BIN": "mdi:trash-can",
     "BLUE BIN": "mdi:recycle",
-    "BROWN BIN": "mdi:leaf"
+    "GREEN BIN": "mdi:trash-can",
 }
-
 
 class Source:
     def __init__(self, uprn):
         self._uprn = str(uprn).zfill(12)
-
 
     def fetch(self):
  

@@ -15,18 +15,13 @@ TEST_CASES = {
     "UPRN_004": {"uprn": 100060703113},
 }
 ICON_MAP = {
-    "Glass": "mdi:glass-fragile",
-    "Recycling": "mdi:recycle",
-    "General Waste": "mdi:trash-can",
-    "Garden Waste": "mdi:leaf",
-    "Food": "mdi:food-apple"
+    "Food": "mdi:food-apple",
 }
 REGEX = (
     r"(Food|Glass|Recycling|General Waste|Garden Waste).*?([0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4})"
 )
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, uprn):

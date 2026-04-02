@@ -14,8 +14,6 @@ TEST_CASES = {
     "Test_004": {"uprn": 10000895390},
 }
 ICON_MAP = {
-    "Recycling": "mdi:recycle",
-    "Refuse": "mdi:trash-can",
     "Paper": "mdi:newspaper",
 }
 HEADERS = {"user-agent": "Mozilla/5.0"}
@@ -35,7 +33,6 @@ PARAM_DESCRIPTIONS = {
         "uprn": "An easy way to discover your Unique Property Reference Number (UPRN) is by going to https://www.findmyaddress.co.uk/ and entering in your address details.",
     }
 }
-
 
 class Source:
     def __init__(

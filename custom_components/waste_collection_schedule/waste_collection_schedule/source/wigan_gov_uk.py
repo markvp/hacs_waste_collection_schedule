@@ -20,14 +20,11 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "BLACK BIN": "mdi:trash-can",
-    "BROWN BIN": "mdi:glass-fragile",
-    "GREEN BIN": "mdi:leaf",
     "BLUE BIN": "mdi:recycle",
+    "BROWN BIN": "mdi:glass-fragile",
 }
 
 REGEX_ORDINALS = r"(st|nd|rd|th)"
-
 
 class Source:
     def __init__(self, postcode, uprn):

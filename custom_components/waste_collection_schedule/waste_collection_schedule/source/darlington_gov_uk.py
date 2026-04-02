@@ -14,20 +14,15 @@ TEST_CASES = {
     "200002724471": {"uprn": "200002724471"},
 }
 
-
 ICON_MAP = {
-    "Recycle": "mdi:recycle",
-    "Refuse": "mdi:trash-can",
     "GARDEN": "mdi:leaf",
 }
-
 
 API_URL = "https://www.darlington.gov.uk/bins-waste-and-recycling/collection-day-lookup/calendar/"
 
 WASTE_TYPES = ICON_MAP.keys()
 
 DATE_REGEX = re.compile(r"calDates.push\(new Date\((\d+)\)\);")
-
 
 class Source:
     def __init__(self, uprn: str | int):

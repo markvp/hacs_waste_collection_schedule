@@ -12,15 +12,11 @@ DESCRIPTION = "Source for waste collection services for Newcastle City Council"
 URL = "https://community.newcastle.gov.uk"
 TEST_CASES = {"Test_001": {"uprn": "004510053797"}, "Test_002": {"uprn": 4510053797}}
 
-
 API_URL = "https://community.newcastle.gov.uk/my-neighbourhood/ajax/getBinsNew.php"
 REGEX = r"[Green|Blue|Brown] [Bb]in \(([A-Za-z]+)( Waste)?\) .*? ([0-9]{2}-[A-Za-z]+-[0-9]{4})"
 ICON_MAP = {
-    "DOMESTIC": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
     "GARDEN": "mdi:leaf",
 }
-
 
 class Source:
     def __init__(self, uprn):

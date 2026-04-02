@@ -22,55 +22,40 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "Trash": "mdi:trash-can",
     "Glass": "mdi:bottle-soda",
-    "Bio": "mdi:leaf",
-    "Paper": "mdi:package-variant",
-    "Recycle": "mdi:recycle",
 }
-
 
 API_URL_LIST = "https://gateway.sisms.pl/akun/api/owners/{owner_id}/{key}/list"
 API_URL_GET = "https://gateway.sisms.pl/akun/api/owners/{owner_id}/{key}/get"
-
 
 class JSONResponseItem(TypedDict):
     id: str
     kind: str
 
-
 class JSONResponseItemName(JSONResponseItem):
     name: str
-
 
 class JSONResponseItemNumber(JSONResponseItem):
     number: str
 
-
 class JSONResponseNumber(TypedDict):
     data: list[JSONResponseItemNumber]
 
-
 class JSONResponseName(TypedDict):
     data: list[JSONResponseItemName]
-
 
 class Receptions(TypedDict):
     id: int
     binId: int
     date: str
 
-
 class TimetableMonth(TypedDict):
     month: str
     receptions: list[Receptions]
 
-
 class TimedatbleResponse(TypedDict):
     data: list[TimetableMonth]
-
 
 class Bin(TypedDict):
     id: int
@@ -78,10 +63,8 @@ class Bin(TypedDict):
     type: str
     color: str
 
-
 class BinResponse(TypedDict):
     data: list[Bin]
-
 
 OWNER_IDS = {
     39: "Gmina Topólka",
@@ -230,7 +213,6 @@ PARAM_TRANSLATION = {
     }
 }
 
-
 PARAM_DESCRIPTIONS = {
     "en": {
         "owner_id": "Owner of the waste collection service You can see the owner id in the url requested by the search page",
@@ -238,7 +220,6 @@ PARAM_DESCRIPTIONS = {
         "town_address": "House number of the town if street is not set",
     }
 }
-
 
 class Source:
     def __init__(
@@ -410,7 +391,6 @@ class Source:
                 entries.append(Collection(date=date_, t=bin_type, icon=icon))
 
         return entries
-
 
 def get_owner_ids():
     import time

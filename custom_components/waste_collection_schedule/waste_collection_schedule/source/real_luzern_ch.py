@@ -14,12 +14,8 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Kehricht": "mdi:trash-can",
-    "Grüngut": "mdi:leaf",
-    "Papier": "mdi:newspaper-variant-multiple",
-    "Karton": "mdi:package-variant",
     "Altmetall": "mdi:clippy",
-    # "Altmetall": "mdi:engine",
+    "Papier": "mdi:newspaper-variant-multiple",
 }
 
 OLD_WASTE_NAME = (
@@ -34,14 +30,12 @@ OLD_WASTE_NAME = (
 
 API_URL = "https://www.real-luzern.ch/abfall/sammeldienst/abfallkalender/"
 
-
 PARAM_TRANSLATIONS = {
     "de": {
         "municipality_id": "Orts ID",
         "street_id": "Strassen ID",
     },
 }
-
 
 class Source:
     def __init__(self, municipality_id: str | int, street_id: str | int | None = None):

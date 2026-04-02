@@ -19,11 +19,6 @@ HEADERS = {
     "Accept-Language": "en,en-GB;q=0.7,en-US;q=0.3",
     "Upgrade-Insecure-Requests": "1",
 }
-ICON_MAP = {
-    "TRASH": "mdi:trash-can",
-    "RECYCLE": "mdi:recycle",
-    "BULKY": "mdi:sofa",
-}
 
 PARAM_DESCRIPTIONS = {  # Optional dict to describe the arguments, will be shown in the GUI configuration below the respective input field
     "en": {
@@ -37,7 +32,6 @@ HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     "Click on the `Table` tab, then click on the `Filter By Map` menu item, and click `Apply` to reduce the number of items being displayed. Note: In the previous step, the more you zoom in on your house, the better this filter works. "
     "Find your address in the filtered list and make a note of the `Object ID` number in the first column. This is the number you need to use."
 }
-
 
 class Source:
     def __init__(self, objectID, try_offical=False):
@@ -89,7 +83,6 @@ class Source:
                     Collection(
                         date=waste[1],
                         t=waste[0],
-                        icon=ICON_MAP.get(waste[0].upper()),
                     )
                 )
 

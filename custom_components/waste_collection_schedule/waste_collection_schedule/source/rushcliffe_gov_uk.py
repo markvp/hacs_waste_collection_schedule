@@ -16,14 +16,10 @@ TEST_CASES = {
     }
 }
 
-
 ICON_MAP = {
-    "grey": "mdi:trash-can",
-    "garden waste": "mdi:leaf",
     "blue": "mdi:package-variant",
-    "glass": "mdi:glass-fragile",
+    "grey": "mdi:trash-can",
 }
-
 
 API_URL = "https://selfservice.rushcliffe.gov.uk/renderform.aspx?t=1242&k=86BDCD8DE8D868B9E23D10842A7A4FE0F1023CCA"
 ADDRESS_LOOKUP = "https://selfservice.rushcliffe.gov.uk/core/addresslookup"
@@ -38,7 +34,6 @@ POST_ARGS = {
     "CurrentSectionID": 1397,
     "TriggerCtl": "",
 }
-
 
 class Source:
     def __init__(self, postcode: str, address: str):

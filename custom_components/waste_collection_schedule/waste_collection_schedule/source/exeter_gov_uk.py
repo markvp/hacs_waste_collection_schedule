@@ -15,14 +15,7 @@ TEST_CASES = {
     "Test_003": {"uprn": 10023120282},
     "Test_004": {"uprn": 100040241022},
 }
-ICON_MAP = {
-    "REFUSE": "mdi:trash-can",
-    "RECYCLING": "mdi:recycle",
-    "GARDEN WASTE": "mdi:leaf",
-    "FOOD WASTE": "mdi:food",
-}
 REGEX_ORDINALS = r"(?<=[0-9])(?:st|nd|rd|th)"
-
 
 class Source:
     def __init__(self, uprn):
@@ -48,8 +41,7 @@ class Source:
                         date=datetime.strptime(
                             re.compile(REGEX_ORDINALS).sub("", d.text), "%A, %d %B %Y"
                         ).date(),
-                        t=b.text.replace(" collection", ""),
-                        icon=ICON_MAP.get(b.text.replace(" collection", "").upper()),
+                        t=b.text.replace(" collection", "").upper(),
                     )
                 )
 

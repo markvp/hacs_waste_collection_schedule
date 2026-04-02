@@ -14,10 +14,8 @@ TEST_CASES = {
     "Test_003": {"parcel_number": 1119284, "suburb": "Glen Forrest"},
 }
 ICON_MAP = {
-    "FOGO Bin": "mdi:leaf",
-    "Recycle Bin": "mdi:recycle",
-    "General Waste": "mdi:trash-can",
     "Bulk Verge Collection": "mdi:sofa",
+    "FOGO Bin": "mdi:leaf",
 }
 HEADERS = {
     "user-agent": "Mozilla/5.0",
@@ -44,7 +42,6 @@ PARAM_DESCRIPTIONS = {
         "parcel_number": "An easy way to discover your parcel_number is by going to https://geohub-mundaring.hub.arcgis.com/, and use the Property Map to search for your address ensuring both Lot Numbers and House Number checkboxes are ticked. The pop-up that appears contains an entry that shows your parcel number.",
     }
 }
-
 
 class Source:
     def __init__(self, parcel_number: str | int, suburb: str):

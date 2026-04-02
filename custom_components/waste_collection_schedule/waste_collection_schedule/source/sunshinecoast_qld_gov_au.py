@@ -14,23 +14,16 @@ TEST_CASES = {
 }
 
 API_URL = "https://www.sunshinecoast.qld.gov.au/__server__/api/v1"
-ICON_MAP = {
-    "Garbage": "mdi:trash-can",
-    "Recycle": "mdi:recycle",
-    "Organic": "mdi:leaf",
-}
 
 """
     WEEK TYPES
         sunshine coast uses a week setting
         week 1 and week 2 starting from a set date
 
-
     RETURNED VALUES FROM API Query
         JSON DATA:
             [{"id":"<id>","street":"<Street Name>","locality":"<Town>","day":"Wednesday","week":"1","instructions":""}]
 """
-
 
 class Source:
     def __init__(
@@ -75,7 +68,6 @@ class Source:
                     Collection(
                         date=date.date(),
                         t=text,
-                        icon=ICON_MAP[text],
                     )
                 )
 

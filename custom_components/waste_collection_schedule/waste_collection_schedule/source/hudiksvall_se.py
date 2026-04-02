@@ -12,23 +12,16 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Restavfall": "mdi:trash-can",
-    "Matavfall": "mdi:leaf",
-    "Porslin": "mdi:coffee",
-    "Returpapper": "mdi:package-variant",
-    "Pappersförpackningar": "mdi:package-variant",
-    "Plastförpackningar": "mdi:recycle",
-    "Metallförpackningar": "mdi:recycle",
     "Färgade": "mdi:bottle-soda",
-    "Ofärgade": "mdi:bottle-soda",
     "Ljuskällor": "mdi:lightbulb",
-    "Småbatterier": "mdi:battery",
+    "Ofärgade": "mdi:bottle-soda",
+    "Plastförpackningar": "mdi:recycle",
+    "Porslin": "mdi:coffee",
 }
 
 API_URL = "https://gis.hudiksvall.se/origoserver/EDPFuture"
 
 HEADERS = {"User-Agent": "Mozilla/5.0"}
-
 
 class Source:
     def __init__(self, address: str):

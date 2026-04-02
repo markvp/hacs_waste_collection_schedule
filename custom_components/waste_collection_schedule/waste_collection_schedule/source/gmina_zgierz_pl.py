@@ -23,7 +23,6 @@ _LOGGER = logging.getLogger(__name__)
 API_URL = "https://bip.gminazgierz.pl/api/articles/59717"
 
 ICON_MAP = {
-    "Segregowane i zmieszane": "mdi:trash-can",
     "BIO": "mdi:recycle",
     "Gabaryty": "mdi:cupboard",
 }
@@ -54,7 +53,6 @@ MONTH_MAP = {
     "grudzień": 12,
     "grudnia": 12,
 }
-
 
 class Source:
     def __init__(self, location_name: str):

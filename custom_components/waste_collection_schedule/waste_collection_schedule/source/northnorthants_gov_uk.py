@@ -2,7 +2,6 @@
 # This is predominantly a refactoring of the Bristol City Council script from the UKBinCollectionData repo
 # https://github.com/robbrad/UKBinCollectionData
 
-
 import json
 from datetime import datetime, timedelta, timezone
 
@@ -21,17 +20,14 @@ TEST_CASES = {
     },
 }
 
-
 ICON_MAP = {
-    "General": "mdi:trash-can",
     "Food": "mdi:food",
     "Garden": "mdi:recycle",
+    "General": "mdi:trash-can",
     "Recycling": "mdi:package-variant",
 }
 
-
 API_URL = "https://www.northnorthants.gov.uk/bins/bin-collection-day"
-
 
 class Source:
     def __init__(self, uprn: str | int):

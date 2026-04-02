@@ -14,14 +14,10 @@ URL = "https://www.wastecollection.mt/"
 
 TEST_CASES: dict[str, dict] = {"test": {}}
 
-
 ICON_MAP = {
     "Mixed": "mdi:trash-can",
-    "Recycled": "mdi:recycle",
-    "Organic": "mdi:leaf",
     "glass": "mdi:bottle-soda",
 }
-
 
 API_URL = "https://www.wastecollection.mt/"
 
@@ -36,7 +32,6 @@ DAYS = {
 }
 
 TIMING_WORDS = {"first": 1, "second": 2, "third": 3, "fourth": 4, "last": -1}
-
 
 class Source:
     def __init__(self):

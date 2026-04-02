@@ -18,8 +18,6 @@ API_URL = (
     "https://swale.gov.uk/bins-littering-and-the-environment/bins/my-collection-day"
 )
 ICON_MAP = {
-    "Refuse": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
     "Food": "mdi:food-apple",
     "Garden": "mdi:leaf",
 }
@@ -41,7 +39,6 @@ PARAM_DESCRIPTIONS = {
         "postcode": "Postcode of the property",
     },
 }
-
 
 class Source:
     def __init__(self, uprn: int | str, postcode: str):

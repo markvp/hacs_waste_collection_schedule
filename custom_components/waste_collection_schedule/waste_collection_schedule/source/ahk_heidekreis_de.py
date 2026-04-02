@@ -43,12 +43,8 @@ _OBJECT_ID_KEYS = ("idObject", "IdObject", "objektId", "ObjektId", "objectId", "
 PARAM_TRANSLATIONS = {
     "de": {
         "city": "Ort",
-        "street": "Straße",
-        "postcode": "PLZ",
-        "house_number": "Hausnummer",
-    }
+    },
 }
-
 
 def _get_field(item: dict, *possible_keys: str):
     """Return the value for the first matching key found in item."""
@@ -56,7 +52,6 @@ def _get_field(item: dict, *possible_keys: str):
         if key in item:
             return item[key]
     return None
-
 
 class Source:
     def __init__(self, city, postcode, street, house_number):

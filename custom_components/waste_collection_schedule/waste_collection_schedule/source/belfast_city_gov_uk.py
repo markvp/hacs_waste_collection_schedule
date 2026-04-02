@@ -21,14 +21,11 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Recycling bin": "mdi:recycle",
     "Compost bin": "mdi:flower",
-    "General waste bin": "mdi:trash-can",
 }
 
 API_URL = URL + "/Default.aspx"
 REQUEST_TIMEOUT = 30
-
 
 class Source:
     """Belfast City Council waste collection source."""

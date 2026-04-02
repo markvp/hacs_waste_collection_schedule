@@ -14,15 +14,7 @@ TEST_CASES = {
     "37 Pilkington St, Garbutt": {"property_id": "580f6e5c1b5ba090598520202d4bcb91"},
 }
 
-
-ICON_MAP = {
-    "Rubbish": "mdi:trash-can",
-    "Recycle": "mdi:recycle",
-}
-
-
 API_URL = "https://mitownsville.service-now.com/api/cio19/bin_collection_dates/getBinCollectionCal"
-
 
 class Source:
     def __init__(self, property_id: str):

@@ -15,15 +15,13 @@ DESCRIPTION = "Support for the waste collection schedule provided by the Office 
 URL = "https://www.heidelberg.de/abfall"
 
 PARAM_TRANSLATIONS = {
-    "en": {
-        "street": "Street",
-        "collect_residual_waste_weekly": "Weekly residual waste collection",
-        "even_house_number": "House number to collect from is even",
-    },
     "de": {
-        "street": "Straße",
         "collect_residual_waste_weekly": "Wöchentliche Abholung des Restmülls",
         "even_house_number": "Hausnummer der Abholadresse ist gerade",
+    },
+    "en": {
+        "collect_residual_waste_weekly": "Weekly residual waste collection",
+        "even_house_number": "House number to collect from is even",
     },
 }
 
@@ -78,9 +76,7 @@ SCHEDULE_TYPES = {
 ICON_MAP = {
     "bio": "mdi:bio",
     "dsd": "mdi:recycle",
-    "paper": "mdi:package-variant",
     "rest": "mdi:trash-can",
-    "christmas": "mdi:pine-tree",
 }
 
 WEEKDAY_MAP = {
@@ -98,12 +94,10 @@ COLLECTIONS_API_URL = (
     "https://garbage.datenplattform.heidelberg.de/collections?street={street}"
 )
 
-
 class PostponementInformation:
     def __init__(self, original_date, new_date):
         self.original_date = original_date
         self.new_date = new_date
-
 
 class WasteInformation:
     def __init__(
@@ -184,7 +178,6 @@ class WasteInformation:
 
     def get_collection_dates(self) -> list[datetime.date]:
         return list(map(lambda x: x.date(), list(self._collection_ruleset)))
-
 
 class Source:
     def __init__(

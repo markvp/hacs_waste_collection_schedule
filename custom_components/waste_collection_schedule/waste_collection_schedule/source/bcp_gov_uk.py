@@ -15,12 +15,6 @@ TEST_CASES = {
     "Test_002": {"uprn": "10001085438"},
     "Test_003": {"uprn": "100040567667"},
 }
-ICON_MAP = {
-    "Recycling": "mdi:recycle",
-    "Rubbish": "mdi:trash-can",
-    "Garden Waste": "mdi:leaf",
-    "Food Waste": "mdi:food",
-}
 
 API_URL = "https://bcpportal.bcpcouncil.gov.uk/checkyourbincollection/"
 
@@ -28,7 +22,6 @@ API_URL_REGEX = re.compile(
     r'function fetchBinCollectionData.*?const response = await fetch\("(.*?)"',
     re.MULTILINE | re.DOTALL,
 )
-
 
 class Source:
     """Fetches bin collection data for BCP Council using the Logic App endpoint."""

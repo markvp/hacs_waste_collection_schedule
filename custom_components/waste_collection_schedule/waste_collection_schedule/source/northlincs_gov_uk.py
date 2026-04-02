@@ -17,13 +17,8 @@ TEST_CASES = {
 }
 ICON_MAP = {
     "Plastic and cardboard wheeled bin": "mdi:recycle",
-    "Blue kerbside box - paper": "mdi:package-variant",
-    "Brown garden waste wheeled bin": "mdi:leaf",
     "Textiles Bag": "mdi:sack",
-    "Green kerbside box - cans, glass and aluminium foil": "mdi:glass-fragile",
-    "General waste wheeled bin": "mdi:trash-can",
 }
-
 
 class Source:
     def __init__(self, uprn):

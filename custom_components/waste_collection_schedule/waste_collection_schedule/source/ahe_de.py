@@ -15,22 +15,12 @@ TEST_CASES = {
     "58313 Alte Straße 1": {"plz": 58313, "strasse": "alte STraße", "hnr": "1"},
 }
 
-
-ICON_MAP = {
-    "Restabfall": "mdi:trash-can",
-    "Bioabfall": "mdi:leaf",
-    "Papier": "mdi:package-variant",
-    "Gelber Sack": "mdi:recycle",
-}
-
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     "en": "Find the parameter of your address using [https://ahe.atino.net/pickup-dates](https://ahe.atino.net/pickup-dates) and write them exactly like on the web page."
 }
 
-
 API_URL = "https://ahe.atino.net/{search}"
 SEARCH_API_URL = API_URL.format(search="search/{search}")
-
 
 class Source:
     def __init__(self, plz: str | int, strasse: str, hnr: str | int):
@@ -118,5 +108,5 @@ class Source:
 
         entries = []
         for d in dates:
-            entries.append(Collection(d[0], d[1], icon=ICON_MAP.get(d[1])))
+            entries.append(Collection(d[0], d[1]))
         return entries

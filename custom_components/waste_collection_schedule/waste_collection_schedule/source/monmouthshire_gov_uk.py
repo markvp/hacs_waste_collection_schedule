@@ -24,10 +24,6 @@ TEST_CASES = {
 API_URL = "https://maps.monmouthshire.gov.uk/localinfo.aspx"
 
 ICON_MAP = {
-    "Blue food bin": "mdi:food",
-    "Garden Waste Bins": "mdi:leaf",
-    "Green Glass Box": "mdi:glass-fragile",
-    "Household rubbish bag": "mdi:trash-can",
     "Red & purple recycling bags": "mdi:recycling",
     "Yellow nappy & hygiene waste bag": "mdi:diaper-outline",
 }
@@ -53,7 +49,6 @@ HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-GB,en;q=0.5",
 }
-
 
 class Source:
     def __init__(self, uprn: str | int):

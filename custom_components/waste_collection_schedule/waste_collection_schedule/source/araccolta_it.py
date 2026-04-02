@@ -17,10 +17,14 @@ TEST_CASES = {
     },
 }
 
-
 PARAM_TRANSLATIONS = {
-    "en": {"district": "District", "domestic": "Domestic"},
-    "it": {"district": "Quartiere", "domestic": "Utenze domestiche"},
+    "en": {
+        "domestic": "Domestic",
+    },
+    "it": {
+        "district": "Quartiere",
+        "domestic": "Utenze domestiche",
+    },
 }
 
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
@@ -30,12 +34,10 @@ HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
 
 ICON_MAP = {
     "Carta e cartone": "mdi:newspaper",
-    "Organico": "mdi:leaf",
+    "Plastica e metalli": "mdi:bottle-soda-classic",
     "Secco residuo": "mdi:delete",
     "Vetro": "mdi:bottle-wine",
-    "Plastica e metalli": "mdi:bottle-soda-classic",
 }
-
 
 ITALIAN_WEEKDAYS = [
     "lunedì",
@@ -48,7 +50,6 @@ ITALIAN_WEEKDAYS = [
 ]
 
 API_URL = "https://araccolta.it/{district}/"
-
 
 class Source:
     def __init__(self, district: str, domestic: bool = True):

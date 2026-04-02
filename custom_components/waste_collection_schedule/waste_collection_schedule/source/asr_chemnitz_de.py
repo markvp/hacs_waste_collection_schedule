@@ -26,26 +26,13 @@ TEST_CASES = {
     "Damaschkestraße 36": {"street": "Damaschkestr.", "house_number": "36"},
 }
 
-ICON_MAP = {
-    "Restabfall": "mdi:trash-can",
-    "Weihnachtsbaum": "mdi:pine-tree",
-    "Bio": "mdi:leaf",
-    "Pappe, Papier & Kart.": "mdi:package-variant",
-    "Leichtstoffverpackungen": "mdi:recycle",
-}
-
-
 API_URL = "https://asc.hausmuell.info/ics/ics.php"
-
 
 PARAM_TRANSLATIONS = {
     "de": {
-        "street": "Straße",
-        "house_number": "Hausnummer",
         "object_number": "Objektnummer",
-    }
+    },
 }
-
 
 class Source:
     def __init__(

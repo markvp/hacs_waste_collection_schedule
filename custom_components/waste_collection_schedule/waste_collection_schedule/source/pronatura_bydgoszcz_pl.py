@@ -36,14 +36,10 @@ NAME_MAP = {
 }
 
 ICON_MAP = {
-    "odpady zmieszane": "mdi:trash-can",
-    "papier": "mdi:recycle",
-    "plastik": "mdi:recycle",
-    "szkło": "mdi:recycle",
-    "odpady bio": "mdi:leaf",
     "odpady wielkogabarytowe": "mdi:wardrobe",
+    "papier": "mdi:recycle",
+    "szkło": "mdi:recycle",
 }
-
 
 class Source:
     def __init__(self, street_name, street_number):

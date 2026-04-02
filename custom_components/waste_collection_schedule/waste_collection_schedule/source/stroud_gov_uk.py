@@ -13,20 +13,15 @@ DESCRIPTION = "Source for Stroud District Council."
 URL = "https://stroud.gov.uk"
 TEST_CASES = {"GL6+9BW 100120517945": {"postcode": "GL6 9BW", "uprn": 100120517945}}
 
-
 ICON_MAP = {
-    "rubbish": "mdi:trash-can",
     "food": "mdi:food",
-    "recycling": "mdi:recycle",
     "garden": "mdi:leaf",
 }
-
 
 API_URL = "https://www.stroud.gov.uk/my-house"
 
 # Wednesday 24 July 2024
 DATE_REGEX = r"(\w+day) (\d{1,2}) (\w+) (\d{4})"
-
 
 def make_bin_type_string(bin_type: str) -> str:
     return (
@@ -38,10 +33,8 @@ def make_bin_type_string(bin_type: str) -> str:
         .capitalize()
     )
 
-
 def get_icon(bin_type: str) -> str | None:
     return ICON_MAP.get(bin_type.split()[0].lower())
-
 
 class Source:
     def __init__(self, postcode: str, uprn: str | int):

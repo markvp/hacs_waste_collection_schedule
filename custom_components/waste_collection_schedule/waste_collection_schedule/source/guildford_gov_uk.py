@@ -14,14 +14,10 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Refuse": "mdi:trash-can",
     "Food": "mdi:food-apple",
-    "Recycling": "mdi:recycle",
-    "Garden Waste": "mdi:leaf",
 }
 
 API_URL = "https://my.guildford.gov.uk/customers/s/sfsites/aura?r=10&other.BinScheduleDisplayCmp.GetBinSchedules=1"
-
 
 class Source:
     def __init__(self, uprn):

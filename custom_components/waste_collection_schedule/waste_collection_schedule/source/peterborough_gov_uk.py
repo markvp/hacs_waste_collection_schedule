@@ -16,10 +16,9 @@ API_URLS = {
 
 ICON_MAP = {
     "Empty Bin 240L Black": "mdi:trash-can",
-    "Empty Bin 240L Green": "mdi:recycle",
     "Empty Bin 240L Brown": "mdi:leaf",
+    "Empty Bin 240L Green": "mdi:recycle",
 }
-
 
 class Source:
     def __init__(self, post_code, uprn):

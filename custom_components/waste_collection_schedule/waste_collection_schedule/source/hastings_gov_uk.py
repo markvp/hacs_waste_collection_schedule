@@ -11,7 +11,6 @@ from waste_collection_schedule import Collection  # type: ignore[attr-defined]
 # This line suppresses the InsecureRequestWarning when using verify=False
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-
 TITLE = "Hastings Borough Council"
 DESCRIPTION = "Source for hastings.gov.uk services for Hastings Borough Council, UK."
 URL = "https://www.hastings.gov.uk/"
@@ -20,10 +19,6 @@ TEST_CASES = {
     "Test_001": {"postcode": "TN34 1QF", "house_number": 36, "uprn": 100060038877},
     "Test_002": {"postcode": "TN34 2DL", "house_number": "28A", "uprn": "10070609836"},
     "Test_003": {"postcode": "TN37 7QH", "house_number": 5, "uprn": "100060041770"},
-}
-ICON_MAP = {
-    "Recycling": "mdi:recycle",
-    "Rubbish": "mdi:trash-can",
 }
 HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
     "en": "An easy way to discover your Unique Property Reference Number (UPRN) is by going to https://www.findmyaddress.co.uk/ and entering in your address details",
@@ -42,7 +37,6 @@ PARAM_DESCRIPTIONS = {
         "house_number": "Deprecated, leave mpty, will be ignored",
     }
 }
-
 
 class Source:
     def __init__(

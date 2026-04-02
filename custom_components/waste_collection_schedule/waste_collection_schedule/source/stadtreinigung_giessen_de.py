@@ -36,20 +36,11 @@ ICON_MAP = {
 
 PARAM_TRANSLATIONS = {
     "en": {
-        "street": "Street",
         "house_number": "House number",
     },
-    "de": {
-        "street": "Straße",
-        "house_number": "Hausnummer",
-    },
     "it": {
-        "street": "Via",
         "house_number": "Numero civico",
-    },
-    "fr": {
-        "street": "Rue",
-        "house_number": "Numéro de maison",
+        "street": "Via",
     },
 }
 
@@ -73,7 +64,6 @@ PARAM_DESCRIPTIONS = {
 }
 
 BASE_URL = "https://stadtreinigung.giessen.de/akal/akal1.php"
-
 
 class StreetOptionParser(HTMLParser):
     """Parse the street dropdown options from the HTML form."""
@@ -109,7 +99,6 @@ class StreetOptionParser(HTMLParser):
             self._in_select = False
         elif tag == "option":
             self._current_value = None
-
 
 class Source:
     def __init__(self, street: str, house_number: str):

@@ -23,9 +23,7 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Domestic": "mdi:trash-can",
     "Food": "mdi:food-apple",
-    "Recycling": "mdi:recycle",
     "Garden": "mdi:leaf",
 }
 
@@ -42,7 +40,6 @@ HEADERS = {
 }
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class Source:
     def __init__(self, uprn: str):

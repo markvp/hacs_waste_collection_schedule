@@ -13,17 +13,12 @@ DESCRIPTION = "Source for Fosen Renovasjon."
 URL = "https://fosenrenovasjon.no/"
 TEST_CASES = {"Lysøysundveien 117": {"address": "Lysøysundveien 117"}}
 
-
 ICON_MAP = {
-    "Restavfall til forbrenning": "mdi:trash-can",
-    "Matavfall": "mdi:leaf",
     "Papir og plastemballasje": "mdi:recycle",
 }
 
-
 ADDRESS_URL = "https://fosen.renovasjonsportal.no/api/address/{address}"
 COLLECTIONS_URL = ADDRESS_URL + "/details"
-
 
 class Source:
     def __init__(self, address: str):

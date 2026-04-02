@@ -12,17 +12,8 @@ TEST_CASES = {
     "Parsberg, Bogenmühle": {"city": "parsberg", "street": "bogenmuehle"},
 }
 
-
-ICON_MAP = {
-    "Restmüll": "mdi:trash-can",
-    "Papiertonne": "mdi:package-variant",
-    "Gelber Sack": "mdi:recycle",
-}
-
-
 BASE_API_URL = "https://www.abfuhrplan-landkreis-neumarkt.de"
 DATA_ULR = BASE_API_URL + "/{city}/{street}"
-
 
 def _prepare_arg(arg: str) -> str:
     return (
@@ -36,7 +27,6 @@ def _prepare_arg(arg: str) -> str:
         .replace("ü", "ue")
         .replace("ß", "ss")
     )
-
 
 class Source:
     def __init__(self, city: str, street: str):

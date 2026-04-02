@@ -24,16 +24,12 @@ TEST_CASES = {
     "BASSENS 1": {"district": "BASSENS 1 et BASSENS 2"},
 }
 
-
 ICON_MAP = {
     "Ménagères": "mdi:trash-can",
-    "Recyclables": "mdi:recycle",
 }
-
 
 API_URL = "https://www.google.com/maps/d/embed?mid=192kaU1tycR1QLrQuF_1hhIdtwghc1GDg&ll=44.90521499253571,-0.5239428999999873&z=13"
 PAGE_DATA_REGEX = r'var _pageData\s+=\s*"(\[.*?\])";'
-
 
 class Source:
     def __init__(self, district: str):

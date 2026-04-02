@@ -15,12 +15,6 @@ TEST_CASES = {
 }
 
 API_URL = "https://www.cardinia.vic.gov.au/info/20002/rubbish_and_recycling/385/bin_collection_days_and_putting_your_bins_out/2#section-2-check-your-bin-collection-days-online"
-ICON_MAP = {
-    "Rubbish": "mdi:trash-can",
-    "Recycling": "mdi:recycle",
-    "Green Waste": "mdi:leaf",
-}
-
 
 class Source:
     def __init__(self, address):
@@ -83,7 +77,6 @@ class Source:
                 Collection(
                     date = next_date,
                     t = "Rubbish",
-                    icon = ICON_MAP.get("Rubbish"),
                 )
             )
         
@@ -92,7 +85,6 @@ class Source:
                 Collection(
                     date = next_date,
                     t = "Recycling",
-                    icon = ICON_MAP.get("Recycling"),
                 )
             )
         
@@ -101,7 +93,6 @@ class Source:
                 Collection(
                     date = next_date,
                     t = "Green Waste",
-                    icon = ICON_MAP.get("Green Waste"),
                 )
             )
 

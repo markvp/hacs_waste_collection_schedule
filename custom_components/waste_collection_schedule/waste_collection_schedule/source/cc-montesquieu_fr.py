@@ -31,10 +31,8 @@ COMMUNES = [
 
 TEST_CASES = {commune: {"commune": commune} for commune in COMMUNES}
 
-ICON_MAP = {  # Optional: Dict of waste types and suitable mdi icons
-    "Bac d'ordures ménagères": "mdi:trash-can",
+ICON_MAP = {
     "Bac jaune": "mdi:recycle",
-    "Déchets verts": "mdi:leaf",
     "Encombrants": "mdi:dump-truck",
 }
 
@@ -58,16 +56,7 @@ PARAM_DESCRIPTIONS = {
     },
 }
 
-PARAM_TRANSLATIONS = {  # Optional dict to translate the arguments, will be shown in the GUI configuration form as placeholder text
-    "en": {
-        "commune": "City",
-    },
-    "de": {
-        "commune": "Stadt",
-    },
-}
 # ### End of arguments affecting the configuration GUI ####
-
 
 class Source:
     def __init__(self, commune: str):

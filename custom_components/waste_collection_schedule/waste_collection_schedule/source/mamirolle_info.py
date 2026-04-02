@@ -17,7 +17,6 @@ TEST_CASES = {
 }
 
 ICON_MAP = {
-    "Poubelle grise": "mdi:trash-can",
     "Poubelle jaune": "mdi:recycle",
 }
 
@@ -35,7 +34,6 @@ MONTH_NAMES = [
     "novembre",
     "décembre",
 ]
-
 
 class Source:
     def __init__(self, _=None):

@@ -19,21 +19,16 @@ TEST_CASES = {
 
 HEADERS = {"user-agent": "Mozilla/5.0 (xxxx Windows NT 10.0; Win64; x64)"}
 ICON_MAP = {
-    "Restabfall": "mdi:trash-can-outline",
-    "Gelber Sack": "mdi:recycle",
-    "Papiertonne": "mdi:package-variant",
     "Biotonne": "mdi:food-apple-outline",
+    "Restabfall": "mdi:trash-can-outline",
 }
-
 
 PARAM_TRANSLATIONS = {
     "de": {
         "city": "Ort",
-        "street": "Straße",
         "number": "Hausnummer",
-    }
+    },
 }
-
 
 class Source:
     def __init__(self, city, street, number):
