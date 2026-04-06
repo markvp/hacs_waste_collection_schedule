@@ -28,9 +28,6 @@ class BaseSource:
     URL: str = ""
     COUNTRY: str = ""
     TEST_CASES: dict = {}
-    PARAM_TRANSLATIONS: dict = {}
-    PARAM_DESCRIPTIONS: dict = {}
-    HOW_TO_GET_ARGUMENTS_DESCRIPTION: dict = {}
 
     # --- Waste types this source produces ---
     WASTE_TYPES: list[WasteType] = []
