@@ -12,15 +12,15 @@ from dateutil import parser as dateutil_parser
 _LOGGER = logging.getLogger(__name__)
 
 
-def auto(date_str: str) -> datetime.date:
+def auto(self, date_str: str) -> datetime.date:
     """Auto-detect date format using dateutil."""
     return dateutil_parser.parse(date_str.strip()).date()
 
 
 def for_format(fmt: str):
-    """Return a date parser function for a specific strptime format."""
+    """Return a date parser method for a specific strptime format."""
 
-    def _parse(date_str: str) -> datetime.date:
+    def _parse(self, date_str: str) -> datetime.date:
         return datetime.datetime.strptime(date_str.strip(), fmt).date()
 
     return _parse

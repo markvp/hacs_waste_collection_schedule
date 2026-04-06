@@ -8,16 +8,16 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def json(response: requests.Response):
+def json(self, response: requests.Response):
     """Parse response as JSON."""
     return response.json()
 
 
-def text(response: requests.Response) -> str:
+def text(self, response: requests.Response) -> str:
     """Return response as plain text."""
     return response.text
 
 
-def html(response: requests.Response) -> BeautifulSoup:
+def html(self, response: requests.Response) -> BeautifulSoup:
     """Parse response as HTML."""
     return BeautifulSoup(response.text, "html.parser")

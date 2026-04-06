@@ -8,23 +8,29 @@ as instance/class attributes.
 import requests
 
 
-def http_get(source) -> requests.Response:
-    """Standard HTTP GET request."""
+def http_get(self) -> requests.Response:
+    """Standard HTTP GET request.
+
+    Reads API_URL, _params, _headers, TIMEOUT from the source instance.
+    """
     return requests.get(
-        source.API_URL,
-        params=getattr(source, "_params", None),
-        headers=getattr(source, "_headers", None),
-        timeout=getattr(source, "TIMEOUT", 30),
+        self.API_URL,
+        params=getattr(self, "_params", None),
+        headers=getattr(self, "_headers", None),
+        timeout=getattr(self, "TIMEOUT", 30),
     )
 
 
-def http_post(source) -> requests.Response:
-    """Standard HTTP POST request."""
+def http_post(self) -> requests.Response:
+    """Standard HTTP POST request.
+
+    Reads API_URL, _params, _data, _json, _headers, TIMEOUT from the source instance.
+    """
     return requests.post(
-        source.API_URL,
-        params=getattr(source, "_params", None),
-        data=getattr(source, "_data", None),
-        json=getattr(source, "_json", None),
-        headers=getattr(source, "_headers", None),
-        timeout=getattr(source, "TIMEOUT", 30),
+        self.API_URL,
+        params=getattr(self, "_params", None),
+        data=getattr(self, "_data", None),
+        json=getattr(self, "_json", None),
+        headers=getattr(self, "_headers", None),
+        timeout=getattr(self, "TIMEOUT", 30),
     )
