@@ -1,11 +1,11 @@
 from waste_collection_schedule.base_source import BaseSource
+from waste_collection_schedule.collection import Collection
 from waste_collection_schedule.config_params import coords
 from waste_collection_schedule.waste_types import (
     GARDEN_WASTE,
     GENERAL_WASTE,
     ORGANIC,
     RECYCLABLES,
-    WasteType,
 )
 
 
@@ -49,7 +49,7 @@ class Source(BaseSource):
             "Referer": f"{self.URL}/waste-and-environment/waste-and-recycling/bin-collections",
         }
 
-    def classify(self, record) -> tuple[str, WasteType] | None:
+    def classify(self, record) -> Collection | None:
         fields = {
             arg["name"]: arg["value"]
             for arg in record
@@ -64,4 +64,5 @@ class Source(BaseSource):
         if not waste_type:
             return None
 
-        return (date_str.replace("  ", " ").strip(), waste_type)
+        date = self.parse_date(date_str.replace("  ", " ").strip())
+        return Collection(date=date, waste_type=waste_type)

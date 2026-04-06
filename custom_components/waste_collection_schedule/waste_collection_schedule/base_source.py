@@ -9,7 +9,6 @@ code for classify() — the source-specific knowledge of what each
 record means.
 """
 
-import datetime
 import logging
 
 from waste_collection_schedule.collection import Collection
@@ -37,15 +36,49 @@ class BaseSource:
     API_URL: str = ""
     TIMEOUT: int = 30
 
-    # Standard pipeline steps — override with alternatives as needed
+    # --- Pipeline steps (override to customise) ---
+
     retrieve = retrievers.http_get
+    """Fetch raw data from the remote service. Returns a requests.Response.
+
+    Default: HTTP GET to API_URL with _params, _headers, TIMEOUT.
+    Alternatives: retrievers.http_post, or a custom method.
+
+    Set on the class to swap the retrieval strategy::
+
+        retrieve = retrievers.http_post    # POST instead of GET
+    """
+
     parse = parsers.json
+    """Convert the raw response into an iterable of records.
+
+    Default: parse as JSON (response.json()).
+    Alternatives: parsers.html (BeautifulSoup), parsers.text (plain str),
+    or a custom method.
+
+    Each record is passed individually to classify()::
+
+        parse = parsers.html    # parse HTML with BeautifulSoup
+    """
+
     parse_date = date_parsers.auto
+    """Parse a date string into a datetime.date.
+
+    Default: auto-detect format via dateutil.
+    Alternative: date_parsers.for_format("%d/%m/%Y") for a known format.
+
+    Called by sources inside classify() when the date is a string::
+
+        parse_date = date_parsers.for_format("%d %B %Y")
+    """
 
     # --- Pipeline orchestration ---
 
     def fetch(self) -> list[Collection]:
-        """Orchestrate: retrieve → parse → classify each → Collection."""
+        """Orchestrate the pipeline: retrieve → parse → classify.
+
+        Generally not overridden. Override the individual steps instead.
+        """
         response = self.retrieve()
         records = self.parse(response)
 
@@ -57,23 +90,26 @@ class BaseSource:
 
         entries = []
         for record in records:
-            result = self.classify(record)
-            if result is None:
-                continue
-
-            date_value, waste_type = result
-
-            if isinstance(date_value, str):
-                date_value = self.parse_date(date_value)
-
-            entries.append(Collection(date=date_value, waste_type=waste_type))
+            collection = self.classify(record)
+            if collection is not None:
+                entries.append(collection)
 
         return entries
 
-    def classify(self, record) -> tuple[datetime.date | str, WasteType] | None:
-        """Classify a single record into (date, WasteType).
+    def classify(self, record) -> Collection | None:
+        """Extract a Collection from a single parsed record.
 
-        Override this — the source-specific knowledge of what each record means.
-        Return None to skip a record.
+        This is the only method most sources need to implement. Receives
+        one record (a dict, HTML element, etc. depending on the parser)
+        and returns a Collection, or None to skip the record.
+
+        Use self.parse_date() to convert date strings::
+
+            def classify(self, record) -> Collection | None:
+                date = self.parse_date(record["date"])
+                waste_type = self.TYPE_MAP.get(record["bin"])
+                if not waste_type:
+                    return None
+                return Collection(date=date, waste_type=waste_type)
         """
         raise NotImplementedError("Source must implement classify()")
