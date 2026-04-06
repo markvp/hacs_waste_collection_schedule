@@ -35,6 +35,7 @@ from homeassistant.helpers.selector import (
 from homeassistant.helpers.translation import async_get_translations
 from voluptuous.schema_builder import UNDEFINED
 from waste_collection_schedule.collection import Collection
+from waste_collection_schedule.config_params import ConfigParam
 from waste_collection_schedule.exceptions import (
     SourceArgumentException,
     SourceArgumentExceptionMultiple,
@@ -138,6 +139,66 @@ SUPPORTED_ARG_TYPES = {
     date: cv.date,
     datetime: cv.datetime,
 }
+
+
+def _is_new_style_source(source_cls) -> bool:
+    """Check if a source uses the new PARAMS-based architecture."""
+    return bool(getattr(source_cls, "PARAMS", None))
+
+
+def _build_schema_from_params(
+    params: list[ConfigParam],
+    pre_filled: dict[str, Any],
+    args_input: dict[str, Any] | None,
+    include_title: bool = True,
+    title: str = "",
+) -> vol.Schema:
+    """Build a voluptuous schema from PARAMS declarations."""
+    vol_args: dict = {}
+
+    if include_title:
+        description = None
+        if args_input is not None and CONF_SOURCE_CALENDAR_TITLE in args_input:
+            description = {"suggested_value": args_input[CONF_SOURCE_CALENDAR_TITLE]}
+        vol_args[vol.Optional(
+            CONF_SOURCE_CALENDAR_TITLE,
+            description=description,
+            default=title,
+        )] = str
+
+    for param in params:
+        for field_name, display_label in param.fields.items():
+            description = None
+            if args_input is not None and field_name in args_input:
+                description = {"suggested_value": args_input[field_name]}
+            elif field_name in pre_filled:
+                description = {"suggested_value": pre_filled[field_name]}
+
+            # Map widget type to HA selector/validator
+            if param.widget == "map":
+                # Coordinates — use float fields
+                vol_args[vol.Required(field_name, description=description)] = cv.string
+            elif param.widget == "select":
+                # TODO: pass through options from ConfigParam when supported
+                vol_args[vol.Required(field_name, description=description)] = cv.string
+            elif param.widget == "uprn_lookup":
+                vol_args[vol.Required(field_name, description=description)] = cv.string
+            else:
+                # Default: text field
+                vol_args[vol.Required(field_name, description=description)] = cv.string
+
+    return vol.Schema(vol_args)
+
+
+def _get_waste_types_for_customize(source_cls) -> list[str]:
+    """Get waste type names from WASTE_TYPES for customization.
+
+    Returns waste_type.id strings for new-style sources.
+    """
+    waste_types = getattr(source_cls, "WASTE_TYPES", None)
+    if not waste_types:
+        return []
+    return [wt.names.get("en", wt.id) for wt in waste_types]
 
 
 def get_customize_schema(defaults: dict[str, Any] = {}):
@@ -501,6 +562,9 @@ class WasteCollectionConfigFlow(ConfigFlow, domain=DOMAIN):  # type: ignore[call
     ) -> Tuple[vol.Schema, types.ModuleType]:
         """Get schema for source arguments.
 
+        For new-style sources (with PARAMS), builds the schema from those
+        declarations. For legacy sources, falls back to __init__ introspection.
+
         Args:
             source (str): source name
             pre_filled (dict[str, Any]): arguments that are pre-filled (description suggested_value)
@@ -510,6 +574,29 @@ class WasteCollectionConfigFlow(ConfigFlow, domain=DOMAIN):  # type: ignore[call
         Returns:
             Tuple[vol.Schema, types.ModuleType]: schema, module
         """
+        # Import source module
+        module = await self.hass.async_add_executor_job(
+            importlib.import_module, f"waste_collection_schedule.source.{source}"
+        )
+
+        # Resolve title
+        source_cls = module.Source
+        title = getattr(source_cls, "TITLE", None) or getattr(module, "TITLE", source)
+        if hasattr(self, "_title") and isinstance(self._title, str):
+            title = self._title
+
+        # New-style source: build schema from PARAMS
+        if _is_new_style_source(source_cls):
+            schema = _build_schema_from_params(
+                source_cls.PARAMS,
+                pre_filled,
+                args_input,
+                include_title=include_title,
+                title=title,
+            )
+            return schema, module
+
+        # Legacy source: introspect __init__ signature
         suggestions: dict[str, list[Any]] = {}
         if hasattr(self, "_error_suggestions"):
             suggestions = {
@@ -518,20 +605,10 @@ class WasteCollectionConfigFlow(ConfigFlow, domain=DOMAIN):  # type: ignore[call
                 if len(value) > 0
             }
 
-        # Import source and get arguments
-        module = await self.hass.async_add_executor_job(
-            importlib.import_module, f"waste_collection_schedule.source.{source}"
-        )
-
         args = dict(inspect.signature(module.Source.__init__).parameters)
         del args["self"]  # Remove self
         # Convert schema for vol
         vol_args = {}
-        title = source  # Default title Should probably be overwritten by the module
-        if hasattr(module, "TITLE") and isinstance(module.TITLE, str):
-            title = module.TITLE
-        if hasattr(self, "_title") and isinstance(self._title, str):
-            title = self._title
 
         if include_title:
             description = None
@@ -687,6 +764,13 @@ class WasteCollectionConfigFlow(ConfigFlow, domain=DOMAIN):  # type: ignore[call
             if len(resp) == 0:
                 errors["base"] = "fetch_empty"
             self._fetched_types = list({x.type.strip() for x in resp})
+            # For new-style sources with WASTE_TYPES, also offer those
+            source_cls = module.Source
+            waste_type_names = _get_waste_types_for_customize(source_cls)
+            if waste_type_names:
+                self._fetched_types = list(
+                    set(self._fetched_types) | set(waste_type_names)
+                )
         except SourceArgumentSuggestionsExceptionBase as e:
             if not hasattr(self, "_error_suggestions"):
                 self._error_suggestions = {}

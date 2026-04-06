@@ -412,6 +412,17 @@ def browse_sources() -> list[SourceInfo]:
     return sources
 
 
+def _is_new_style_source(source_cls) -> bool:
+    """Check if a source uses the new PARAMS/WASTE_TYPES-based architecture.
+
+    New-style sources are self-describing — they don't need translation or
+    metadata generation from this script.
+    """
+    return bool(getattr(source_cls, "PARAMS", None)) or bool(
+        getattr(source_cls, "WASTE_TYPES", None)
+    )
+
+
 @lru_cache(maxsize=None)
 def get_source_by_file(file: str) -> tuple[ModuleType, list[SourceInfo]]:
     # iterate through all *.py files in waste_collection_schedule/source
@@ -419,6 +430,11 @@ def get_source_by_file(file: str) -> tuple[ModuleType, list[SourceInfo]]:
 
     # Read metadata from Source class first, fall back to module level
     source_cls = module.Source
+
+    # New-style sources are self-describing — skip translation/metadata generation
+    if _is_new_style_source(source_cls):
+        return module, []
+
     title = getattr(source_cls, "TITLE", None) or getattr(module, "TITLE", None)
     url = getattr(source_cls, "URL", None) or getattr(module, "URL", None)
     country = (

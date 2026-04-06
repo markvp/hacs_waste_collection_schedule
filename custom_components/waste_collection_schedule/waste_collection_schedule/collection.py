@@ -2,42 +2,26 @@ import datetime
 import logging
 from typing import Optional
 
+from .waste_types import WasteType
+
 _LOGGER = logging.getLogger(__name__)
 
 
 class Collection:
-    """A single waste collection event.
+    """A single waste collection event: (date, WasteType).
 
-    New-style (preferred):
-        Collection(date=..., waste_type=GENERAL_WASTE)
-
-    Deprecated (backwards compatible):
-        Collection(date=..., t="Refuse", icon="mdi:trash-can")
+    This is the new-style primary interface. Sources that use BaseSource
+    return Collection(date, waste_type) and everything else derives from
+    the WasteType.
     """
 
-    def __init__(
-        self,
-        date: datetime.date,
-        t: str | None = None,
-        icon: Optional[str] = None,
-        picture: Optional[str] = None,
-        waste_type=None,
-    ):
+    def __init__(self, date: datetime.date, waste_type: WasteType):
         self._date = date
         self._waste_type = waste_type
-        self._picture = picture
-
-        # Explicit overrides (from user config or legacy source params)
-        self._icon_override = icon if waste_type is not None else None
-        self._type_override = t if waste_type is not None else None
-
-        if waste_type is None and t is None:
-            raise ValueError("Collection requires either waste_type or t parameter")
-
-        # Legacy mode: no waste_type, store raw values
-        if waste_type is None:
-            self._legacy_type = t
-            self._legacy_icon = icon
+        # Overrides applied by source_shell.py Customize
+        self._type_override: str | None = None
+        self._icon_override: str | None = None
+        self._picture: str | None = None
 
     # --- Properties ---
 
@@ -50,23 +34,18 @@ class Collection:
         return (self._date - datetime.datetime.now().date()).days
 
     @property
-    def waste_type(self):
-        """The standard WasteType, or None for legacy sources."""
+    def waste_type(self) -> WasteType:
         return self._waste_type
 
     @property
     def type(self) -> str:
-        """Display name. Override > WasteType name > legacy string."""
-        if self._waste_type is not None:
-            return self._type_override or self._waste_type.names.get("en", self._waste_type.id)
-        return self._legacy_type
+        """Display name: override > WasteType English name."""
+        return self._type_override or self._waste_type.names.get("en", self._waste_type.id)
 
     @property
-    def icon(self) -> str | None:
-        """Icon. Override > WasteType icon > legacy icon."""
-        if self._waste_type is not None:
-            return self._icon_override or self._waste_type.icon
-        return self._legacy_icon
+    def icon(self) -> str:
+        """Icon: override > WasteType icon."""
+        return self._icon_override or self._waste_type.icon
 
     @property
     def picture(self) -> str | None:
@@ -75,16 +54,10 @@ class Collection:
     # --- Mutators (used by source_shell.py Customize) ---
 
     def set_type(self, t: str):
-        if self._waste_type is not None:
-            self._type_override = t
-        else:
-            self._legacy_type = t
+        self._type_override = t
 
     def set_icon(self, icon: str):
-        if self._waste_type is not None:
-            self._icon_override = icon
-        else:
-            self._legacy_icon = icon
+        self._icon_override = icon
 
     def set_picture(self, picture: str):
         self._picture = picture
@@ -92,10 +65,9 @@ class Collection:
     def set_date(self, date: datetime.date):
         self._date = date
 
-    # --- Serialization (for framework/HA frontend consumption) ---
+    # --- Serialization ---
 
     def as_dict(self) -> dict:
-        """Serialize for the framework."""
         return {
             "date": self._date.isoformat(),
             "type": self.type,
@@ -103,35 +75,8 @@ class Collection:
             "picture": self.picture,
         }
 
-    # --- Backwards compat: dict-like access for existing framework code ---
-
-    def __getitem__(self, key):
-        return self.as_dict()[key]
-
-    def __setitem__(self, key, value):
-        if key == "type":
-            self.set_type(value)
-        elif key == "icon":
-            self.set_icon(value)
-        elif key == "picture":
-            self.set_picture(value)
-        elif key == "date":
-            self._date = datetime.date.fromisoformat(value) if isinstance(value, str) else value
-
-    def __contains__(self, key):
-        return key in self.as_dict()
-
-    def get(self, key, default=None):
-        return self.as_dict().get(key, default)
-
-    def update(self, d: dict):
-        for k, v in d.items():
-            self[k] = v
-
     def __repr__(self):
-        if self._waste_type:
-            return f"Collection{{date={self.date}, waste_type={self._waste_type.id}}}"
-        return f"Collection{{date={self.date}, type={self.type}}}"
+        return f"Collection{{date={self.date}, waste_type={self._waste_type.id}}}"
 
     def __eq__(self, other):
         if not isinstance(other, Collection):
@@ -142,13 +87,87 @@ class Collection:
         return hash((self.date, self.type))
 
 
+class LegacyCollection(Collection):
+    """Adapter for old-style sources that pass t= and icon= strings.
+
+    Usage (by legacy sources):
+        Collection(date=..., t="Refuse", icon="mdi:trash-can")
+
+    Internally creates an ad-hoc WasteType from the provided strings.
+    """
+
+    def __init__(
+        self,
+        date: datetime.date,
+        t: str,
+        icon: Optional[str] = None,
+        picture: Optional[str] = None,
+    ):
+        from .waste_types import OTHER
+
+        # Create an ad-hoc WasteType from the legacy string params
+        ad_hoc = WasteType(
+            id=f"legacy_{t}",
+            icon=icon or OTHER.icon,
+            color=OTHER.color,
+            names={"en": t},
+        )
+        super().__init__(date=date, waste_type=ad_hoc)
+        self._picture = picture
+
+
+def _collection_factory(
+    date: datetime.date,
+    t: str | None = None,
+    icon: Optional[str] = None,
+    picture: Optional[str] = None,
+    waste_type: WasteType | None = None,
+) -> Collection:
+    """Factory that returns the right Collection type.
+
+    This is what old sources get when they `from waste_collection_schedule import Collection`.
+    Supports both:
+        Collection(date=..., waste_type=GENERAL_WASTE)     → new-style
+        Collection(date=..., t="Refuse", icon="mdi:...")   → legacy adapter
+    """
+    if waste_type is not None:
+        c = Collection(date=date, waste_type=waste_type)
+        if picture is not None:
+            c.set_picture(picture)
+        return c
+    if t is not None:
+        return LegacyCollection(date=date, t=t, icon=icon, picture=picture)
+    raise ValueError("Collection requires either waste_type or t parameter")
+
+
+# Make the factory callable as a class (for `Collection(date=..., t=...)` syntax)
+class _CollectionMeta:
+    """Wrapper that makes _collection_factory look like a class.
+
+    Supports isinstance() checks and attribute access on the 'class'.
+    """
+
+    def __call__(self, *args, **kwargs):
+        return _collection_factory(*args, **kwargs)
+
+    def __instancecheck__(self, instance):
+        return isinstance(instance, Collection)
+
+    def __subclasscheck__(self, subclass):
+        return issubclass(subclass, Collection)
+
+
+# This is what gets exported — callable like a class, dispatches to the right type
+CollectionFactory = _CollectionMeta()
+
+
 class CollectionGroup:
     """A group of collections on the same date (for calendar display)."""
 
     def __init__(self, date: datetime.date):
         self._date = date
-        self._icon = None
-        self._picture = None
+        self._icon: str | None = None
+        self._picture: str | None = None
         self._types: list[str] = []
 
     @staticmethod
@@ -195,7 +214,3 @@ class CollectionGroup:
 
     def __repr__(self):
         return f"CollectionGroup{{date={self.date}, types={self.types}}}"
-
-
-# Backwards compat — referenced by __init__.py and potentially external code
-CollectionBase = Collection

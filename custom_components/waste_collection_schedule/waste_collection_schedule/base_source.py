@@ -12,7 +12,7 @@ record means.
 import datetime
 import logging
 
-from waste_collection_schedule import Collection
+from waste_collection_schedule.collection import Collection
 from waste_collection_schedule.waste_types import WasteType
 from waste_collection_schedule import retrievers, parsers, date_parsers
 

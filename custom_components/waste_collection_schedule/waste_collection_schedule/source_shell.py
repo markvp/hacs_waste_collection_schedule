@@ -4,7 +4,7 @@ import logging
 import traceback
 from typing import Dict, Iterable, List, Optional, Protocol
 
-from .collection import Collection
+from .collection import Collection, LegacyCollection
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -75,16 +75,26 @@ class Customize:
         return f"Customize{{waste_type={self._waste_type}, alias={self._alias}, show={self._show}, icon={self._icon}, picture={self._picture}}}"
 
 
+def _get_customize_key(entry: Collection) -> str:
+    """Get the key to look up in the customize dict.
+
+    New-style sources: use waste_type.id (e.g. "general_waste")
+    Legacy sources: use the display string (e.g. "Refuse")
+    """
+    if isinstance(entry, LegacyCollection):
+        return entry.type
+    return entry.waste_type.id
+
+
 def filter_function(entry: Collection, customize: Dict[str, Customize]):
-    c = customize.get(entry.type)
+    c = customize.get(_get_customize_key(entry))
     if c is None:
         return True
-    else:
-        return c.show
+    return c.show
 
 
 def customize_function(entry: Collection, customize: Dict[str, Customize]):
-    c = customize.get(entry.type)
+    c = customize.get(_get_customize_key(entry))
     if c is not None:
         if c.alias is not None:
             entry.set_type(c.alias)
