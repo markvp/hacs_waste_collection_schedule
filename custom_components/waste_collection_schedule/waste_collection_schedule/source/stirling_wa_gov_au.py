@@ -13,6 +13,7 @@ class Source(BaseSource):
     TITLE = "Stirling"
     DESCRIPTION = "Source for Stirling."
     URL = "https://www.stirling.wa.gov.au"
+    COUNTRY = "au"
     API_URL = "https://www.stirling.wa.gov.au/bincollectioncheck/getresult"
 
     TEST_CASES = {

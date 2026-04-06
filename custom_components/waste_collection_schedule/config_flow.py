@@ -86,12 +86,43 @@ _LOGGER = logging.getLogger(__name__)
 # Load source lists and metadata for configuration
 _SOURCES_FILE = Path(__file__).parent / "sources.json"
 _SOURCE_METADATA_FILE = Path(__file__).parent / "source_metadata.json"
+_SOURCE_DIR = Path(__file__).parent / "waste_collection_schedule" / "source"
 _SOURCES: dict[str, list[Any]] = {}
 _SOURCE_METADATA: dict[str, dict[str, Any]] = {}
 
+# Country code → display name (shared with update_docu_links.py)
+_COUNTRY_CODE_MAP: dict[str, str] = {
+    "au": "Australia",
+    "at": "Austria",
+    "be": "Belgium",
+    "ca": "Canada",
+    "cz": "Czech Republic",
+    "de": "Germany",
+    "dk": "Denmark",
+    "hamburg": "Germany",
+    "hu": "Hungary",
+    "ie": "Ireland",
+    "it": "Italy",
+    "lt": "Lithuania",
+    "lu": "Luxembourg",
+    "mt": "Malta",
+    "nl": "Netherlands",
+    "nz": "New Zealand",
+    "no": "Norway",
+    "pl": "Poland",
+    "se": "Sweden",
+    "sk": "Slovakia",
+    "si": "Slovenia",
+    "ch": "Switzerland",
+    "us": "United States of America",
+    "uk": "United Kingdom",
+    "fr": "France",
+    "fi": "Finland",
+}
+
 
 def _load_sources() -> dict[str, list[Any]]:
-    """Load sources.json with error handling."""
+    """Load sources.json (legacy sources) with error handling."""
     try:
         with open(_SOURCES_FILE, encoding="utf-8") as f:
             return json.load(f)
@@ -110,7 +141,49 @@ def _load_source_metadata() -> dict[str, dict[str, Any]]:
         return {}
 
 
-# Initialize both files on module import
+def _discover_new_style_sources() -> dict[str, list[Any]]:
+    """Discover new-style sources at runtime by scanning the source directory.
+
+    New-style sources (with PARAMS) are self-describing — their metadata
+    is read from the Source class, not from generated JSON files.
+    """
+    sources: dict[str, list[Any]] = {}
+
+    for py_file in _SOURCE_DIR.glob("*.py"):
+        if py_file.stem == "__init__":
+            continue
+
+        try:
+            module = importlib.import_module(
+                f"waste_collection_schedule.source.{py_file.stem}"
+            )
+        except Exception:
+            continue
+
+        source_cls = getattr(module, "Source", None)
+        if source_cls is None or not _is_new_style_source(source_cls):
+            continue
+
+        # Read metadata from Source class
+        title = getattr(source_cls, "TITLE", py_file.stem)
+        country_code = (
+            getattr(source_cls, "COUNTRY", "") or py_file.stem.rsplit("_", 1)[-1]
+        )
+        country_name = _COUNTRY_CODE_MAP.get(country_code, country_code)
+
+        entry = {
+            "title": title,
+            "module": py_file.stem,
+            "default_params": {},
+            "id": py_file.stem,
+        }
+
+        sources.setdefault(country_name, []).append(entry)
+
+    return sources
+
+
+# Initialize on module import — legacy from JSON, new-style discovered at runtime
 _SOURCES = _load_sources()
 _SOURCE_METADATA = _load_source_metadata()
 
@@ -404,8 +477,15 @@ class WasteCollectionConfigFlow(ConfigFlow, domain=DOMAIN):  # type: ignore[call
         if len(self._sources) > 0:
             return
 
-        # Use pre-loaded sources from module level
-        self._sources = _SOURCES
+        # Start with legacy sources from sources.json
+        self._sources = {k: list(v) for k, v in _SOURCES.items()}
+
+        # Discover and merge new-style sources at runtime
+        new_style = await self.hass.async_add_executor_job(
+            _discover_new_style_sources
+        )
+        for country, entries in new_style.items():
+            self._sources.setdefault(country, []).extend(entries)
 
         async def args_method(args_input):
             return await self.async_step_args(args_input)
@@ -802,17 +882,41 @@ class WasteCollectionConfigFlow(ConfigFlow, domain=DOMAIN):  # type: ignore[call
         return module.Source(**kwargs)
 
     def _get_description_placeholders(self, source: str) -> dict[str, str]:
-        """Get description placeholders (URLs and howto) for a source."""
+        """Get description placeholders (URLs and howto) for a source.
+
+        For new-style sources, reads directly from Source class attributes.
+        For legacy sources, reads from source_metadata.json.
+        """
         placeholders: dict[str, str] = {}
+
+        hass = getattr(self, "hass", None)
+        language = getattr(getattr(hass, "config", None), "language", "en")
+
+        # Try new-style source first (read from class)
+        try:
+            module = importlib.import_module(
+                f"waste_collection_schedule.source.{source}"
+            )
+            source_cls = module.Source
+            if _is_new_style_source(source_cls):
+                url = getattr(source_cls, "URL", "")
+                placeholders["docs_url"] = url
+                howto_dict = getattr(source_cls, "HOWTO", {})
+                howto = howto_dict.get(language, howto_dict.get("en", ""))
+                if howto:
+                    placeholders["howto"] = howto.rstrip("\n") + "\n\n"
+                else:
+                    placeholders["howto"] = ""
+                return placeholders
+        except Exception:
+            pass
+
+        # Fall back to legacy metadata from source_metadata.json
         if source in _SOURCE_METADATA:
             metadata = _SOURCE_METADATA[source]
             placeholders["docs_url"] = metadata.get("docs_url", "")
             placeholders.update(metadata.get("urls", {}))
-            # Get howto for current language (defaults to English)
             howto_dict = metadata.get("howto", {})
-            # Try to get howto for the current language
-            hass = getattr(self, "hass", None)
-            language = getattr(getattr(hass, "config", None), "language", "en")
             placeholders["howto"] = howto_dict.get(language, howto_dict.get("en", ""))
             if placeholders["howto"]:
                 placeholders["howto"] = placeholders["howto"].rstrip("\n") + "\n\n"

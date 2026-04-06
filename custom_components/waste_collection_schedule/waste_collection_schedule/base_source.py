@@ -28,6 +28,7 @@ class BaseSource:
     URL: str = ""
     COUNTRY: str = ""
     TEST_CASES: dict = {}
+    HOWTO: dict[str, str] = {}  # {"en": "How to find your args...", ...}
 
     # --- Waste types this source produces ---
     WASTE_TYPES: list[WasteType] = []
