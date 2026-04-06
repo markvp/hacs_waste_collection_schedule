@@ -417,17 +417,32 @@ def get_source_by_file(file: str) -> tuple[ModuleType, list[SourceInfo]]:
     # iterate through all *.py files in waste_collection_schedule/source
     module = importlib.import_module(f"waste_collection_schedule.source.{file}")
 
-    title = module.TITLE
-    url = module.URL
-    country = getattr(module, "COUNTRY", file.split("_")[-1])
+    # Read metadata from Source class first, fall back to module level
+    source_cls = module.Source
+    title = getattr(source_cls, "TITLE", None) or getattr(module, "TITLE", None)
+    url = getattr(source_cls, "URL", None) or getattr(module, "URL", None)
+    country = (
+        getattr(source_cls, "COUNTRY", None)
+        or getattr(module, "COUNTRY", None)
+        or file.split("_")[-1]
+    )
 
-    sig = inspect.signature(module.Source.__init__)
+    sig = inspect.signature(source_cls.__init__)
     params = [param.name for param in sig.parameters.values()]
     if "self" in params:
         params.remove("self")
-    param_translations = getattr(module, "PARAM_TRANSLATIONS", {})
-    param_descriptions = getattr(module, "PARAM_DESCRIPTIONS", {})
-    howto = getattr(module, "HOW_TO_GET_ARGUMENTS_DESCRIPTION", {})
+    param_translations = (
+        getattr(source_cls, "PARAM_TRANSLATIONS", None)
+        or getattr(module, "PARAM_TRANSLATIONS", {})
+    )
+    param_descriptions = (
+        getattr(source_cls, "PARAM_DESCRIPTIONS", None)
+        or getattr(module, "PARAM_DESCRIPTIONS", {})
+    )
+    howto = (
+        getattr(source_cls, "HOW_TO_GET_ARGUMENTS_DESCRIPTION", None)
+        or getattr(module, "HOW_TO_GET_ARGUMENTS_DESCRIPTION", {})
+    )
 
     filename = f"/doc/source/{file}.md"
     sources = []

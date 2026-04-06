@@ -1,80 +1,66 @@
-import logging
-
-import requests
-from dateutil import parser
-from waste_collection_schedule import Collection  # type: ignore[attr-defined]
-
-_LOGGER = logging.getLogger(__name__)
-
-TITLE = "Stirling"
-DESCRIPTION = "Source for Stirling."
-URL = "https://www.stirling.wa.gov.au"
-TEST_CASES = {
-    "-31.9034183 115.8320855": {"lat": -31.9034183, "lon": 115.8320855},
-    "-31.878331, 115.815553": {"lat": "-31.8783052", "lon": "115.8157741"},
-}
-
-ICON_MAP = {
-    "red": "mdi:trash-can",
-    "green": "mdi:leaf",
-    "greenverge": "mdi:pine-tree",
-    "yellow": "mdi:recycle",
-}
-
-API_PATH = "/bincollectioncheck/getresult"
-REFERER_PATH = "/waste-and-environment/waste-and-recycling/bin-collections"
+from waste_collection_schedule.base_source import BaseSource
+from waste_collection_schedule.config_params import coords
+from waste_collection_schedule.waste_types import (
+    GARDEN_WASTE,
+    GENERAL_WASTE,
+    ORGANIC,
+    RECYCLABLES,
+    WasteType,
+)
 
 
-class Source:
+class Source(BaseSource):
+    TITLE = "Stirling"
+    DESCRIPTION = "Source for Stirling."
+    URL = "https://www.stirling.wa.gov.au"
+    API_URL = "https://www.stirling.wa.gov.au/bincollectioncheck/getresult"
+
+    TEST_CASES = {
+        "-31.9034183 115.8320855": {"lat": -31.9034183, "lon": 115.8320855},
+        "-31.878331, 115.815553": {"lat": "-31.8783052", "lon": "115.8157741"},
+    }
+
+    WASTE_TYPES = [GENERAL_WASTE, RECYCLABLES, ORGANIC, GARDEN_WASTE]
+
+    PARAMS = [
+        coords(lat="lat", lon="lon"),
+    ]
+
+    TYPE_MAP = {
+        "red": GENERAL_WASTE,
+        "green": ORGANIC,
+        "greenverge": GARDEN_WASTE,
+        "yellow": RECYCLABLES,
+    }
+
     def __init__(self, lat: float, lon: float):
         if isinstance(lat, str):
             lat = float(lat)
         if isinstance(lon, str):
             lon = float(lon)
-
-        self._lat: float = lat
-        self._lon: float = lon
-
-    def fetch(self) -> list[Collection]:
-        headers = {
+        self._headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
             "configid": "7c833520-7b62-4228-8522-fb1a220b32e8",
             "form": "57753bab-f589-44d7-8934-098b6d5c572f",
-            "fields": f"{self._lon},{self._lat}",
+            "fields": f"{lon},{lat}",
             "apikeylookup": "Bin Day",
-            "Origin": URL,
-            "Referer": f"{URL}{REFERER_PATH}",
+            "Origin": self.URL,
+            "Referer": f"{self.URL}/waste-and-environment/waste-and-recycling/bin-collections",
         }
-        r = requests.get(f"{URL}{API_PATH}", headers=headers)
-        r.raise_for_status()
 
-        data = r.json()
-        entries = []
-        for collection in data:
-            bin_type = None
-            bin_date_str = None
-            bin_date = None
+    def classify(self, record) -> tuple[str, WasteType] | None:
+        fields = {
+            arg["name"]: arg["value"]
+            for arg in record
+            if "name" in arg
+        }
+        date_str = fields.get("date", "")
+        if not date_str or not isinstance(date_str, str):
+            return None
 
-            for arg in collection:
-                if arg.get("name") == "type":
-                    bin_type = arg.get("value")
-                if arg.get("name") == "date":
-                    bin_date_str = arg.get("value")
-                    if not isinstance(bin_date_str, str):
-                        continue
-                    bin_date_str = bin_date_str.replace("  ", " ").strip()
-                    try:
-                        # Aug  7 2024
-                        bin_date = parser.parse(bin_date_str).date()
-                    except ValueError:
-                        _LOGGER.warning("Could not parse date %s", bin_date_str)
+        bin_type = fields.get("type", "").lower()
+        waste_type = self.TYPE_MAP.get(bin_type)
+        if not waste_type:
+            return None
 
-            if bin_date is None:
-                _LOGGER.warning("Could not find date for collection %s", bin_type)
-                continue
-            if bin_type is None:
-                _LOGGER.warning("Skipping invalid collection record")
-                continue
-            icon = ICON_MAP.get(bin_type.lower())  # Collection icon
-            entries.append(Collection(date=bin_date, t=bin_type, icon=icon))
-        return entries
+        return (date_str.replace("  ", " ").strip(), waste_type)

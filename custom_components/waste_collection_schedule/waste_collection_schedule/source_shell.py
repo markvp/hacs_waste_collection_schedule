@@ -231,13 +231,25 @@ class SourceShell:
         # create source
         source: Fetchable = source_module.Source(**source_args)  # type: ignore
 
+        # read metadata from Source class first, fall back to module level
+        source_cls = source_module.Source
+        title = getattr(source_cls, "TITLE", None) or getattr(
+            source_module, "TITLE", ""
+        )
+        description = getattr(source_cls, "DESCRIPTION", None) or getattr(
+            source_module, "DESCRIPTION", ""
+        )
+        url = getattr(source_cls, "URL", None) or getattr(
+            source_module, "URL", ""
+        )
+
         # create source shell
         g = SourceShell(
             source=source,
             customize=customize,
-            title=source_module.TITLE,
-            description=source_module.DESCRIPTION,
-            url=source_module.URL,
+            title=title,
+            description=description,
+            url=url,
             calendar_title=calendar_title,
             unique_id=calc_unique_source_id(source_name, source_args),
             day_offset=day_offset,
