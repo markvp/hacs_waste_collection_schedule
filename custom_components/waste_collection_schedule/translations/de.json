@@ -5817,13 +5817,13 @@
         "data": {
           "calendar_title": "Kalender Titel",
           "address_suffix": "Hausnummerzusatz",
-          "altkleider_schuhe": "Altkleider Schuhe",
-          "altpapier_buendelsammlung": "Altpapier Buendelsammlung",
+          "altkleider_schuhe": "Altkleider/Schuhe",
+          "altpapier_buendelsammlung": "Altpapier Bündelsammlung",
           "altpapier_papiertonne": "Altpapier Papiertonne",
           "bioenergietonne": "Bioenergietonne",
           "city": "Ort",
           "house_number": "Hausnummer",
-          "restmuell": "Restmuell",
+          "restmuell": "Restmüll",
           "schadstoffe": "Schadstoffe",
           "street": "Straße",
           "verpackungstonne": "Verpackungstonne"
@@ -5838,13 +5838,13 @@
         "data": {
           "calendar_title": "Kalender Titel",
           "address_suffix": "Hausnummerzusatz",
-          "altkleider_schuhe": "Altkleider Schuhe",
-          "altpapier_buendelsammlung": "Altpapier Buendelsammlung",
+          "altkleider_schuhe": "Altkleider/Schuhe",
+          "altpapier_buendelsammlung": "Altpapier Bündelsammlung",
           "altpapier_papiertonne": "Altpapier Papiertonne",
           "bioenergietonne": "Bioenergietonne",
           "city": "Ort",
           "house_number": "Hausnummer",
-          "restmuell": "Restmuell",
+          "restmuell": "Restmüll",
           "schadstoffe": "Schadstoffe",
           "street": "Straße",
           "verpackungstonne": "Verpackungstonne"

@@ -81,6 +81,16 @@ TEST_CASES = {
 }
 _LOGGER = logging.getLogger(__name__)
 
+PARAM_TRANSLATIONS = {
+    "en": {
+        "f_abfallarten": "Waste Types",
+        "f_id_bezirk": "District ID",
+        "f_id_kommune": "Municipality ID",
+        "f_id_strasse": "Street ID",
+        "f_id_strasse_hnr": "House Number ID",
+    }
+}
+
 MODUS_KEY = "d6c5855a62cf32a4dadbc2831f0f295f"
 HEADERS = {
     "user-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0"

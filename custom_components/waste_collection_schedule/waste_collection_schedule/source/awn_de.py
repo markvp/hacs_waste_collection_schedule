@@ -45,7 +45,27 @@ PARAM_TRANSLATIONS = {
         "street": "Straße",
         "house_number": "Hausnummer",
         "address_suffix": "Hausnummerzusatz",
-    }
+        "restmuell": "Restmüll",
+        "bioenergietonne": "Bioenergietonne",
+        "altpapier_papiertonne": "Altpapier Papiertonne",
+        "altpapier_buendelsammlung": "Altpapier Bündelsammlung",
+        "verpackungstonne": "Verpackungstonne",
+        "altkleider_schuhe": "Altkleider/Schuhe",
+        "schadstoffe": "Schadstoffe",
+    },
+    "en": {
+        "city": "City",
+        "street": "Street",
+        "house_number": "House Number",
+        "address_suffix": "Address Suffix",
+        "restmuell": "Residual Waste",
+        "bioenergietonne": "Bio-Energy Bin",
+        "altpapier_papiertonne": "Paper Bin",
+        "altpapier_buendelsammlung": "Paper Bundle Collection",
+        "verpackungstonne": "Packaging Bin",
+        "altkleider_schuhe": "Old Clothes / Shoes",
+        "schadstoffe": "Hazardous Waste",
+    },
 }
 
 

@@ -226,6 +226,15 @@ CONFIG_FLOW_TYPES = {
 }
 
 
+PARAM_TRANSLATIONS = {
+    "en": {
+        "typevoie": "Street Type",
+        "num_voie": "Street Number",
+        "address": "Street Name",
+    }
+}
+
+
 class EntryType(TypedDict):
     type: str
     results: list[str]

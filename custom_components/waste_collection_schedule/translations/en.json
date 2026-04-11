@@ -4299,10 +4299,10 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "cislo": "Cislo",
-          "obec": "Obec",
-          "obvod": "Obvod",
-          "ulice": "Ulice"
+          "cislo": "Number",
+          "obec": "Municipality",
+          "obvod": "District",
+          "ulice": "Street"
         },
         "data_description": {
           "calendar_title": "A more readable, or user-friendly, name for the waste calendar. If nothing is provided, the name returned by the source will be used."
@@ -4313,10 +4313,10 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "cislo": "Cislo",
-          "obec": "Obec",
-          "obvod": "Obvod",
-          "ulice": "Ulice"
+          "cislo": "Number",
+          "obec": "Municipality",
+          "obvod": "District",
+          "ulice": "Street"
         },
         "data_description": {}
       },
@@ -4740,10 +4740,10 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "address": "Address",
+          "address": "Street Name",
           "city": "City",
-          "num_voie": "Num Voie",
-          "typevoie": "Typevoie"
+          "num_voie": "Street Number",
+          "typevoie": "Street Type"
         },
         "data_description": {
           "calendar_title": "A more readable, or user-friendly, name for the waste calendar. If nothing is provided, the name returned by the source will be used."
@@ -4754,10 +4754,10 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "address": "Address",
+          "address": "Street Name",
           "city": "City",
-          "num_voie": "Num Voie",
-          "typevoie": "Typevoie"
+          "num_voie": "Street Number",
+          "typevoie": "Street Type"
         },
         "data_description": {}
       },
@@ -5277,11 +5277,11 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "f_abfallarten": "F Abfallarten",
-          "f_id_bezirk": "F Id Bezirk",
-          "f_id_kommune": "F Id Kommune",
-          "f_id_strasse": "F Id Strasse",
-          "f_id_strasse_hnr": "F Id Strasse Hnr",
+          "f_abfallarten": "Waste Types",
+          "f_id_bezirk": "District ID",
+          "f_id_kommune": "Municipality ID",
+          "f_id_strasse": "Street ID",
+          "f_id_strasse_hnr": "House Number ID",
           "key": "Key"
         },
         "data_description": {
@@ -5293,11 +5293,11 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "f_abfallarten": "F Abfallarten",
-          "f_id_bezirk": "F Id Bezirk",
-          "f_id_kommune": "F Id Kommune",
-          "f_id_strasse": "F Id Strasse",
-          "f_id_strasse_hnr": "F Id Strasse Hnr",
+          "f_abfallarten": "Waste Types",
+          "f_id_bezirk": "District ID",
+          "f_id_kommune": "Municipality ID",
+          "f_id_strasse": "Street ID",
+          "f_id_strasse_hnr": "House Number ID",
           "key": "Key"
         },
         "data_description": {}
@@ -5942,16 +5942,16 @@
         "data": {
           "calendar_title": "Calendar Title",
           "address_suffix": "Address Suffix",
-          "altkleider_schuhe": "Altkleider Schuhe",
-          "altpapier_buendelsammlung": "Altpapier Buendelsammlung",
-          "altpapier_papiertonne": "Altpapier Papiertonne",
-          "bioenergietonne": "Bioenergietonne",
+          "altkleider_schuhe": "Old Clothes / Shoes",
+          "altpapier_buendelsammlung": "Paper Bundle Collection",
+          "altpapier_papiertonne": "Paper Bin",
+          "bioenergietonne": "Bio-Energy Bin",
           "city": "City",
           "house_number": "House Number",
-          "restmuell": "Restmuell",
-          "schadstoffe": "Schadstoffe",
+          "restmuell": "Residual Waste",
+          "schadstoffe": "Hazardous Waste",
           "street": "Street",
-          "verpackungstonne": "Verpackungstonne"
+          "verpackungstonne": "Packaging Bin"
         },
         "data_description": {
           "calendar_title": "A more readable, or user-friendly, name for the waste calendar. If nothing is provided, the name returned by the source will be used."
@@ -5963,16 +5963,16 @@
         "data": {
           "calendar_title": "Calendar Title",
           "address_suffix": "Address Suffix",
-          "altkleider_schuhe": "Altkleider Schuhe",
-          "altpapier_buendelsammlung": "Altpapier Buendelsammlung",
-          "altpapier_papiertonne": "Altpapier Papiertonne",
-          "bioenergietonne": "Bioenergietonne",
+          "altkleider_schuhe": "Old Clothes / Shoes",
+          "altpapier_buendelsammlung": "Paper Bundle Collection",
+          "altpapier_papiertonne": "Paper Bin",
+          "bioenergietonne": "Bio-Energy Bin",
           "city": "City",
           "house_number": "House Number",
-          "restmuell": "Restmuell",
-          "schadstoffe": "Schadstoffe",
+          "restmuell": "Residual Waste",
+          "schadstoffe": "Hazardous Waste",
           "street": "Street",
-          "verpackungstonne": "Verpackungstonne"
+          "verpackungstonne": "Packaging Bin"
         },
         "data_description": {}
       },
@@ -6131,9 +6131,9 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "abfall": "Abfall",
+          "abfall": "Waste Type",
           "gemeinde": "Municipality",
-          "hausnummer": "House number",
+          "hausnummer": "House Number",
           "ort": "District",
           "ortsteil": "Subdistrict",
           "service": "Operator",
@@ -6148,9 +6148,9 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "abfall": "Abfall",
+          "abfall": "Waste Type",
           "gemeinde": "Municipality",
-          "hausnummer": "House number",
+          "hausnummer": "House Number",
           "ort": "District",
           "ortsteil": "Subdistrict",
           "service": "Operator",
@@ -6718,7 +6718,7 @@
         "data": {
           "calendar_title": "Calendar Title",
           "hnr": "House Number",
-          "plz": "Plz",
+          "plz": "Postal Code",
           "strasse": "Street"
         },
         "data_description": {
@@ -6731,7 +6731,7 @@
         "data": {
           "calendar_title": "Calendar Title",
           "hnr": "House Number",
-          "plz": "Plz",
+          "plz": "Postal Code",
           "strasse": "Street"
         },
         "data_description": {}
@@ -6809,12 +6809,12 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "app_id": "App Id",
+          "app_id": "App ID",
           "bezirk": "District",
-          "bundesland": "Bundesland",
+          "bundesland": "State",
           "city": "City",
           "hnr": "House Number",
-          "landkreis": "Landkreis",
+          "landkreis": "County",
           "strasse": "Street"
         },
         "data_description": {
@@ -6826,12 +6826,12 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "app_id": "App Id",
+          "app_id": "App ID",
           "bezirk": "District",
-          "bundesland": "Bundesland",
+          "bundesland": "State",
           "city": "City",
           "hnr": "House Number",
-          "landkreis": "Landkreis",
+          "landkreis": "County",
           "strasse": "Street"
         },
         "data_description": {}
@@ -7246,7 +7246,7 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "nummer": "Nummer",
+          "nummer": "Number",
           "ort": "City",
           "stadtteil": "District",
           "strasse": "Street"
@@ -7260,7 +7260,7 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "nummer": "Nummer",
+          "nummer": "Number",
           "ort": "City",
           "stadtteil": "District",
           "strasse": "Street"
@@ -10047,7 +10047,7 @@
         "data": {
           "calendar_title": "Calendar Title",
           "hnr": "House Number",
-          "hnr_zusatz": "Hnr Zusatz",
+          "hnr_zusatz": "House Number Addition",
           "ort": "City",
           "strasse": "Street"
         },
@@ -10061,7 +10061,7 @@
         "data": {
           "calendar_title": "Calendar Title",
           "hnr": "House Number",
-          "hnr_zusatz": "Hnr Zusatz",
+          "hnr_zusatz": "House Number Addition",
           "ort": "City",
           "strasse": "Street"
         },
@@ -11474,7 +11474,7 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "standort": "Standort"
+          "standort": "Location"
         },
         "data_description": {
           "calendar_title": "A more readable, or user-friendly, name for the waste calendar. If nothing is provided, the name returned by the source will be used."
@@ -11485,7 +11485,7 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "standort": "Standort"
+          "standort": "Location"
         },
         "data_description": {}
       },
@@ -13103,9 +13103,9 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "commune": "Commune",
-          "localite": "Localite",
-          "rue": "Rue"
+          "commune": "Municipality",
+          "localite": "Locality",
+          "rue": "Street"
         },
         "data_description": {
           "calendar_title": "A more readable, or user-friendly, name for the waste calendar. If nothing is provided, the name returned by the source will be used."
@@ -13116,9 +13116,9 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "commune": "Commune",
-          "localite": "Localite",
-          "rue": "Rue"
+          "commune": "Municipality",
+          "localite": "Locality",
+          "rue": "Street"
         },
         "data_description": {}
       },
@@ -15822,7 +15822,7 @@
         "data": {
           "calendar_title": "Calendar Title",
           "locality": "Locality",
-          "ortschaft": "Ortschaft"
+          "ortschaft": "Locality"
         },
         "data_description": {
           "calendar_title": "A more readable, or user-friendly, name for the waste calendar. If nothing is provided, the name returned by the source will be used.",
@@ -15835,7 +15835,7 @@
         "data": {
           "calendar_title": "Calendar Title",
           "locality": "Locality",
-          "ortschaft": "Ortschaft"
+          "ortschaft": "Locality"
         },
         "data_description": {
           "locality": "Village"

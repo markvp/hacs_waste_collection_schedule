@@ -61,6 +61,15 @@ TEST_CASES = {
 }
 
 
+PARAM_TRANSLATIONS = {
+    "en": {
+        "commune": "Municipality",
+        "localite": "Locality",
+        "rue": "Street",
+    }
+}
+
+
 def _fetch_rows() -> list[dict]:
     """Fetch and parse the CSV."""
     response = requests.get(CSV_URL, timeout=30)

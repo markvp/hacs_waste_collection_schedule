@@ -156,6 +156,17 @@ ICON_MAP = {
 
 API_URL = ""
 
+PARAM_TRANSLATIONS = {
+    "en": {
+        "app_id": "App ID",
+        "strasse": "Street",
+        "hnr": "House Number",
+        "bezirk": "District",
+        "bundesland": "State",
+        "landkreis": "County",
+    },
+}
+
 
 class Source:
     def __init__(

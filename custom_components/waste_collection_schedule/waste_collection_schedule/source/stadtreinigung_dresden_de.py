@@ -12,6 +12,13 @@ TEST_CASES = {
 }
 
 
+PARAM_TRANSLATIONS = {
+    "en": {
+        "standort": "Location",
+    }
+}
+
+
 class Source:
     def __init__(self, standort):
         self._standort = standort

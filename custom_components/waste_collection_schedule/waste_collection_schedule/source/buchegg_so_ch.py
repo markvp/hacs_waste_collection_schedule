@@ -42,6 +42,13 @@ PARAM_DESCRIPTIONS = {
     },
 }
 
+PARAM_TRANSLATIONS = {
+    "en": {
+        "locality": "Locality",
+        "ortschaft": "Locality",
+    }
+}
+
 TEST_CASES = {
     "Aetingen": {"locality": "Aetingen"},
     "Bibern": {"locality": "Bibern"},

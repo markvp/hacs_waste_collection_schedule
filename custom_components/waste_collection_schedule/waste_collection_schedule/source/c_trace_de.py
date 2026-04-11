@@ -162,11 +162,12 @@ BASE_URL = "https://{subdomain}.c-trace.de"
 PARAM_TRANSLATIONS = {
     "en": {
         "strasse": "Street",
-        "hausnummer": "House number",
+        "hausnummer": "House Number",
         "gemeinde": "Municipality",
         "ort": "District",
         "ortsteil": "Subdistrict",
         "service": "Operator",
+        "abfall": "Waste Type",
     }
 }
 

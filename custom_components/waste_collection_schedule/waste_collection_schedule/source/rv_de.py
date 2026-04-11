@@ -40,6 +40,15 @@ ICON_MAP = {
 
 API_URL = "https://athos-onlinedienste.rv.de/WasteManagementRavensburgPrivat/WasteManagementServlet"
 
+PARAM_TRANSLATIONS = {
+    "en": {
+        "ort": "City",
+        "strasse": "Street",
+        "hnr": "House Number",
+        "hnr_zusatz": "House Number Addition",
+    }
+}
+
 
 class HiddenInputParser(HTMLParser):
     def __init__(self):

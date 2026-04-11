@@ -28,6 +28,14 @@ HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
 }
 
 
+PARAM_TRANSLATIONS = {
+    "en": {
+        "plz": "Postal Code",
+        "strasse": "Street",
+        "hnr": "House Number",
+    },
+}
+
 API_URL = "https://ahe.atino.net/{search}"
 SEARCH_API_URL = API_URL.format(search="search/{search}")
 

@@ -39,6 +39,15 @@ ICON_MAP = {
     "altmetalle": "mdi:nail",
 }
 
+PARAM_TRANSLATIONS = {
+    "en": {
+        "ort": "City",
+        "strasse": "Street",
+        "nummer": "Number",
+        "stadtteil": "District",
+    }
+}
+
 LOGGER = logging.getLogger(__name__)
 
 

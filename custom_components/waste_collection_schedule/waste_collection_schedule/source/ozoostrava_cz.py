@@ -32,6 +32,16 @@ ICON_MAP = {
 }
 
 
+PARAM_TRANSLATIONS = {
+    "en": {
+        "obec": "Municipality",
+        "obvod": "District",
+        "ulice": "Street",
+        "cislo": "Number",
+    }
+}
+
+
 class Source:
     def __init__(self, obec: str, obvod: str, ulice: str, cislo: str):
         self._obec = obec
