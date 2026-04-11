@@ -387,6 +387,8 @@ PARAM_TRANSLATIONS = {
     "en": {
         "district": "District",
         "municipal": "Municipal",
+        "plz": "Postal Code",
+        "hnr": "House Number",
         "calendar": "Calendar",
         "calendar_title_separator": "Calendar Title Separator",
         "calendar_splitter": "Calendar Entry Splitter",

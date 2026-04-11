@@ -55,6 +55,7 @@ PARAM_DESCRIPTIONS = {  # Optional dict to describe the arguments, will be shown
 PARAM_TRANSLATIONS = {  # Optional dict to translate the arguments, will be shown in the GUI configuration form as placeholder text
     "en": {
         "uprn": "Unique Property Reference Number",
+        "address_name_numer": "Address Name Number",
     },
 }
 

@@ -2416,9 +2416,9 @@
           "calendar_splitter": "Calendar Entry Splitter",
           "calendar_title_separator": "Calendar Title Separator",
           "district": "District",
-          "hnr": "Hnr",
+          "hnr": "House Number",
           "municipal": "Municipal",
-          "plz": "Plz",
+          "plz": "Postal Code",
           "street": "Street",
           "town": "Town"
         },
@@ -2446,9 +2446,9 @@
           "calendar_splitter": "Calendar Entry Splitter",
           "calendar_title_separator": "Calendar Title Separator",
           "district": "District",
-          "hnr": "Hnr",
+          "hnr": "House Number",
           "municipal": "Municipal",
-          "plz": "Plz",
+          "plz": "Postal Code",
           "street": "Street",
           "town": "Town"
         },
@@ -18375,7 +18375,7 @@
         "data": {
           "calendar_title": "Calendar Title",
           "address_name_number": "Address Name Number",
-          "address_name_numer": "Address Name Numer",
+          "address_name_numer": "Address Name Number",
           "address_postcode": "Address Postcode",
           "address_street": "Address Street",
           "street_town": "Street Town",
@@ -18392,7 +18392,7 @@
         "data": {
           "calendar_title": "Calendar Title",
           "address_name_number": "Address Name Number",
-          "address_name_numer": "Address Name Numer",
+          "address_name_numer": "Address Name Number",
           "address_postcode": "Address Postcode",
           "address_street": "Address Street",
           "street_town": "Street Town",
