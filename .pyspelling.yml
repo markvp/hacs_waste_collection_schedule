@@ -4,7 +4,7 @@ jobs: 4
 matrix:
   - name: markdown-docs
     sources:
-      - "doc/**/*.md"
+      - "doc/*.md"
       - "README.md"
       - "info.md"
     hunspell:
