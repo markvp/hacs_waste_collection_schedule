@@ -22436,7 +22436,7 @@
         "description": "Configurez votre fournisseur de services. {howto}Plus de détails : {docs_url}.",
         "data": {
           "calendar_title": "Titre du Calendrier",
-          "garden_cutomer": "Garden Cutomer",
+          "garden_customer": "Garden Customer",
           "street": "Street",
           "town": "Town"
         },
@@ -22449,7 +22449,7 @@
         "description": "Configurez votre fournisseur de services. {howto}Plus de détails : {docs_url}.",
         "data": {
           "calendar_title": "Titre du Calendrier",
-          "garden_cutomer": "Garden Cutomer",
+          "garden_customer": "Garden Customer",
           "street": "Street",
           "town": "Town"
         },

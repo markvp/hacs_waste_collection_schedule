@@ -22435,7 +22435,7 @@
         "description": "Compila i campi per ottenere le informazioni sul tuo servizio di raccolta. {howto}Maggiori informazioni: {docs_url}.",
         "data": {
           "calendar_title": "Nome Calendario",
-          "garden_cutomer": "Garden Cutomer",
+          "garden_customer": "Garden Customer",
           "street": "Strada",
           "town": "Città"
         },
@@ -22448,7 +22448,7 @@
         "description": "Compila i campi per ottenere le informazioni sul tuo servizio di raccolta. {howto}Per maggiori informazioni: {docs_url}.",
         "data": {
           "calendar_title": "Nome Calendario",
-          "garden_cutomer": "Garden Cutomer",
+          "garden_customer": "Garden Customer",
           "street": "Strada",
           "town": "Città"
         },

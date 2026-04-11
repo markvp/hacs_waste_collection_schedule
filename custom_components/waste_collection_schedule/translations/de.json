@@ -22554,7 +22554,7 @@
         "description": "Konfiguriere deinen Service Provider. {howto}Mehr details: {docs_url}",
         "data": {
           "calendar_title": "Kalender Titel",
-          "garden_cutomer": "Garden Cutomer",
+          "garden_customer": "Garden Customer",
           "street": "Straße",
           "town": "Stadt"
         },
@@ -22567,7 +22567,7 @@
         "description": "Konfiguriere deinen Service Provider. {howto}Mehr details: {docs_url}",
         "data": {
           "calendar_title": "Kalender Titel",
-          "garden_cutomer": "Garden Cutomer",
+          "garden_customer": "Garden Customer",
           "street": "Straße",
           "town": "Stadt"
         },

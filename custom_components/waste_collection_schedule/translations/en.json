@@ -718,17 +718,17 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "mapkey": "The unique identifier for your property used by the Joonalup website",
-          "number": "Your house number as it appears on the Joonalup website",
-          "street": "Your stree name as it appears on the Joonalup website",
-          "suburb": "Your suburb as it appears on the Joonalup website"
+          "mapkey": "The unique identifier for your property used by the Joondalup website",
+          "number": "Your house number as it appears on the Joondalup website",
+          "street": "Your street name as it appears on the Joondalup website",
+          "suburb": "Your suburb as it appears on the Joondalup website"
         },
         "data_description": {
           "calendar_title": "A more readable, or user-friendly, name for the waste calendar. If nothing is provided, the name returned by the source will be used.",
-          "mapkey": "The unique identifier for your property used by the Joonalup website",
-          "number": "Your house number as it appears on the Joonalup website",
-          "street": "Your stree name as it appears on the Joonalup website",
-          "suburb": "Your suburb as it appears on the Joonalup website"
+          "mapkey": "The unique identifier for your property used by the Joondalup website",
+          "number": "Your house number as it appears on the Joondalup website",
+          "street": "Your street name as it appears on the Joondalup website",
+          "suburb": "Your suburb as it appears on the Joondalup website"
         }
       },
       "reconfigure_joondalup_wa_gov_au": {
@@ -736,16 +736,16 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "mapkey": "The unique identifier for your property used by the Joonalup website",
-          "number": "Your house number as it appears on the Joonalup website",
-          "street": "Your stree name as it appears on the Joonalup website",
-          "suburb": "Your suburb as it appears on the Joonalup website"
+          "mapkey": "The unique identifier for your property used by the Joondalup website",
+          "number": "Your house number as it appears on the Joondalup website",
+          "street": "Your street name as it appears on the Joondalup website",
+          "suburb": "Your suburb as it appears on the Joondalup website"
         },
         "data_description": {
-          "mapkey": "The unique identifier for your property used by the Joonalup website",
-          "number": "Your house number as it appears on the Joonalup website",
-          "street": "Your stree name as it appears on the Joonalup website",
-          "suburb": "Your suburb as it appears on the Joonalup website"
+          "mapkey": "The unique identifier for your property used by the Joondalup website",
+          "number": "Your house number as it appears on the Joondalup website",
+          "street": "Your street name as it appears on the Joondalup website",
+          "suburb": "Your suburb as it appears on the Joondalup website"
         }
       },
       "args_kalamunda_wa_gov_au": {
@@ -22957,7 +22957,7 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "garden_cutomer": "Garden Cutomer",
+          "garden_customer": "Garden Customer",
           "street": "Street",
           "town": "Town"
         },
@@ -22970,7 +22970,7 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "garden_cutomer": "Garden Cutomer",
+          "garden_customer": "Garden Customer",
           "street": "Street",
           "town": "Town"
         },
@@ -23326,7 +23326,7 @@
     "error": {
       "invalid_weekday": "Invalid weekday. Please provide a valid weekday (MO, TU, WE, TH, FR, SA, SU).",
       "invalid_count": "Invalid count. Please provide a valid number.",
-      "invalid_weekdays": "Invalid Weekday format please proivde one (MO, TU, WE, TH, FR, SA, SU) or a dictonary like MO: 1.",
+      "invalid_weekdays": "Invalid weekday format. Please provide one of (MO, TU, WE, TH, FR, SA, SU) or a dictionary like MO: 1.",
       "invalid_source": "You did not select a source. Please select a valid source.",
       "fetch_error": "The source returned an invalid response: \"{fetch_error_message}\". Please check the provided arguments and try again.",
       "invalid_arg": "Argument is invalid: \"{invalid_arg_message}\"",
