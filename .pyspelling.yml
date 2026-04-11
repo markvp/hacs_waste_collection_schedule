@@ -1,0 +1,47 @@
+spellchecker: hunspell
+jobs: 4
+
+matrix:
+  - name: python-source
+    sources:
+      - "custom_components/**/*.py"
+      - "tests/**/*.py"
+    hunspell:
+      d:
+        - en_US
+        - de_DE
+        - fr_FR
+        - pl_PL
+        - it_IT
+        - nl_NL
+        - sv_SE
+        - nb_NO
+        - da_DK
+        - cs_CZ
+    pipeline:
+      - pyspelling.filters.python:
+          comments: true
+          docstrings: true
+          strings: false
+    dictionary:
+      wordlists:
+        - .pyspelling-wordlist
+      output: build/spelling.dic
+
+  - name: markdown-docs
+    sources:
+      - "doc/**/*.md"
+      - "*.md"
+    hunspell:
+      d:
+        - en_US
+        - de_DE
+        - fr_FR
+    pipeline:
+      - pyspelling.filters.markdown:
+          markdown_extensions:
+            - markdown.extensions.extra
+    dictionary:
+      wordlists:
+        - .pyspelling-wordlist
+      output: build/spelling-md.dic

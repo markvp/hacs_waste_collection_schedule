@@ -13,16 +13,11 @@ repos:
           - --safe
           - --quiet
         files: ^((custom_components|script|tests)/.+)?[^/]+\.py$
-  - repo: https://github.com/codespell-project/codespell
-    rev: v2.4.1
+  - repo: https://github.com/facelessuser/pyspelling
+    rev: 2.10
     hooks:
-      - id: codespell
-        args:
-          - -I
-          - .codespellignore
-          - --skip="./.*,*.csv,*.json"
-          - --quiet-level=2
-        exclude_types: [csv, json]
+      - id: pyspelling
+        additional_dependencies: [pyspelling]
   - repo: https://github.com/pycqa/flake8
     rev: 7.2.0
     hooks:
