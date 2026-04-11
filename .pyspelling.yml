@@ -2,26 +2,10 @@ spellchecker: hunspell
 jobs: 4
 
 matrix:
-  - name: markdown-docs
-    sources:
-      - "doc/*.md"
-      - "README.md"
-      - "info.md"
-    hunspell:
-      d: en_US
-    pipeline:
-      - pyspelling.filters.markdown:
-          markdown_extensions:
-            - markdown.extensions.extra
-      - pyspelling.filters.html:
-          comments: false
-          ignores:
-            - code
-            - pre
-    dictionary:
-      wordlists:
-        - .pyspelling-wordlist
-      output: build/spelling-docs.dic
+  # Markdown docs are too code-heavy (source names, identifiers,
+  # code examples) for meaningful spell checking. Generated docs
+  # (README, info.md, doc/source/) also contain thousands of place
+  # names from ~600 worldwide providers.
 
   - name: translations-en
     sources:
