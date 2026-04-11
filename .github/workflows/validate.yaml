@@ -29,10 +29,11 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Install hunspell dictionaries
         run: |
-          sudo apt-get install -y -qq hunspell hunspell-en-us hunspell-de-de hunspell-fr hunspell-pl hunspell-it hunspell-nl hunspell-sv hunspell-no hunspell-da hunspell-cs
+          sudo apt-get install -y -qq hunspell hunspell-en-us hunspell-de-de hunspell-fr hunspell-it
       - name: Spell check with pyspelling
         run: |
           pip install pyspelling
+          python scripts/extract_translation_strings.py
           pyspelling -c .pyspelling.yml
       - name: Lint with flake8
         run: |

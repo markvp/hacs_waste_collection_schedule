@@ -8,7 +8,7 @@ matrix:
       - "README.md"
       - "info.md"
     hunspell:
-      d: en_US,de_DE,fr_FR,pl_PL,it_IT,nl_NL,sv_SE,nb_NO,da_DK,cs_CZ
+      d: en_US
     pipeline:
       - pyspelling.filters.markdown:
           markdown_extensions:
@@ -21,4 +21,52 @@ matrix:
     dictionary:
       wordlists:
         - .pyspelling-wordlist
-      output: build/spelling.dic
+      output: build/spelling-docs.dic
+
+  - name: translations-en
+    sources:
+      - "build/translations/en.txt"
+    hunspell:
+      d: en_US
+    pipeline:
+      - pyspelling.filters.text
+    dictionary:
+      wordlists:
+        - .pyspelling-wordlist
+      output: build/spelling-en.dic
+
+  - name: translations-de
+    sources:
+      - "build/translations/de.txt"
+    hunspell:
+      d: de_DE
+    pipeline:
+      - pyspelling.filters.text
+    dictionary:
+      wordlists:
+        - .pyspelling-wordlist
+      output: build/spelling-de.dic
+
+  - name: translations-fr
+    sources:
+      - "build/translations/fr.txt"
+    hunspell:
+      d: fr_FR
+    pipeline:
+      - pyspelling.filters.text
+    dictionary:
+      wordlists:
+        - .pyspelling-wordlist
+      output: build/spelling-fr.dic
+
+  - name: translations-it
+    sources:
+      - "build/translations/it.txt"
+    hunspell:
+      d: it_IT
+    pipeline:
+      - pyspelling.filters.text
+    dictionary:
+      wordlists:
+        - .pyspelling-wordlist
+      output: build/spelling-it.dic
