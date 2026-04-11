@@ -28,6 +28,12 @@ ICON_MAP = {
 
 API_URL = "https://wav-wrp.whitespacews.com/"
 
+PARAM_TRANSLATIONS = {
+    "en": {
+        "address_name_numer": "Address Name Number",
+    },
+}
+
 
 class Source:
     def __init__(
