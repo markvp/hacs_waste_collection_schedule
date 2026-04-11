@@ -2413,10 +2413,10 @@
           "calendar_title": "Calendar Title",
           "addition": "Addition",
           "calendar": "Calendar",
-          "calendar_splitter": "Calendar Splitter",
+          "calendar_splitter": "Calendar Entry Splitter",
           "calendar_title_separator": "Calendar Title Separator",
           "district": "District",
-          "hnr": "House Number",
+          "hnr": "Hnr",
           "municipal": "Municipal",
           "plz": "Plz",
           "street": "Street",
@@ -2443,10 +2443,10 @@
           "calendar_title": "Calendar Title",
           "addition": "Addition",
           "calendar": "Calendar",
-          "calendar_splitter": "Calendar Splitter",
+          "calendar_splitter": "Calendar Entry Splitter",
           "calendar_title_separator": "Calendar Title Separator",
           "district": "District",
-          "hnr": "House Number",
+          "hnr": "Hnr",
           "municipal": "Municipal",
           "plz": "Plz",
           "street": "Street",
@@ -3949,7 +3949,7 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "address": "Address / Adresse"
+          "address": "Address"
         },
         "data_description": {
           "calendar_title": "A more readable, or user-friendly, name for the waste calendar. If nothing is provided, the name returned by the source will be used.",
@@ -3961,7 +3961,7 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "address": "Address / Adresse"
+          "address": "Address"
         },
         "data_description": {
           "address": "Your full address / Votre adresse complete"
@@ -14922,7 +14922,7 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "place_id": "Place ID (Odjemno mesto)"
+          "place_id": "Place ID"
         },
         "data_description": {
           "calendar_title": "A more readable, or user-friendly, name for the waste calendar. If nothing is provided, the name returned by the source will be used."
@@ -14933,7 +14933,7 @@
         "description": "Configure your service provider. {howto}More details: {docs_url}.",
         "data": {
           "calendar_title": "Calendar Title",
-          "place_id": "Place ID (Odjemno mesto)"
+          "place_id": "Place ID"
         },
         "data_description": {}
       },

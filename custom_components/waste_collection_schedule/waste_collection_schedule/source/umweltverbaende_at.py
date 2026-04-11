@@ -383,7 +383,14 @@ PARAM_TRANSLATIONS = {
         "calendar": "Kalender",
         "calendar_title_separator": "Kalendertitel Separator",
         "calendar_splitter": "Kalendereintrag-Trenner",
-    }
+    },
+    "en": {
+        "district": "District",
+        "municipal": "Municipal",
+        "calendar": "Calendar",
+        "calendar_title_separator": "Calendar Title Separator",
+        "calendar_splitter": "Calendar Entry Splitter",
+    },
 }
 
 POSSIBLE_COLLECTION_PATHS = (

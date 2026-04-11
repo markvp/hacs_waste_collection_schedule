@@ -28,7 +28,7 @@ HOW_TO_GET_ARGUMENTS_DESCRIPTION = {
 }
 PARAM_TRANSLATIONS = {
     "en": {
-        "place_id": "Place ID (Odjemno mesto)",
+        "place_id": "Place ID",
     }
 }
 

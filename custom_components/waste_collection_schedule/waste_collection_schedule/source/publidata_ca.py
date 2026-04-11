@@ -61,7 +61,7 @@ PARAM_DESCRIPTIONS = {
 
 PARAM_TRANSLATIONS = {
     "en": {
-        "address": "Address / Adresse",
+        "address": "Address",
     },
 }
 
